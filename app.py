@@ -32,4 +32,5 @@ def pages(page):
 
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    # Add port 8080
+    app.run(debug=True, use_reloader=True, port=8080) 
