@@ -10,6 +10,20 @@ a {
     color: #000000;
 }
 
+@font-face {
+    font-family: "Agency FB";
+    src: url("{{ url_for('static', filename='upload/fonts/AgencyFB-Regular.ttf') }}") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Agency FB";
+    src: url("{{ url_for('static', filename='upload/fonts/AgencyFB-Bold.ttf') }}") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 /*  */
 body {
     padding-top: 56px;
@@ -90,7 +104,68 @@ footer {
 }
 
 .schoolInfo {
-    margin-left: auto;
+    margin: auto;
+    margin-top: -15px;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal;
+    min-width: 350px;
 }
 
-.contactInfo {}
+.schoolInfo .schoolInfo-text {
+    font-family: "Agency FB", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.footer-logo {
+    max-height: 67px;
+    width: auto;
+}
+
+.contactInfo {
+    position: relative;
+    margin: auto;
+    margin-top: 0;
+}
+
+.contactInfo .contactInfo-text {
+    font-family: "Agency FB", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.contactInfo .wechat-icon,
+.contactInfo .bilibili-icon {
+    vertical-align: middle;
+}
+
+.contactInfo .wechat-icon {
+    width: 36px;
+    height: 33px;
+    padding-right: 4px;
+}
+
+.contactInfo .bilibili-icon {
+    width: 35px;
+    height: 37px;
+}
+
+.contactInfo::after {
+    content: "";
+    position: absolute;
+    top: -82px;
+    right: -115px;
+    width: 240px;
+    height: 185px;
+    background: url(../static/upload/footer/鱼1.png) no-repeat center/contain;
+    z-index: 9999;
+    transform: rotate(151.44deg);
+    pointer-events: none;
+}

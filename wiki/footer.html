@@ -1,6 +1,6 @@
 <footer class="footer py-5 mt-5">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center flex-wrap">
+    <div class="row align-items-center">
       <div class="row g-0">
         <div class="col-auto">
           <img src="{{ url_for('static', filename='upload/footer/有小鱼的大标题.png') }}" alt="有小鱼的大标题" class="wukong-fish">
@@ -9,39 +9,38 @@
         <!-- Middle Part -->
         <div class="col-lg-3 col-12 schoolInfo">
           <!-- University -->
-          <div class="row align-items-center mb-3">
-            <div class="col-4 text-end">
-              <img src="{{ url_for('static', filename='upload/footer/logo黑色.png') }}" alt="ECUST Logo" class="img-fluid"
-                style="max-height: 70px;">
-            </div>
-            <div class="col-8 text-start">
-              <h6 class="fw-bold mb-0">EAST CHINA UNIVERSITY OF</h6>
-              <h6 class="fw-bold mb-0">SCIENCE AND TECHNOLOGY</h6>
+          <div class="d-flex align-items-center mb-3">
+            <img src="{{ url_for('static', filename='upload/footer/logo黑色.png') }}" alt="logo黑色"
+              class="me-2 footer-logo">
+            <div>
+              <h6 class="fw-bold schoolInfo-text">EAST CHINA UNIVERSITY OF</h6>
+              <h6 class="fw-bold schoolInfo-text">SCIENCE AND TECHNOLOGY</h6>
             </div>
           </div>
 
           <!-- School -->
-          <div class="row align-items-center">
-            <div class="col-4 text-end">
-              <img src="{{ url_for('static', filename='upload/footer/生工logo黑色.png') }}" alt="Biotech Logo"
-                class="img-fluid" style="max-height: 70px;">
-            </div>
-            <div class="col-8 text-start">
-              <h6 class="fw-bold mb-0">SCHOOL OF</h6>
-              <h6 class="fw-bold mb-0">BIOTECHNOLOGY</h6>
+          <div class="d-flex align-items-center">
+            <img src="{{ url_for('static', filename='upload/footer/生工logo黑色.png') }}" alt="生工logo黑色"
+              class="me-2 footer-logo">
+            <div>
+              <h6 class="fw-bold mb-0 schoolInfo-text">SCHOOL OF BIOTECHNOLOGY</h6>
             </div>
           </div>
+
         </div>
 
 
         <div class="col-lg-3 col-xs-12 contactInfo">
-          <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-          <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-          <p class="mb-0">(541) 754-3010</p>
-          <p>info@hsdf.com</p>
+          <h6 class="contactInfo-text">FOLLOW OR CONTACT</h6>
+          <img src="{{ url_for('static', filename='upload/footer/微信.png') }}" alt="微信" class="wechat-icon me-2">
+          <img src="{{ url_for('static', filename='upload/footer/b站黑色.png') }}" alt="b站黑色" class="bilibili-icon me-2">
+          <H6 class="contactInfo-text">ECUST_China@outlook.com</H6>
         </div>
+
+
       </div>
-      <hr />
+
+
       <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
       <div class="row mt-4">
         <div class="col">
