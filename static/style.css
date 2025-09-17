@@ -2,7 +2,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -12,14 +12,14 @@ a {
 
 @font-face {
     font-family: "Agency FB";
-    src: url("{{ url_for('static', filename='upload/fonts/AgencyFB-Regular.ttf') }}") format("truetype");
+    src: url("/static/fonts/AGENCYR.TTF") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Agency FB";
-    src: url("{{ url_for('static', filename='upload/fonts/AgencyFB-Bold.ttf') }}") format("truetype");
+    src: url("/static/fonts/AGENCYB.TTF") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
@@ -86,7 +86,7 @@ body {
 /* footer */
 footer {
     width: 1440px;
-    height: 236px;
+    min-height: 236px;
     left: 1px;
     top: 4485px;
     background-image: url(../static/upload/footer/IMG_8645.png), url(../static/upload/footer/素材姬_2.png);
@@ -117,23 +117,31 @@ footer {
 }
 
 .schoolInfo {
-    margin: auto;
     margin-top: 33px;
     margin-left: 53px;
     word-break: normal !important;
     overflow-wrap: normal !important;
     white-space: nowrap;
     padding-bottom: 0;
+    max-width: 50px;
+    white-space: 1px;
+}
+
+.schoolInfo .middle-university {
+    margin-top: -25px;
+}
+
+.schoolInfo .middle-school {
+    margin-top: 10px;
 }
 
 .schoolInfo .schoolInfo-text {
     font-family: "Agency FB", sans-serif;
     font-size: 27px;
     font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0;
     color: #000000;
-    padding-bottom: 0;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .footer-logo {
@@ -143,34 +151,37 @@ footer {
 
 .contactInfo {
     position: relative;
-    margin: auto;
-    margin-top: 0;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 45px;
+    gap: 2px;
+    z-index: 999;
 }
 
 .contactInfo .contactInfo-text {
     font-family: "Agency FB", sans-serif;
     font-size: 30px;
     font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0%;
-    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.contactInfo .wechat-icon,
-.contactInfo .bilibili-icon {
-    vertical-align: middle;
+.contact-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .contactInfo .wechat-icon {
-    width: 36px;
-    height: 33px;
-    padding-right: 4px;
+    width: 30px;
+    height: 30px;
 }
 
 .contactInfo .bilibili-icon {
-    width: 35px;
-    height: 37px;
+    width: 30px;
+    height: 30px;
 }
 
 .contactInfo::after {
@@ -181,11 +192,11 @@ footer {
     width: 240px;
     height: 185px;
     background: url(../static/upload/footer/鱼1.png) no-repeat center/contain;
-    z-index: 9999;
+    z-index: 0;
     transform: rotate(151.44deg);
     pointer-events: none;
 }
 
-license {
-    margin-top: auto;
+.license {
+    margin-bottom: 100px;
 }

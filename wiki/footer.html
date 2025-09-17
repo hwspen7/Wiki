@@ -1,23 +1,23 @@
 <footer class="footer">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center justify-content-between">
       <div class="col-auto">
         <img src="{{ url_for('static', filename='upload/footer/有小鱼的大标题.png') }}" alt="有小鱼的大标题" class="wukong-fish">
       </div>
 
       <!-- Middle Part -->
-      <div class="col-lg-2 schoolInfo">
+      <div class="col-lg-3 col-md-4 schoolInfo">
         <!-- University -->
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center middle-university">
           <img src="{{ url_for('static', filename='upload/footer/logo黑色.png') }}" alt="logo黑色" class="me-2 footer-logo">
-          <div>
+          <div class="icon-adjust">
             <h6 class="schoolInfo-text">EAST CHINA UNIVERSITY OF</h6>
             <h6 class=" schoolInfo-text">SCIENCE AND TECHNOLOGY</h6>
           </div>
         </div>
 
         <!-- School -->
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center middle-school">
           <img src="{{ url_for('static', filename='upload/footer/生工logo黑色.png') }}" alt="生工logo黑色"
             class="me-2 footer-logo">
           <div>
@@ -28,20 +28,22 @@
       </div>
 
 
-      <div class="col-lg-2 col-xs-12 contactInfo">
+      <div class="col-lg-3 col-xs-12 ms-auto contactInfo">
         <h6 class="contactInfo-text">FOLLOW OR CONTACT</h6>
-        <img src="{{ url_for('static', filename='upload/footer/微信.png') }}" alt="微信" class="wechat-icon me-2">
-        <img src="{{ url_for('static', filename='upload/footer/b站黑色.png') }}" alt="b站黑色" class="bilibili-icon me-2">
+        <div class="contact-icons">
+          <img src="{{ url_for('static', filename='upload/footer/微信.png') }}" alt="微信" class="wechat-icon me-2">
+          <img src="{{ url_for('static', filename='upload/footer/b站黑色.png') }}" alt="b站黑色" class="bilibili-icon me-2">
+        </div>
         <H6 class="contactInfo-text">ECUST_China@outlook.com</H6>
       </div>
 
       <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
       <div class="row mt-4 license">
         <div class="col text-center">
-          <p class="mb-0"><small>© 2025 - Content on this site is licensed under a <a class="subfoot"
+          <p class="mb-0 lh-1"><small>© 2025 - Content on this site is licensed under a <a class="subfoot"
                 href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0
                 International license</a>.</small></p>
-          <p class="mb-0"><small>The repository used to create this website is available at <a
+          <p class="mb-0 lh-1"><small>The repository used to create this website is available at <a
                 href="https://gitlab.igem.org/2025/ecust-china">gitlab.igem.org/2025/ecust-china</a>.</small></p>
         </div>
       </div>
