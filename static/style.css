@@ -89,17 +89,29 @@ footer {
     left: 1px;
     top: 4485px;
     background-image: url(../static/upload/footer/IMG_8645.png), url(../static/upload/footer/素材姬_2.png);
-    background-size: 320px 280px, cover;
-    background-position: -20px, bottom center;
+    background-size: 311px 300px, cover;
+    background-position: -36px -41px, bottom center;
     background-color: #E6AA27;
     background-repeat: no-repeat, no-repeat;
+
+    margin-top: 0 !important;
+    /* 去掉外边距 */
+    padding-top: 0 !important;
+    /* 去掉内边距 */
+    padding-bottom: 0 !important;
+}
+
+.footer .license {
+    margin-top: -8px !important;
+    /* 不要往上推 */
+    padding-top: 0 !important;
 }
 
 .wukong-fish {
-    width: 302px;
-    height: 149px;
-    margin-left: 99px;
-    margin-top: -1px;
+    width: 315px;
+    height: 161px;
+    margin-left: 81px;
+    margin-top: 34px;
     padding-right: 0 !important;
 }
 
@@ -168,4 +180,8 @@ footer {
     z-index: 9999;
     transform: rotate(151.44deg);
     pointer-events: none;
+}
+
+license {
+    margin-top: auto;
 }
