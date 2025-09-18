@@ -209,7 +209,6 @@ footer {
 
 /* 留白 */
 .license {
-    margin-bottom: 100px;
     font-family: 'ABeeZee', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -217,4 +216,8 @@ footer {
     line-height: 100%;
     letter-spacing: 0;
     text-align: center;
+}
+
+.license .col {
+    padding-top: 8px;
 }
