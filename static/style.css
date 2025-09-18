@@ -24,6 +24,20 @@ a {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('/static/fonts/ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('/static/fonts/ABeeZee-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
 body {
     padding-top: 56px;
     margin: 0 auto;
@@ -83,6 +97,7 @@ body {
 }
 
 /* footer */
+/* Background */
 footer {
     width: 1440px;
     height: 236px;
@@ -103,6 +118,7 @@ footer {
     padding-top: 0px !important;
 }
 
+/* Left Part */
 .wukong-fish {
     width: 315px;
     height: 161px;
@@ -111,6 +127,7 @@ footer {
     padding-right: 0 !important;
 }
 
+/* Middle Part */
 .schoolInfo {
     margin-top: 33px;
     margin-left: 53px;
@@ -144,6 +161,7 @@ footer {
     width: 67px;
 }
 
+/* Right Part */
 .contactInfo {
     position: relative;
     display: flex;
@@ -169,15 +187,12 @@ footer {
     align-items: center;
 }
 
-.contactInfo .wechat-icon {
-    width: 30px;
-    height: 30px;
-}
-
+.contactInfo .wechat-icon,
 .contactInfo .bilibili-icon {
     width: 30px;
     height: 30px;
 }
+
 
 .contactInfo::after {
     content: "";
@@ -188,11 +203,18 @@ footer {
     height: 185px;
     background: url(../static/upload/footer/鱼1.png) no-repeat center/contain;
     z-index: 0;
-    transform: rotate(151.44deg);
+    transform: rotate(60deg) scaleX(-1);
     pointer-events: none;
 }
 
 /* 留白 */
 .license {
     margin-bottom: 100px;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
 }
