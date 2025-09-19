@@ -10,6 +10,15 @@ a {
     color: #000000;
 }
 
+/* Header Fonts */
+@font-face {
+    font-family: "Inknut Antiqua";
+    src: url("/static/fonts/InknutAntiqua-Regular.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Footer Fonts */
 @font-face {
     font-family: "Agency FB";
     src: url("/static/fonts/AGENCYR.TTF") format("truetype");
@@ -37,6 +46,101 @@ a {
     font-weight: 400;
     font-style: italic;
 }
+
+/* Header */
+.navbar .nav-link {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #EAF2FB;
+
+    display: flex;
+    align-items: center;
+    height: 94px;
+    line-height: 1;
+}
+
+.custom-navbar {
+    background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
+    height: 94px;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+}
+
+.home-link::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("/static/upload/header/home-link.svg") no-repeat center/contain;
+    position: relative;
+    top: -2px;
+    -webkit-mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
+    mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
+    background-color: currentColor;
+}
+
+.nav-link:hover {
+    color: #FFF4D9;
+}
+
+.team-link::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
+
+    position: relative;
+    top: -2px;
+}
+
+.project-link::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
+
+    position: relative;
+    top: -2px;
+}
+
+.lab-link::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
+
+    position: relative;
+    top: -2px;
+}
+
+.human-practices-link::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
+
+    position: relative;
+    top: -2px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
 
 body {
     padding-top: 56px;
@@ -96,7 +200,7 @@ body {
     border-left-color: #d9534f
 }
 
-/* footer */
+/* Footer */
 /* Background */
 footer {
     width: 1440px;
