@@ -60,9 +60,37 @@ a {
     line-height: 1;
 }
 
+.logo-wraper {
+    position: relative;
+    width: 220px;
+    height: 120px;
+}
+
+.logo-left {
+    position: absolute;
+    top: 6px;
+    left: 132px;
+    width: 94px;
+    height: 94px;
+}
+
+.logo-right {
+    position: absolute;
+    top: 21px;
+    left: 196px;
+    width: 120px;
+    height: 63px;
+    z-index: 1;
+}
+
+
 .custom-navbar {
     background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
     height: 94px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
 }
 
 .home-link {
