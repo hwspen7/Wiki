@@ -69,15 +69,15 @@ a {
 .logo-left {
     position: absolute;
     top: 6px;
-    left: 132px;
+    left: 6%;
     width: 94px;
     height: 94px;
 }
 
 .logo-right {
     position: absolute;
-    top: 21px;
-    left: 196px;
+    top: 20px;
+    left: 10%;
     width: 120px;
     height: 63px;
     z-index: 1;
