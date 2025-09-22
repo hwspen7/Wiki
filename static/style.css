@@ -109,7 +109,15 @@ a {
     transform: translateX(-50%);
     display: none;
     z-index: 2000;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url("/static/upload/header_individual/common-background.PNG");
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            /* 顶部透明 */
+            rgba(0, 0, 0, 0.6) 60%,
+            /* 中间开始加深 */
+            rgba(0, 0, 0, 1) 100%),
+        /* 底部完全黑 */
+        url("/static/upload/header_individual/common-background.PNG");
     background-size: 100% 360px, 100% 360px;
     background-position: center top, center top;
     background-repeat: no-repeat, no-repeat;
