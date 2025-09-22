@@ -7,7 +7,6 @@
     margin-top: 10px;
 }
 
-/* 左边标题 */
 .project-title h2 {
     font-size: 28px;
     font-weight: 400;
@@ -20,35 +19,28 @@
     margin: 0;
 }
 
-/* dl 右侧整体 */
 .project-links dl {
     margin: 0;
     padding: 0;
 }
 
-/* 大标题（dt） */
 .project-links dt {
     display: inline-block;
-    /* 让边框只包裹内容 */
     font-size: 22px;
     font-weight: 700;
     border-bottom: 2px solid #D4A76A;
     margin-bottom: 15px;
     padding-bottom: 5px;
     padding-right: 20px;
-    /* 右边额外留一点，让线条更长 */
     color: #D4A76A;
 }
 
-/* 小项（dd） */
 .project-links dd {
     margin: 0 0 15px 0;
-    /* 下方间距 */
     display: flex;
     align-items: flex-start;
 }
 
-/* 小项前的图标 */
 .project-links dd::before {
     content: "";
     display: inline-block;
@@ -60,7 +52,6 @@
     flex-shrink: 0;
 }
 
-/* 链接样式 */
 .project-links a {
     font-size: 20px;
     text-decoration: none;
@@ -70,5 +61,4 @@
 
 .project-links a:hover {
     color: #FEEFC5;
-    /* hover 效果 */
 }

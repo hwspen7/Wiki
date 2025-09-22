@@ -19,15 +19,14 @@
       <ul class="navbar-nav ml-auto left-aligned">
 
         <!-- HOME -->
-        <li class="nav-item">
+        <li class="nav-item mega-trigger">
           <a class="nav-link home-link" href="{{ url_for('home') }}">HOME</a>
         </li>
 
         <!-- TEAM -->
         <li class="nav-item position-relative mega-trigger">
           <a class="nav-link team-link" href="#">TEAM</a>
-          <div class="mega-menu">
-            {% include "Header/header_team.html" %}
+          <div>
           </div>
         </li>
 
