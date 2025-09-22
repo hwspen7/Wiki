@@ -142,8 +142,7 @@ a {
     margin-right: 2px;
     background: url("/static/upload/header/home-link.svg") no-repeat center/contain;
     position: relative;
-    top: -2px;
-    -webkit-mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
+    top: -1px;
     mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
     background-color: currentColor;
 }
@@ -161,7 +160,7 @@ a {
     background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
 
     position: relative;
-    top: -2px;
+    top: 0;
 }
 
 .project-link::before {
@@ -173,7 +172,7 @@ a {
     background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
 
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 
 .lab-link::before {
@@ -185,7 +184,7 @@ a {
     background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
 
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 
 .human-practices-link::before {
@@ -275,7 +274,7 @@ footer {
     background-position: -36px -41px, bottom center;
     background-color: #E6AA27;
     background-repeat: no-repeat, repeat;
-
+    margin: 0 auto;
     margin-top: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
