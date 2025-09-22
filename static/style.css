@@ -98,6 +98,9 @@ a {
     margin-right: 30px;
 }
 
+/* Underline */
+
+
 /* Small Individual Parts */
 .mega-menu {
     position: fixed;
@@ -117,6 +120,8 @@ a {
 
 .mega-trigger:hover .mega-menu {
     display: block;
+
+
 }
 
 .project-section {
@@ -143,8 +148,6 @@ a {
     background: url("/static/upload/header/home-link.svg") no-repeat center/contain;
     position: relative;
     top: -1px;
-    mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
-    background-color: currentColor;
 }
 
 .nav-link:hover {
@@ -157,10 +160,9 @@ a {
     width: 20px;
     height: 20px;
     margin-right: 2px;
-    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
-
     position: relative;
     top: 0;
+    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
 }
 
 .project-link::before {
@@ -168,11 +170,10 @@ a {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
-
+    margin-right: 1px;
     position: relative;
     top: -1px;
+    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
 }
 
 .lab-link::before {
@@ -180,23 +181,20 @@ a {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
-
+    margin-right: 1px;
     position: relative;
     top: -1px;
+    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
 }
 
-.human-practices-link::before {
+.human-practice-link::before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
-
     position: relative;
-    top: -2px;
+    top: -1px;
+    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
 }
 
 .dropdown-toggle::after {

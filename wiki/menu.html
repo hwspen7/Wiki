@@ -44,25 +44,18 @@
 
 
         <!-- LAB -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle lab-link" href="#" id="navbar-wet-lab" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            LAB
-          </a>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link lab-link" href="#">LAB</a>
           <div class="mega-menu">
-            <iframe src="/static/Header/header_lab.html" title="Project Section"></iframe>
-            <div class="overlay"></div>
+            {% include "Header/header_lab.html" %}
           </div>
         </li>
 
         <!-- HUMAN PRACTICES -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle human-practices-link" href="#" id="navbar-engagement" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            HUMAN PRACTICES
-          </a>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link human-practice-link" href="#">HUMAN PRACTICE</a>
           <div class="mega-menu">
-            <iframe src="/static/Header/header_human_practice.html" title="Project Section"></iframe>
+            {% include "Header/header_human_practice.html" %}
           </div>
         </li>
 
