@@ -87,11 +87,47 @@ a {
 .custom-navbar {
     background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
     height: 94px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3000;
 }
 
 .navbar-nav .nav-item {
     margin-right: 30px;
 }
+
+/* Small Individual Parts */
+.mega-menu {
+    position: fixed;
+    top: 94px;
+    left: 50%;
+    width: 1440px;
+    height: 1024px;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 2000;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.7) 30%,
+            rgba(0, 0, 0, 0.3) 60%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.mega-trigger:hover .mega-menu {
+    display: block;
+}
+
+.project-section {
+    position: relative;
+    padding: 40px;
+    color: #e6d3af;
+    font-family: 'Times New Roman', serif;
+    z-index: 1;
+}
+
+
 
 .home-link {
     display: flex;
@@ -173,8 +209,8 @@ a {
 body {
     padding-top: 56px;
     margin: 0 auto;
-    width: 1441px;
-    max-width: 1441px;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
