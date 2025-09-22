@@ -98,10 +98,8 @@ a {
     margin-right: 30px;
 }
 
-/* Underline */
 
-
-/* Small Individual Parts */
+/* Dropdown Menu */
 .mega-menu {
     position: fixed;
     top: 94px;
@@ -118,12 +116,32 @@ a {
             rgba(0, 0, 0, 0) 100%);
 }
 
-.mega-trigger:hover .mega-menu {
-    display: block;
-
-
+/* Underline */
+.mega-trigger {
+    position: relative;
+    display: inline-block;
 }
 
+.mega-trigger::after {
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    left: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #e6d3af;
+    transition: width 0.4s ease;
+}
+
+.mega-trigger:hover::after {
+    width: 100%;
+}
+
+.mega-trigger:hover .mega-menu {
+    display: block;
+}
+
+/* Dropdown Menu Style */
 .project-section {
     position: relative;
     padding: 40px;
@@ -133,7 +151,7 @@ a {
 }
 
 
-
+/* Navigator Section */
 .home-link {
     display: flex;
     align-items: center;
@@ -202,7 +220,7 @@ a {
 }
 
 
-
+/* Body Section */
 body {
     padding-top: 56px;
     margin: 0 auto;
