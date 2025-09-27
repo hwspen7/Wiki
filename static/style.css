@@ -285,9 +285,9 @@ footer {
     width: 1440px;
     height: 236px;
     left: 1px;
-    background-image: url(../static/upload/footer/IMG_8645.png), url(../static/upload/footer/素材姬_2.png);
-    background-size: 311px 300px, cover;
-    background-position: -36px -41px, bottom center;
+    background-image: url(../static/upload/footer/footerlogo.png), url(../static/upload/footer/footerbackground.png);
+    background-size: 213px 194px, cover;
+    background-position: 11px -11px, bottom center;
     background-color: #E6AA27;
     background-repeat: no-repeat, repeat;
     margin: 0 auto;
