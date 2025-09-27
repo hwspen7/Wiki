@@ -87,7 +87,6 @@ a {
 .custom-navbar {
     background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
     height: 94px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
