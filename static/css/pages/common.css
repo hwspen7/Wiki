@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header.bg-hero {
+    display: none !important;
+}
+
 @font-face {
     font-family: "Inknut Antiqua";
     src: url("/static/fonts/InknutAntiqua-Regular.ttf") format("truetype");
@@ -16,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: black;
+    background-color: black !important;
     font-family: "Inknut Antiqua", serif;
 }
 
@@ -53,26 +57,27 @@ body {
 
 .overlay-text {
     position: absolute;
-    top: 50%;
+    top: 38%;
     right: 10%;
     transform: translateY(-100%);
     text-align: right;
-    color: #f5deb3;
 }
 
 .overlay-text h3 {
-    font-size: 1.5rem;
+    font-size: 48px;
     margin: 0;
-    color: #FFD700;
+    color: #EBCF9C;
 }
 
 .overlay-text h1 {
-    font-size: 3rem;
+    font-size: 64px;
     margin: 0;
     font-weight: bold;
+    color: #D3B68F;
 }
 
 /* 
+
  */
 
 .stage {
@@ -204,9 +209,9 @@ body {
     min-height: 707px;
     background: #fbf8f0;
     color: #222;
-    border: none;
+    border: 3px solid #DFB155;
     border-radius: 26px;
-    padding: 28px 32px 48px;
+    padding: 28px 40px 28px 40px;
     position: relative;
     box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
     overflow: visible;
@@ -244,8 +249,8 @@ p {
 /* Go back to the top */
 .logo-ring {
     position: fixed;
-    top: 150px;
-    left: 1240px;
+    top: 600px;
+    left: 1250px;
     transform: translate(46px, 0);
     z-index: 1000;
     pointer-events: auto;
@@ -258,7 +263,7 @@ p {
 .logo-ring::before {
     content: "";
     position: absolute;
-    inset: 1%;
+    inset: 3%;
     background: url("/static/upload/page/up.png") center/contain no-repeat;
     border-radius: 50%;
     z-index: 2;
@@ -268,7 +273,7 @@ p {
 .logo-ring::after {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 3%;
     background: url("/static/upload/page/upsurround.png") center/contain no-repeat;
     border-radius: 50%;
     animation: spin 6s linear infinite;
