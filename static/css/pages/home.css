@@ -198,3 +198,17 @@ body {
     margin-top: -480px;
     z-index: 2;
 }
+
+/* Third Section */
+.two-columns {
+    display: flex;
+    /* 并排 */
+    justify-content: center;
+    /* 水平居中 */
+    gap: 40px;
+    /* 卡片之间的间距 */
+    margin: 60px auto;
+    /* 外边距 */
+    max-width: 1200px;
+    /* 最大宽度 */
+}
