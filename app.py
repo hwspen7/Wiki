@@ -36,6 +36,11 @@ def members():
 def hardware():
     return render_template("pages/hardware.html")
 
+# Team
+@app.route("/team")
+def team():
+    return render_template("pages/team.html")
+
 @app.route('/<page>')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
