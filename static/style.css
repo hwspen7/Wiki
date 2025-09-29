@@ -282,6 +282,7 @@ body {
 /* Background */
 footer {
     width: 1440px;
+    max-width: 1920px;
     height: 236px;
     left: 1px;
     background-image: url(../static/upload/footer/footerlogo.png), url(../static/upload/footer/footerbackground.png);
