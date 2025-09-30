@@ -58,8 +58,8 @@ body {
 
 .delimeter-com {
     display: block;
-    width: 606px;
-    height: 56px;
+    width: 1250px;
+    height: 85px;
     margin: 0 auto 20px auto;
     position: relative;
     z-index: 10;
@@ -191,7 +191,8 @@ body {
 }
 
 /* Video 1 */
-.video-box {
+.video-box-1 {
+    width: 1920px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -200,15 +201,120 @@ body {
 }
 
 /* Third Section */
+
+.title-1 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 96px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -20px;
+}
+
+.title-2 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+
 .two-columns {
     display: flex;
     /* 并排 */
     justify-content: center;
     /* 水平居中 */
-    gap: 40px;
+    gap: 50px;
     /* 卡片之间的间距 */
-    margin: 60px auto;
+    margin: 60px auto 100px auto;
     /* 外边距 */
     max-width: 1200px;
     /* 最大宽度 */
+}
+
+
+.left-card {
+    width: 588px;
+    height: 707px;
+    top: 1150px;
+    right: 193px;
+    z-index: 6;
+}
+
+.video-box-2 {
+    padding-top: 570px;
+    width: 1920px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -480px;
+    z-index: 2;
+}
+
+.card {
+    width: 1201px;
+    height: 707px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+
+    /* 外层金色边框 */
+    background:
+        /* 边 */
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+    background-color: black;
+    overflow: hidden;
+    /* 裁切内部溢出 */
+}
+
+.card-video {
+    position: absolute;
+    left: 19px;
+    width: 97%;
+    height: 100%;
+    object-fit: contain;
+
+    /* 裁切出和边框一致的四角内凹 */
+    clip-path: polygon(30px 0, calc(100% - 30px) 0, 100% 30px,
+            100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%,
+            0 calc(100% - 30px), 0 30px);
+}
+
+.eigth-section {
+    position: relative;
+}
+
+.part-3 {
+    width: 1201px;
+    height: 707px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
 }
