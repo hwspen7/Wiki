@@ -1,0 +1,56 @@
+.project-section {
+    position: relative;
+    padding: 60px 80px;
+    min-height: 500px;
+    color: #D4A76A;
+    font-family: "Inknut Antiqua", serif;
+}
+
+/* Left Side */
+.project-title h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: "Inknut Antiqua", serif;
+}
+
+.project-title h1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+    font-family: "Inknut Antiqua", serif;
+}
+
+/* Right Side */
+.project-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-links li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-links li::before {
+    content: url("/static/upload/header_individual/psychology.svg");
+    display: inline-block;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.project-links a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #D4A76A;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #FEEFC5;
+}

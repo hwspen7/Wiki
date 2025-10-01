@@ -26,6 +26,21 @@ def serve():
 def home():
     return render_template('pages/home.html')
 
+# Templete
+@app.route("/members")
+def members():
+    return render_template("pages/members.html")
+
+# Hardware
+@app.route("/hardware")
+def hardware():
+    return render_template("pages/hardware.html")
+
+# Team
+@app.route("/team")
+def team():
+    return render_template("pages/team.html")
+
 @app.route('/<page>')
 def pages(page):
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')

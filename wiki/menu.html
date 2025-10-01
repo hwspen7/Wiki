@@ -1,8 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
   <div class="container">
 
     <!-- WUKONG -->
-    <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand" href="#">
+      <div class="logo-wrapper">
+        <img src="/static/upload/header/IMG_8645.png" alt="" class="logo-left">
+        <img src="/static/upload/header/白色.png" alt="" class="logo-right">
+      </div>
+    </a>
 
     <!-- SMALL SCREEN MENU ICON -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -14,66 +19,38 @@
       <ul class="navbar-nav ml-auto left-aligned">
 
         <!-- HOME -->
-        <li class="nav-item">
+        <li class="nav-item mega-trigger">
           <a class="nav-link home-link" href="{{ url_for('home') }}">HOME</a>
         </li>
 
         <!-- TEAM -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle team-link" href="#" id="navbar-team" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            TEAM
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-team">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='members') }}">Members</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
-          </ul>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link team-link" href="{{url_for('team')}}">TEAM</a>
         </li>
 
         <!-- PROJECT -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle project-link" href="#" id="navbar-project" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            PROJECT
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-project">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">PROJECT Description</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">APPLICATIONS</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">CONTRIBUTION</a></li>
-          </ul>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link project-link" href="#">PROJECT</a>
+          <div class="mega-menu">
+            {% include "Header/header_project.html" %}
+          </div>
         </li>
 
+
         <!-- LAB -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle lab-link" href="#" id="navbar-wet-lab" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            LAB
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-wet-lab">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='safety-and-security') }}">Safety and
-                Security</a></li>
-          </ul>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link lab-link" href="#">LAB</a>
+          <div class="mega-menu">
+            {% include "Header/header_lab.html" %}
+          </div>
         </li>
 
         <!-- HUMAN PRACTICES -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle human-practices-link" href="#" id="navbar-engagement" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            HUMAN PRACTICES
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbar-engagement">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a>
-            </li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainability') }}">Sustainability</a></li>
-          </ul>
+        <li class="nav-item position-relative mega-trigger">
+          <a class="nav-link human-practice-link" href="#">HUMAN PRACTICE</a>
+          <div class="mega-menu">
+            {% include "Header/header_human_practice.html" %}
+          </div>
         </li>
 
       </ul>

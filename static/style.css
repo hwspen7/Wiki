@@ -60,11 +60,104 @@ a {
     line-height: 1;
 }
 
-.custom-navbar {
-    background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
+.logo-wraper {
+    position: relative;
+    width: 220px;
+    height: 120px;
+}
+
+.logo-left {
+    position: absolute;
+    top: 6px;
+    left: 6%;
+    width: 94px;
     height: 94px;
 }
 
+.logo-right {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 120px;
+    height: 63px;
+    z-index: 1;
+}
+
+
+.custom-navbar {
+    background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
+    height: 94px;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    max-width: 1920px;
+    z-index: 3000;
+    margin: 0 auto;
+    /* 居中关键 */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+
+/* Dropdown Menu */
+.mega-menu {
+    position: fixed;
+    top: 94px;
+    left: 50%;
+    width: 1440px;
+    height: 1024px;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 2000;
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.3) 30%,
+            /* 顶部透明 */
+            rgba(0, 0, 0, 0.6) 60%,
+            /* 中间开始加深 */
+            rgba(0, 0, 0, 1) 100%),
+        /* 底部完全黑 */
+        url("/static/upload/header_individual/common-background.PNG");
+    background-size: 100% 360px, 100% 360px;
+    background-position: center top, center top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+/* Underline */
+.mega-trigger {
+    position: relative;
+    display: inline-block;
+}
+
+.mega-trigger::after {
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    left: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #e6d3af;
+    transition: width 0.4s ease;
+}
+
+.mega-trigger:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu Style */
+.project-section {
+    position: relative;
+    padding: 40px;
+    color: #e6d3af;
+    font-family: 'Times New Roman', serif;
+    z-index: 1;
+}
+
+
+/* Navigator Section */
 .home-link {
     display: flex;
     align-items: center;
@@ -78,10 +171,7 @@ a {
     margin-right: 2px;
     background: url("/static/upload/header/home-link.svg") no-repeat center/contain;
     position: relative;
-    top: -2px;
-    -webkit-mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
-    mask: url("/static/upload/header/home-link.svg") no-repeat center / contain;
-    background-color: currentColor;
+    top: -1px;
 }
 
 .nav-link:hover {
@@ -94,10 +184,9 @@ a {
     width: 20px;
     height: 20px;
     margin-right: 2px;
-    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
-
     position: relative;
-    top: -2px;
+    top: 0;
+    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
 }
 
 .project-link::before {
@@ -105,11 +194,10 @@ a {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
-
+    margin-right: 1px;
     position: relative;
-    top: -2px;
+    top: -1px;
+    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
 }
 
 .lab-link::before {
@@ -117,36 +205,29 @@ a {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
-
+    margin-right: 1px;
     position: relative;
-    top: -2px;
+    top: -1px;
+    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
 }
 
-.human-practices-link::before {
+.human-practice-link::before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 2px;
-    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
-
     position: relative;
-    top: -2px;
-}
-
-.dropdown-toggle::after {
-    display: none;
+    top: -1px;
+    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
 }
 
 
-
+/* Body Section */
 body {
     padding-top: 56px;
     margin: 0 auto;
-    width: 1441px;
-    max-width: 1441px;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -159,7 +240,7 @@ body {
 }
 
 .bg-hero {
-    background-color: #45b06cff;
+    background-color: #343a40;
 }
 
 /* CALLOUT */
@@ -167,7 +248,7 @@ body {
     padding: 1.25rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    border: 1px solid #e9ecef;
+    border: 1px solid black;
     border-left-width: .25rem;
     border-radius: .25rem
 }
@@ -204,14 +285,15 @@ body {
 /* Background */
 footer {
     width: 1440px;
+    max-width: 1920px;
     height: 236px;
     left: 1px;
-    background-image: url(../static/upload/footer/IMG_8645.png), url(../static/upload/footer/素材姬_2.png);
-    background-size: 311px 300px, cover;
-    background-position: -36px -41px, bottom center;
+    background-image: url(../static/upload/footer/footerlogo.png), url(../static/upload/footer/footerbackground.png);
+    background-size: 213px 194px, cover;
+    background-position: 11px -11px, bottom center;
     background-color: #E6AA27;
     background-repeat: no-repeat, repeat;
-
+    margin: 0 auto;
     margin-top: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;

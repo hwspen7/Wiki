@@ -1,0 +1,416 @@
+header.bg-hero {
+    display: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Abhaya Libre";
+    src: url("/static/fonts/AbhayaLibre-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: black;
+    font-family: "Inknut Antiqua", serif;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    z-index: 0;
+}
+
+
+/* Container */
+.container {
+    width: 1440px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    aspect-ratio: 19 / 7;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+/* Section ONE */
+.first-section {
+    width: 100%;
+    background: url("/static/upload/home/longbackground.png") no-repeat center top;
+    background-size: contain;
+    position: relative;
+    padding: 50px 0;
+    z-index: 10;
+}
+
+.fg-img {
+    display: block;
+    width: 783px;
+    height: 485px;
+    margin: 1990px auto -32px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.delimeter-com {
+    display: block;
+    width: 1250px;
+    height: 85px;
+    margin: 0 auto 20px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.wukong-text {
+    text-align: center;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    z-index: 10;
+
+
+}
+
+/* Section TWO */
+.second-section {
+    margin-top: -100px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.second-section .ocean-bg {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/static/upload/home/ocean.png") no-repeat center top;
+    background-size: contain;
+    z-index: 0;
+}
+
+.second-section img {
+    display: block;
+    margin: 60px 0 100px 0;
+    /* 每张图之间的间距 */
+    width: 800px;
+    max-width: 90%;
+    /* 小屏幕适配 */
+    position: relative;
+    z-index: 1;
+}
+
+.second-section .peoandfish {
+    top: 988px;
+    left: 0px;
+}
+
+.second-section .medicine {
+    width: 1037px;
+    height: 836px;
+    top: 590px;
+    right: -730px;
+}
+
+.second-section .peoeatfish {
+    transform: scaleX(-1);
+    width: 1200px;
+    top: -235px;
+    left: -48px;
+}
+
+.insert-circle {
+    position: absolute;
+    display: grid;
+    width: 950px;
+    height: 388px;
+    place-items: center;
+    text-align: center;
+    line-height: 55px;
+
+    /* Fonts */
+    color: #FFF4D9;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Left */
+.part-1 {
+    top: 1534px;
+    left: 45px;
+    z-index: 7;
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat,
+
+        /* Background Color change */
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+/* Right */
+.part-2 {
+    width: 742px;
+    height: 420px;
+    top: 1150px;
+    left: 1193px;
+    z-index: 6;
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+}
+
+/* Video 1 */
+.video-box-1 {
+    width: 1440px;
+    max-width: 1920px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -480px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Third Section */
+
+.title-1 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 96px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -20px;
+}
+
+.title-2 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+
+.two-columns {
+    display: flex;
+    /* 并排 */
+    justify-content: center;
+    /* 水平居中 */
+    gap: 50px;
+    /* 卡片之间的间距 */
+    margin: 60px auto 100px auto;
+    /* 外边距 */
+    max-width: 1200px;
+    /* 最大宽度 */
+}
+
+
+.left-card {
+    width: 588px;
+    height: 707px;
+    top: 1150px;
+    right: 193px;
+    z-index: 6;
+}
+
+.video-box-2 {
+    padding-top: 570px;
+    width: 100%;
+    /* 改成自适应 */
+    max-width: 1920px;
+    /* 最大不能超过 1920px */
+    margin: 0 auto;
+    /* 自动居中 */
+    display: flex;
+    justify-content: center;
+    margin-top: -480px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.card {
+    width: 1201px;
+    height: 707px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+
+    /* 外层金色边框 */
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+    background-color: black;
+    overflow: hidden;
+}
+
+.card-video {
+    position: absolute;
+    left: 19px;
+    width: 97%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.eigth-section {
+    position: relative;
+}
+
+.video-fifth {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.factory-farming {
+    width: 1226px;
+    display: block;
+    /* 让图片变成块级元素 */
+    margin: 0 auto;
+    /* 左右自动外边距，居中 */
+    max-width: 100%;
+    /* 可选，防止图片溢出容器 */
+    height: auto;
+    /* 保持比例 */
+    margin-bottom: 100px;
+}
+
+.part-3 {
+    width: 1188px;
+    height: 162px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+
+    /* Fonts */
+    color: #FFF4D9;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.video-box-6 {
+    width: 100%;
+    /* 外层始终占满宽度 */
+    display: flex;
+    /* 用 flex 居中子元素 */
+    justify-content: center;
+    align-items: center;
+    /* 如果要上下居中 */
+    margin: 0 auto;
+    /* 保证容器居中 */
+    z-index: 2;
+}
+
+.video-box-6 video,
+.video-box-6 img {
+    width: 1920px;
+    /* 跟父容器同宽 */
+    max-width: 1920px;
+    /* 不超过设计稿的宽度 */
+    height: auto;
+    /* 保持比例缩放 */
+    display: block;
+}
+
+/* Go back to the top */
+.logo-ring {
+    position: fixed;
+    /* 垂直居中 */
+    /* 页面宽度的 60% 处 */
+    transform: translateY(-50%, -50%);
+    /* 保证纵向居中 */
+    z-index: 1000;
+    pointer-events: auto;
+    width: 167px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+/* Up */
+.logo-ring::before {
+    content: "";
+    position: absolute;
+    inset: 3%;
+    background: url("/static/upload/page/up.png") center/contain no-repeat;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Upsurround */
+.logo-ring::after {
+    content: "";
+    position: absolute;
+    inset: 3%;
+    background: url("/static/upload/page/upsurround.png") center/contain no-repeat;
+    border-radius: 50%;
+    animation: spin 6s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
