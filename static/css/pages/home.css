@@ -120,6 +120,7 @@ body {
     height: 836px;
     top: 590px;
     right: -730px;
+    z-index: 7;
 }
 
 .second-section .peoeatfish {
