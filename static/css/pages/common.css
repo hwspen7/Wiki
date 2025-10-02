@@ -31,7 +31,7 @@ body {
     background: url("/static/upload/page/pagebackground1.png") no-repeat center center;
     background-size: contain;
 
-    max-width: 1440px !important;
+    max-width: 1920px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     margin: 0 !important;

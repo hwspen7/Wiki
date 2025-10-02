@@ -53,7 +53,7 @@ body {
     display: block;
     width: 783px;
     height: 485px;
-    margin: 1990px auto -32px auto;
+    margin: 1540px auto -32px auto;
     position: relative;
     z-index: 10;
 }
@@ -104,10 +104,8 @@ body {
 .second-section img {
     display: block;
     margin: 60px 0 100px 0;
-    /* 每张图之间的间距 */
     width: 800px;
     max-width: 90%;
-    /* 小屏幕适配 */
     position: relative;
     z-index: 1;
 }
@@ -134,8 +132,8 @@ body {
 .insert-circle {
     position: absolute;
     display: grid;
-    width: 950px;
-    height: 388px;
+    width: 860px;
+    height: 405px;
     place-items: center;
     text-align: center;
     line-height: 55px;
@@ -174,10 +172,10 @@ body {
 
 /* Right */
 .part-2 {
-    width: 742px;
-    height: 420px;
-    top: 1150px;
-    left: 1193px;
+    width: 770px;
+    height: 430px;
+    top: 1135px;
+    left: 620px;
     z-index: 6;
     background:
         /* Side */
@@ -192,6 +190,28 @@ body {
         radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
 }
 
+.peoandfish,
+.peoeatfish,
+.part-1 {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 1s ease-out;
+}
+
+.medicine,
+.part-2 {
+    opacity: 0;
+    transform: translateX(80px);
+    /* 从右边划入 */
+    transition: all 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 /* Video 1 */
 .video-box-1 {
     width: 1440px;
@@ -204,8 +224,8 @@ body {
     overflow: hidden;
 }
 
-/* Third Section */
 
+/* Third Section */
 .title-1 p {
     font-family: 'Abhaya Libre SemiBold', serif;
     font-size: 96px;
@@ -226,15 +246,10 @@ body {
 
 .two-columns {
     display: flex;
-    /* 并排 */
     justify-content: center;
-    /* 水平居中 */
     gap: 50px;
-    /* 卡片之间的间距 */
     margin: 60px auto 100px auto;
-    /* 外边距 */
     max-width: 1200px;
-    /* 最大宽度 */
 }
 
 
@@ -246,14 +261,44 @@ body {
     z-index: 6;
 }
 
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+/* 初始状态：隐藏在左右两边 */
+.left-card,
+.right-card {
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.left-card {
+    transform: translateX(-150px);
+}
+
+.right-card {
+    transform: translateX(150px);
+}
+
+.show .left-card,
+.show .right-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* Fourth Section */
 .video-box-2 {
     padding-top: 570px;
     width: 100%;
-    /* 改成自适应 */
     max-width: 1920px;
-    /* 最大不能超过 1920px */
     margin: 0 auto;
-    /* 自动居中 */
     display: flex;
     justify-content: center;
     margin-top: -480px;
@@ -261,38 +306,18 @@ body {
     overflow: hidden;
 }
 
-.card {
-    width: 1201px;
-    height: 707px;
-    position: relative;
+
+
+.video-box-3 {
+    padding-top: 570px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 0%);
-
-    /* 外层金色边框 */
-    background:
-        /* Side */
-        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
-        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
-        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
-        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
-        /* Corner */
-        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
-        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
-        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
-        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
-    background-color: black;
+    margin-top: -560px;
+    z-index: 2;
     overflow: hidden;
-}
-
-.card-video {
-    position: absolute;
-    left: 19px;
-    width: 97%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .eigth-section {
@@ -308,19 +333,15 @@ body {
 .factory-farming {
     width: 1226px;
     display: block;
-    /* 让图片变成块级元素 */
     margin: 0 auto;
-    /* 左右自动外边距，居中 */
     max-width: 100%;
-    /* 可选，防止图片溢出容器 */
     height: auto;
-    /* 保持比例 */
     margin-bottom: 100px;
 }
 
 .part-3 {
     width: 1188px;
-    height: 162px;
+    height: 215px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -352,65 +373,34 @@ body {
 
 .video-box-6 {
     width: 100%;
-    /* 外层始终占满宽度 */
     display: flex;
-    /* 用 flex 居中子元素 */
     justify-content: center;
     align-items: center;
-    /* 如果要上下居中 */
     margin: 0 auto;
-    /* 保证容器居中 */
     z-index: 2;
+    margin-top: -2px;
 }
 
-.video-box-6 video,
-.video-box-6 img {
+.video-box-6 video {
     width: 1920px;
-    /* 跟父容器同宽 */
     max-width: 1920px;
-    /* 不超过设计稿的宽度 */
     height: auto;
-    /* 保持比例缩放 */
     display: block;
-}
-
-/* Go back to the top */
-.logo-ring {
-    position: fixed;
-    /* 垂直居中 */
-    /* 页面宽度的 60% 处 */
-    transform: translateY(-50%, -50%);
-    /* 保证纵向居中 */
-    z-index: 1000;
-    pointer-events: auto;
-    width: 167px;
-    aspect-ratio: 1;
-    cursor: pointer;
-}
-
-/* Up */
-.logo-ring::before {
-    content: "";
-    position: absolute;
-    inset: 3%;
-    background: url("/static/upload/page/up.png") center/contain no-repeat;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-/* Upsurround */
-.logo-ring::after {
-    content: "";
-    position: absolute;
-    inset: 3%;
-    background: url("/static/upload/page/upsurround.png") center/contain no-repeat;
-    border-radius: 50%;
-    animation: spin 6s linear infinite;
-    z-index: 1;
 }
 
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+
+svg:hover .shine-group rect {
+    animation: slide 1.5s ease-in-out forwards;
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(500px);
     }
 }
