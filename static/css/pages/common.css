@@ -15,6 +15,7 @@ header.bg-hero {
     font-style: normal;
 }
 
+
 html,
 body {
     margin: 0;
@@ -83,10 +84,6 @@ img {
     margin: 0 auto;
 }
 
-/* 
-
- */
-
 .stage {
     width: 1440px !important;
     max-width: 1440px !important;
@@ -139,7 +136,7 @@ img {
 /* Vertical bar */
 .indicator {
     position: fixed;
-    left: calc(50% - 720px + 12px);
+    left: calc(50% - 720px + 10px);
     top: 220px;
     width: 0;
     height: 0;
@@ -225,7 +222,6 @@ img {
     overflow: visible;
 }
 
-/* 框内排版 */
 .content section {
     padding: 32px 0 40px;
     border: none;
@@ -238,52 +234,56 @@ img {
 }
 
 h2 {
+    padding-top: 50px;
     font-family: "Inknut Antiqua", serif;
-    /* 字体 */
     font-weight: 600;
-    /* SemiBold */
     font-size: 32px;
-    /* 字号 */
     line-height: 40px;
-    /* 行高 */
     letter-spacing: 0;
-    /* 字间距 */
-    color: #111;
-    /* 深色字体 */
+    color: black;
     margin: 0 0 15px;
-    /* 段落间距，下方15px */
-    text-indent: 40px;
-    /* 首行缩进 40px */
-    text-align: justify;
-    /* 两端对齐，正文更整齐（可选） */
+}
+
+h2:first-of-type {
+    padding-top: 0;
 }
 
 .sub {
     margin: 0 0 18px;
-    color: #555;
+    color: black;
     font-family: "Abhaya Libre Medium", serif;
-    /* 字体 */
     font-weight: 500;
-    /* 字重 */
     font-size: 26px;
-    /* 字号 */
     line-height: 39px;
-    /* 行高 */
     letter-spacing: 0;
-    /* 字间距 */
-
-    /* 段落样式 */
     margin-top: 15px;
-    /* 段前距 */
     margin-bottom: 15px;
-    /* 段后距 */
     text-indent: 40px;
 }
 
 p {
     line-height: 1.85;
-    color: #333;
+    color: black;
 }
+
+ul li,
+ol li {
+    margin: 0 0 15px;
+    padding-left: 0.5em;
+    font-family: "Abhaya Libre Medium", serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 0;
+    text-indent: 0;
+}
+
+ul,
+ol {
+    margin: 0 0 15px 40px;
+    padding: 0;
+}
+
 
 /* Go back to the top */
 .logo-ring {
@@ -344,20 +344,16 @@ p {
 
 .figurecaption {
     text-align: center;
-    /* 居中 */
     font-weight: bold;
-    /* 加粗 */
 }
 
 h1 {
-    /* 渐变文字 */
     background: linear-gradient(to right, #D4A76A 45%, #FEEFC5 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     position: relative;
     display: block;
-    /* 让它撑满容器宽度 */
     padding-bottom: 5px;
     margin-bottom: 20px;
     text-align: left;
@@ -369,7 +365,6 @@ h1::after {
     left: 0;
     bottom: 0;
     width: 100%;
-    /* 延伸到整个 h1 容器宽度 */
     height: 2px;
     background: linear-gradient(to right, #D4A76A 70%, #FEEFC5 100%);
 }
