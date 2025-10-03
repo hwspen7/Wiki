@@ -92,7 +92,7 @@ body {
 
 .second-section .ocean-bg {
     position: absolute;
-    top: -150px;
+    top: -110px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -337,6 +337,7 @@ body {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+    margin-top: 55px;
     margin-bottom: 100px;
 }
 
@@ -389,6 +390,7 @@ body {
     display: block;
 }
 
+/* Lab Button */
 .lab-button {
     width: 420px;
     height: auto;
@@ -401,16 +403,13 @@ body {
     z-index: 3;
     transform: translateY(30px);
     transform-origin: 50% 50%;
-    /* 明确指定中心点 */
-    /* 关键：设置缩放原点为中心 */
-    /* 下移 30px */
+    margin-bottom: 100px;
 }
 
 .lab-button:hover {
-    transform: scale(1.5) translateY(20px);
+    transform: scale(1.35) translateY(20px);
 }
 
-/* 光泽条 */
 .lab-button::after {
     content: "";
     position: absolute;
@@ -427,12 +426,90 @@ body {
     opacity: 0;
 }
 
-/* 悬停时触发一次动画：扫到右边并淡出 */
 .lab-button:hover::after {
     animation: sweep-once 0.8s ease forwards;
 }
 
-/* 关键帧：从左 0% → 右 80%，途中保持亮度，结束时透明 */
+/* Hardware Button */
+.hardware-button {
+    width: 420px;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    transform: translateY(30px);
+    transform-origin: 50% 50%;
+    margin-bottom: 100px;
+}
+
+.hardware-button:hover {
+    transform: scale(1.35) translateY(20px);
+}
+
+.hardware-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.hardware-button:hover::after {
+    animation: sweep-once 0.8s ease forwards;
+}
+
+/* Result Button */
+.result-button {
+    width: 420px;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    transform: translateY(30px);
+    transform-origin: 50% 50%;
+}
+
+.result-button:hover {
+    transform: scale(1.35) translateY(20px);
+}
+
+.result-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.result-button:hover::after {
+    animation: sweep-once 0.8s ease forwards;
+}
+
+
 @keyframes sweep-once {
     0% {
         left: 10%;
