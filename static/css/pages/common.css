@@ -76,6 +76,13 @@ body {
     color: #D3B68F;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* 
 
  */
@@ -99,7 +106,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0;
-    margin: 0 auto;
+    margin: 90px auto;
     padding: 0;
     max-width: none;
 }
@@ -121,11 +128,12 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    bottom: 0;
+    height: 810px;
     width: 10px;
     border-radius: 0 6px 6px 0;
     background: linear-gradient(180deg, #ffe28a 0%, #e7b21a 45%, #c48b0b 100%);
     pointer-events: none;
+    z-index: 1;
 }
 
 /* Vertical bar */
@@ -230,15 +238,46 @@ body {
 }
 
 h2 {
-    margin: 0 0 10px;
-    font-size: 34px;
-    letter-spacing: .02em;
+    font-family: "Inknut Antiqua", serif;
+    /* 字体 */
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 32px;
+    /* 字号 */
+    line-height: 40px;
+    /* 行高 */
+    letter-spacing: 0;
+    /* 字间距 */
     color: #111;
+    /* 深色字体 */
+    margin: 0 0 15px;
+    /* 段落间距，下方15px */
+    text-indent: 40px;
+    /* 首行缩进 40px */
+    text-align: justify;
+    /* 两端对齐，正文更整齐（可选） */
 }
 
 .sub {
     margin: 0 0 18px;
     color: #555;
+    font-family: "Abhaya Libre Medium", serif;
+    /* 字体 */
+    font-weight: 500;
+    /* 字重 */
+    font-size: 26px;
+    /* 字号 */
+    line-height: 39px;
+    /* 行高 */
+    letter-spacing: 0;
+    /* 字间距 */
+
+    /* 段落样式 */
+    margin-top: 15px;
+    /* 段前距 */
+    margin-bottom: 15px;
+    /* 段后距 */
+    text-indent: 40px;
 }
 
 p {
@@ -249,8 +288,8 @@ p {
 /* Go back to the top */
 .logo-ring {
     position: fixed;
-    top: 600px;
-    left: 1250px;
+    top: 800px;
+    left: 1350px;
     transform: translate(46px, 0);
     z-index: 1000;
     pointer-events: auto;
@@ -301,4 +340,36 @@ p {
         height: 0;
         display: none;
     }
+}
+
+.figurecaption {
+    text-align: center;
+    /* 居中 */
+    font-weight: bold;
+    /* 加粗 */
+}
+
+h1 {
+    /* 渐变文字 */
+    background: linear-gradient(to right, #D4A76A 45%, #FEEFC5 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    position: relative;
+    display: block;
+    /* 让它撑满容器宽度 */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* 延伸到整个 h1 容器宽度 */
+    height: 2px;
+    background: linear-gradient(to right, #D4A76A 70%, #FEEFC5 100%);
 }

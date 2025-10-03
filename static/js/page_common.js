@@ -20,14 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .filter(Boolean);
 
     function setActiveByScroll() {
-        const paperTop = paper ? paper.getBoundingClientRect().top : 0;
-        const judgeY = paperTop + 8;
+        if (!paper) return;
         let idx = 0;
-        for (let i = 0; i < sections.length; i++) {
-            const t = sections[i].getBoundingClientRect().top;
-            if (t <= judgeY) idx = i; else break;
-        }
+        const scrollY = paper.scrollTop;
 
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i].offsetTop <= scrollY + 10) {
+                idx = i;
+            } else {
+                break;
+            }
+        }
         moveTo(idx);
     }
 
@@ -46,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
     }
 
-    window.addEventListener('scroll', setActiveByScroll, { passive: true });
     if (paper) paper.addEventListener('scroll', setActiveByScroll, { passive: true });
     window.addEventListener('resize', setActiveByScroll);
 
