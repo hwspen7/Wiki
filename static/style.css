@@ -89,10 +89,10 @@ header.bg-hero {
 
 .logo-right {
     position: absolute;
-    top: 20px;
-    left: 10%;
-    width: 120px;
-    height: 63px;
+    top: -48px;
+    left: 35%;
+    width: 220px;
+    height: 210px;
     z-index: 1;
 }
 
@@ -106,7 +106,6 @@ header.bg-hero {
     max-width: 1920px;
     z-index: 3000;
     margin: 0 auto;
-    /* 居中关键 */
 }
 
 .navbar-nav .nav-item {
