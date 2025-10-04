@@ -28,37 +28,40 @@ body {
 .our-team-section {
     position: relative;
     width: 1440px !important;
-    min-height: 80vh;
-    background: url("/static/upload/page/pagebackground1.png") no-repeat center center;
-    background-size: contain;
-
     max-width: 1920px !important;
+    min-height: 80vh;
     left: 50% !important;
     transform: translateX(-50%) !important;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: hidden;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, .12) 50%,
+            rgba(0, 0, 0, .22) 75%,
+            rgba(0, 0, 0, .30) 100%),
+        url("/static/upload/page/pagebackground1.png");
+
+    background-size:
+        100% 45%,
+        contain,
+        920px 518px,
+        582px 349px;
+    background-position:
+        center bottom,
+        center bottom,
+        417px 153px,
+        385px 175px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
-.our-team-section::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 55%;
-    /* 35% → 55% */
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, .35) 15%,
-            rgba(0, 0, 0, .65) 35%,
-            rgba(0, 0, 0, .8) 70%,
-            #000 100%);
-    pointer-events: none;
-}
+
 
 .overlay-text {
     position: absolute;
-    top: 38%;
+    top: 55%;
     right: 10%;
     transform: translateY(-100%);
     text-align: right;
@@ -136,7 +139,7 @@ img {
 /* Vertical bar */
 .indicator {
     position: fixed;
-    left: calc(50% - 720px + 10px);
+    left: calc(50% - 720px + 12px);
     top: 220px;
     width: 0;
     height: 0;
@@ -253,7 +256,7 @@ h2:first-of-type {
     color: black;
     font-family: "Abhaya Libre Medium", serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 39px;
     letter-spacing: 0;
     margin-top: 15px;
@@ -272,7 +275,7 @@ ol li {
     padding-left: 0.5em;
     font-family: "Abhaya Libre Medium", serif;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 39px;
     letter-spacing: 0;
     text-indent: 0;
