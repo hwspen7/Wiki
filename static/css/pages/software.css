@@ -1,0 +1,26 @@
+.usage {
+    color: black;
+    font-family: "Abhaya Libre Medium", serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 39px;
+    letter-spacing: 0;
+    width: 80%;
+    line-height: 1.8;
+}
+
+.usage h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.usage a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.usage a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
