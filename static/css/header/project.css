@@ -35,20 +35,36 @@
 }
 
 .project-links li::before {
-    content: url("/static/upload/header_individual/psychology.svg");
+    content: url("/static/upload/header_subpage/projectsubyellow.svg");
     display: inline-block;
     margin-right: 0px;
     vertical-align: middle;
 }
 
 .project-links a {
+    position: relative;
     font-size: 20px;
     text-decoration: none;
-    color: #D4A76A;
+    color: #FEEFC5;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: color 0.3s ease;
+}
+
+.project-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #FEEFC5;
+    transition: width 0.3s ease;
+}
+
+.project-links a:hover::after {
+    width: 100%;
 }
 
 .project-links a:hover {

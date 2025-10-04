@@ -28,11 +28,11 @@
     display: inline-block;
     font-size: 22px;
     font-weight: 700;
-    border-bottom: 2px solid #D4A76A;
+    border-bottom: 2px solid #FEEFC5;
     margin-bottom: 15px;
     padding-bottom: 5px;
     padding-right: 20px;
-    color: #D4A76A;
+    color: #FEEFC5;
 }
 
 .project-links dd {
@@ -48,15 +48,34 @@
     height: 24px;
     margin-right: 6px;
     vertical-align: middle;
-    background: url("/static/upload/header_individual/memory.svg") no-repeat center/contain;
+    background: url("/static/upload/header_subpage/labsubyellow.svg") no-repeat center/contain;
     flex-shrink: 0;
 }
 
 .project-links a {
+    position: relative;
     font-size: 20px;
     text-decoration: none;
-    color: #D4A76A;
+    color: #FEEFC5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: color 0.3s ease;
+}
+
+.project-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #FEEFC5;
+    transition: width 0.3s ease;
+}
+
+.project-links a:hover::after {
+    width: 100%;
 }
 
 .project-links a:hover {

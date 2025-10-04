@@ -129,16 +129,8 @@ header.bg-hero {
     display: none;
     z-index: 2000;
     background:
-        linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.3) 30%,
-            /* 顶部透明 */
-            rgba(0, 0, 0, 0.6) 60%,
-            /* 中间开始加深 */
-            rgba(0, 0, 0, 1) 100%),
-        /* 底部完全黑 */
-        url("/static/upload/header_individual/common-background.PNG");
-    background-size: 100% 360px, 100% 360px;
+        url("/static/upload/header_subpage/headersubback.png");
+    background-size: 100% 1000px, 100% 1000px;
     background-position: center top, center top;
     background-repeat: no-repeat, no-repeat;
 }
@@ -183,59 +175,92 @@ header.bg-hero {
 .home-link::before {
     content: "";
     display: inline-block;
-    width: 20px;
+    width: 22px;
     height: 20px;
     margin-right: 2px;
-    background: url("/static/upload/header/home-link.svg") no-repeat center/contain;
+    background: url("/static/upload/header/homewhite.png") no-repeat center/contain;
     position: relative;
     top: -1px;
+    background-size: contain;
 }
 
-.nav-link:hover {
-    color: #FFF4D9;
+.home-link:hover::before {
+    background: url("/static/upload/header/homeyellow.png") no-repeat center/contain;
+    background-size: contain;
 }
+
+
 
 .team-link::before {
     content: "";
     display: inline-block;
-    width: 20px;
+    width: 22px;
     height: 20px;
     margin-right: 2px;
     position: relative;
-    top: 0;
-    background: url("/static/upload/header/team-link.svg") no-repeat center/contain;
+    top: -1px;
+    background: url("/static/upload/header/teamwhite.png") no-repeat center/contain;
+    background-size: contain;
 }
+
+.team-link:hover::before {
+    background: url("/static/upload/header/teamyellow.png") no-repeat center/contain;
+    background-size: contain;
+}
+
 
 .project-link::before {
     content: "";
     display: inline-block;
-    width: 20px;
+    width: 22px;
     height: 20px;
     margin-right: 1px;
     position: relative;
     top: -1px;
-    background: url("/static/upload/header/project-link.svg") no-repeat center/contain;
+    background: url("/static/upload/header/projectwhite.png") no-repeat center/contain;
+    background-size: contain;
+}
+
+.project-link:hover::before {
+    background: url("/static/upload/header/projectyellow.png") no-repeat center/contain;
+    background-size: contain;
 }
 
 .lab-link::before {
     content: "";
     display: inline-block;
-    width: 20px;
+    width: 22px;
     height: 20px;
     margin-right: 1px;
     position: relative;
     top: -1px;
-    background: url("/static/upload/header/lab-link.svg") no-repeat center/contain;
+    background: url("/static/upload/header/labwhite.png") no-repeat center/contain;
+    background-size: contain;
+}
+
+.lab-link:hover::before {
+    background: url("/static/upload/header/labyellow.png") no-repeat center/contain;
+    background-size: contain;
 }
 
 .human-practice-link::before {
     content: "";
     display: inline-block;
-    width: 20px;
+    width: 22px;
     height: 20px;
     position: relative;
-    top: -1px;
-    background: url("/static/upload/header/human-practice-link.svg") no-repeat center/contain;
+    top: -2px;
+    background: url("/static/upload/header/humanwhite.png") no-repeat center/contain;
+    background-size: contain;
+}
+
+.human-practice-link:hover::before {
+    background: url("/static/upload/header/humanyellow.png") no-repeat center/contain;
+    background-size: contain;
+}
+
+.nav-link:hover {
+    color: #FFF4D9;
 }
 
 
