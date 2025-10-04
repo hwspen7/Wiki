@@ -22,24 +22,121 @@ def freeze():
 def serve():
     freezer.run()
 
-@app.route('/')
-def home():
-    return render_template('pages/home.html')
-
 # Templete
 @app.route("/members")
 def members():
     return render_template("pages/members.html")
+
+
+# Home
+@app.route('/')
+def home():
+    return render_template('pages/home.html')
+
+# Team
+# Teammember
+@app.route("/teammember")
+def teammember():
+    return render_template("pages/teammember.html")
+
+# Collaborations
+# Team
+@app.route("/collaborations")
+def collaborations():
+    return render_template("pages/collaborations.html")
+
+
+
+# Project
+# Project Description
+@app.route("/projectdescription")
+def projectdescription_view():
+    return render_template("pages/projectdescription.html")
+
+# Engineering
+@app.route("/engineering")
+def engineering():
+    return render_template("pages/engineering.html")
+
+# Implementation
+@app.route("/implementation")
+def implementation():
+    return render_template("pages/implementation.html")
+
+# Contribution
+@app.route("/contribution")
+def contribution():
+    return render_template("pages/contribution.html")
+
+# Safety-Project
+@app.route("/safetyproject")
+def safetyproject():
+    return render_template("pages/safetyproject.html")
+
+
+
+# Lab
+# Design
+@app.route("/design")
+def design():
+    return render_template("pages/design.html")
+
+# Experiments
+@app.route("/experiments")
+def experiments():
+    return render_template("pages/experiments.html")
+
+# Notebook
+@app.route("/notebook")
+def notebook():
+    return render_template("pages/notebook.html")
+
+# Results
+@app.route("/results")
+def results():
+    return render_template("pages/results.html")
+
+# Model
+@app.route("/model")
+def model():
+    return render_template("pages/model.html")
 
 # Hardware
 @app.route("/hardware")
 def hardware():
     return render_template("pages/hardware.html")
 
-# Team
-@app.route("/team")
-def team():
-    return render_template("pages/team.html")
+# Software
+@app.route("/software")
+def software():
+    return render_template("pages/software.html")
+
+# Human Practice
+# Practical Content
+@app.route("/practicalcontent")
+def practicalcontent():
+    return render_template("pages/practicalcontent.html")
+
+# Education
+@app.route("/education")
+def education():
+    return render_template("pages/education.html")
+
+# Safety
+@app.route("/safetyhuman")
+def safetyhuman():
+    return render_template("pages/safetyhuman.html")
+
+# Inclusivity
+@app.route("/inclusivity")
+def inclusivity():
+    return render_template("pages/inclusivity.html")
+
+# Sustainability
+@app.route("/sustainability")
+def sustainability():
+    return render_template("pages/sustainability.html")
+
 
 @app.route('/<page>')
 def pages(page):

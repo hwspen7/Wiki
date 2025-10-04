@@ -6,7 +6,6 @@
         <div class="row">
             <!-- Left Title -->
             <div class="col-md-6 project-title d-flex flex-column justify-content-center">
-                <h2>PART.5</h2>
                 <h1>HUMAN <br> PRACTICE</h1>
             </div>
 
@@ -16,16 +15,16 @@
                     <!-- Right Upper -->
                     <div class="col-md-6 project-links">
                         <ul>
-                            <li><a href="#">HUMAN <br> PRACTICE</a></li>
-                            <li><a href="#">EDUCATION <br> &PUBLICITY</a></li>
+                            <li><a href="{{ url_for('practicalcontent') }}">PRACTICAL <br> CONTENT</a></li>
+                            <li><a href="{{ url_for('education') }}">EDUCATION <br> &PUBLICITY</a></li>
                         </ul>
                     </div>
                     <!-- Right Bottom -->
                     <div class="col-md-6 project-links">
                         <ul>
-                            <li><a href="#">SAFETY</a></li>
-                            <li><a href="#">INCLUSIVITY</a></li>
-                            <li><a href="#">SUSTAINABLE</a></li>
+                            <li><a href="{{ url_for('safetyhuman') }}">SAFETY</a></li>
+                            <li><a href="{{ url_for('inclusivity') }}">INCLUSIVITY</a></li>
+                            <li><a href="{{ url_for('sustainability') }}">SUSTAINABILITY</a></li>
                         </ul>
                     </div>
                 </div>
