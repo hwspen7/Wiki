@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
 
 <div class="container">
+  <!-- First Section -->
   <div class="first-section">
-    <!-- 前景图（包含白色文字） -->
     <img class="fg-img" src="/static/upload/home/wukonghome.png" alt="wukonghome">
     <img class="delimeter-com" src="/static/upload/home/delimeterlong.png" alt="delimeterlong">
 
@@ -82,8 +82,11 @@
         <p>THE GOLDEN <br>CUDCEL EXPANDS</p>
       </div>
       <img class="delimeter-com" src="/static/upload/home/delimeterlong.png" alt="delimeterlong">
-      <div class="card">
-        <video src="/static/upload/home/video3.mp4" autoplay muted class="card-video"></video>
+      <div class="video-box-3">
+        <video autoplay muted playsinlinep>
+          <source src="/static/upload/home/video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
@@ -98,8 +101,12 @@
           body to
           obtain the Palm Leaf Fan</p>
       </div>
-      <div class="card">
-        <video src="/static/upload/home/video4.mp4" autoplay muted class="card-video"></video>
+
+      <div class="video-box-3">
+        <video autoplay muted playsinlinep>
+          <source src="/static/upload/home/video4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
@@ -109,6 +116,11 @@
         <p>ENTER THE <br>LABORATORY</p>
       </div>
       <img class="delimeter-com" src="/static/upload/home/delimeterlong.png" alt="delimeterlong">
+
+      <div class="lab-button">
+        <img src="/static/upload/home/enterlab.svg" alt="Enter Lab Button">
+      </div>
+
       <div class="video-fifth">
         <video autoplay muted playsinlinep>
           <source src="/static/upload/home/video5.mp4" type="video/mp4">
@@ -124,6 +136,11 @@
       <p>THE EMERGENCE OF <br> Hardware</p>
     </div>
     <img class="delimeter-com" src="/static/upload/home/delimeterlong.png" alt="delimeterlong">
+
+    <div class="hardware-button">
+      <img src="/static/upload/home/enterhardware.svg" alt="Enter Lab Button">
+    </div>
+
     <div class="title-2">
       <p>This episode originates from Journey to the West, <br> in which Sun Wukong enters Princess Iron <br>Fan's
         body to
@@ -142,6 +159,12 @@
       <p>WE DID IT</p>
     </div>
     <img class="delimeter-com" src="/static/upload/home/delimeterlong.png" alt="delimeterlong">
+
+    <div class="result-button">
+      <img src="/static/upload/home/enterresult.svg" alt="Enter Lab Button">
+    </div>
+
+
     <div class="video-box-6">
       <video autoplay muted playsinlinep>
         <source class="video-6" src="/static/upload/home/video6.mp4" type="video/mp4">
@@ -151,5 +174,9 @@
   </div>
 </div>
 
+</div>
+
+
+<script src="/static/js/home.js"></script>
 
 {% endblock %}
