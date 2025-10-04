@@ -371,3 +371,22 @@ h1::after {
     height: 2px;
     background: linear-gradient(to right, #D4A76A 70%, #FEEFC5 100%);
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+img.formula {
+    height: 30px;
+}
