@@ -1,34 +1,303 @@
 {% extends "layout.html" %}
-  
-{% block title %}Education{% endblock %}
-{% block lead %}Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/software.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Education</h4>
-      <p>Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology. How have you developed new opportunities to include more people in shaping synthetic biology? Education activities do not have to be directly related to your project but may look at wider issues of iGEM or synthetic biology.  Education activities must promote scientific learning and avoid simply proselytizing or marketing synthetic biology and/or iGEM. Document your approach, and what was learned by everyone involved, to compete for this award.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/special-prizes">Special Prizes page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>HUMAN PRACTICE</h3>
+    <h1>EDUCATION&PUBLICITY</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/cityu-hongkong/education">2024 CityU-HongKong</a></li>
-      <li><a href="https://2024.igem.wiki/cjuh-jlu-china/education">2024 CJUH-JLU-China</a></li>
-      <li><a href="https://2024.igem.wiki/keystone/education">2024 Keystone</a></li>
-      <li><a href="https://2024.igem.wiki/stanford/education">2024 Stanford</a></li>
-      <li><a href="https://2024.igem.wiki/gems-taiwan/education">2024 GEMS-Taiwan</a></li>
-      <li><a href="https://2024.igem.wiki/heidelberg/education">2024 Heidelberg</a></li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#wechat">WeChat Public <br> Account Posts</a></li>
+            <li><a class="navlink" href="#high">High school <br> presentations</a></li>
+            <li><a class="navlink" href="#community">Community teaching</a></li>
+            <li><a class="navlink" href="#questionnaire">Questionnaire <br> survey and popular <br> science</a></li>
+            <li><a class="navlink" href="#control">CONTROL <br> SYSTEM MODEL</a></li>
+            <li><a class="navlink" href="#conclusion">CONCLUSION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+        <p class="sub">In today's information age, effective education and communication are crucial for driving the
+          success of scientific initiatives. Through the tireless efforts of East China University of Science and
+          Technology's 2025 iGEM "Sun Wukong" team, our project has not only achieved breakthroughs in scientific
+          research but also played a significant role in science popularization.</p>
+
+        <!-- ID：introduction -->
+        <section id="wechat">
+          <h1>WeChat Public Account Posts</h1>
+          <p class="sub">Through the wechat public account "Sun Wukong-iGEM2025-ECUST", we actively promote the progress
+            of the project, popularize scientific knowledge, and enhance the public's understanding of mariculture
+            technology.</p>
+
+          <img src="/static/upload/page/education/education1.png" alt="education1">
+          <p class="figurecaption"> Figure 1. WeChat public account introduction and QR code</p>
+
+          <p class="sub">Our official WeChat account regularly publishes original science articles covering everything
+            from fundamental scientific knowledge to the latest research breakthroughs. For instance, our article "From
+            Bacterial 'Weapons' to Micro-Nano Robots: How We Make Vaccines 'Transform 72 Times' " provides a detailed
+            introduction to vaccine technology innovations and their applications in aquaculture, enhancing farming
+            efficiency and fish health. Additionally, we explored "When Sun Wukong Meets the 'Blue Granary'? iGEM Team
+            Decodes the Tech Secrets of Aquaculture," which not only reveals technological challenges in marine farming
+            but also showcases our solutions and future vision.</p>
+          <img src="/static/upload/page/education/education2.png" alt="education2">
+          <p class="figurecaption"> Figure 2. Content of public account tweets</p>
+
+
+          <p class="sub">Through these articles, we aim to spark public interest in marine biotechnology and enhance
+            awareness of sustainable ocean resource management. Our WeChat official account serves not only as an
+            information platform but also as a vibrant community for interactive exchanges. We encourage readers to
+            leave comments, ask questions, and engage in discussions, thereby building a bridge between scientists and
+            the general public.</p>
+
+          <p class="sub">Furthermore, our official account serves an educational mission. By publishing accessible
+            science content, we make complex scientific concepts understandable to non-specialists. A prime example is
+            our article "Can Fish Get Sick Too? Understanding Vaccines and Prevention Methods!" which explains fish
+            disease prevention techniques and the crucial role of vaccines in plain language. The article garnered over
+            2,000 views, not only sharing research findings but also boosting public awareness of aquaculture
+            technology. This initiative has significantly contributed to advancing sustainable marine biotechnology
+            development. </p>
+        </section>
+
+
+        <!-- ID：high -->
+        <section id="high">
+          <h1>High school presentations</h1>
+          <p class="sub">In the educational outreach component of our project, we prioritized engaging with and
+            inspiring younger generations, particularly through high school outreach programs. Recently, our team had
+            the privilege of returning to our former high school for a meaningful iGEM project presentation. This event
+            served not only as an opportunity to showcase our achievements but also as a platform to pass on the
+            scientific spirit and innovative thinking that defines our work.</p>
+
+          <p class="sub">Standing on the familiar podium before curious and eager junior students, we saw ourselves in
+            their eyes. Their focused listening during the lecture and enthusiastic participation in Q&A sessions
+            revealed boundless potential. We shared the allure of synthetic biology, explained how we transform
+            scientific theories into practical applications, and demonstrated how these technologies create positive
+            societal impacts.</p>
+
+          <img src="/static/upload/page/education/education3.png" alt="education3">
+          <p class="figurecaption"> Figure 3. Photo of the lecture</p>
+
+
+          <p class="sub">Through our educational initiatives, we aim to plant the seeds of scientific inquiry in young
+            minds and ignite their passion for cutting-edge exploration. This is not merely about sharing knowledge, but
+            more importantly, passing on dreams. We hope these young listeners will grow into pioneers of scientific
+            discovery, continuing to drive innovation and progress in science.</p>
+          <p class="sub">We believe our sharing can serve as a bridge connecting the present and the future, sparking
+            students 'interest in science and their boundless imagination for tomorrow. We look forward to seeing more
+            innovative talents shine on the iGEM stage in the future – these bright sparks will grow into the abundant
+            fruits of the seeds we've planted today.</p>
+        </section>
+
+        <!-- ID：community -->
+        <section id="community">
+          <h1>COMMUNITY TEACHING</h1>
+          <p class="sub">Educational outreach programs offer us a unique opportunity to connect directly with the
+            younger generation, understanding their needs and interests firsthand. Beyond imparting knowledge, these
+            initiatives play a vital role in nurturing scientific thinking, sparking creativity, and igniting their
+            passion for exploration. Such experiences are crucial for their development, helping shape them into future
+            leaders and innovators in science.</p>
+
+          <img src="/static/upload/page/education/education4.png" alt="education4">
+          <p class="figurecaption">Figure 4. Group photo of volunteer teaching in Hohhot, Inner Mongolia</p>
+
+          <p class="sub">Our team members actively engage with students in diverse settings. Whether conducting mental
+            health education in classrooms or delivering environmental awareness programs outdoors, every visual
+            representation captures the power and impact of these educational initiatives. These activities not only
+            enrich students' holiday experiences but also provide them with a platform to explore the world, gain
+            self-awareness, and plan their future.</p>
+
+          <img src="/static/upload/page/education/education5.png" alt="education5">
+          <p class="figurecaption">Figure 5. Teaching support interaction in different scenarios</p>
+
+          <p class="sub">Through these volunteer teaching initiatives, we successfully brought scientific knowledge into
+            schools, enabling students to learn through hands-on practice and grow through academic exploration. Our
+            team members transformed complex scientific concepts into accessible lessons through engaging explanations
+            and interactive sessions, allowing students to absorb new knowledge in a relaxed and enjoyable environment.
+            These activities not only boosted students' enthusiasm for learning but also enhanced their practical
+            skills, laying a solid foundation for their future education and career development.</p>
+
+          <p class="sub">Educational outreach programs are integral to long-term education. We will continue exploring
+            innovative approaches and opportunities to bring science education to more students. Through these efforts,
+            we are confident in cultivating a new generation of young people with scientific literacy and innovative
+            thinking, advancing educational equity, and contributing to global development.</p>
+        </section>
+
+        <!-- ID：questionnaire -->
+        <section id="questionnaire">
+          <h1>Questionnaire survey and popular science</h1>
+          <p class="sub">In advancing public understanding of aquaculture science and food safety, our "Sun Wukong" iGEM
+            club conducted a series of surveys. These questionnaires not only provided valuable first-hand data for our
+            research, but also served as crucial tools for public education and awareness campaigns.</p>
+
+          <h2>4.1 Purpose and content of questionnaire design</h2>
+          <p class="sub">Our survey aims to understand the public's awareness of fish consumption habits, concerns about
+            medication use in aquaculture, and perceptions of fish vaccines. The questionnaire covers multiple aspects
+            including frequency of fish consumption, purchasing channels, key concerns, nutritional value understanding,
+            health risks associated with farmed fish, and vaccine knowledge. These carefully designed questions are
+            intended to assess the public's attitudes and knowledge levels regarding aquaculture practices and food
+            safety from various perspectives.</p>
+          <p class="sub">Implementation and Feedback of the Questionnaire Survey: Through both online and offline
+            channels, we distributed questionnaires extensively and received positive feedback. Participants included
+            individuals from diverse age groups, professions, and educational backgrounds, ensuring our survey results
+            were more representative and inclusive. Throughout the process, we maintained questionnaire anonymity and
+            ensured voluntary participation to enhance data authenticity and reliability.</p>
+
+          <h2>4.2 Data collection and analysis</h2>
+          <p class="sub">This survey collected 397 valid questionnaires from multiple provinces and cities including
+            Shanghai, Heilongjiang, Jiangxi and Sichuan, with feedback mainly coming through WeChat channels. The
+            analysis is conducted from two perspectives: descriptive analysis and multiple response analysis, focusing
+            on three dimensions of consumer behavior regarding fish consumption, safety awareness, and perception of
+            fish vaccines.</p>
+
+
+          <h3>4.2.1 Descriptive analysis</h3>
+          <p class="sub">Descriptive analysis focuses on the distribution characteristics of a single variable, and
+            presents the overall tendency of consumers in fish consumption habits, safety concerns and fish vaccine
+            cognition through frequency, proportion and other indicators.</p>
+
+          <h4>Fish consumption behaviour</h4>
+
+          <ol>
+            <li>Commonly consumed fish varieties: Crucian carp (58.94%) is the most popular choice, followed by grass
+              carp (42.82%), sea bass (35.01%). Marine fish like salmon (26.7%) and cod (22.17%) show relatively lower
+              acceptance rates, with only 11.34% choosing "other" species such as loach and blackfish. This reflects
+              consumers' preference for common freshwater fish while showing limited acceptance of premium marine
+              varieties.</li>
+            <li>Frequency of consumption: nearly 70% of consumers eat less frequently, among which "1-3 times a month"
+              accounts for the highest proportion (35.26%), and "rarely or never eat" accounts for 30.98%; high
+              frequency consumption (3 times or more a week) only 5.08%, and "once or twice a week" was 23.68%,
+              indicating that fish has not become a high-frequency daily food.</li>
+            <li>Purchase Channels: Traditional markets and large supermarkets serve as primary channels (data is
+              implicit and supplemented with sample details). Only 13.85% of consumers directly purchase from
+              fishermen/farming households, while 6.05% opt for "other" channels like community group buying or fresh
+              food e-commerce platforms. This indicates consumers' reliance on established offline retail scenarios and
+              their lower trust in direct purchasing channels.</li>
+            <li>Preference for product types: Freshwater fish (57.18%) and shrimp and crab (57.68%) have similar
+              preferences, followed by sea fish (34.26%) and shellfish (41.31%), and only 4.79% choose "others",
+              indicating that consumers are more receptive to freshwater fish and shrimp and crab, which may be related
+              to taste, price and convenience of purchase.</li>
+          </ol>
+
+          <img src="/static/upload/page/education/education6.png" alt="education6">
+          <p class="figurecaption">Figure 6. Statistics of fish consumption behavior</p>
+
+          <h4>Fish vaccine cognition:</h4>
+          <ol>
+            <li>Vaccine awareness: 84.64% of consumers have insufficient knowledge about fish vaccines, among which
+              "never heard of it" accounts for 42.57%, "heard of it but don't know much" accounts for 42.07%; only
+              15.37% are "somewhat familiar" (5.08%) or "very familiar" (5.29%), indicating that fish vaccines have not
+              yet entered the public consciousness. </li>
+            <li>Post-education vaccine awareness: 66.25% recognized vaccines as "preventing fish diseases and reducing
+              mortality", 48.87% understood their role in "reducing antibiotic use", 46.35% acknowledged their
+              contribution to "ensuring food safety", 45.09% believed they could "improve production efficiency", while
+              11.59% remained uncertain. This indicates that consumers have grasped the core benefits of vaccines
+              post-education, though there's still room for improvement in understanding the connection between
+              "reducing antibiotics" and "ensuring food safety".</li>
+            <li>Vaccine safety concerns: Most consumers have health concerns about vaccine fish, with 46.6% expressing
+              "somewhat concerned" and 29.22% "very concerned". Only 9.32% are "not worried", while 14.86% have "never
+              considered it", indicating that consumer trust in vaccine safety remains unestablished. It is crucial to
+              strengthen public education on "vaccines leaving no residue and posing no harm to humans". </li>
+            <li>Understanding of Vaccination Methods: 50.88% reported "completely unfamiliar" with injection, immersion,
+              oral administration, etc., while 35.26% "knew one method (e.g., injection)". Only 13.85% "understood
+              multiple methods" (5.58%) or were "very familiar" (3.27%). Notably, 92.95% couldn't explain why "immersion
+              offers better efficacy", indicating consumers' near-complete lack of understanding about vaccine technical
+              details.</li>
+            <li>Public Attitude Toward Vaccine Promotion: 67.76% of consumers support fish vaccine promotion, with
+              "strongly supportive" accounting for 42.32%, "somewhat supportive but require more regulation" at
+              25.44%,28.72% "neutral", and 3.53% "not too supportive or opposed". This indicates that while most
+              consumers recognize the progressive nature of vaccines, there remains a clear demand for enhanced
+              regulatory oversight and transparency.</li>
+          </ol>
+          <img src="/static/upload/page/education/education7.png" alt="education7">
+          <p class="figurecaption">Figure 7. Fish vaccine awareness survey science popularization</p>
+
+
+          <h3>4.2.2 Multiple response analysis</h3>
+          <p class="sub">Through cross-frequency and correlation analysis, we dig out the potential correlations among
+            various variables, focusing on two core correlations of "consumption behavior and safety cognition" and
+            "vaccine cognition and purchase intention".</p>
+
+          <h4>A. The correlation between consumption behavior and food safety cognition:</h4>
+          <ol>
+            <li>The correlation between consumption frequency and nutritional awareness: Consumers who eat fish
+              frequently (3 or more times per week) demonstrate a more comprehensive understanding of its nutritional
+              value. Notably, 88.2% can accurately identify "high-quality protein," while 58.8% mention "Omega-3
+              unsaturated fatty acids" – significantly higher than the 40.5% among low-frequency consumers (eating 1-3
+              times monthly). Among low-frequency consumers, 15.2% reported being unaware of nutritional information,
+              three times the rate of frequent consumers. This demonstrates that increased consumption frequency
+              correlates with heightened attention to and awareness of fish nutrition.</li>
+            <li>Correlation between purchasing channels and safety concerns: Among consumers choosing "large
+              supermarkets/fresh produce e-commerce platforms", 62.3% prioritize "safety certifications", while only
+              38.5% of those opting for "traditional markets" focus on safety verification, with a higher emphasis on
+              "freshness" (85.7% vs 72.4%). For direct purchases from "fishermen/farming households", 45.5% prioritize
+              "production origin" – twice as much as other channels. This highlights significant differences in consumer
+              priorities across channels: supermarket/e-commerce buyers value standardized safety labels more, market
+              shoppers prioritize visual freshness, and direct purchasers focus more on reliable supply chains.</li>
+          </ol>
+
+          <h4>B. Correlation between fish vaccine cognition, purchase intention and promotion attitude</h4>
+          <ol>
+            <li>The correlation between vaccine awareness and purchase intention: Among consumers who "somewhat
+              understand/very understand" fish vaccines, 68.8% reported "significantly increased willingness to
+              purchase" or "slightly increased willingness," while only 12.5% were "skeptical." Conversely, among those
+              who "never heard of/are unfamiliar with" fish vaccines, 42.3% expressed skepticism, with merely 29.5%
+              showing increased willingness to purchase. This demonstrates that higher awareness significantly enhances
+              consumers' acceptance and purchasing intention for fish vaccines, proving that cognitive understanding
+              serves as the critical prerequisite for boosting purchase intent.</li>
+            <li>The correlation between vaccine safety concerns and promotion attitudes: Among consumers who "do not
+              worry about vaccine safety," 92.3% are "very supportive" of vaccination campaigns. For those with
+              "moderate concerns," 65.8% are "somewhat supportive but require stricter oversight." Among consumers with
+              "significant concerns," 58.2% are "neutral" or "opposed." This demonstrates that trust in vaccine safety
+              directly influences promotion attitudes, with worried individuals relying more on "regulation and
+              transparency" to build confidence.</li>
+            <li>The correlation between antibiotic awareness and vaccine value perception: Among consumers who "highly
+              care about antibiotics," 72.5% recognize vaccines 'role in "reducing antibiotic use," with 68.3%
+              "supporting vaccine promotion." In contrast, only 35.8% of consumers who "never paid attention to
+              antibiotics" acknowledged vaccines' "antibiotic reduction" value, while 45.2% remained neutral. This
+              demonstrates that heightened awareness of antibiotic issues correlates with consumers 'better
+              understanding of vaccines' core value (replacing antibiotics), thereby increasing support for vaccine
+              promotion.</li>
+          </ol>
+
+          <h4>C. The correlation between science popularization channels preference and cognitive enhancement needs</h4>
+          <p class="sub">Among consumers' preferred science communication channels, authoritative media (58.94%),
+            product packaging QR codes (53.15%), supermarket/vegetable market promotions (46.35%), social media short
+            videos (43.83%), and community/school lectures (35.77%) are the main choices. Cross-analysis reveals that
+            among consumers who "have never heard about fish vaccines," 62.4% prefer "authoritative media explanations"
+            and "product packaging labels," considering these two channels as "more credible." In contrast, 58.7% of
+            consumers with "relatively basic knowledge about vaccines" rely on "social media" for information,
+            demonstrating significant differences in channel preferences between consumers with varying levels of
+            awareness: those lacking prior knowledge depend on authoritative sources to build trust, while those with
+            foundational understanding prefer fragmented and convenient social media-based explanations.</p>
+          <img src="/static/upload/page/education/education8.png" alt="education8">
+          <p class="figurecaption">Figure 8. Survey of popular science form preferences</p>
+
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
