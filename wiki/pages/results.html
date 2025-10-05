@@ -1,44 +1,552 @@
 {% extends "layout.html" %}
-  
-{% block title %}Results{% endblock %}
-{% block lead %}Present the results of your project, along with a detailed analysis and discussion of their significance. Also outline future plans and reflections on the impact of your project.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/hardware.css') }}">
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What Should this Page Contain?</h2>
-    <hr />
-    <ul>
-      <li>Clearly and objectively describe the results of your experiments and research.</li>
-      <li>Use tables, graphs, and images to visualize your data.</li>
-      <li>Discuss the implications of your findings in the context of your project goals.</li>
-      <li>Highlight any trends, patterns, or significant observations.</li>
-      <li>Include an analysis summary section to synthesize your findings and discuss their overall significance.</li>
-      <li>Outline your future plans for the project, including potential applications, further research, and development.</li>
-      <li>Explain what went wrong and what you learned from these experiences.</li>
-      <li>Discuss potential improvements or alternative approaches.</li>
-      <li>Emphasize the importance of scientific honesty and transparency.</li>
-    </ul>
-  </div>
-
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/heidelberg/results">2024 Heidelberg</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/results">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/epfl/results">2024 EPFL</a></li>
-      <li><a href="https://2024.igem.wiki/utoronto/results">2024 UToronto</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/results">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/sydney-australia/results">2024 Sydney-Australia</a></li>
-      <li><a href="https://2024.igem.wiki/toulouse-insa-ups/results">2024 Toulouse-INSA-UPS</a></li>
-      <li><a href="https://2024.igem.wiki/bnds-china/results">2024 BNDS-China</a></li>
-      <li><a href="https://2024.igem.wiki/vilnius-lithuania/results">2024 Vilnius-Lithuania</a></li>
-      <li><a href="https://2024.igem.wiki/xmu-china/results">2024 XMU-China</a></li>
-      <li><a href="https://2023.igem.wiki/estonia-tuit/results">2023 Estonia-TUIT</a></li>
-    </ul>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>LAB</h3>
+    <h1>RESULTS</h1>
   </div>
 </div>
 
-{% endblock %}
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#introduction">INTRODUCTION</a></li>
+            <li><a class="navlink" href="#section1">SECTION 1</a></li>
+            <li><a class="navlink" href="#section2">SECTION 2</a></li>
+            <li><a class="navlink" href="#section3">SECTION 3</a></li>
+            <li><a class="navlink" href="#section4">SECTION 4</a></li>
+            <li><a class="navlink" href="#section5">SECTION 5</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：introduction -->
+        <section id="introduction">
+          <h1>INTRODUCTION</h1>
+          <h2>1.1 Research Background</h2>
+          <p class="sub">In this project, we plan to use Escherichia coli as a substitute for Edwardsiella piscicida to
+            construct an engineered strain that exhibits linear movement under blue light and tumbling movement under
+            green light. We will further combine this engineered strain with a light irradiation device to achieve
+            precise control over the movement state of Escherichia coli, thereby enhancing the invasive ability of the
+            vaccine strain and improving the efficacy of immersion immunization. </p>
+
+          <p class="sub">At present, we have completed the construction of four groups of plasmids, which have been
+            introduced into Escherichia coli BL21 to construct engineered strains. We have verified that the target
+            proteins can be successfully expressed and initially tested their effects on the movement state of bacteria.
+          </p>
+        </section>
+
+        <!-- ID：section1 -->
+        <section id="section1">
+          <h1>SECTION 1</h1>
+          <p class="sub">In this project, pBBR1MCS-5, pDawn, and pSR58.6 were used as vectors. The main target genes
+            included CheA, CheY, CheZ, and sfGFP. The electrophoresis results of the main fragments and vector backbones
+            used in this study are shown in the figure below.</p>
+          <img src="/static/upload/page/results/results1.png" alt="results1">
+          <p class="figurecaption">Figure 1 Electrophoresis Image of the CheA, CheY and CheZ Fragments</p>
+
+          <img src="/static/upload/page/results/results2.png" alt="results2">
+          <p class="figurecaption">Figure 2 Electrophoresis Image of the sfGFP Fragment</p>
+
+          <img src="/static/upload/page/results/results3.png" alt="results3">
+          <p class="figurecaption">Figure 3 Electrophoresis Image of the pBBR1MCS-5 Vector Backbone</p>
+
+          <img src="/static/upload/page/results/results4.png" alt="results4">
+          <p class="figurecaption">Figure 4 Electrophoresis Image of the pDawn Vector Backbone</p>
+
+          <img src="/static/upload/page/results/results5.png" alt="results5">
+          <p class="figurecaption">Figure 5 Electrophoresis Image of the pSR58.6 Vector Backbone</p>
+
+          <p class="sub">The aforementioned fragments and vector backbones were successfully assembled into the
+            recombinant plasmids listed in the table below using a seamless cloning method.</p>
+
+          <!-- Table 1 -->
+          <p class="figurecaption">Table 1 Main Plasmids Used in This Experiment</p>
+          <img src="/static/upload/page/results/table1.png" alt="table1">
+        </section>
+
+        <!-- ID：section2 -->
+        <section id="section2">
+          <h1>SECTION 2</h1>
+          <p class="sub">Centered on constructing light-controlled E. coli BL21 engineered strains that move straight
+            under blue light and tumble under green light, this project relies on CheA, CheY, and CheZ proteins to
+            control bacterial movement. Western Blot and fluorescence detection are key experiments to verify protein
+            expression and regulation efficiency, laying the foundation for subsequent movement capability studies.</p>
+          <p class="sub">Western blot directly confirms whether target proteins are expressed: Using Flag-tagged
+            plasmids (e.g., BL21-pDawn-CheZ-Flag), it detects protein expression differences under light induction.
+            Results show blue light significantly increases CheZ expression, confirming the "light signal → target
+            protein expression" pathway works; weak bands in dark groups indicate minor basal expression, guiding
+            subsequent optimizations.</p>
+          <img src="/static/upload/page/results/results6.png" alt="results6">
+          <p class="figurecaption">Figure 6 WB Development Result Image of BL21-pDawn-CheZ-Flag</p>
+          <p class="sub">Under green light induction conditions, similar results were also observed. Taking
+            BL21-pSR43.6r&pSR58.6-CheA-Flag as an example:</p>
+
+          <img src="/static/upload/page/results/results7.png" alt="results7">
+          <p class="figurecaption">Figure 7 WB Development Result Image of BL21-pDawn-CheZ-Flag</p>
+          <p class="sub">Fluorescence detection (with sfGFP as reporter gene) quantifies expression efficiency:
+            Experiments on BL21-pDawn-sfGFP and BL21-pSR43.6r&pSR58.6 show light boosts sfGFP expression in a
+            time-dependent manner, confirming inducible and quantifiable light-responsive pathways.</p>
+
+          <img src="/static/upload/page/results/results8.png" alt="results8">
+          <p class="figurecaption">Figure 8 Relative Fluorescence Intensity of Bacterial Culture under Blue Light
+            Induction</p>
+
+          <img src="/static/upload/page/results/results9.png" alt="results9">
+          <p class="figurecaption">Together, they verify the light-controlled expression system is functional, ensuring
+            reliable attribution of subsequent movement experiment results to protein function rather than expression
+            errors.</p>
+        </section>
+
+        <!-- ID：section3 -->
+        <section id="section3">
+          <h1>SECTION 3</h1>
+          <h3>Verification 1: Macroscopic Verification via Semi-Solid Medium Culture Assay</h3>
+          <p class="sub">To preliminarily verify the motility of the engineered strains, we designed a semi-solid medium
+            culture assay. Owing to its semi-solid nature, this medium exhibits both a certain degree of fluidity and
+            stability. Utilizing semi-solid medium to assess bacterial diffusive motility (i.e., motility test) enables
+            more intuitive observation of phenomena, making it a fundamental and crucial identification technique in
+            microbiology laboratories.</p>
+          <p class="sub">In our hypothesis, overexpression of the CheZ protein would dephosphorylate CheY-A, thereby
+            inhibiting the clockwise rotation of Escherichia coli (E. coli) flagella, weakening their tumbling motility,
+            and simultaneously promoting counterclockwise rotation to enhance their straight-line motility. The weakened
+            tumbling ability and strengthened straight-line motility of E. coli would manifest as enhanced diffusive
+            motility on semi-solid medium, possibly with an accelerated diffusion rate—specifically, forming larger
+            colony areas within the same time period.</p>
+
+          <p class="sub">To validate whether the effect of CheZ overexpression aligns with our hypothesized outcomes
+            under IPTG induction, we constructed the pBBR1-MCS-5-CheZ system.</p>
+
+          <img src="/static/upload/page/results/results10.png" alt="results10">
+          <p class="figurecaption">Figure 10 Results of semi-solid medium culture for the pBBR1-MCS-5-CheZ system(From
+            left to right: Plates 1 and 3 are IPTG-induced groups; Plate 2 is the uninduced control group)</p>
+
+          <p class="sub">From the semi-solid culture results, the colonies in the two experimental groups (IPTG-induced)
+            were indeed larger than those in the middle control group (uninduced). This confirms that overexpression of
+            the CheZ protein can effectively promote the straight-line motility of E. coli.</p>
+          <p class="sub">Conversely, overexpression of the CheY protein or CheA protein (a phosphokinase) would increase
+            the production of CheY-A, thereby promoting the counterclockwise rotation of E. coli flagella, enhancing
+            their tumbling motility, and inhibiting clockwise rotation to weaken their straight-line motility. The
+            strengthened tumbling ability and weakened straight-line motility of E. coli would manifest as reduced
+            diffusive motility on semi-solid medium, possibly with a slower diffusion rate—specifically, forming smaller
+            bacterial lawn areas within the same time period. To verify whether the effects of CheY and CheA
+            overexpression match our hypothesized outcomes under IPTG induction, we further constructed the
+            pBBR1-MCS-5-CheY and pBBR1-MCS-5-CheA systems.</p>
+
+
+          <img src="/static/upload/page/results/results11.png" alt="results11">
+          <p class="figurecaption">Figure 11 Results of semi-solid medium culture for the pBBR1-MCS-5-CheY system(From
+            left to right: Plates 1 and 2 are IPTG-induced groups; Plate 3 is the uninduced control group)</p>
+
+          <img src="/static/upload/page/results/results12.png" alt="results12">
+          <p class="figurecaption">Figure 12 Results of semi-solid medium culture for the pBBR1-MCS-5-CheZ system(From
+            left to right: Plates 1 and 2 are IPTG-induced groups; Plate 3 is the uninduced control group)</p>
+
+          <p class="sub">From the semi-solid culture results, the colonies in the IPTG-induced groups were either the
+            same size as or smaller than those in the uninduced control group. This partially aligns with our expected
+            outcomes. We hypothesize that this discrepancy may stem from human operational errors during sample
+            spotting, which caused slight variations in the volume of bacterial culture added—leading to differences in
+            colony size. To a certain extent, this result supports the validity of our initial hypothesis, but further
+            verification is required to confirm the exact scenario.</p>
+          <p class="sub">In our design, under green light induction, the pSR43.6-pSR58.6-CheA and pSR43.6-pSR58.6-CheY
+            systems would overexpress the CheA and CheY proteins, respectively. This would increase CheY-A production,
+            enhance tumbling motility, and weaken straight-line motility of the bacteria. On semi-solid medium, this
+            would manifest as reduced diffusive motility and a slower diffusion rate—specifically, forming smaller
+            bacterial lawn areas within the same time period.</p>
+
+          <img src="/static/upload/page/results/results13.png" alt="results13">
+          <p class="figurecaption">Figure 13 Results of semi-solid medium culture for the pSR43.6-pSR58.6-CheY system
+          </p>
+
+          <img src="/static/upload/page/results/results14.png" alt="results14">
+          <p class="figurecaption">Figure 14 Results of semi-solid medium culture for the pSR43.6-pSR58.6-CheA system
+          </p>
+
+          <p class="sub">From the results in Figures 13 and 14, there was no significant difference in colony size
+            between the green light-induced groups and the non-induced groups. This confirms that the variations in
+            colony size observed in the pBBR1-MCS-5 system were likely caused by experimental errors. However, this does
+            not sufficiently prove that overexpression of CheA or CheY has no effect on flagellar tumbling motility.
+            Similarly, while the colony results from CheZ overexpression in semi-solid medium do not fully confirm
+            enhanced straight-line motility, they provide preliminary macroscopic evidence of a potential effect.
+            Further experiments are needed to clarify the exact impact of these protein overexpressions.</p>
+          <p class="sub">Therefore, we conducted the following microscopic observation assay to investigate bacterial
+            motility at the microscopic level.</p>
+
+
+          <h3>Verification 2: Microscopic Investigation via Microscopic Field Observation</h3>
+          <p class="sub">To directly identify changes in the motility of engineered strains from a microscopic
+            perspective, we designed a microscopic observation assay to visualize the movement trajectories of E. coli
+            in a liquid environment, as shown in the figures below.</p>
+          <img src="/static/upload/page/results/results15.png" alt="results15">
+          <p class="figurecaption">Figure 15 Microscopic movement trajectories of strains from the pDawn-CheZ system</p>
+
+          <p class="sub">Figure 15 presents the movement trajectories of four representative E. coli cells selected for
+            observation. Microscopic observations revealed that the strains overexpressing CheZ exhibited a noticeable
+            enhancement in straight-line motility. Compared to the macroscopic observations from the semi-solid medium
+            assay, this microscopic evidence further confirms our expected outcomes.</p>
+
+          <img src="/static/upload/page/results/results16.png" alt="results16">
+          <p class="figurecaption">Figure 16 Microscopic movement trajectories of strains from the pSR43.6-pSR58.6-CheY
+            system</p>
+
+          <p class="sub">The E. coli cells observed in Figure 16 were strains overexpressing CheY. Observations of their
+            motility revealed a significant decrease in movement ability. This is consistent with our previous
+            hypothesis that overexpression of CheY enhances tumbling motility. We propose that if E. coli exhibits
+            strengthened tumbling motility and weakened straight-line motility, it would appear as slow in-place
+            wriggling rather than rapid movement under microscopic observation. This further confirms the success of our
+            strain engineering. The unexpected diffusion results from the earlier semi-solid medium assay may be
+            attributed to the difficulty of detecting changes in E. coli flagellar motility using macroscopic
+            observation methods.</p>
+
+
+
+          <section id="section4"></section>
+          <h3>Section 4: Verification Assay for the Infectivity of Edwardsiella piscicida</h3>
+          <img src="/static/upload/page/results/results17.png" alt="results17">
+          <p class="figurecaption">Figure 17 Infection assay of Edwardsiella piscicida labeled with red fluorescent
+            protein</p>
+
+          <img src="/static/upload/page/results/results18.png" alt="results18">
+          <p class="figurecaption">Figure 18 Infection assay of Edwardsiella piscicida labeled with green fluorescent
+            protein</p>
+
+          <p class="sub">In this set of experiments, we constructed E. piscicida strains labeled with red fluorescent
+            protein and green fluorescent protein, respectively, and subjected them to attenuation treatment before
+            conducting infection assays. Through immersion infection assays on zebrafish larvae, we finally detected the
+            infection efficiency using fluorescence microscopy, as shown in Figures 17 and 18. Observations revealed
+            that the vaccine strains primarily accumulated in the gills, digestive tract, and skin surface of the
+            zebrafish larvae. This is consistent with findings from previously reviewed literature, which indicate that
+            vaccine strains typically enter the fish body through these three pathways and then reach immune organs such
+            as the liver via bodily fluids to activate the immune response—thereby exerting their function as a vaccine.
+          </p>
+
+
+          <h3>Section 5: Conclusion and Outlook</h3>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ID：analysis -->
+        <section id="analysis">
+          <h1>ANSYS Finite Element Analysis</h1>
+          <p class="sub">Fish Separator Grading Plate</p>
+          <p class="sub">Material and yield strength: The main material is medical grade 316L stainless "σ" _"y" steel,
+            whose yield strength at room temperature is 170 MPa. This material is selected to consider corrosion
+            resistance, biocompatibility and sufficient mechanical strength.</p>
+          <p class="sub">Boundary condition: The analysis model fixes the rigidity of the lower plate (simulating the
+            foundation constraint) and applies a uniform normal load of 1000 N in the central area of the upper plate
+            (simulating the operating pressure or fish body force).</p>
+          <p class="sub">Stress analysis: The maximum von Mises "σ_max " effect stress appears in the central area of
+            the upper plate, and its value is 0.01664 MPa.</p>
+
+          <img src="/static/upload/page/hardware/hardware12.png" alt="hardware12">
+          <p class="figurecaption">Figure 11.Stress cloud diagram of fisher
+          </p>
+
+          <p class="sub">The σ<sub>max</sub> &lt;&lt; σ<sub>y</sub> (170 MPa),
+            and the safety factor (SF = σ<sub>y</sub> / σ<sub>max</sub>)
+            is very large, indicating that the structural strength is very abundant,
+            and there is no risk of plastic deformation or static failure.</p>
+
+          <img src="/static/upload/page/hardware/hardware13.png" alt="hardware13">
+          <p class="figurecaption">Figure 12.Deformation cloud map of fisher
+          </p>
+
+          <p class="sub">Deformation analysis: As shown in the "σ_max " figure, the maximum deformation occurs in the
+            central load-bearing area of the upper plate, and its value is 2.4×10-⁶ mm. This deformation is extremely
+            small, far lower than the manufacturing tolerance and measurement accuracy (usually in microns or higher
+            order), which can be completely ignored in engineering.</p>
+          <p class="sub">For the fish body, this magnitude of deformation does not produce any perceptible crushing or
+            shear effect, effectively avoiding damage to the fish body caused by structural deformation. Fish water
+            separation funnel material and yield strength. </p>
+          <p class="sub">The material is also 316L stainless steel (yield strength 170 MPa) to ensure that it is
+            consistent with the material properties of the fish separator and corrosion resistant.</p>
+          <p class="sub">Boundary conditions: The analysis model will completely constrain the bottom surface of the
+            support frame (simulating the connection with the foundation or rack), and apply an equivalent total load of
+            2000 N simulating the gravity of the fluid or fish weight on the side wall and/or inner surface of the
+            bottom of the funnel (specify the force application surface and the nature of the simulated load).</p>
+          <p class="sub">Stress analysis: The maximum von Mises" " equivalent stress("σ_max" ) appears at the root area
+            of the connection between the support frame and the main body of the funnel, and the value is 0.58499 MPa.
+          </p>
+
+          <img src="/static/upload/page/hardware/hardware14.png" alt="hardware14">
+          <p class="figurecaption">Figure 13. Fish water separation funnel deformation cloud map
+          </p>
+
+          <p class="sub">The σ<sub>max</sub> &lt;&lt; σ<sub>y</sub> (170 MPa),
+            and the safety factor (SF ≈ 290) is still very high,
+            indicating that the strength of funnel structure is reliable
+            and meets the design bearing requirements.</p>
+
+          <img src="/static/upload/page/hardware/hardware15.png" alt="hardware15">
+          <p class="figurecaption">Figure 14. Archimedes screw and bearing stress cloud diagram</p>
+          <p class="sub">Deformation Analysis:</p>
+          <p class="sub">The maximum deformation "σ_max " occurs at the free edge or central region of the funnel, and
+            its value is "0.016524 mm(~16.5 μm" ). This deformation is small in magnitude and can usually be ignored in
+            engineering applications (especially considering the manufacturing accuracy of the funnel itself and water
+            flow disturbance).</p>
+          <p class="sub">For the fish and water separation function, this deformation will not affect the permeability
+            of particulate matter, nor will it cause damage to the retained fish body.</p>
+
+          <img src="/static/upload/page/hardware/hardware16.png" alt="hardware16">
+          <p class="figurecaption">Figure 15. Deformation cloud diagram of screw outlet support </p>
+
+          <p class="sub">Screw and support structure: stress and deformation analysis was carried out on the outlet
+            support, bearing support and installation platform of the screw system. The results of stress analysis are
+            as follows.</p>
+          <p class="sub">Screw outlet support: the maximum stress"(σmax)" occurs at both ends of the support, and the
+            value is "0.0037 MPa" . This value is far lower than the yield strength of the material valuing 170 MPa,
+            indicating that the support strength is sufficient.</p>
+          <p class="sub">Bearing support: The " σmax," maximum stress occurs at the bottom of the bearing seat, the
+            connection with the platform or the stress concentration area, and the value is 0.04 MPa. It is far lower
+            than the yield strength of the material 170 MPa, indicating that the support strength is sufficient.</p>
+          <p class="sub">Screw platform: The maximum "σmax," stress occurs around the screw bearing installation hole,
+            below the center of the base plate or at the joint of the rib plate, with a value of W MPa. The safety is
+            evaluated. It is pointed out that the stress of the three key support components is within the safe range.
+          </p>
+
+          <ul>
+            <li>
+              Support deformation: The maximum "σmax,0.0039 m" deformation occurs at the top of the support or the free
+              end, and the value is. It has little effect on the working clearance of the bearing and can be ignored.
+            </li>
+            <li>
+              Lift platform deformation: The maximum "σmax,3.36e-5 m" deformation occurs in the central area of the
+              platform, and the value is negligible. </li>
+            <li>
+              Lug outlet support deformation: " σmax,0.0004 m" the maximum deformation occurs at the end of the
+              cantilever, and the value is small enough to be ignored.
+              In conclusion, the deformation of each support structure is very small (typical magnitude, such as μm),
+              which is within the engineering installation tolerance and bearing working permission range, and will not
+              adversely affect the flat stability, smooth operation and material delivery of the screw.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ID：effect -->
+        <section id="effect">
+          <h1>CURRENT EFFECT</h1>
+          <!-- 4.1 -->
+          <h2>4.1 Analysis on Competitive Products </h2>
+          <h3>1. Injection inoculation technical scheme</h3>
+          <p class="sub">Skala Maskon, a Norwegian company, is an internationally renowned developer and manufacturer of
+            fishing vaccination equipment. Their closed-loop injection system utilizes negative pressure delivery
+            technology and machine vision to position fish lateral lines, achieving a vaccination efficiency of 10,000
+            fish per hour (per unit). The system processes fish weighing 30-130 grams and features an automated
+            supporting system with core components including:</p>
+
+          <p class="sub">A. The anesthesia device avoids the shutdown of medicine replacement through the double-chamber
+            design and uses the screw conveyor to gently control the delivery rate of fish.</p>
+          <p class="sub">B. The buffer tank can be linked with the vision system to accurately calculate the average
+            weight of the fish and control the delivery.</p>
+          <p class="sub">C. The fish pump system realizes the seamless connection of anesthesia, weighing and
+            inoculation, ensuring an efficient and gentle processing process.</p>
+          <p class="sub">The whole set of equipment is highly complex (requiring supporting classification modules) and
+            costs more than $500,000.</p>
+
+          <img src="/static/upload/page/hardware/hardware17.png" alt="hardware17">
+          <p class="figurecaption">Figure 16. Maskon company fishing vaccine automatic injection inoculator (single
+            unit and double unit) </p>
+
+          <h3>2. Soaking inoculation technical scheme</h3>
+          <p class="sub">Specifically designed for aquaculture hatcheries, Spain's FFFF (Fish Farm Feeder) has developed
+            an automated vaccination system utilizing immersion immunization. The equipment inoculates fish by immersing
+            them in a soaking tank containing vaccine suspension, suitable for all fish species with ideal weights
+            ranging from 4 grams to 10 grams. Its standard internal barrier features 4-millimeter spacing between the
+            grids. Key features and advantages include:</p>
+
+          <p class="sub">A. Adjust the concentration of vaccine solution according to fish species (conventional
+            soaking: 108 CFU/ml, high osmotic soaking: combined with 5%NaCl).</p>
+          <p class="sub">B. The soaking time can be adjusted (30 seconds to 5 minutes) depending on the type of vaccine
+            and the tolerance of the fish.</p>
+          <p class="sub">C. The inoculation efficiency can reach 1000-1500 kg/day (average fish weight of 2g per tail),
+            and the average inoculation amount is 30,000 per hour.</p>
+
+          <img src="/static/upload/page/hardware/hardware18.png" alt="hardware18">
+          <p class="figurecaption">Figure 17. Spanish FFFF fish vaccine intermittent immersion inoculator </p>
+
+          <h3>Technical comparison</h3>
+          <p class="sub">Compared with the advanced equipment of French FFF company and Norwegian Skala Maskon company
+            (world leading), the innovative advantages of this equipment are reflected in the comprehensive breakthrough
+            of inoculation efficiency, precision and fish body damage.</p>
+
+          <p class="sub">A. Processing efficiency: The equipment achieves a continuous inoculation capacity of 40,000
+            animals/hour, which is four times higher than Skala Maskon's automatic injection system (10,000 animals/hour
+            per machine) and equal to the FFF immersion system.</p>
+          <p class="sub">B. Precision of Vaccination: This device utilizes a multi-source sensing system (120fps vision
+            + bioimpedance + infrared spectroscopy) and LSTM neural network model to dynamically optimize parameters,
+            achieving a vaccine penetration rate ≥95%—equivalent to Skala's injection-grade performance—while completely
+            avoiding mechanical damage with a comprehensive injury rate ≤0.5% (compared to 10-15% in traditional
+            injections). In contrast, the FFF immersion system relies on a hyperosmotic mode requiring hypertonic
+            solutions, which may disrupt the body's internal homeostasis.</p>
+          <p class="sub">C. Cost-effectiveness of inoculation: The recycling of vaccine liquid in this equipment reduces
+            the cost of single inoculation to 0.03 yuan (compared with 0.12 yuan in traditional injection), reduces the
+            dosage of antibiotics by 90%, and is compatible with inactivated vaccines, live attenuated vaccines and
+            vector vaccines. In contrast, Skala equipment (cost more than 500,000 US dollars) only supports injection
+            vaccines, and the inoculation cost is 300 yuan/10,000 animals.</p>
+          <p class="sub">The whole set of equipment is highly complex (requiring supporting classification modules) and
+            costs more than $500,000.</p>
+
+          <img src="/static/upload/page/hardware/hardware19.jpg" alt="hardware19">
+
+          <!-- 4.2 -->
+          <h2>4.2 Technical Applications</h2>
+          <p class="sub">The large flounder (Turbot), a globally valued coastal fish species, has an annual fry
+            production exceeding 1 billion. However, its vaccination process remains reliant on manual immersion
+            methods, presenting two critical challenges: </p>
+
+          <ol>
+            <li>
+              Inefficiency. Traditional vaccination relies solely on manual injection, while immersion techniques
+              require batch-wise intermittent operations that lack precise dosage control. With processing capacity of
+              only 1,000-3,000 fry per hour, this approach fails to meet large-scale breeding demands. </li>
+            <li>
+              Stress-induced damage. Injection vaccinations have a 95% survival rate (requiring anesthesia) but
+              carry a 5-10% risk of secondary bacterial infections due to improper handling.
+            </li>
+          </ol>
+
+          <p class="sub">The continuous immersion system developed for this equipment is optimized according to the
+            biological characteristics of turbot.</p>
+
+          <ol>
+            <li>
+              Specialized adaptation module. The Archimedes screw compartment volume is optimized to 0.5L/cavity,
+              matching the body length of turbot fry (3-5cm), with precise control of vaccine solution circulation flow
+              rate at 0.3L/s to ensure uniform contact with fish bodies.
+            <li>
+              Low-stress assurance. Through multi-source perception real-time monitoring of dissolved oxygen (≥6
+              mg/L) and flow rate (≤0.2 m/s), combined with AI algorithm dynamic adjustment, respiratory frequency is
+              stabilized at 40-45 breaths/min (traditionally fluctuating up to 80 breaths/min).</li>
+            <li>
+              Efficient vaccination verification. Pilot tests at a seedling base in Shandong, China showed that the
+              system processing efficiency reached 40,000 birds per hour, with a vaccine absorption rate of 98.2% and a
+              survival rate ≥99.5%, representing a 15 percentage point improvement over traditional methods.</li>
+          </ol>
+          <p class="sub">Currently, the equipment has already signed two cooperation agreements of intent to establish
+            five demonstration sites in major production areas of flounder and halibut farming in Liaoning and Shandong
+            provinces, China, with commercial promotion to be achieved by 2026.</p>
+
+
+          <!-- 4.3 -->
+          <h2>Potential Value</h2>
+          <h4>Shrimp and crab immunization</h4>
+          <p class="sub">For crustaceans such as white leg shrimp and swimming crab:</p>
+          <ul>
+            <li>
+              Osmotic adaptation: Develop a nano-micromole vaccine chamber (particle size ≤50nm) and enhance the
+              absorption of chitinous vaccine through negative pressure osmosis.</li>
+            <li>
+              Low damage sorting: integrated flexible vibrating screen (frequency ≤10Hz), the sorting damage rate can
+              be controlled below 0.1%. </li>
+          </ul>
+          <h4>Deep sea aquaculture scenario</h4>
+          <ul>
+            <li>
+              Waves resistance design: The modular inoculation cabin can be carried on the deep-sea aquaculture
+              platform such as intelligent cage, aquaculture fence and aquaculture work boat, and can be operated
+              offshore through wave energy drive.
+            <li>
+              Vaccine cold chain: Develop a phase change material temperature control system (4-8℃ constant
+              temperature for 72 hours) to meet the needs of deep-sea transportation.</li>
+          </ul>
+
+
+          <h3>Multi-functional extension applications</h3>
+          <ul>
+            <li>
+              Seedling pre-treatment: Integrate the function of gene editing vector to realize the synergistic
+              regulation of immunity enhancement and stress resistance.
+            <li>
+              Precise drug delivery: adapted to the slow-release technology of parasitic control drugs, reducing the
+              dosage by 50% in a single treatment.</li>
+          </ul>
+
+          <!-- 4.4 -->
+          <h2>4.4 Economic Benefits and Social Impact</h2>
+          <h4>Direct economic value</h4>
+          <ul>
+            <li>
+              Equipment sales: calculated according to the annual output of 200 units (unit price of 600,000 yuan),
+              the output value reaches 120 million yuan.
+            <li>
+              Service income: vaccine supporting and technical service fee is about 30 yuan / 10,000 animals, annual
+              processing of 1 billion animals can generate revenue of 30 million yuan.</li>
+            <li>
+              Cost saving: The cost of single tail inoculation is reduced from 0.12 yuan in traditional injection to
+              0.03 yuan, saving more than 200 million yuan of breeding cost annually.</li>
+          </ul>
+
+          <h4>Industrial chain pulling effect</h4>
+          <ul>
+            <li>
+              Vaccine industry: Promote the development of adjuvant, sustained-release carrier and other supporting
+              technologies, which is expected to drive the market size of more than 2 billion yuan.
+            <li>
+              Equipment manufacturing: Promote the localization of high-precision sensors, servo motors and other
+              products to replace imports, and increase the replacement rate to 60%.</li>
+          </ul>
+
+          <h4>Social and ecological benefits</h4>
+          <ul>
+            <li>
+              Antibiotic reduction action: A set of equipment can reduce the annual use of antibiotics by more than
+              90% ,helping achieve the goal of reducing the use of antibiotics in aquaculture by 30% by 2025.
+            <li>
+              Food safety: the risk of drug residues reduces, and the project is expected to increase the
+              qualification rate of aquatic products from 97.5% to 99.8%.</li>
+            <li>
+              Employment promotion: every 1,000 equipment operation and maintenance requirement can create 5,000 new
+              technical jobs, promoting rural industrial upgrading.</li>
+          </ul>
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
