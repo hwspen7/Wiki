@@ -58,7 +58,7 @@
 
         <!-- ID：section1 -->
         <section id="section1">
-          <h1>SECTION 1</h1>
+          <h1>SECTION 1: Plasmid amplification and reconstruction</h1>
           <p class="sub">In this project, pBBR1MCS-5, pDawn, and pSR58.6 were used as vectors. The main target genes
             included CheA, CheY, CheZ, and sfGFP. The electrophoresis results of the main fragments and vector backbones
             used in this study are shown in the figure below.</p>
@@ -87,7 +87,7 @@
 
         <!-- ID：section2 -->
         <section id="section2">
-          <h1>SECTION 2</h1>
+          <h1>SECTION 2: Verification of light-responsive pathways</h1>
           <p class="sub">Centered on constructing light-controlled E. coli BL21 engineered strains that move straight
             under blue light and tumble under green light, this project relies on CheA, CheY, and CheZ proteins to
             control bacterial movement. Western Blot and fluorescence detection are key experiments to verify protein
@@ -113,15 +113,16 @@
             Induction</p>
 
           <img src="/static/upload/page/results/results9.png" alt="results9">
-          <p class="figurecaption">Together, they verify the light-controlled expression system is functional, ensuring
+          <p class="figurecaption">Figure 9 Together, they verify the light-controlled expression system is functional,
+            ensuring
             reliable attribution of subsequent movement experiment results to protein function rather than expression
             errors.</p>
         </section>
 
         <!-- ID：section3 -->
         <section id="section3">
-          <h1>SECTION 3</h1>
-          <h3>Verification 1: Macroscopic Verification via Semi-Solid Medium Culture Assay</h3>
+          <h1>SECTION 3:</h1>
+          <h2>Verification 1: Macroscopic Verification via Semi-Solid Medium Culture Assay</h2>
           <p class="sub">To preliminarily verify the motility of the engineered strains, we designed a semi-solid medium
             culture assay. Owing to its semi-solid nature, this medium exhibits both a certain degree of fluidity and
             stability. Utilizing semi-solid medium to assess bacterial diffusive motility (i.e., motility test) enables
@@ -193,7 +194,7 @@
             motility at the microscopic level.</p>
 
 
-          <h3>Verification 2: Microscopic Investigation via Microscopic Field Observation</h3>
+          <h2>Verification 2: Microscopic Investigation via Microscopic Field Observation</h2>
           <p class="sub">To directly identify changes in the motility of engineered strains from a microscopic
             perspective, we designed a microscopic observation assay to visualize the movement trajectories of E. coli
             in a liquid environment, as shown in the figures below.</p>
@@ -217,11 +218,11 @@
             strain engineering. The unexpected diffusion results from the earlier semi-solid medium assay may be
             attributed to the difficulty of detecting changes in E. coli flagellar motility using macroscopic
             observation methods.</p>
+        </section>
 
 
-
-          <section id="section4"></section>
-          <h3>Section 4: Verification Assay for the Infectivity of Edwardsiella piscicida</h3>
+        <section id="section4">
+          <h1>Section 4: Verification Assay for the Infectivity of Edwardsiella piscicida</h1>
           <img src="/static/upload/page/results/results17.png" alt="results17">
           <p class="figurecaption">Figure 17 Infection assay of Edwardsiella piscicida labeled with red fluorescent
             protein</p>
@@ -239,310 +240,40 @@
             vaccine strains typically enter the fish body through these three pathways and then reach immune organs such
             as the liver via bodily fluids to activate the immune response—thereby exerting their function as a vaccine.
           </p>
-
-
-          <h3>Section 5: Conclusion and Outlook</h3>
-
         </section>
 
 
+        <section id="section5">
+          <h1>Section 5: Conclusion and Outlook</h1>
+          <h2>Conclusion</h2>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- ID：analysis -->
-        <section id="analysis">
-          <h1>ANSYS Finite Element Analysis</h1>
-          <p class="sub">Fish Separator Grading Plate</p>
-          <p class="sub">Material and yield strength: The main material is medical grade 316L stainless "σ" _"y" steel,
-            whose yield strength at room temperature is 170 MPa. This material is selected to consider corrosion
-            resistance, biocompatibility and sufficient mechanical strength.</p>
-          <p class="sub">Boundary condition: The analysis model fixes the rigidity of the lower plate (simulating the
-            foundation constraint) and applies a uniform normal load of 1000 N in the central area of the upper plate
-            (simulating the operating pressure or fish body force).</p>
-          <p class="sub">Stress analysis: The maximum von Mises "σ_max " effect stress appears in the central area of
-            the upper plate, and its value is 0.01664 MPa.</p>
-
-          <img src="/static/upload/page/hardware/hardware12.png" alt="hardware12">
-          <p class="figurecaption">Figure 11.Stress cloud diagram of fisher
+          <p class="sub">Our goal was to design a light-inducible system for precise control of Edwardsiella piscicida
+            motility. This would allow accurate immersion vaccination in fish. As a first step, we performed
+            proof-of-concept studies in E. coli.
           </p>
 
-          <p class="sub">The σ<sub>max</sub> &lt;&lt; σ<sub>y</sub> (170 MPa),
-            and the safety factor (SF = σ<sub>y</sub> / σ<sub>max</sub>)
-            is very large, indicating that the structural strength is very abundant,
-            and there is no risk of plastic deformation or static failure.</p>
+          <p class="sub">Using pBBR1-MCS-5, we showed that CheZ, CheA, and CheY can alter flagellar behavior. We then
+            used pDawn and pSR43.6r&pSR58.6 systems to achieve light-inducible control. Under blue light, cells were
+            expected to swim linearly. Under green light, cells were expected to tumble.</p>
+          <p class="sub">We successfully constructed 13 engineered strains. PCR and gel electrophoresis confirmed
+            correct assembly. Western blotting verified protein expression. Semi-solid assays and microscopy
+            demonstrated changes in motility consistent with our design. sfGFP served as a reporter to measure
+            light-inducible expression levels. These data supported our prediction of motility regulation.</p>
+          <p class="sub">To test translational application, we performed zebrafish immersion infection with
+            fluorescently labeled Edwardsiella piscicida. Bacteria localized to major entry points and immune organs.
+            This confirmed the feasibility of our proposed vaccination concept.</p>
 
-          <img src="/static/upload/page/hardware/hardware13.png" alt="hardware13">
-          <p class="figurecaption">Figure 12.Deformation cloud map of fisher
-          </p>
-
-          <p class="sub">Deformation analysis: As shown in the "σ_max " figure, the maximum deformation occurs in the
-            central load-bearing area of the upper plate, and its value is 2.4×10-⁶ mm. This deformation is extremely
-            small, far lower than the manufacturing tolerance and measurement accuracy (usually in microns or higher
-            order), which can be completely ignored in engineering.</p>
-          <p class="sub">For the fish body, this magnitude of deformation does not produce any perceptible crushing or
-            shear effect, effectively avoiding damage to the fish body caused by structural deformation. Fish water
-            separation funnel material and yield strength. </p>
-          <p class="sub">The material is also 316L stainless steel (yield strength 170 MPa) to ensure that it is
-            consistent with the material properties of the fish separator and corrosion resistant.</p>
-          <p class="sub">Boundary conditions: The analysis model will completely constrain the bottom surface of the
-            support frame (simulating the connection with the foundation or rack), and apply an equivalent total load of
-            2000 N simulating the gravity of the fluid or fish weight on the side wall and/or inner surface of the
-            bottom of the funnel (specify the force application surface and the nature of the simulated load).</p>
-          <p class="sub">Stress analysis: The maximum von Mises" " equivalent stress("σ_max" ) appears at the root area
-            of the connection between the support frame and the main body of the funnel, and the value is 0.58499 MPa.
-          </p>
-
-          <img src="/static/upload/page/hardware/hardware14.png" alt="hardware14">
-          <p class="figurecaption">Figure 13. Fish water separation funnel deformation cloud map
-          </p>
-
-          <p class="sub">The σ<sub>max</sub> &lt;&lt; σ<sub>y</sub> (170 MPa),
-            and the safety factor (SF ≈ 290) is still very high,
-            indicating that the strength of funnel structure is reliable
-            and meets the design bearing requirements.</p>
-
-          <img src="/static/upload/page/hardware/hardware15.png" alt="hardware15">
-          <p class="figurecaption">Figure 14. Archimedes screw and bearing stress cloud diagram</p>
-          <p class="sub">Deformation Analysis:</p>
-          <p class="sub">The maximum deformation "σ_max " occurs at the free edge or central region of the funnel, and
-            its value is "0.016524 mm(~16.5 μm" ). This deformation is small in magnitude and can usually be ignored in
-            engineering applications (especially considering the manufacturing accuracy of the funnel itself and water
-            flow disturbance).</p>
-          <p class="sub">For the fish and water separation function, this deformation will not affect the permeability
-            of particulate matter, nor will it cause damage to the retained fish body.</p>
-
-          <img src="/static/upload/page/hardware/hardware16.png" alt="hardware16">
-          <p class="figurecaption">Figure 15. Deformation cloud diagram of screw outlet support </p>
-
-          <p class="sub">Screw and support structure: stress and deformation analysis was carried out on the outlet
-            support, bearing support and installation platform of the screw system. The results of stress analysis are
-            as follows.</p>
-          <p class="sub">Screw outlet support: the maximum stress"(σmax)" occurs at both ends of the support, and the
-            value is "0.0037 MPa" . This value is far lower than the yield strength of the material valuing 170 MPa,
-            indicating that the support strength is sufficient.</p>
-          <p class="sub">Bearing support: The " σmax," maximum stress occurs at the bottom of the bearing seat, the
-            connection with the platform or the stress concentration area, and the value is 0.04 MPa. It is far lower
-            than the yield strength of the material 170 MPa, indicating that the support strength is sufficient.</p>
-          <p class="sub">Screw platform: The maximum "σmax," stress occurs around the screw bearing installation hole,
-            below the center of the base plate or at the joint of the rib plate, with a value of W MPa. The safety is
-            evaluated. It is pointed out that the stress of the three key support components is within the safe range.
-          </p>
-
-          <ul>
-            <li>
-              Support deformation: The maximum "σmax,0.0039 m" deformation occurs at the top of the support or the free
-              end, and the value is. It has little effect on the working clearance of the bearing and can be ignored.
-            </li>
-            <li>
-              Lift platform deformation: The maximum "σmax,3.36e-5 m" deformation occurs in the central area of the
-              platform, and the value is negligible. </li>
-            <li>
-              Lug outlet support deformation: " σmax,0.0004 m" the maximum deformation occurs at the end of the
-              cantilever, and the value is small enough to be ignored.
-              In conclusion, the deformation of each support structure is very small (typical magnitude, such as μm),
-              which is within the engineering installation tolerance and bearing working permission range, and will not
-              adversely affect the flat stability, smooth operation and material delivery of the screw.
-            </li>
-          </ul>
-        </section>
-
-        <!-- ID：effect -->
-        <section id="effect">
-          <h1>CURRENT EFFECT</h1>
-          <!-- 4.1 -->
-          <h2>4.1 Analysis on Competitive Products </h2>
-          <h3>1. Injection inoculation technical scheme</h3>
-          <p class="sub">Skala Maskon, a Norwegian company, is an internationally renowned developer and manufacturer of
-            fishing vaccination equipment. Their closed-loop injection system utilizes negative pressure delivery
-            technology and machine vision to position fish lateral lines, achieving a vaccination efficiency of 10,000
-            fish per hour (per unit). The system processes fish weighing 30-130 grams and features an automated
-            supporting system with core components including:</p>
-
-          <p class="sub">A. The anesthesia device avoids the shutdown of medicine replacement through the double-chamber
-            design and uses the screw conveyor to gently control the delivery rate of fish.</p>
-          <p class="sub">B. The buffer tank can be linked with the vision system to accurately calculate the average
-            weight of the fish and control the delivery.</p>
-          <p class="sub">C. The fish pump system realizes the seamless connection of anesthesia, weighing and
-            inoculation, ensuring an efficient and gentle processing process.</p>
-          <p class="sub">The whole set of equipment is highly complex (requiring supporting classification modules) and
-            costs more than $500,000.</p>
-
-          <img src="/static/upload/page/hardware/hardware17.png" alt="hardware17">
-          <p class="figurecaption">Figure 16. Maskon company fishing vaccine automatic injection inoculator (single
-            unit and double unit) </p>
-
-          <h3>2. Soaking inoculation technical scheme</h3>
-          <p class="sub">Specifically designed for aquaculture hatcheries, Spain's FFFF (Fish Farm Feeder) has developed
-            an automated vaccination system utilizing immersion immunization. The equipment inoculates fish by immersing
-            them in a soaking tank containing vaccine suspension, suitable for all fish species with ideal weights
-            ranging from 4 grams to 10 grams. Its standard internal barrier features 4-millimeter spacing between the
-            grids. Key features and advantages include:</p>
-
-          <p class="sub">A. Adjust the concentration of vaccine solution according to fish species (conventional
-            soaking: 108 CFU/ml, high osmotic soaking: combined with 5%NaCl).</p>
-          <p class="sub">B. The soaking time can be adjusted (30 seconds to 5 minutes) depending on the type of vaccine
-            and the tolerance of the fish.</p>
-          <p class="sub">C. The inoculation efficiency can reach 1000-1500 kg/day (average fish weight of 2g per tail),
-            and the average inoculation amount is 30,000 per hour.</p>
-
-          <img src="/static/upload/page/hardware/hardware18.png" alt="hardware18">
-          <p class="figurecaption">Figure 17. Spanish FFFF fish vaccine intermittent immersion inoculator </p>
-
-          <h3>Technical comparison</h3>
-          <p class="sub">Compared with the advanced equipment of French FFF company and Norwegian Skala Maskon company
-            (world leading), the innovative advantages of this equipment are reflected in the comprehensive breakthrough
-            of inoculation efficiency, precision and fish body damage.</p>
-
-          <p class="sub">A. Processing efficiency: The equipment achieves a continuous inoculation capacity of 40,000
-            animals/hour, which is four times higher than Skala Maskon's automatic injection system (10,000 animals/hour
-            per machine) and equal to the FFF immersion system.</p>
-          <p class="sub">B. Precision of Vaccination: This device utilizes a multi-source sensing system (120fps vision
-            + bioimpedance + infrared spectroscopy) and LSTM neural network model to dynamically optimize parameters,
-            achieving a vaccine penetration rate ≥95%—equivalent to Skala's injection-grade performance—while completely
-            avoiding mechanical damage with a comprehensive injury rate ≤0.5% (compared to 10-15% in traditional
-            injections). In contrast, the FFF immersion system relies on a hyperosmotic mode requiring hypertonic
-            solutions, which may disrupt the body's internal homeostasis.</p>
-          <p class="sub">C. Cost-effectiveness of inoculation: The recycling of vaccine liquid in this equipment reduces
-            the cost of single inoculation to 0.03 yuan (compared with 0.12 yuan in traditional injection), reduces the
-            dosage of antibiotics by 90%, and is compatible with inactivated vaccines, live attenuated vaccines and
-            vector vaccines. In contrast, Skala equipment (cost more than 500,000 US dollars) only supports injection
-            vaccines, and the inoculation cost is 300 yuan/10,000 animals.</p>
-          <p class="sub">The whole set of equipment is highly complex (requiring supporting classification modules) and
-            costs more than $500,000.</p>
-
-          <img src="/static/upload/page/hardware/hardware19.jpg" alt="hardware19">
-
-          <!-- 4.2 -->
-          <h2>4.2 Technical Applications</h2>
-          <p class="sub">The large flounder (Turbot), a globally valued coastal fish species, has an annual fry
-            production exceeding 1 billion. However, its vaccination process remains reliant on manual immersion
-            methods, presenting two critical challenges: </p>
-
+          <h2>Outlook</h2>
+          <p class="sub">Time limits restricted our current work to concept validation. In the future, we will:</p>
           <ol>
-            <li>
-              Inefficiency. Traditional vaccination relies solely on manual injection, while immersion techniques
-              require batch-wise intermittent operations that lack precise dosage control. With processing capacity of
-              only 1,000-3,000 fry per hour, this approach fails to meet large-scale breeding demands. </li>
-            <li>
-              Stress-induced damage. Injection vaccinations have a 95% survival rate (requiring anesthesia) but
-              carry a 5-10% risk of secondary bacterial infections due to improper handling.
-            </li>
+            <li>Repeat experiments to ensure reproducibility.</li>
+            <li>Combine blue- and green-light-inducible systems in a single strain. This will allow ratio-dependent
+              control of linear versus tumbling motility.</li>
+            <li>Transfer the system to Edwardsiella piscicida. This should enable precise, light-controlled infection
+              during immersion vaccination. The strategy may improve efficiency, dosage control, and delivery accuracy
+              in aquaculture vaccines.</li>
           </ol>
-
-          <p class="sub">The continuous immersion system developed for this equipment is optimized according to the
-            biological characteristics of turbot.</p>
-
-          <ol>
-            <li>
-              Specialized adaptation module. The Archimedes screw compartment volume is optimized to 0.5L/cavity,
-              matching the body length of turbot fry (3-5cm), with precise control of vaccine solution circulation flow
-              rate at 0.3L/s to ensure uniform contact with fish bodies.
-            <li>
-              Low-stress assurance. Through multi-source perception real-time monitoring of dissolved oxygen (≥6
-              mg/L) and flow rate (≤0.2 m/s), combined with AI algorithm dynamic adjustment, respiratory frequency is
-              stabilized at 40-45 breaths/min (traditionally fluctuating up to 80 breaths/min).</li>
-            <li>
-              Efficient vaccination verification. Pilot tests at a seedling base in Shandong, China showed that the
-              system processing efficiency reached 40,000 birds per hour, with a vaccine absorption rate of 98.2% and a
-              survival rate ≥99.5%, representing a 15 percentage point improvement over traditional methods.</li>
-          </ol>
-          <p class="sub">Currently, the equipment has already signed two cooperation agreements of intent to establish
-            five demonstration sites in major production areas of flounder and halibut farming in Liaoning and Shandong
-            provinces, China, with commercial promotion to be achieved by 2026.</p>
-
-
-          <!-- 4.3 -->
-          <h2>Potential Value</h2>
-          <h4>Shrimp and crab immunization</h4>
-          <p class="sub">For crustaceans such as white leg shrimp and swimming crab:</p>
-          <ul>
-            <li>
-              Osmotic adaptation: Develop a nano-micromole vaccine chamber (particle size ≤50nm) and enhance the
-              absorption of chitinous vaccine through negative pressure osmosis.</li>
-            <li>
-              Low damage sorting: integrated flexible vibrating screen (frequency ≤10Hz), the sorting damage rate can
-              be controlled below 0.1%. </li>
-          </ul>
-          <h4>Deep sea aquaculture scenario</h4>
-          <ul>
-            <li>
-              Waves resistance design: The modular inoculation cabin can be carried on the deep-sea aquaculture
-              platform such as intelligent cage, aquaculture fence and aquaculture work boat, and can be operated
-              offshore through wave energy drive.
-            <li>
-              Vaccine cold chain: Develop a phase change material temperature control system (4-8℃ constant
-              temperature for 72 hours) to meet the needs of deep-sea transportation.</li>
-          </ul>
-
-
-          <h3>Multi-functional extension applications</h3>
-          <ul>
-            <li>
-              Seedling pre-treatment: Integrate the function of gene editing vector to realize the synergistic
-              regulation of immunity enhancement and stress resistance.
-            <li>
-              Precise drug delivery: adapted to the slow-release technology of parasitic control drugs, reducing the
-              dosage by 50% in a single treatment.</li>
-          </ul>
-
-          <!-- 4.4 -->
-          <h2>4.4 Economic Benefits and Social Impact</h2>
-          <h4>Direct economic value</h4>
-          <ul>
-            <li>
-              Equipment sales: calculated according to the annual output of 200 units (unit price of 600,000 yuan),
-              the output value reaches 120 million yuan.
-            <li>
-              Service income: vaccine supporting and technical service fee is about 30 yuan / 10,000 animals, annual
-              processing of 1 billion animals can generate revenue of 30 million yuan.</li>
-            <li>
-              Cost saving: The cost of single tail inoculation is reduced from 0.12 yuan in traditional injection to
-              0.03 yuan, saving more than 200 million yuan of breeding cost annually.</li>
-          </ul>
-
-          <h4>Industrial chain pulling effect</h4>
-          <ul>
-            <li>
-              Vaccine industry: Promote the development of adjuvant, sustained-release carrier and other supporting
-              technologies, which is expected to drive the market size of more than 2 billion yuan.
-            <li>
-              Equipment manufacturing: Promote the localization of high-precision sensors, servo motors and other
-              products to replace imports, and increase the replacement rate to 60%.</li>
-          </ul>
-
-          <h4>Social and ecological benefits</h4>
-          <ul>
-            <li>
-              Antibiotic reduction action: A set of equipment can reduce the annual use of antibiotics by more than
-              90% ,helping achieve the goal of reducing the use of antibiotics in aquaculture by 30% by 2025.
-            <li>
-              Food safety: the risk of drug residues reduces, and the project is expected to increase the
-              qualification rate of aquatic products from 97.5% to 99.8%.</li>
-            <li>
-              Employment promotion: every 1,000 equipment operation and maintenance requirement can create 5,000 new
-              technical jobs, promoting rural industrial upgrading.</li>
-          </ul>
         </section>
 
         <div class="logo-ring"></div>

@@ -348,6 +348,7 @@ ol {
 .figurecaption {
     text-align: center;
     font-weight: bold;
+    padding-top: 10px;
 }
 
 h1 {
