@@ -1,39 +1,387 @@
 {% extends "layout.html" %}
-  
-{% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/software.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model</h4>
-      <p>Models and computer simulations can help us understand the function and operation of BioBrick Parts and Devices. Simulation and modeling are critical engineering skills that can contribute to project design or provide a better understanding of the modeled process. These processes are even more useful and/or informative when real-world data are included in the model. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before, or in conjunction with, experiments in the wetlab.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/special-prizes">Special Prizes page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>LAB</h3>
+    <h1>MODEL</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr />
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/utoronto/model">2024 UToronto</a></li>
-      <li><a href="https://2024.igem.wiki/heidelberg/model">2024 Heidelberg</a></li>
-      <li><a href="https://2024.igem.wiki/waseda-tokyo/model">2024 Waseda-Tokyo</a></li>
-      <li><a href="https://2024.igem.wiki/bnuzh-china/model">2024 BNUZH-China</a></li>
-      <li><a href="https://2024.igem.wiki/cjuh-jlu-china/model">2024 CJUH-JLU-China</a></li>
-      <li><a href="https://2024.igem.wiki/tsinghua/model">2024 Tsinghua</a></li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#description">INTRODUCTION</a></li>
+            <li><a class="navlink" href="#strategy">DEVELOPMENT <br>STRATEGY</a></li>
+            <li><a class="navlink" href="#architecture">SYSTEM <br>ARCHITECTURE</a></li>
+            <li><a class="navlink" href="#machine">MACHINE <br>VISION MODEL</a></li>
+            <li><a class="navlink" href="#control">CONTROL <br> SYSTEM MODEL</a></li>
+            <li><a class="navlink" href="#conclusion">CONCLUSION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：introduction -->
+        <section id="introduction">
+          <h1>INTRODUCTION</h1>
+          <p class="sub">In the precision bioprocessing of modern aquaculture, immersion vaccination mandates
+            near-stringent requirements for process environment stability and operational repeatability. Conventional
+            control methodologies, due to their inherent latency and limitations, struggle to perform real-time,
+            dynamic, and precise regulation of Key Process Parameters (KPPs) such as vaccine concentration, temperature,
+            and salinity, thereby directly impacting vaccine bio-activity and inoculation success rates.</p>
+
+          <p class="sub">To overcome this technical bottleneck, we have developed an intelligent control system based on
+            multi-source IoT perception—"Smart Vac". This system is not an isolated remote monitoring tool, but rather
+            an end-to-end, closed-loop solution that deeply integrates data sensing, intelligent decision-making, and
+            precision execution.</p>
+          <h4>The core innovative value of our system is manifested on several levels:</h4>
+          <h4>1.From Passive Monitoring to Proactive Process Control: </h4>
+          <p class="sub">We engineered a real-time process control system with a PLC at its core. By deploying Advanced
+            Process Control (APC) algorithms, it proactively modulates actuators to dynamically maintain critical
+            process parameters within exceptionally tight setpoint windows.</p>
+          <h4>2.Machine Learning as an Intelligent Decision Engine: </h4>
+          <p class="sub">The system innovatively incorporates a machine learning decision engine. It not only performs
+            predictive assessments of the biological state of fry through visual analysis but also executes real-time
+            dynamic optimization of physical processes like material handling, marking a pivotal leap from automation to
+            intelligence.
+          </p>
+          <h4>3.A Hybrid Edge-Cloud Collaborative Architecture: </h4>
+          <p class="sub">We designed a unique dual-software architecture, creating a hybrid edge-cloud model that
+            balances reliability with flexibility. The Qt-based edge control software ensures mission-critical local
+            control and data security, while the uni-app-based cross-platform software provides powerful remote
+            collaboration and scalable supervisory control capabilities.</p>
+        </section>
+
+
+        <!-- ID：strategy -->
+        <section id="strategy">
+          <h1>DEVELOPMENT STRATEGY</h1>
+          <p class="sub">Intelligent system of "Smart Vac", we adopted a modular, phased-empowerment agile development
+            strategy. This strategy partitioned the entire system's construction into three logically distinct and
+            progressive phases: first, building an autonomous hardware control core; second, constructing a
+            collaborative local and cloud interaction layer; and finally, integrating a data-driven intelligent
+            decision engine. Each phase focused on the delivery of a core capability, ensuring through continuous
+            feedback and testing that a stable, reliable, and intelligent system could be seamlessly integrated in the
+            end.</p>
+          <!-- Phase 1 -->
+          <H4>Phase I: Building the Autonomous Hardware Control Core</H4>
+          <p class="sub">Purpose: Forge a functionally complete and standalone automated physical unit, concentrating
+            on the precise process control of the underlying hardware.</p>
+          <p class="sub">Tasks: To complete the control logic programming for the Siemens S7-1214C PLC , implementing
+            closed-loop control for key parameters such as temperature and concentration. Concurrently, to integrate
+            various high-precision sensors and actuators, establishing a complete link from data perception to
+            physical execution.</p>
+          <p class="sub">Achievement: A fully-equipped, standalone automated device that achieves unmanned and
+            standardized operation of the core production process.</p>
+
+          <!-- Phase 2 -->
+          <H4>Phase II: Constructing the Local and Cloud Collaborative Interaction Layer</H4>
+          <p class="sub">Purpose: Establish a seamless communication bridge between human operators and the machine,
+            as
+            well as between local and remote access, to enable comprehensive data management and supervisory control.
+          </p>
+          <p class="sub">Tasks: Initially, to develop the Qt-based edge control software to serve as the primary local
+            Human-Machine Interface (HMI) for local parameter setting and real-time monitoring. Subsequently, to
+            develop the uni-app-based cross-platform control software and its IoT backend, enabling remote monitoring,
+            parameter calibration, and an innovative one-to-many device management function.</p>
+          <p class="sub">Achievement: A collaborative control system with full IoT capabilities, allowing operators to
+            securely monitor and manage one or more devices from either local or remote terminals.</p>
+
+          <!-- Phase 3 -->
+          <H4>Phase III: Integrating the Data-Driven Intelligent Decision Engine</H4>
+          <p class="sub">Purpose:Empower the system with the ability to analyze, judge, and self-optimize based on
+            data.
+          </p>
+          <p class="sub">Core Tasks: To develop and deploy a visual assessment model for fish health status, providing
+            a scientific basis for inoculation decisions. Simultaneously, to develop a dynamic optimization model for
+            the automated fish separation process, which intelligently adjusts actuators based on visual feedback to
+            maximize process efficiency. Finally, to link the model's decision outputs with the underlying control
+            system to close the intelligent loop.</p>
+          <p class="sub">Achievement: An intelligent vaccination system equipped with autonomous perception, analysis,
+            and decision-making capabilities, achieving a process that is highly efficient, precise, and safe.</p>
+
+          <p class="sub">Through this phased and iterative development path, we ensured that the project had clear,
+            deliverable outcomes at each stage. We systematically addressed all technical challenges, from low-level
+            hardware control to high-level intelligent applications, ultimately architecting an innovative software
+            solution that is robust, powerful, and forward-looking.</p>
+
+          <img src="/static/upload/page/software/software1.png" alt="software1">
+          <p class="figurecaption">Figure 1</p>
+        </section>
+
+        <!-- ID：architecture -->
+        <section id="architecture">
+          <h1>System Architecture</h1>
+          <p class="sub">To support the high-reliability, high-intelligence, and high-collaboration design goals of
+            the "Smart Vac" system, we architected an advanced, decoupled, three-layer collaborative IoT framework,
+            as illustrated in Figure 1. This architecture distinctly separates real-time and non-real-time tasks,
+            ensuring both the ultra-low latency of local control and the powerful analytical capabilities of cloud
+            services. The overall design balances system stability, scalability, and security.</p>
+
+          <h4>The core of this architecture is composed of three tightly integrated layers. </h4>
+          <p class="sub">1.The Perception & Control Layer, acting as the system's on-site "brain", consists of a
+            Siemens S7-1214C PLC controller and various high-precision sensors, responsible for the most critical
+            real-time data acquisition and autonomous device control. Sensor data is transmitted at high speed via
+            the industrial-grade Snap7 protocol to the edge control software. Developed on the robust Qt framework,
+            this software runs directly on a local industrial host, enabling direct command issuance to the PLC. The
+            primary advantage of this design is its ability to guarantee the autonomous and stable operation of the
+            core production process even under extreme conditions, such as a network outage.</p>
+
+          <p class="sub">2.The Application & Interaction Layer is the system's "window" to the user, dedicated to
+            providing an intuitive and accessible remote control and data insight experience from anywhere, at any
+            time. Its core is the cross-platform control software based on the uni-app framework. We chose uni-app
+            for its "code once, deploy anywhere" capability, which significantly enhanced development efficiency and
+            ensured a consistent user experience across different platforms.</p>
+
+          <p class="sub">3.At the apex of the architecture is the Decision & Intelligence Layer, the wellspring of
+            the system's "intelligence". It operates independently of the core control loop, focusing on
+            transforming data into decisions. The cloud-deployed machine vision models invoke vast amounts of
+            historical data to perform inference and issue high-level directives, such as "prohibit inoculation" or
+            "optimize fish separation frequency". These commands are then relayed to the control layer for
+            execution, forming a complete, intelligent loop of "Data-Analysis-Decision-Execution".</p>
+        </section>
+
+        <!-- ID：implementation -->
+        <section id="implementation">
+          <h1>Software Implementation</h1>
+          <p class="sub">Guided by a clear architecture, we translated our layered design blueprint into a suite of
+            powerful and user-friendly software applications. Our implementation focused on providing two distinct
+            operational experiences: first, stable and reliable core control at the edge, and second, flexible and
+            convenient mobile collaborative management in the cloud.</p>
+
+          <h4>1. Edge Control Software: The Localized, High-Reliability Interaction Core </h4>
+          <p class="sub">As the primary interface for direct equipment interaction, we implemented this high-performance
+            edge control software based on the Qt framework. Its main interface is a highly integrated "digital
+            cockpit", as shown in Figure 2. Here, operators can gain a comprehensive real-time overview of the dynamic
+            values of six core parameters, including temperature, salinity, and vaccine concentration, while also
+            intuitively grasping the device's operational status and the latest event list to ensure immediate
+            situational awareness. For in-depth control, the software integrates four task-oriented, independent
+            sub-menus (as shown in Figures 2):</p>
+          <img src="/static/upload/page/software/software2.png" alt="software2">
+          <p class="figurecaption">Figure 2</p>
+
+
+          <p class="sub">1.1 The Parameter Calibration module allows users to precisely define setpoints (SV) for
+            various variables and observe their process values (PV).</p>
+          <p class="sub">1.2 The Data Curves module visualizes historical data of key parameters for traceability and
+            analysis</p>
+          <p class="sub">1.3 The Vaccine Configuration module provides a procedural interface to mitigate operational
+            errors.</p>
+          <p class="sub">1.4 The Alarm Query module automatically logs all abnormal events, providing a critical basis
+            for troubleshooting.</p>
+
+          <h4>2. Cross-Platform Control Software: The Mobile, Scalable Management Hub</h4>
+
+          <p class="sub">The cross-platform control software, based on the uni-app framework, resides in the Application
+            and Interaction Layer and serves as the core portal for users to achieve remote monitoring and management.
+            Its implementation aims to seamlessly extend the powerful control capabilities of the edge to mobile smart
+            devices and to expand functionality to meet more complex management needs. To ensure a consistent user
+            experience, we replicated all the core functionalities of the edge software on the mobile client—such as
+            Data Calibration, Event List, Vaccine Configuration, and Historical Data query—while optimizing them for
+            mobile interaction characteristics.</p>
+          <p class="sub">The most significant innovation of this software is the implementation of a powerful "My
+            Devices" management module, which completely overcomes the one-to-one control limitation of the edge
+            software. As illustrated, within the "My" page, users have permissions to "Add Device" and "Manage Devices,"
+            allowing them to bring all their "Smart Vac" units under unified management. The device list clearly
+            displays the ID and status of each unit. With a simple tap, users can quickly switch their control focus
+            between different devices, dramatically enhancing management efficiency and collaborative capabilities in
+            multi-device scenarios.</p>
+          <p class="sub">Finally, the interface and functions of this software are as shown in Video 1.</p>
+          <!-- Video 1 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/software/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
+
+        <!-- ID：machine-->
+        <section id="machine">
+          <h1>Machine Vision Model</h1>
+          <p class="sub">The machine vision model is the core of the "Smart Vac" system's intelligent perception,
+            responsible for transforming raw image information into structured, decision-ready biological status data.
+            The entire model is composed of a cascade of two stages: image pre-processing and the core perception
+            network.</p>
+          <img class="formula" src="/static/upload/page/software/formula1.png" alt="formula1">
+          <p class="sub">I(x) is the observed hazy image, J(x) is the desired clear image, A is the global atmospheric
+            light, and t(x) is the transmission map. Based on the prior assumption that "in most non-sky local regions,
+            at least one color channel has some pixels with very low intensity," the algorithm can effectively estimate
+            the atmospheric light and transmission map, ultimately solving for the clear image </p>
+          <p class="sub">J(x) via inversion. This provides high-quality input for the subsequent training of the vision
+            model.</p>
+
+          <h4>2. Core Perception Model & Performance Validation </h4>
+          <p class="sub">Serving as the system's "eyes," we built a deeply customized VoVNet instance segmentation
+            network based on the Mask R-CNN framework. Its backbone utilizes the high-efficiency VoVNet, the core of
+            which is the One-Shot Aggregation (OSA) module (Figure 3). Unlike traditional networks, it aggregates all
+            preceding features at the end of the unit, significantly improving computational efficiency and making it
+            particularly suitable for real-time tasks. To further optimize performance, we employed Depthwise Separable
+            Convolution to reduce computational complexity and integrated the eSE attention mechanism, which allows the
+            network to adaptively focus on more informative feature channels through a three-step
+            "Squeeze-Excitation-Rescale" process.</p>
+          <p class="sub">The model demonstrates exceptional performance. As shown by the inference results (Figure 4),
+            the model can accurately identify and precisely segment the contours of both individual 'Infectedfish' and
+            'Freshfish' with nearly 100% confidence. Even in complex scenarios with dense fish populations and partial
+            occlusion, the model remains robust, successfully detecting multiple targets with high confidence scores.
+            The training loss curve ( Figure 5) shows that the model's total loss rapidly decreases with increasing
+            iterations, eventually converging stably around 0.06. Ultimately, the model achieved an Average Precision
+            (AP) of 85.7%, a key metric for evaluating object detection performance.</p>
+
+
+          <img src="/static/upload/page/software/software3.png" alt="software3">
+          <p class="figurecaption">Figure 3</p>
+          <img src="/static/upload/page/software/software4.png" alt="software4">
+          <p class="figurecaption">Figure 4</p>
+          <img src="/static/upload/page/software/software5.png" alt="software5">
+          <p class="figurecaption">Figure 5</p>
+
+          <h4>2. Core Perception Model & Performance Validation </h4>
+          <p class="sub">In the inference stage, we leverage the pre-trained static perception model as a frame-by-frame
+            "observation data source" and cascade it with a dynamic spatio-temporal analysis model. This elevates the
+            system from a static "image analyzer" to a "video analysis system" capable of understanding the temporal
+            behavior of objects.</p>
+          <p class="sub">3.1Data Association and Optimal Assignment:</p>
+          <p class="sub">This is the core of the tracking algorithm, for which we adopt the classic
+            Tracking-by-Detection paradigm. To address the central challenge of associating detections in the current
+            frame with existing historical trajectories, we first construct a cost matrix. The elements of this matrix
+            are derived from the Intersection over Union (IoU), which is mathematically defined as:</p>
+          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula2.png" alt="formula2">
+          <p class="sub">Subsequently, we employ a solver based on the Hungarian algorithm to find the globally optimal
+            assignment for the cost matrix. This process matches each historical trajectory to a unique new detection
+            with the minimum possible total cost, thereby maintaining identity consistency across frames.</p>
+
+          <p class="sub">3.2 Trajectory State Smoothing:</p>
+          <!-- Video 2 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/software/video2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="sub">To ensure that the object's tracked trajectory is visually coherent and free from jitter, we
+            apply an Exponential Moving Average (EMA) model to smooth the bounding box positions. Its mathematical
+            expression is:"S" _"t" "=α⋅" "Y" _"t" "+(1-α)⋅" "S" _"t-1" ,Here, St represents the smoothed coordinates in
+            the current frame, Yt are the raw detected coordinates in the current frame, St−1 are the smoothed
+            coordinates from the previous frame, and α is the smoothing factor, which determines the degree of smoothing
+            and the responsiveness to new observations.</p>
+
+        </section>
+
+        <!-- ID：control-->
+        <section id="control">
+          <h1>Control System Model</h1>
+          <p class="sub">To achieve ultra-high-precision and stable control of key environmental parameters during the
+            vaccine production process, we have designed an advanced multi-variable, multi-strategy intelligent control
+            system. This system tailors optimal composite control strategies for the unique dynamic characteristics
+            (e.g., non-linearity, time-delay, actuator coupling) of different controlled variables, such as temperature,
+            dissolved oxygen, and pH. This approach allows for the construction of a highly efficient, robust, and
+            intelligent control core. The table below presents the variables we need to control and their requirements.
+          </p>
+          <img class="formula" style="height: 210px; padding-bottom: 20px;"
+            src="/static/upload/page/software/formula3.png" alt="formula3">
+
+          <h4>1. Temperature Control: A Hybrid Intelligent Strategy with Neural Networks and Feedforward Compensation:
+          </h4>
+          <p class="sub">Recognizing that temperature is a critical variable with the slowest response and strongest
+            non-linearity, we designed a hybrid intelligent control scheme combining adaptive feedback with predictive
+            feedforward. At its core is an adaptive PID controller based on a Back-Propagation (BP) Neural Network. This
+            network, with a 4-7-3 architecture, not only uses the conventional error e(k) and error rate de(k) as inputs
+            but also innovatively incorporates measurable disturbances like coolant flow rate F(k) and inlet temperature
+            Tin(k), endowing the controller with predictive adjustment capabilities. Through online learning, the
+            network can perform real-time, dynamic self-tuning of the PID parameters (Kp,Ki,Kd) to adapt to the
+            reactor's changing dynamics under various operating conditions.</p>
+          <p class="sub">To further enhance performance, we introduced a Hybrid Feedforward Compensator (HFF) to
+            proactively and rapidly counteract external disturbances. This compensator includes: a static feedforward
+            component based on the system's steady-state energy balance equation to compensate for measurable
+            disturbances; and a dynamic feedforward component based on a disturbance observer, which compensates for
+            unmeasurable disturbances and model uncertainties by estimating a "lumped disturbance term" online.</p>
+
+          <h4>2. Dissolved Oxygen, pH, and Salinity Control: A Two-Degree-of-Freedom PID Decoupling Strategy:</h4>
+          <p class="sub">For variables like dissolved oxygen, pH, and salinity, which require a simultaneous balance
+            between fast setpoint tracking and robust disturbance rejection, we employed a Two-Degree-of-Freedom PID
+            (2DOF-PID) controller. A conventional PID controller faces an inherent trade-off between these two
+            performance objectives. The 2DOF-PID successfully decouples these functions by introducing additional
+            setpoint weighting factors, b and c, on the proportional and derivative terms. This allows us to
+            independently optimize the controller's response to setpoint changes and external disturbances, achieving
+            smoother, overshoot-free setpoint tracking without sacrificing disturbance rejection capability. Its control
+            law is given by the following equation, where R(s) is the setpoint and Y(s) is the measured output:</p>
+
+          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula4.png" alt="formula4">
+          <h4>3. Controller Parameter Tuning</h4>
+          <p class="sub">To ensure optimal controller performance, we used the MOMI analytical method to obtain initial
+            values for the PID parameters. This method is based on an open-loop step response, from which multiple
+            integral areas Ai under the response curve are calculated. The PID parameters are then determined using the
+            following formulas:</p>
+
+          <img class="formula" style="height: 240px;" src="/static/upload/page/software/formula5.png" alt="formula5">
+
+          <p class="sub">The simulation architecture in Figure 5 clearly illustrates the complete closed-loop process of
+            this multi-variable control system, including setpoint generation, parallel operation of multiple
+            controllers, the reactor model, and signal feedback.</p>
+          <img src="/static/upload/page/software/software6.png" alt="software6">
+          <p class="figurecaption">Figure 6</p>
+          <div class="usage">
+            <h4>Reference Files</h4>
+            <p>
+            <h5><a href="/static/upload/page/software/md1.md" target="_blank">md-1</a></h5>
+            <h5><a href="/static/upload/page/software/md2.md" target="_blank">md-2</a></h5>
+            <h5><a href="/static/upload/page/software/md3.md" target="_blank">md-3</a></h5>
+            </p>
+          </div>
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="conclusion">
+          <h1>CONCLUSION</h1>
+          <p class="sub">Focusing on our project plan, we have successfully achieved breakthroughs in key technical
+            areas, delivering an integrated software solution that spans from low-level real-time control to high-level
+            intelligent decision-making. This system not only validates the feasibility of combining high-reliability
+            edge computing with high-flexibility cloud management but also integrates preliminary deep learning-based
+            computer vision models and a multi-variable control system founded on advanced process control theory.
+            Collectively, this work lays a solid technical foundation for realizing the vision of an intelligent
+            traditional vaccination process.</p>
+
+          <p class="sub">Commercial bioprocess automation software often presents challenges such as high costs and
+            proprietary systems, which can limit its widespread adoption in academic research. In contrast, the "Smart
+            Vac" system is built upon a modular architecture and mainstream open-source technologies, aiming to enhance
+            its scalability and portability. It is our hope that future iGEM teams and other research projects can adapt
+            our vision algorithms, control models, or system architecture for novel bioprocess automation scenarios,
+            which could in turn increase the project's reuse value and contribute to the iGEM community.</p>
+
+
+          <p class="sub">In summary, the significance of the "Smart Vac" system extends beyond providing an open-source,
+            reusable tool for academic research. More importantly, it serves as an exploratory paradigm, demonstrating
+            how cutting-edge information technologies like IoT, edge computing, and machine learning can be deeply
+            integrated with applications in synthetic biology. Through this integration, we have elevated a traditional,
+            labor-intensive bioprocess into a highly efficient, precise, and traceable digital production paradigm,
+            showcasing significant potential for enhancing production efficiency, process stability, and data
+            traceability. Therefore, this project is more than an effective attempt to solve a specific problem; it
+            provides a field-tested, robust, and open engineering blueprint for the future development of smart
+            agriculture and automated biotechnology.</p>
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
