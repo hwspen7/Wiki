@@ -1,58 +1,763 @@
 {% extends "layout.html" %}
-  
-{% block title %}Human Practices{% endblock %}
-{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/software.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #2</h4>
-      <p>Explain how you have determined your work is responsible and good for the world.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/medals">Medals page</a> for more information.</p>
-    </div>
-  
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Integrated Human Practices</h4>
-      <p>How does your project affect society and how does society influence the direction of your project? How might ethical considerations and stakeholder input guide your project purpose, design and the experiments you conduct in the lab? How did this feedback enter into the process of your work throughout the iGEM Competition? Document a thoughtful and creative approach to exploring these questions and how your project evolved in the process, to compete for this award.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/special-prizes">Special Prizes page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>HUMAN PRACTICE</h3>
+    <h1>PRACTICAL CONTENT</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr />
-    <p>At iGEM, Human Practices is about more than just outreach. It's about actively considering the societal implications of your synthetic biology project and demonstrating how those considerations have shaped your work. This page documents our team's Human Practices activities and their impact on our project.</p>
-    <div class="bd-callout bd-callout-info">
-      <p>For more information, visit the <a href="https://responsibility.igem.org/human-practices/what-is-human-practices">Human Practices Hub</a>.</p>
-    </div>
-    <ul>
-      <li>You should demonstrate how you have thoughtfully and creatively addressed the question: "Is our project responsible and good for the world?"</li>
-      <li>Clearly identify the ethical, social, safety, security, and sustainability issues relevant to your project.</li>
-      <li>Document all interactions with experts, stakeholders, and the public.</li>
-      <li>Explain how the insights gained from your Human Practices activities influenced your project's purpose, design, and execution.</li>
-      <li>Discuss any ethical dilemmas or challenges encountered during your project.</li>
-      <li>Assess the potential social impact of your project, both positive and negative.</li>
-      <li>Consider the perspectives of diverse stakeholders.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/ju-krakow/human-practices">2024 JU-Krakow</a></li>
-      <li><a href="https://2024.igem.wiki/epfl/human-practices">2024 EPFL</a></li>
-      <li><a href="https://2024.igem.wiki/freiburg/human-practices">2024 Freiburg</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/human-practices">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/cjuh-jlu-china/human-practices">2024 CJUH-JLU-China</a></li>
-      <li><a href="https://2024.igem.wiki/stanford/human-practices">2024 Stanford</a></li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#general">GENERAL</a></li>
+            <li><a class="navlink" href="#how">HOW DID <br>WE START?</a></li>
+            <li><a class="navlink" href="#on">ON-THE-SPOT <br>INVESTIGATION</a></li>
+            <li><a class="navlink" href="#consulations">CONSULATIONS</a></li>
+            <li><a class="navlink" href="#team">TEAM EXCHANGES</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：introduction -->
+        <section id="general">
+          <h1>GENERAL</h1>
+          <p class="sub">We are a research team at East China University of Science and Technology. This project
+            originated from our profound commitment to addressing key technological challenges in modern agricultural
+            development, with particular focus on resolving disease issues that persistently affect aquaculture
+            industries worldwide. Through systematic research on fish diseases, development of fish vaccines, and
+            related equipment, we successfully developed the "Sun Wukong Fish Vaccine" and its accompanying inoculation
+            system. During this process, our team gained invaluable interdisciplinary experience: We established deep
+            collaborations with experts from various fields through continuous dialogue, multi-party consultations, and
+            partnership building, strengthening academic-industrial connections. Simultaneously, we conducted in-depth
+            exchanges with frontline aquaculture farmers who have witnessed the real-world impacts of fish diseases,
+            ensuring close alignment between research design and practical needs.</p>
+
+          <p class="sub">Furthermore, this project aims to achieve multidimensional breakthroughs: while ensuring
+            user-friendly tools with significant cost-effectiveness and accessibility, it emphasizes integrating diverse
+            perspectives to enhance the universality and innovation of solutions. Team members, driven by environmental
+            awareness, actively participate in social practices dedicated to advancing sustainable agricultural
+            initiatives.</p>
+        </section>
+
+
+        <!-- ID：how -->
+        <section id="how">
+          <h1>HOW DID WE START?</h1>
+          <h2>2.1 Social Background Research —— September 2024 </h2>
+          <p class="sub">As a core technological approach in modern aquaculture disease prevention and control, fish
+            vaccination plays a direct role in the sustainable development of global aquaculture. Current mainstream
+            vaccination methods include injection, immersion, and oral administration. Our survey of aquaculture
+            enterprises reveals that all these companies currently face significant technical bottlenecks in this field.
+          </p>
+          <p class="sub">While injection method ensures precise vaccine administration, it requires individual handling
+            of each fish, which is both time-consuming and labor-intensive. This approach not only incurs high labor
+            costs but also easily triggers stress responses in fish, making it nearly impossible to implement in
+            large-scale aquaculture farms processing tens of thousands of fry daily. The immersion method, though simple
+            to operate, suffers from low vaccine utilization rates (typically under 5%) and significant variations in
+            immune efficacy among individuals. Oral vaccination faces dual challenges——: overcoming digestive enzyme
+            degradation and breaking through intestinal mucosal barriers, leading to unstable immune responses.</p>
+          <p class="sub">Intravenous vaccination remains the standard practice for fish immunization, offering precise
+            dose control to ensure each individual receives accurate administration. This proves particularly crucial
+            for vaccines requiring specific dosage thresholds to elicit effective immune responses. However, this method
+            presents significant limitations: Each fish must be individually handled, a time-consuming and
+            labor-intensive process. In large-scale aquaculture operations handling tens of thousands of fry daily, such
+            traditional methods prove nearly impossible to implement. Take Norway's Lumic LV8 semi-automatic injection
+            system as an example: equipped with eight injection channels, it requires four operators to vaccinate 20,000
+            fish per hour. Even for salmon hatcheries producing 20 million fry annually, the entire vaccination process
+            would take 1,000 hours—— an impractical timeframe for industrial-scale operations[1]. Moreover, the
+            injection procedure inherently induces stress responses in fish. These physiological reactions weaken their
+            immune systems, making them more susceptible to secondary infections that ultimately reduce overall growth
+            rates and survival rates.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent1.png" alt="practicalcontent1">
+          <p class="figurecaption">Figure 1. Injection inoculation</p>
+
+          <p class="sub">In contrast, the immersion method is relatively straightforward. Fish are placed in a
+            vaccine-containing solution, where the vaccine gets absorbed through their gills and skin. However, this
+            approach suffers from low vaccine efficacy, typically below 5%. This occurs because most vaccine remains in
+            the water, failing to be effectively absorbed by fish. Notably, studies have found that factors like fish
+            gill structure and skin mucus further hinder vaccine absorption, exacerbating the inefficiency[2]. Moreover,
+            there's significant variation in immune response across individuals. Factors such as fish size, health
+            status, and swimming behavior all influence vaccine uptake, resulting in uneven immune protection
+            effectiveness among different fish populations.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent2.png" alt="practicalcontent2">
+          <p class="figurecaption">Figure 2. Bubble inoculation</p>
+
+
+          <p class="sub">Oral vaccines present an alternative approach, yet they face dual challenges: enzymatic
+            degradation in the digestive tract and the intestinal mucosal barrier. The digestive enzymes in fish
+            intestines break down vaccine components, reducing their efficacy. Meanwhile, the intestinal mucosal
+            barrier—which should protect against foreign substances—may hinder full absorption. Furthermore, since oral
+            vaccination relies on feeding behavior, inconsistent administration can leave some fish unvaccinated—a
+            critical practical issue [2]. Consequently, oral vaccines often induce unstable immune responses, making it
+            difficult to achieve sustained disease prevention.</p>
+          <p class="sub">In summary, while fish vaccination is vital for aquaculture, existing mainstream methods have
+            inherent limitations. Addressing these challenges not only plays a key role in enhancing disease prevention
+            efficiency but also presents a pivotal opportunity to transition the industry from the "antibiotic era" to
+            the "vaccine era" [3]. Overcoming these technical barriers will be crucial for advancing fish vaccines and
+            their widespread application, injecting new momentum into the sustainable and healthy development of global
+            aquaculture.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent3.png" alt="practicalcontent3">
+          <p class="figurecaption">Figure 3. Oral vaccination</p>
+
+          <h2>2.2 Target User Group and Market Demand Analysis ——October 2024 </h2>
+          <h3>2.2.1 Target User Groups</h3>
+          <h4>Diet Consumer Groups</h4>
+
+          <p class="sub">The modern consumer's pursuit of healthy eating has fueled the booming market for premium
+            aquatic products. As an ideal low-fat, high-protein food (averaging 18-22g protein per 50g) rich in EPA/DHA
+            (with Omega-3 fatty acids reaching 1-2g per 50g), global annual consumption per capita has surpassed 20.5kg.
+            Notably, high-nutrient fish like rainbow trout and tuna are seeing annual demand growth rates exceeding 12%,
+            particularly among fitness enthusiasts, pregnant and postpartum individuals, and those at high risk of
+            cardiovascular diseases.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent4.png" alt="practicalcontent4">
+          <p class="figurecaption">Figure 4. Fish ingredients</p>
+
+          <h4>Pharmaceutical/Health products</h4>
+
+          <p class="sub">The global market size of fish oil health products has exceeded 4 billion US dollars, among
+            which high-end products such as DHA seaweed oil and krill oil have increased by 18%. These functional
+            products for infant brain development and prevention of cognitive impairment in the elderly are particularly
+            strict on vaccine safety.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent5.png" alt="practicalcontent5">
+          <p class="figurecaption">Figure 5. Fish oil health products</p>
+
+          <h4>Fish Collagen Cosmetics</h4>
+
+          <p class="sub">Fish collagen has become a game-changer in skincare with its exceptional moisturizing and
+            anti-wrinkle properties. Featuring a unique Type I collagen structure (with a molecular weight of 280-300
+            kDa), it delivers 30% better hydration than land-based collagen. Leading global brands like Estée Lauder and
+            Shiseido have launched their "Ocean Skincare" collections containing fish collagen, which now generate over
+            $1.5 billion in annual sales.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent6.png" alt="practicalcontent6">
+          <p class="figurecaption">Figure 6. Fish collagen cosmetics</p>
+
+          <h4>Fish Skin Products</h4>
+
+          <p class="sub">Fish skin leather, a sustainable fashion material, has gained popularity among eco-conscious
+            consumers embracing the "fishery-first" philosophy. For instance, salmon skin leather delivers 80% of the
+            tear resistance of genuine cowhide while reducing its carbon footprint by a factor of ten. Eco-forward
+            brands like Stella McCartney have launched premium fish-skin handbags priced over $2,000, with annual
+            production growth rates reaching a remarkable 25%.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent7.png" alt="practicalcontent7">
+          <p class="figurecaption">Figure 7. Fish skin products</p>
+
+
+          <h3>2.2.2 Market Demand</h3>
+          <p class="sub">In 2024, the total output of global fisheries and aquaculture reached 223.2 million tons, with
+            aquaculture production accounting for 59%, surpassing fishing for the first time. As the world's largest
+            producer of aquatic products, China's total output in 2024 was 74.1 million tons, with aquaculture
+            production reaching 60.8 million tons, representing a significant 82% share. It is projected that by 2029,
+            the global fish vaccine market will reach $680 million, with a compound annual growth rate of 9.2%. The data
+            indicates that the market demand for fish products continues to expand and rise year by year.</p>
+          <p class="sub">The global aquaculture industry is currently undergoing structural transformation. According to
+            2024 data, China, as the world's largest producer, contributes 58% of global aquaculture output, with
+            vaccine-dependent species such as shrimp and tilapia accounting for over 40%. Norway's salmon farming
+            industry has reduced antibiotic usage by 99% through vaccination technology, setting a significant
+            demonstration effect. It is projected that by 2029, the Asia-Pacific region will account for 47% of the
+            global aquatic vaccine market, while China's market compound growth rate will reach 11.5%. Physical-driven
+            technologies not only reduce vaccine costs but also effectively control disease-related mortality rates,
+            aligning with both the evolving needs of the aquaculture market and the development requirements for
+            reducing antibiotic dependence and controlling disease transmission through vaccination.</p>
+
+
+          <h2>2.3 the Monkey King of Creativity —— November 2024</h2>
+          <p class="sub">When conceptualizing the fish vaccine project, we sought to create an engaging and accessible
+            explanation of how vaccines work. The inspiration came from a classic episode of ”Journey to the West“——
+            where Sun Wukong enters Princess Iron Fan's body to solve a problem. This story inspired us: the process of
+            vaccines entering fish bodies and providing protection mirrors Sun Wukong's entry into Princess Iron Fan's
+            body to resolve her crisis. Through this metaphor, the fish body symbolizes Princess Iron Fan's womb, while
+            the vaccine transforms into Sun Wukong-like substance that defends against diseases within the body. We also
+            connected the gradual evolution of bacterial cell structures from small to large with Sun Wukong's magical
+            ability to transform. By combining scientific principles with this beloved story, we developed a vivid and
+            easy-to-understand explanation of vaccination, making complex processes accessible and enjoyable for
+            everyone.</p>
+
+          <h2>2.4. Discussion of experimental scheme ——November 2024</h2>
+          <p class="sub">We identified three approaches———light-driven, sound-driven, and magnetically driven—to achieve
+            external physical signal control of the vaccine bacteria' directional movement for creating "micro-robots".
+            After thorough research and discussions, we abandoned the magnetic drive solution due to practical
+            limitations and biocompatibility concerns, instead focusing on light-driven and sound-driven systems.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent8.png" alt="practicalcontent8">
+          <p class="figurecaption">Figure 8. Programme discussion</p>
+
+          <p class="sub">In the research of light-driven technologies, we have discovered an upconversion microgel
+            capable of converting near-infrared light into blue light. However, due to its high cost and manufacturing
+            challenges, it remains limited to theoretical research at present. Additionally, we developed a blue
+            light-responsive transcription system that can enrich engineered microbial communities in fish intestinal
+            mucosa. Nevertheless, this technology still requires breakthroughs for integrated applications in
+            micro-robots.</p>
+          <p class="sub">For the acoustic drive system, considering that fish are difficult to adapt to ultrasonic
+            heating, we limit it to enhance bacterial invasion through ultrasound.</p>
+          <p class="sub">We have conducted in-depth research on bacterial invasion mechanisms and proposed strategies
+            such as outer membrane vesicle construction and targeting peptide design, though these approaches remained
+            impractical due to technical limitations. These concepts warrant further exploration. Under Professor Ma
+            Yue's guidance, we shifted our focus to achieving directional movement through engineered ——proteins
+            (flagella) utilizing optoacoustic synergy. The light-based solution employs a photosensitive promoter to
+            regulate CheY and CheZ gene expression, while constructing logic gate circuits for precise navigation. The
+            acoustic-driven approach revealed that mechanically sensitive ion channels MscL (or MscS) can activate
+            calcium ion influx via ultrasound, thereby enhancing flagellar rotation speed and motility.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent9.png" alt="practicalcontent9">
+          <p class="figurecaption">Figure 9. Experimental exploration</p>
+
+        </section>
+
+        <!-- ID：on -->
+        <section id="on">
+          <h1>ON-THE-SPOT-INVESTIGATION</h1>
+          <h2>3.1 China Hebei Qinhuangdao Zhenli Aquatic Products —— May 2025 </h2>
+          <h3>3.1.1 Background and Purpose</h3>
+
+          <p class="sub">To gain a deeper understanding of the current status of modern aquaculture and the practical
+            application of fish vaccination technology, we plan to conduct field research at the Qinhuangdao Fishery in
+            Hebei Province, China. As an important fishery base in China, Qinhuangdao not only boasts abundant fishery
+            resources but also possesses advanced breeding techniques. This research aims to understand the challenges
+            currently faced by the fishery industry, the actual operational procedures for vaccination, and how
+            technological innovation drives industrial development through communication with local fishermen and
+            fishery enterprises.</p>
+
+          <h3>3.1.2 Practice Content</h3>
+          <p class="sub">Upon arriving at Qinhuangdao Aquaculture Farm, we first engaged with the facility manager to
+            understand its overall layout, breeding scale, main species, and daily management processes. Through on-site
+            inspections of fish ponds, breeding workshops, and related facilities, we gained a comprehensive
+            understanding of the entire aquaculture operation. We particularly focused on the farm's smart management
+            system, learning how IoT technology enables real-time monitoring of water quality and fish health. During
+            our visit, we learned that Qinhuangdao boasts 480,000 mu (approximately 30,000 hectares) of integrated
+            marine aquaculture areas combining shallow sea raft farming, ocean ranch bottom seeding, and saltwater pond
+            cultivation, along with 1.6 million cubic meters of industrialized aquaculture water bodies. These are
+            mainly distributed across Beidaihe New Area and Changle County, primarily cultivating scallops, sea
+            cucumbers, flounder, flatfish, half-smooth tongue sole, and shrimp. We also discovered that the
+            operational "Jiuteng No.1" intelligent deep-sea cage is equipped with solar photovoltaic power generation
+            systems, feed storage modules, underwater video surveillance, and real-time water quality monitoring
+            devices, achieving modernized smart aquaculture.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent10.png" alt="practicalcontent10">
+          <p class="figurecaption">Figure 10. Field research</p>
+
+          <h3>3.1.3 Application of Vaccination Techniques</h3>
+          <p class="sub">We focused on the practical operations of fishery vaccination. Through in-depth communication
+            with technicians and fishermen, we comprehensively understood the advantages and disadvantages of current
+            vaccination methods (such as injection and immersion), and explored how to improve vaccination efficiency
+            and reduce labor costs in large-scale aquaculture. Additionally, we investigated the application prospects
+            of physical drive technologies (such as light-driven and sound-driven systems) in vaccination, analyzing how
+            these technologies enhance vaccine utilization rates and immunization effectiveness. It is reported that
+            disease issues are particularly prominent in aquaculture processes, with over 200 known pathogens, and
+            vaccination is considered the most effective method for preventing and controlling aquatic animal diseases.
+            Currently, China has conducted research on more than 50 aquatic vaccines targeting nearly 30 pathogens,
+            but their market promotion and application remain limited. As of April 2025, only seven self-developed
+            aquatic vaccines have obtained national new veterinary drug certificates.</p>
+
+          <h3>3.1.4 Feedback from fishers and fisheries enterprises</h3>
+
+
+          <p class="sub">Through face-to-face dialogues with fishermen and representatives from fishery enterprises, we
+            gathered their feedback on existing vaccination technologies while gaining insights into practical
+            challenges encountered in field operations, including vaccine costs, post-vaccination stress responses in
+            fish, and storage requirements. We also explored their acceptance levels and expectations for new
+            technologies, as well as how technological innovations could address current challenges. By analyzing local
+            market trends for premium aquatic products, we identified consumer priorities regarding health and safety
+            standards. The study revealed how fishery enterprises are meeting market demands through technological
+            advancements while addressing these concerns. Furthermore, we examined the role of vaccination technology in
+            enhancing product quality and boosting market competitiveness within the fisheries sector.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent11.png" alt="practicalcontent11">
+          <p class="figurecaption">Figure 11. Practice exchange and feedback</p>
+
+          <h3>3.1.5 Results and Implications</h3>
+          <p class="sub">The field study of Qinhuangdao's aquaculture operations has yielded valuable insights for
+            modern aquaculture practices. This research not only optimized vaccination protocols and parameter settings
+            to meet practical needs but also enhanced hardware design, validated modular feasibility, and adopted
+            adaptive control systems inspired by intelligent management solutions. Through discussions with fishermen
+            and industry partners, we identified innovation directions in key technological fields including automated
+            injection systems, submerged aquaculture technology, physical drive mechanisms, and integrated monitoring
+            systems.</p>
+
+
+
+
+          <h2>3.2 China Hainan Wanning Linlan Group ——June 2025 </h2>
+          <h3>3.2.1 Background and purpose</h3>
+          <p class="sub">Our project is dedicated to modernizing and ensuring sustainable aquaculture development
+            through innovative fish vaccine technologies. To gain in-depth insights into tropical marine fish farming
+            practices, particularly the breeding techniques for Oriental sea urchins (Pseudotrichodactylus orientalis),
+            we conducted field research at Hainan Wanning Linlan Group. We also participated in their Oriental sea
+            urchin breeding training programs and industry networking events with sector leaders.</p>
+          <p class="sub">As a leading aquaculture enterprise in Wanning, Hainan, Linlan Group specializes in cultivating
+            high-value species such as Oriental sea urchins and red seabream (Pseudotrichodactylus redus). Through
+            collaboration with the research team led by Academician Chen Songlin from the Yellow Sea Fisheries Research
+            Institute of the Chinese Academy of Sciences, the company has achieved a major breakthrough in Oriental sea
+            urchin breeding by successfully overcoming key reproductive bottlenecks.</p>
+
+          <h3>3.2.2 Practice Content</h3>
+          <p class="sub">Through in-depth communication with the management of Linlan Group, we had a deep understanding
+            of the company's development history, business vision, breeding scale, market positioning, etc., and also
+            conducted field investigation on the breeding environment of Dongxing Spotted Fish Farm, including key links
+            such as fish ponds, feeding, epidemic prevention, etc.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent12.png" alt="practicalcontent12">
+          <p class="figurecaption">Figure 12. Enterprise symposiums</p>
+
+          <p class="sub">Vaccination has emerged as a pivotal strategy in aquaculture disease prevention and control.
+            Global research on aquaculture vaccines is closely tied to developing economically sustainable management
+            models that prioritize environmental protection [7]. Historically, most approved fish vaccines involved
+            combining inactivated pathogens with adjuvants, administered through immersion or injection methods.
+            Understanding how Linlan Group integrates these vaccination approaches into its disease prevention system
+            holds significant value for our research.</p>
+
+
+          <h3>3.2.3 Vaccine technical exchanges</h3>
+          <p class="sub">Our team participated in the technical training program organized by Linlan Group for Wanning
+            Dongxing Fish Farming, where we systematically learned the latest vaccination techniques. Through in-depth
+            discussions with technical experts like Academician Chen Songlin, we explored critical aspects such as
+            vaccine selection, timing, and dosage control. This exchange provided valuable firsthand data and practical
+            experience for our project. An ideal fish vaccine should possess core characteristics including safety,
+            efficacy, cost-effectiveness, and ease of administration. During discussions, we focused on how to
+            achieve these attributes in Oriental Starfish vaccine development. For instance, ensuring vaccine safety
+            means it should not harm fish. In 2024, Uweks Company announced the successful development of a novel
+            epitope vaccine that effectively prevents Spondylodermis desiderata virus (SDDV) infection, marking a
+            significant step forward in vaccine effectiveness assurance. Understanding how these concepts translate into
+            the development of Oriental Starfish vaccines holds great significance for our project.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent13.png" alt="practicalcontent13">
+          <p class="figurecaption">Figure 13. Technical exchanges</p>
+
+          <h3>3.2.4 Results and implications</h3>
+          <p class="sub">Following the completion of this field study, we conducted an analysis of current market
+            demands for Dongxingba premium aquatic products and identified key consumer concerns regarding food safety
+            and health. Through in-depth research and technical training programs, we have developed the following
+            findings: Exploring how aquaculture enterprises can leverage technological innovation to meet market needs,
+            thereby enhancing product competitiveness.</p>
+
+          <h2>3.3 China Shandong Guoxin Oriental Aquaculture Base--July 2025 </h2>
+          <h3>3.3.1 Practical purpose</h3>
+          <p class="sub">In order to further understand the current situation of industrial aquaculture and the
+            application of fish seedling vaccine immunization technology in actual production, we plan to conduct field
+            research on Yantai Guoxin Oriental Aquaculture Base in Shandong Province.</p>
+
+          <h3>3.3.2 Practice content</h3>
+          <p class="sub">Upon arriving at Guoxin Oriental Aquaculture Base, we first engaged in an in-depth discussion
+            with the production manager to systematically understand the facility's overall layout, production scale,
+            major aquaculture species, and daily operational management model. Through visits to key areas including
+            industrialized breeding workshops, recirculating water treatment systems, and vaccine operation zones, we
+            gained a comprehensive understanding of the entire operational process from fry stocking, water quality
+            control, disease prevention to fish harvesting. Special attention was paid to the intelligent monitoring
+            system implemented at the base, with detailed insights into how IoT technology is applied in water quality
+            monitoring, fish behavior tracking, and automated feeding systems.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent14.png" alt="practicalcontent14">
+          <p class="figurecaption">Figure 14. Field research</p>
+
+          <h3>3.3.3 Application of immunization techniques</h3>
+          <p class="sub">We focused on the practice of base vaccination operation, and had in-depth communication with
+            technicians about the specific problems existing in the current immunization mode:</p>
+          <ol>
+            <li>The physical damage and stress response caused to the fish body during the injection seriously affected
+              the subsequent growth and survival rate of the fish.</li>
+            <li>There were significant differences in vaccine protection rates at different injection sites, depths and
+              doses.</li>
+            <li>It is difficult to balance the efficiency and quality of existing methods due to the daily immunization
+              flux requirements (e.g., thousands of fish per hour) under large-scale aquaculture conditions.</li>
+          </ol>
+
+          <h3>3.3.4 Results and implications</h3>
+          <p class="sub">These practical challenges have clarified the development priorities and key areas for
+            improvement in submerged immunization systems. Through face-to-face discussions with aquaculture managers
+            and frontline staff, we gathered detailed feedback on existing immunization technologies. While
+            injection-based methods demonstrate relatively stable efficacy, they involve cumbersome procedures requiring
+            high technical expertise from operators and often cause fish injuries. The industry urgently needs
+            innovative immunization approaches that reduce operational complexity, minimize fish stress responses, and
+            ensure effective protection. Furthermore, our research uncovered specific corporate requirements regarding
+            cost control, vaccine storage conditions, and effectiveness evaluation – all of which provide crucial
+            practical references for our R&D efforts.</p>
+
+          <h2>3.4 China Laizhou Mingbo Aquatic Products Co., Ltd. --July 2025</h2>
+          <h3>3.4.1 Background and Purpose</h3>
+          <p class="sub">To gain deeper insights into the current state of aquaculture in En and practical applications
+            of fish vaccination techniques, we plan to conduct an on-site investigation at Mingbo Aquatic Products Co.,
+            Ltd. in Laizhou, Yantai City, Shandong Province. As one of China's key aquatic demonstration bases, Mingbo
+            Aquatic Products is renowned for its advanced breeding technologies, intelligent management systems, and
+            sustainable development model. This research aims to engage in in-depth discussions with technical staff and
+            managers at the facility, comprehensively understand challenges faced by the aquaculture industry, examine
+            practical implementation processes of vaccination protocols, and explore how technological innovation can
+            drive quality improvement and efficiency enhancement in the sector.</p>
+
+          <h3>3.4.2 Practice Content</h3>
+          <p class="sub">Upon arriving at the Mingbo Aquaculture Base, we commenced an in-depth discussion with the
+            facility director, gaining comprehensive insights into the company's R&D journey, corporate culture, and
+            industrial framework. Since its establishment, Mingbo Aquaculture has consistently embraced the philosophy
+            of "technology-driven innovation and sustainable development," progressively building a complete industrial
+            chain system that spans from seedling cultivation and fish farming to product processing and distribution.
+            Through our tour of the exhibition hall and historical archives, we witnessed firsthand the remarkable
+            achievements made by Mingbo Aquaculture in species selection, technological advancement, and market
+            expansion. These accomplishments have provided crucial reference points for subsequent research endeavors.
+          </p>
+          <p class="sub">We then focused on visiting Mingbo Aquatic's intelligent recirculating water nursery workshop.
+            The facility employs an advanced water treatment system and IoT monitoring technology, enabling real-time
+            tracking and automated adjustment of critical parameters including water temperature, dissolved oxygen, and
+            pH levels. Through hands-on observation and technical staff guidance, we gained comprehensive understanding
+            of efficient seedling cultivation processes, feed strategy implementation, and pest control measures.
+            Particularly noteworthy were the recirculating water system's advantages in conserving water resources and
+            reducing environmental pollution. This practical experience provided crucial evidence for our research on
+            vaccine immunization technology application scenarios.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent15.png" alt="practicalcontent15">
+          <p class="figurecaption">Figure 15. Enterprise visit</p>
+
+          <h3>3.4.3 Corporate Communications</h3>
+          <p class="sub">We held a specialized seminar with Mingbo Aquatic's technical team, focusing on research
+            advancements in fish vaccine delivery systems and physical-driven immunization technologies. Participants
+            engaged in in-depth discussions about the practical effectiveness, operational challenges, and scalability
+            of existing vaccination methods (such as injections and immersion techniques). Mingbo Aquatic shared
+            insights into real-world issues encountered during vaccine administration, including immune stress
+            responses, vaccination efficiency, and cost-effectiveness considerations. The company also provided valuable
+            suggestions for optimizing project technologies, particularly regarding automated injection devices,
+            immersion immunization protocols, and evaluation methodologies for immunization efficacy.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent16.png" alt="practicalcontent16">
+          <p class="figurecaption">Figure 16. Technology sharing</p>
+
+          <h3>3.4.4 Results and Implications</h3>
+          <p class="sub">The research at Mingbo Aquaculture Base has not only deepened our understanding of modern
+            aquaculture practices, but also provided crucial frontline production data and optimization directions for
+            team project development. Through communication, we identified bottlenecks in vaccine immunization
+            technology implementation and developed strategies for creating efficient, cost-effective immunization
+            solutions suitable for large-scale adoption. Meanwhile, Mingbo's intelligent management system and green
+            farming model have offered valuable references for our technical integration and modular design.</p>
+
+          <h2>3.5 China Shandong Yantai Tianyuan Aquatic Products Co., LTD. --August 2025</h2>
+          <h3>3.5.1 Background and Purpose</h3>
+          <p class="sub">As a key marine economy hub in Shandong Province, Yantai boasts abundant aquatic resources and
+            advanced aquaculture technologies. Tianyuan Aquaculture Co., Ltd., a flagship enterprise in the city's
+            aquaculture sector, serves as both a national-level premium flounder breeding center and a provincial-level
+            original breeding base. The company maintains industry leadership in marine fish fry cultivation and
+            aquaculture practices. This field study examines Tianyuan's aquaculture models, germplasm innovation
+            technologies, and disease prevention systems to gain deeper insights into the current state and future
+            trends of modern aquaculture, with particular focus on the practical implementation of fish vaccination
+            techniques.</p>
+          <h3>3.5.2 Practice Content</h3>
+          <p class="sub">The research team first examined Tianyuan Aquaculture's industrialized recirculating
+            aquaculture system. The company began conducting feasibility studies, design, and preparatory work for
+            semi-closed recirculating aquaculture in 2008, officially commencing production in March 205. The system
+            currently maintains approximately 1,600 cubic meters of semi-closed recirculating water bodies, primarily
+            cultivating turbot (also known as mandarin fish). The water treatment process follows a closed-loop path:
+            "reclaimed water → recirculation pumps → elevated tank → temperature regulation pool → oxygenation →
+            disinfection → breeding pond," with daily seawater replenishment at about 5% and complete water replacement
+            every 6-7 days. Equipped with pure oxygen tanks and two sets of recirculating water treatment systems, the
+            facility achieves a processing capacity of 200 cubic meters per hour. The water clarity in breeding areas
+            reaches approximately 40 centimeters, ensuring optimal aquatic conditions. Compared to traditional open
+            aquaculture models, Tianyuan's recirculating system demonstrates significant advantages. Data shows this
+            system saves 85% water and 50% electricity compared to conventional methods. In turbot cultivation, initial
+            stocking fry weighing 280-300 grams at a density of 30 kg/m³ can reach an average weight of 65 grams within
+            120 days, achieving a 5% higher growth rate than conventional approaches.</p>
+          <p class="sub">In disease prevention and control, Tianyuan Aquatic Products has established a comprehensive
+            health management system. As a key demonstration base for aquatic animal disease control in Yantai City, the
+            company actively participates in monitoring initiatives organized by the Yantai Marine Development and
+            Fisheries Bureau. During our research, we focused on its vaccination practices. Having weathered two major
+            "drug residue" incidents in 2006 and 2015, this leading mandarin fish breeder has intensified efforts in
+            healthy aquaculture and scientific disease prevention. The company's registered "Penglai Ge" trademark
+            enables full traceability from seedling cultivation to market distribution, ensuring product safety. While
+            primarily using injection methods, Tianyuan is also exploring alternative immunization approaches like
+            immersion and oral administration. Technical staff noted that although injections provide stable protection,
+            their cumbersome procedures and stress-induced reactions in fish make developing new immunization techniques
+            imperative.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent17.png" alt="practicalcontent17">
+          <p class="figurecaption">Figure 17. Field survey</p>
+
+          <h3>3.5.3 Practical Significance</h3>
+          <p class="sub">Through in-depth research on Tianyuan Aquatic Products, we have gained valuable practical
+            experience in modern aquaculture, especially fish vaccination technology. The main results of this research
+            include:</p>
+          <p class="sub">Tianyuan Aquaculture's recirculating aquaculture model provides crucial technical optimization
+            references. This innovative approach not only conserves water and electricity but also accelerates fish
+            growth, establishing it as a vital pathway for sustainable aquaculture development. Particularly under the
+            current backdrop of increasingly stringent environmental regulations, recirculating aquaculture technology
+            demonstrates significant promotion value. Regarding vaccination techniques, Tianyuan Aquaculture's practices
+            have clarified the direction for technological innovation. Based on research findings, our team has
+            prioritized developing automated injection systems, submerged immunization technology, and oral vaccine
+            delivery systems to address current pain points in vaccination processes.</p>
+          <p class="sub">As a pioneering enterprise in China's marine aquaculture sector, Tianyuan Aquatic has charted
+            the course for the industry's transformation through its evolution. From successfully introducing the
+            Chinese tilapia to achieving industrial scale-up, and from overcoming two major drug residue scandals to
+            establishing comprehensive quality assurance systems, the company's journey offers valuable lessons for the
+            entire industry. Research findings indicate that germplasm innovation and disease prevention constitute the
+            dual core drivers of modern aquaculture development. Through collaboration with research institutions,
+            Tianyuan has made significant strides in germplasm conservation and genetic enhancement, laying a solid
+            foundation for sustainable industry growth. The innovative application of vaccination technology stands as a
+            critical component in ensuring biosecurity in aquaculture. This research provides clear guidance for our
+            technological development. We will develop efficient, cost-effective immunization technologies tailored to
+            Tianyuan's practical needs, contributing to the modernization of China's aquaculture industry.</p>
+
+          <h2>3.6 Liaoning Huludao Individual Farmers Exchange in China--September 2025 </h2>
+          <h3>3.6.1 Background and Purpose</h3>
+          <p class="sub">As an important aquaculture base in Liaoning Province, Huludao City holds a unique position in
+            China's aquaculture industry. Located in southwestern Liaoning and adjacent to the Bohai Sea, the area lies
+            within the north latitude 40° golden aquaculture belt, with abundant natural well salt water resources
+            underground. The production of turbot in Huludao accounts for approximately 58% of China's total aquaculture
+            output, earning it the reputation that "one out of every two mandarin fish consumed worldwide originates
+            from Huludao." This practical research aims to investigate the actual operational conditions of individual
+            farmers in Huludao who face relatively backward breeding facilities and outdated equipment. We particularly
+            focus on the unique challenges these small-scale farmers encounter in seedling selection, farming models,
+            disease prevention, and marketing, seeking to identify key factors constraining their development and
+            providing empirical evidence for improving production conditions for small-scale farmers.</p>
+          <h3>3.6.2 Practice Content</h3>
+          <p class="sub">The survey primarily targeted small-scale aquaculture operators, particularly those with
+            relatively outdated facilities and basic equipment. We conducted in-depth face-to-face interviews with over
+            20 individual aquaculture businesses, all operating on a small scale with investment amounts ranging from
+            tens of thousands to hundreds of thousands of yuan.</p>
+          <p class="sub">The infrastructure of individual aquaculture operators in Huludao remains rudimentary, with
+            relatively outdated breeding conditions. Most small-scale operators use basic fish farming sheds and ponds
+            lacking modern recirculating water systems and temperature control equipment. Compared to large-scale
+            enterprises, these independent farmers face significant underinvestment in facilities, which hinders the
+            improvement of breeding efficiency. At the Cold Water Aquaculture Cooperative in Xianglushan Village,
+            Xintaimen Town, Lianshan District, we observed relatively simple facilities: "At the foot of the mountain,
+            over 30 fish ponds measuring 6 meters wide and 5-18 meters long are visible, with rows of small injectors
+            resembling miniature waterfalls channeling clear spring water into the pools." While this nature-dependent
+            approach requires minimal investment, it suffers from high environmental sensitivity and low productivity.
+            In contrast, large-scale enterprises typically employ factory-style recirculating aquaculture systems that
+            enable precise environmental control. Limited by financial constraints, small operators struggle to upgrade
+            their infrastructure, remaining stuck with traditional farming methods. This disparity in facilities
+            directly impacts breeding density, survival rates, and product quality.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent18.png" alt="practicalcontent18">
+          <p class="figurecaption">Figure 18. Talk with farmers</p>
+
+          <h3>3.6.3 Key Challenges and Dilemmas</h3>
+          <p class="sub">Funding shortages remain the primary obstacle hindering the development of individual
+            aquaculture businesses in Huludao. Small-scale operators commonly face dual challenges: inadequate initial
+            investments and tight operating budgets. The substantial capital required for establishing breeding
+            facilities and purchasing equipment proves particularly challenging, as these entrepreneurs typically lack
+            sufficient personal funds to cover such expenses.</p>
+          <p class="sub">Technological backwardness remains a critical challenge for individual aquaculture operators in
+            Huludao. Small-scale farmers generally lack professional expertise and technical support in breeding
+            techniques, disease prevention, and water quality management, relying primarily on traditional experience to
+            make farming decisions. This technological deficiency not only reduces production efficiency but also
+            heightens operational risks in the industry.</p>
+
+          <h3>3.6.4 Optimization Suggestions</h3>
+          <p class="sub">To enhance the competitiveness of individual aquaculture operators in Huludao, priority should
+            be given to upgrading infrastructure and modernizing equipment. The government and enterprises must
+            collaborate to assist these operators in renovating their facilities, promoting practical technologies and
+            advanced equipment, thereby advancing the sector's modernization. Specific measures could include:</p>
+          <ul>
+            <li>Promoting practical aquaculture models: Tailored to individual farmers 'needs, we advocate
+              low-investment and easy-to-implement farming approaches. A prime example is the "Large Flatfish +
+              Shellfish" integrated cultivation model, which reduces annual pollutant emissions by 2,000 tons and has
+              been recognized as a "Green Aquaculture Model Case Study" by China's Ministry of Agriculture and Rural
+              Affairs.</li>
+            <li>Provide equipment subsidies or leasing services: In view of the shortage of funds for individual
+              businesses, small-scale and low-cost technical equipment subsidies can be provided, or equipment leasing
+              platforms can be established to reduce the threshold of technology application for individual businesses.
+            </li>
+            <li>Strengthening infrastructure co-construction and sharing: Encourage individual businesses to build and
+              share water treatment facilities, cold chain logistics and other infrastructure through cooperatives, so
+              as to improve the efficiency of resource utilization.</li>
+          </ul>
+
+
+        </section>
+
+        <!-- ID：consulations -->
+        <section id="consulations">
+          <h1>CONSULTATIONS</h1>
+          <h2>Dongxing Spot Breeding Technology Training in Wanning, Hainan</h2>
+          <h3>4.1.1 Purpose of the Training Session</h3>
+          <p class="sub">The core goal of the "Dongxing Spotted Fish Cultivation Technology Training and Leading
+            Enterprise Connection Conference" held by Wanning City on August 2-3, 2025 is to promote the green and
+            high-quality development of Dongxing Spotted fish industry in Wanning through technology-driven industrial
+            upgrading and build a platform for industry-university-research cooperation to solve practical production
+            problems.</p>
+
+          <h3>4.1.2 Technical Collaboration Workshops</h3>
+          <p class="sub">At the industry-leading aquaculture matchmaking event, Professor Wang Qi'ao engaged in in-depth
+            discussions with representatives from multiple breeding enterprises regarding vaccine technology
+            collaboration, sharing successful case studies. He introduced our developed "Sun Wukong Fish Vaccine" to the
+            companies, emphasizing its technical feasibility and operational convenience while exploring potential
+            cooperation opportunities. Through collaborative discussions on enhancing overall breeding techniques,
+            reducing risks, and improving product quality through technological partnerships, we ultimately reached a
+            mutually beneficial consensus.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent19.png" alt="practicalcontent19">
+          <p class="figurecaption">Figure 19. Experience sharing</p>
+
+
+          <p class="sub">Prior to the workshop, we produced a manual on prevention of diseases in marine fish and
+            distributed it at the registration desk. This initiative not only raised initial awareness but also served
+            as promotional material for our project.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent20.png" alt="practicalcontent20">
+          <p class="figurecaption">Figure 20. Distribution of teaching materials</p>
+
+          <h3>4.1.3 Outcome of the Session</h3>
+
+          <p class="sub">Establishing partnerships with industry leaders paves the way for future technological
+            collaboration and market expansion, accelerating project industrialization. Collaborating with aquatic
+            industry pioneers like Linlan Group provides access to diverse perspectives and resources. For instance, the
+            partnership between Linlan Group and Academician Chen Songlin's team achieved a major breakthrough in
+            eastern starfish breeding. Through in-depth exchanges, we identified complementary areas where vaccine
+            technology could enhance their existing operations, enabling the development of more comprehensive solutions
+            that maximize industry-wide benefits and consumer interests.</p>
+          <p class="sub">Through in-depth collaboration with aquaculture enterprises, we have gained precise insights
+            into market demands and consumer preferences, establishing a strategic foundation for product positioning
+            and marketing strategies. With growing public concern over the safety and health of aquatic products, our
+            partnership with farming companies allows deeper understanding of these needs. For instance, when consumers
+            raise concerns about antibiotic residues in fish, our developed vaccine technology——a solution that reduces
+            antibiotic usage in aquaculture—can be effectively promoted. The landmark "Pike Vaccine" successfully
+            developed by East China University of Science and Technology in 2013 has demonstrated potential to decrease
+            antibiotic consumption in tilapia farming. Similarly, our "Sun Wukong Fish Vaccine" has garnered positive
+            market feedback due to its unique advantage in addressing consumer pain points.</p>
+          <p class="sub">Our innovative initiatives not only provide aquaculture enterprises with cutting-edge
+            vaccination solutions, but also enhance farming efficiency and fish health through intelligent management
+            systems. We are confident that partnering with industry leaders like Linlan Group will accelerate the
+            application of our technologies in the Oriental sea urchin sector, driving sustainable development in
+            fisheries.</p>
+
+          <h2>4.2 2025 China Industrial Expo</h2>
+          <h3>4.2.1 Overview</h3>
+
+          <p class="sub">This fall, the iGEM team from East China University of Science and Technology made a stunning
+            debut at the China International Industry Fair (CIIF), showcasing their self-developed "Continuous
+            Submersion Inoculation System for Aquatic Organisms". At this global event gathering industry leaders, our
+            innovative project stood out with its unique technical solution and promising application prospects,
+            garnering significant attention from the industry.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent21.png" alt="practicalcontent21">
+          <p class="figurecaption">Figure 21. Group photo of the Industrial Expo</p>
+
+          <h3>4.2.2 Exhibition Content</h3>
+
+          <p class="sub">As China's most influential and largest industrial exhibition, the China International Industry
+            Fair (CIIF) has always been a barometer of cutting-edge technology and market trends. Our participation
+            demonstrates that frontier academic research is steadily advancing into core areas of industrial
+            application. This grand event also serves as a vital platform for industrial innovation, where global
+            industry leaders such as Schneider Electric, Mitsubishi Electric, Bosch Group, and FANUC have showcased
+            their latest explorations in the deep integration of artificial intelligence and industrial applications.
+          </p>
+          <p class="sub">During the exhibition, many leading enterprises in aquaculture, animal health and other
+            industries had in-depth communication with us, highly praised the practicality and forward-looking design of
+            the project, clearly expressed the willingness to cooperate and the intention of follow-up communication,
+            and opened up a good prospect for the future implementation of technology.</p>
+          <p class="sub">We not only showcased our achievements—— but also actively learned from other corporate and
+            university teams. These valuable interactions provided us with abundant inspiration and gathered critical
+            insights for optimizing equipment and improving experiments in the next phase.</p>
+          <img src="/static/upload/page/practicalcontent/practicalcontent22.png" alt="practicalcontent22">
+          <p class="figurecaption">Figure 22. Field communication</p>
+
+          <h3>4.2.3 Significance of the Exhibition</h3>
+          <p class="sub">This debut at the International Aquatic Food Exhibition marks a crucial step in our
+            university's research projects transitioning from laboratory to market. The team from East China University
+            of Science and Technology has consistently dedicated itself to innovation, driving this technology toward
+            practical applications, enabling the wisdom and strength of young Chinese scientists to contribute to the
+            sustainable development of the global aquaculture industry.</p>
+        </section>
+
+        <!-- ID：team-->
+        <section id="team">
+          <h1>TEAM EXCHANGES</h1>
+          <h2>5.1 IGEM offline exchange between Xi 'an Jiaotong-Liverpool University and Nanjing University of
+            Technology</h2>
+          <p class="sub">This collaborative event aimed to foster knowledge sharing and innovative collaboration among
+            university iGEM teams in synthetic biology. Representatives from East China University of Science and
+            Technology's iGEM team, Xi' an Jiaotong-Liverpool University, and Nanjing Tech University engaged in
+            in-depth discussions on competition preparation, interdisciplinary collaboration models, and social outreach
+            initiatives. Through team presentations, group workshops, and laboratory visits, the three institutions
+            exchanged constructive insights on enhancing project scientific rigor, engineering feasibility, and societal
+            impact. </p>
+
+          <p class="sub">The Xi 'an Jiaotong-Liverpool University team shared their cross-college selection mechanism
+            and international talent cultivation model, emphasizing the enhancement of team collaboration efficiency
+            through modular division of labor (experimentation, modeling, humanities practice). Nanjing Tech University
+            introduced its experience in echelon construction based on disciplinary strengths, providing new ideas for
+            optimizing team composition and succession mechanisms at our university. All parties agreed that synthetic
+            biology must be closely integrated with practical application scenarios. Xi' an Jiaotong-Liverpool
+            University's case studies in biomedical industrialization (such as collaborations with Suzhou Industrial
+            Park) demonstrated pathways for aligning academic research with industrial demands; Nanjing Tech
+            University's experience in engineering platform construction offered references for technology
+            implementation in our university's projects. Teams from all three universities emphasized science
+            popularization and social research. Xi' an Jiaotong-Liverpool University enhanced public awareness of
+            synthetic biology through community engagement, while Nanjing Tech University focused on integrating
+            projects with local industrial needs. These practices inspired our university to further optimize the
+            "research-society" bidirectional empowerment model.</p>
+          <p class="sub">This exchange has strengthened consensus on inter-institutional collaboration and expanded the
+            team's multidimensional understanding of iGEM competition objectives. The iGEM team from East China
+            University of Science and Technology will incorporate advanced experiences, continuously optimize project
+            design, and actively promote in-depth cooperation with sister institutions to jointly advance the innovation
+            ecosystem in synthetic biology.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent23.png" alt="practicalcontent23">
+          <p class="figurecaption">Figure 23. Team exchanges</p>
+
+          <h2>5.2 Shanghai Xuhui Youth Center IGEM team exchange</h2>
+          <p class="sub">The iGEM team from East China University of Science and Technology engaged in academic
+            exchanges with the Shanghai Xuhui Youth Center's iGem program. During this event, team members not only
+            showcased cutting-edge research in synthetic biology but also immersed themselves in the unique community
+            atmosphere of the youth center, achieving a profound dialogue between scientific innovation and social
+            practice. In the exchange session, the team discussed their annual competition project "Sun Wukong" ———an
+            aquaculture vaccine delivery system based on light-controlled genetic circuits—with young innovators at the
+            youth center. The project integrates Sun Wukong's "precision adaptation" wisdom into synthetic biology
+            design, demonstrating a clever fusion of traditional humanistic spirit and modern technological innovation.
+            Young participants' sharp questions about technical details and cross-disciplinary perspectives provided
+            fresh inspiration for optimizing the project.</p>
+
+          <p class="sub">This collaboration not only strengthened the partnership between the university and local
+            community, but also helped team members recognize the importance of aligning research projects with societal
+            needs. Moving forward, the team plans to incorporate feedback from the Youth Center into project iterations
+            while exploring regular community engagement through science outreach lectures and bio-art exhibitions.
+            These initiatives aim to bring synthetic biology out of laboratories and into broader social contexts. The
+            integration of scientific rigor with community engagement, where innovation coexists with human warmth, has
+            revitalized East China University of Science and Technology's iGEM team. This exchange event has
+            demonstrated the unique value of Xuhui Youth Center as a platform for youth innovation practices.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent24.png" alt="practicalcontent24">
+          <p class="figurecaption">Figure 24. Team exchanges</p>
+
+          <h2>5.3 Guanghua Team Exchange</h2>
+          <p class="sub">Recently, the iGEM team from East China University of Science and Technology (ECUST) and
+            Shanghai Guanghua United Team held a productive online academic exchange session. Focusing on innovative
+            applications of synthetic biology in aquaculture, this collaboration provided both parties with a valuable
+            platform for project discussions and experience sharing. During the presentation segment, Guanghua United
+            Team showcased their attenuated live vaccine project targeting white spot disease in yellow croaker viscera.
+            The team innovatively combined AI and bioinformatics methods to predict key virulence factors, followed by
+            expression validation in Escherichia coli, aiming to effectively replace antibiotic use and promote
+            sustainable aquaculture development. ECUST's Wukong Team presented research progress in preventing
+            Edwardsiella parasiticosis in mandarin fish, highlighting the design of light-controlled gene circuit-based
+            vaccine delivery systems and automated immersion inoculation equipment inspired by Sun Wukong mythology. In
+            discussions, both sides delved into experimental design and humanistic practices. Regarding animal testing
+            alternatives, they proposed innovative ideas using organoid models to simulate intestinal environments. For
+            humanistic practices, they exchanged experiences on building complete scientific storytelling chains and
+            reached consensus on expanding science communication inclusivity (such as designing Braille picture books
+            and conducting targeted science education for middle-aged and elderly groups). This exchange not only
+            deepened mutual understanding in technical solutions but also laid a solid foundation for future
+            collaboration. We look forward to deeper cooperation with Guanghua United Team in synthetic biology,
+            contributing youthful wisdom to green aquaculture and marine ecological protection.</p>
+
+          <img src="/static/upload/page/practicalcontent/practicalcontent25.png" alt="practicalcontent25">
+          <p class="figurecaption">Figure 25. Online communication</p>
+
+        </section>
+
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
