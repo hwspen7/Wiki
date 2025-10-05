@@ -1,36 +1,546 @@
 {% extends "layout.html" %}
-  
-{% block title %}Notebook{% endblock %}
-{% block lead %}This serves as a chronological record of your team's progress throughout the season. It documents your daily activities, experiments, discussions, and decisions.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/software.css') }}">
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What Should this Page Contain?</h2>
-    <hr />
-    <ul>
-      <li>Record all activities in chronological order, with each entry clearly dated.</li>
-      <li>Provide sufficient detail for each activity, including:</li>
-      <ul>
-        <li>Purpose of the activity.</li>
-        <li>Methods and procedures used.</li>
-        <li>Results obtained.</li>
-        <li>Observations and notes.</li>
-      </ul>
-      <li>Document all experiments, protocols, data analysis, meetings, brainstorming sessions, and other project-related activities.</li>
-      <li>Include photos, videos, and diagrams to illustrate your progress.</li>
-      <li>Indicate which team members participated in each activity.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul> 
-      <li><a href="https://2024.igem.wiki/epfl/notebook">2024 EPFL</a></li>
-      <li><a href="https://2024.igem.wiki/ju-krakow/notebook">2024 JU-Krakow</a></li>
-    </ul>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>LAB</h3>
+    <h1>SOFTWARE</h1>
   </div>
 </div>
 
-{% endblock %}
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#804">8.4</a></li>
+            <li><a class="navlink" href="#805">8.5</a></li>
+            <li><a class="navlink" href="#807">8.7</a></li>
+            <li><a class="navlink" href="#808">8.8</a></li>
+            <li><a class="navlink" href="#control">CONTROL <br> SYSTEM MODEL</a></li>
+            <li><a class="navlink" href="#conclusion">CONCLUSION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：804 -->
+        <section id="804">
+          <h1>8.4 Experimenters: Yangxin Zhang, Yixuan Xie</h1>
+          <p class="sub">Summary: In this experiment, we used gene sequences related to flagellar movement, including
+            CheA, CheY, and CheZ, and designed relevant PCR primers using SnapGene software. Overnight shaking culture
+            was performed for E. coli BL21 and E. coli DH5α stored in the laboratory.</p>
+          <h3>1.Experimental Materials</h3>
+          <p class="figurecaption">Table 1 Main Plasmids and Strains Used in This Experiment</p>
+          <img src="/static/upload/page/notebookfolder/table1.png" alt="table1">
+
+          <p class="figurecaption">Table2 The primers used in this study</p>
+          <img src="/static/upload/page/notebookfolder/table2.png" alt="table2">
+
+          <h3>2. Experimental Methods and Results</h3>
+          <h4>2.1 Plasmid Maps</h4>
+          <img src="/static/upload/page/notebookfolder/notebook1.png" alt="notebook1">
+          <p class="figurecaption">Figure 1 Map of the Recombinant Plasmid Using pBBR1MCS-5 as the Vector</p>
+
+          <h4>2.2 Preparation of LB Medium (150 mL × 9, including 3 batches of solid medium)</h4>
+          <p class="sub">Each liter of LB medium contains 10 g sodium chloride (NaCl), 5 g yeast extract, and 10 g
+            tryptone. The medium was sterilized using an autoclave at 115°C for 20 minutes. For solid LB medium, 2%
+            (w/v) agar powder was added as a coagulant, followed by autoclaving at 115°C for 20 minutes. After cooling
+            to room temperature, a gel-like solid medium was formed.</p>
+          <h4>2.3 Bacterial Shaking Culture</h4>
+
+          <p class="sub">DH5α and BL21 were taken out of the refrigerator; 100 μL of each strain was added to a culture
+            flask containing 6 mL of LB medium, followed by shaking culture at 37°C for 12–16 hours (overnight).</p>
+          <p class="sub">Notes: All operations should be performed near a Bunsen burner. Do not place the flask lid on
+            the workbench. After use, seal the medium and pipette tips in their original packaging.</p>
+        </section>
+
+        <!-- ID：805 -->
+        <section id="805">
+          <h1>8.5 Experimenters：Yangxin Zhang Yixuan Xie</h1>
+          <p class="sub">Summary: The plasmid backbone of pBBR1MCS-5 was amplified, and plasmids were constructed via
+            seamless cloning and restriction enzyme ligation. PCR amplification and electrophoresis verification of
+            relevant genes and vectors revealed errors in the amplification of the plasmid backbone.</h3>
+
+          <h3>1. Experimental Methods and Results</h3>
+          <h4>1.1 Plasmid Extraction (Using a Trial Kit)</h4>
+          <ol>
+            <li>Take the overnight-cultured bacterial solution, centrifuge at 10,000×g for 1 minute, and discard the
+              supernatant (aspirate as much as possible). For large volumes of bacterial solution, centrifuge in
+              multiple batches to collect the bacterial pellet.</li>
+            <li>Add 500 μL of colorless Solution RB (containing RNase A) and vortex to resuspend the bacterial pellet;
+              no small bacterial clumps should remain.</li>
+            <li>Add 250 μL of blue Solution LB, gently invert and mix 4–6 times to fully lyse the bacteria, forming a
+              clear blue solution. A color change from translucent to clear blue indicates complete lysis (lysis time
+              should not exceed 5 minutes).</li>
+            <li>Add 750 μL of yellow Solution NB, gently mix 5–6 times (the color changes from blue to yellow
+              completely, indicating thorough mixing and neutralization) until a tight yellow aggregate is formed, and
+              let stand at room temperature for 2 minutes.</li>
+            <li>Centrifuge at 12,000×g for 5 minutes, carefully aspirate the supernatant and add it to a spin column.
+              Centrifuge at 12,000×g for 1 minute, and discard the flow-through. If the supernatant volume exceeds 800
+              μL, add it to the column in multiple batches, centrifuge as above, and discard the flow-through each time.
+            </li>
+            <li>Add 650 μL of Solution WB, centrifuge at 12,000×g for 1 minute, and discard the flow-through.</li>
+            <li>Centrifuge at 12,000×g for 1–2 minutes to completely remove residual WB.</li>
+            <li>Place the spin column in a clean centrifuge tube, add 30–50 μL of Elution Buffer (EB) or deionized water
+              (pH > 7.0) to the center of the column membrane, and let stand at room temperature for 1 minute.(Note:
+              Preheating EB or deionized water in a 60–70°C water bath improves elution efficiency).</li>
+            <li>Centrifuge at 10,000×g for 1 minute to elute DNA. Store the eluted DNA at -20°C.</li>
+          </ol>
+
+          <h4>1.2 PCR</h4>
+          <p class="sub">The plasmid backbone, CheA, CheY, and CheZ were amplified using the primers designed on August
+            4.</p>
+
+          <p class="figurecaption">Table 1 General PCR Reaction System</p>
+          <img src="/static/upload/page/notebookfolder/table3.png" alt="table3">
+
+          <p class="figurecaption">Table 2 General PCR Reaction Program</p>
+          <img src="/static/upload/page/notebookfolder/table4.png" alt="table5">
+
+          <h4>1.3 DNA Purification</h4>
+          <p class="sub">The above PCR products were recovered for DNA purification.</p>
+          <ol>
+            <li>Add 3 volumes of Buffer DP to the PCR tube containing the PCR product, vortex to mix, and centrifuge
+              briefly.</li>
+            <li>Transfer the mixture to a HiPure DNA column with a collection tube, and centrifuge at 12,000 rpm for 1
+              minute.</li>
+            <li>Discard the liquid, add 600 μL of Buffer DW2, and centrifuge at 12,000 rpm for 30 seconds.</li>
+            <li>Repeat step (3) once.</li>
+            <li>Discard the liquid, and centrifuge the column empty for 2 minutes.</li>
+            <li>After centrifugation, dry the column in a 65°C metal bath for 7–8 minutes to completely evaporate
+              ethanol.</li>
+            <li>Finally, add 20 μL of preheated ddH₂O to the column, let stand for 2 minutes, and centrifuge at 12,000
+              rpm for 2 minutes.</li>
+            <li>Re-aspirate the filtrate and pass it through the column again; repeat step (7).</li>
+            <li>Discard the collection tube. Determine the concentration of the purified product using a NanoDrop
+              instrument, and store it at 4°C for later use.</li>
+          </ol>
+
+
+          <h4>1.4 Electrophoresis and Gel Extraction</h4>
+          <p class="sub">The purified products were subjected to gel extraction. Using the E. coli genome as the
+            template, PCR amplification was performed with primers BL21-CheA-pBBR1-F/BL21-CheA-pBBR1-R to obtain a
+            target fragment with a size of 1965 bp. Similarly, the CheY fragment (390 bp) and CheZ fragment (645 bp)
+            were obtained. The theoretical size of pBBR1MCS-5 is 4768 bp.</p>
+
+          <img src="/static/upload/page/notebookfolder/notebook2.png" alt="notebook2">
+          <p class="figurecaption">Figure 1 Electrophoresis Image of the Fragments</p>
+
+          <ol>
+            <li>First, perform 1% agarose gel electrophoresis to separate the target fragment. Under UV light, cut the
+              gel block corresponding to the target fragment and place it in a 1.5 mL EP tube.</li>
+            <li>Weigh the gel block, add an appropriate volume of Buffer GDP according to the corresponding ratio, and
+              melt the gel in a 55°C metal bath.</li>
+            <li>After the gel is completely melted, centrifuge briefly to collect droplets on the tube wall. Assemble
+              the HiPure DNA Mini Column, transfer all the solutions to the column, and centrifuge at 12,000 rpm for 1
+              minute.</li>
+            <li>Discard the filtrate, reattach the column to the collection tube, add 300 μL of Buffer GDP, let stand,
+              and centrifuge at 12,000 rpm for 1 minute.</li>
+            <li>Discard the filtrate, reattach the column to the collection tube, add 600 μL of Buffer DW2, and
+              centrifuge at 12,000 rpm for 1 minute.</li>
+            <li>Repeat step (5) once.</li>
+            <li>Discard the filtrate, and centrifuge the column empty for 2 minutes.</li>
+            <li>After centrifugation, dry the column in a 65°C metal bath for 7–8 minutes. Add 25 μL of ddH₂O to the
+              center of the column, let stand for 2 minutes, and centrifuge at 12,000 rpm for 2 minutes.</li>
+            <li>Re-aspirate the filtrate and pass it through the column again; repeat step (8).</li>
+            <li>Discard the collection tube. Determine the concentration of the gel-extracted product using a NanoDrop
+              instrument, and store it at 4°C for later use.</li>
+          </ol>
+
+          <h4>1.5 Restriction Enzyme Digestion of the Plasmid Backbone</h4>
+
+
+          <p class="sub">Electrophoresis verification showed that the size of the vector plasmid backbone band was
+            incorrect. It was speculated that the reverse PCR primers were designed too close to each other, so Hind III
+            was reselected for restriction enzyme ligation. After digestion, gel electrophoresis still showed incorrect
+            band sizes.</p>
+          <p class="sub">(1) Restriction enzyme digestion: The target fragment and plasmid with the same restriction
+            site were subjected to single or double digestion in the corresponding digestion system to obtain DNA
+            fragments with the same sticky ends. Digestion was performed at 50°C for 15 minutes. Taking Hind III
+            digestion as an example, the specific digestion conditions are as follows:</p>
+          <img src="/static/upload/page/notebookfolder/table5.png" alt="table5">
+        </section>
+
+
+        <!-- ID：807 -->
+        <section id="807">
+          <h1>8.7</h1>
+          <p class="sub">Summary: Plasmid pSR43.6r was transformed. Since sequencing of pBBR1MCS-5/DH5α confirmed
+            correctness, it was speculated that the plasmid extraction kit was ineffective. Therefore, the kit was
+            replaced to re-amplify the pBBR1MCS-5 plasmid backbone, CheA, CheY, and CheZ genes. The target fragments
+            (after purification and gel extraction) and the linearized vector pBBR1MCS-5 were ligated using one-step
+            seamless cloning enzyme, followed by transformation into E. coli DH5α to construct recombinant plasmids
+            pBBR1-MCS-CheA, pBBR1-MCS-CheY, and pBBR1-MCS-CheZ.</p>
+          <h3>1. Experimental Materials</h3>
+          <p class="figurecaption">Table 1 Main Plasmids and Strains Used in This Experiment</p>
+          <img src="/static/upload/page/notebookfolder/table6.png" alt="table6">
+
+          <h3>2. Experimental Methods and Results</h3>
+          <h4>2.1 LB Resistance Plates</h4>
+          <ol>
+            <li>Prepare a 50 mg/mL streptomycin stock solution: Dissolve streptomycin in deionized water, then
+              filter-sterilize (aspirate the antibiotic stock solution with a syringe, pass through a sterile filter
+              membrane, collect into a sterile EP tube, and store at -20°C).</li>
+            <li>Heat and melt the solid LB medium, cool to approximately 55°C, and add streptomycin stock solution at a
+              ratio of 1‰ (100 μL per 100 mL medium).</li>
+          </ol>
+
+          <h4>2.2 Procedure for pSR43.6 Transformation</h4>
+          <ol>
+            <li>Take E. coli DH5α competent cells out of the -80°C refrigerator, and thaw on ice for 5–10 minutes.</li>
+            <li>In a biosafety cabinet, add the ligation product to 100 μL of DH5α, gently tap the bottom of the tube
+              2–3 times, and incubate on ice for 30 minutes.</li>
+            <li>After ice incubation, heat-shock in a 42°C water bath for 90 seconds.</li>
+            <li>Immediately transfer to ice for 2 minutes after heat shock.</li>
+            <li>In a biosafety cabinet, add 900 μL of LB medium, and incubate in a 37°C shaker for 45 minutes to 1 hour.
+            </li>
+            <li>After incubation, centrifuge at 5000×g for 1 minute, aspirate and discard approximately 900 μL of
+              supernatant. Resuspend the remaining ~100 μL bacterial solution, spread it on LB plates containing the
+              corresponding antibiotic, and incubate inverted in a 37°C incubator overnight.</li>
+          </ol>
+
+          <h4>2.3 Re-amplification of pBBR1MCS-5 Plasmid Backbone, CheA, CheY, and CheZ Genes</h4>
+          <img src="/static/upload/page/notebookfolder/notebook4.png" alt="notebook4">
+          <p class="figurecaption">Figure 1 Electrophoresis Image of the Fragments</p>
+        </section>
+
+
+
+        <!-- ID：808 -->
+        <section id="808">
+          <h1>8.8</h1>
+          <p class="sub">Summary: Plasmid pGS58.6 was transformed; primers were redesigned, and the pET28a plasmid was
+            used to amplify the vector backbone. BL21 bacterial solution was pretreated, and three target gene fragments
+            (CheA, CheY, and CheZ) were amplified using corresponding primers. Electrophoresis verification confirmed
+            correct amplification of CheA and CheY; the bands were excised for gel extraction and purification. The
+            target fragments CheA and CheY were ligated to the linearized vector pET28a via seamless cloning, followed
+            by transformation into E. coli DH5α to obtain engineered strains DH5α-pET28a- CheA and DH5α-pET28a- CheY.
+          </p>
+          <h3>1. Experimental Materials</h3>
+          <p class="figurecaption">Table 1 Main Plasmids and Strains Used in This Experiment</p>
+          <img src="/static/upload/page/notebookfolder/table7.png" alt="table7">
+
+          <p class="figurecaption">Table2 The primers used in this study</p>
+          <img src="/static/upload/page/notebookfolder/table8.png" alt="table8">
+
+          <h3>2. Experimental Methods and Results</h3>
+          <h4>2.1 Plasmid Maps</h4>
+          <img src="/static/upload/page/notebookfolder/notebook5.png" alt="notebook5">
+          <p class="figurecaption">Figure 1 Map of Plasmid pET28a- CheA</p>
+
+          <img src="/static/upload/page/notebookfolder/notebook6.png" alt="notebook6">
+          <p class="figurecaption">Figure 2 Map of Plasmid pET28a- CheY</p>
+
+          <img src="/static/upload/page/notebookfolder/notebook7.png" alt="notebook7">
+          <p class="figurecaption">Figure 3 Map of Plasmid pET28a- CheZ</p>
+
+          <h4>2.2 Preparation of LB Medium (Same as 8.4)</h4>
+          <h4>2.3 Transformation of Plasmid pGS58.6 (Same as 8.7)</h4>
+          <h4>2.4 Construction of CheA and CheY Expression Vectors</h4>
+
+          <img src="/static/upload/page/notebookfolder/notebook8.png" alt="notebook8">
+          <p class="figurecaption">Figure 1 Electrophoresis Image of the Fragments</p>
+
+          <p class="sub">
+            Taking pET28a -CheA as an example, PCR amplification was performed with primers BL21-CheA-F/BL21-CheA-R to
+            obtain a target fragment of 1965 bp. Using pET28a plasmid as the template, PCR amplification was performed
+            with pet28a-fan-F/p1 to obtain a plasmid backbone of 5301 bp. Electrophoresis results (as shown in the
+            figure above) showed clear and correctly sized bands, confirming successful amplification of CheA, CheY
+            genes, and pET28a plasmid backbone. These products were purified and subjected to gel extraction for later
+            use.
+          </p>
+          <p class="sub">Seamless Cloning Reaction Conditions: Incubate at 50°C for 15 minutes. The specific reaction
+            system is as follows:</p>
+          <img src="/static/upload/page/notebookfolder/table9.png" alt="table9">
+          <p class="sub">The purified target fragments and plasmid backbone were mixed at a molar ratio of 3:1, and
+            ligated using 2×Hieff Clone Enzyme at 50°C for 15 minutes to obtain the ligation product. The ligation
+            product was transformed into E. coli DH5α competent cells, plated, and incubated overnight.</p>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ID：architecture -->
+        <section id="architecture">
+          <h1>System Architecture</h1>
+          <p class="sub">To support the high-reliability, high-intelligence, and high-collaboration design goals of
+            the "Smart Vac" system, we architected an advanced, decoupled, three-layer collaborative IoT framework,
+            as illustrated in Figure 1. This architecture distinctly separates real-time and non-real-time tasks,
+            ensuring both the ultra-low latency of local control and the powerful analytical capabilities of cloud
+            services. The overall design balances system stability, scalability, and security.</p>
+
+          <h4>The core of this architecture is composed of three tightly integrated layers. </h4>
+          <p class="sub">1.The Perception & Control Layer, acting as the system's on-site "brain", consists of a
+            Siemens S7-1214C PLC controller and various high-precision sensors, responsible for the most critical
+            real-time data acquisition and autonomous device control. Sensor data is transmitted at high speed via
+            the industrial-grade Snap7 protocol to the edge control software. Developed on the robust Qt framework,
+            this software runs directly on a local industrial host, enabling direct command issuance to the PLC. The
+            primary advantage of this design is its ability to guarantee the autonomous and stable operation of the
+            core production process even under extreme conditions, such as a network outage.</p>
+
+          <p class="sub">2.The Application & Interaction Layer is the system's "window" to the user, dedicated to
+            providing an intuitive and accessible remote control and data insight experience from anywhere, at any
+            time. Its core is the cross-platform control software based on the uni-app framework. We chose uni-app
+            for its "code once, deploy anywhere" capability, which significantly enhanced development efficiency and
+            ensured a consistent user experience across different platforms.</p>
+
+          <p class="sub">3.At the apex of the architecture is the Decision & Intelligence Layer, the wellspring of
+            the system's "intelligence". It operates independently of the core control loop, focusing on
+            transforming data into decisions. The cloud-deployed machine vision models invoke vast amounts of
+            historical data to perform inference and issue high-level directives, such as "prohibit inoculation" or
+            "optimize fish separation frequency". These commands are then relayed to the control layer for
+            execution, forming a complete, intelligent loop of "Data-Analysis-Decision-Execution".</p>
+        </section>
+
+        <!-- ID：implementation -->
+        <section id="implementation">
+          <h1>Software Implementation</h1>
+          <p class="sub">Guided by a clear architecture, we translated our layered design blueprint into a suite of
+            powerful and user-friendly software applications. Our implementation focused on providing two distinct
+            operational experiences: first, stable and reliable core control at the edge, and second, flexible and
+            convenient mobile collaborative management in the cloud.</p>
+
+          <h4>1. Edge Control Software: The Localized, High-Reliability Interaction Core </h4>
+          <p class="sub">As the primary interface for direct equipment interaction, we implemented this high-performance
+            edge control software based on the Qt framework. Its main interface is a highly integrated "digital
+            cockpit", as shown in Figure 2. Here, operators can gain a comprehensive real-time overview of the dynamic
+            values of six core parameters, including temperature, salinity, and vaccine concentration, while also
+            intuitively grasping the device's operational status and the latest event list to ensure immediate
+            situational awareness. For in-depth control, the software integrates four task-oriented, independent
+            sub-menus (as shown in Figures 2):</p>
+          <img src="/static/upload/page/software/software2.png" alt="software2">
+          <p class="figurecaption">Figure 2</p>
+
+
+          <p class="sub">1.1 The Parameter Calibration module allows users to precisely define setpoints (SV) for
+            various variables and observe their process values (PV).</p>
+          <p class="sub">1.2 The Data Curves module visualizes historical data of key parameters for traceability and
+            analysis</p>
+          <p class="sub">1.3 The Vaccine Configuration module provides a procedural interface to mitigate operational
+            errors.</p>
+          <p class="sub">1.4 The Alarm Query module automatically logs all abnormal events, providing a critical basis
+            for troubleshooting.</p>
+
+          <h4>2. Cross-Platform Control Software: The Mobile, Scalable Management Hub</h4>
+
+          <p class="sub">The cross-platform control software, based on the uni-app framework, resides in the Application
+            and Interaction Layer and serves as the core portal for users to achieve remote monitoring and management.
+            Its implementation aims to seamlessly extend the powerful control capabilities of the edge to mobile smart
+            devices and to expand functionality to meet more complex management needs. To ensure a consistent user
+            experience, we replicated all the core functionalities of the edge software on the mobile client—such as
+            Data Calibration, Event List, Vaccine Configuration, and Historical Data query—while optimizing them for
+            mobile interaction characteristics.</p>
+          <p class="sub">The most significant innovation of this software is the implementation of a powerful "My
+            Devices" management module, which completely overcomes the one-to-one control limitation of the edge
+            software. As illustrated, within the "My" page, users have permissions to "Add Device" and "Manage Devices,"
+            allowing them to bring all their "Smart Vac" units under unified management. The device list clearly
+            displays the ID and status of each unit. With a simple tap, users can quickly switch their control focus
+            between different devices, dramatically enhancing management efficiency and collaborative capabilities in
+            multi-device scenarios.</p>
+          <p class="sub">Finally, the interface and functions of this software are as shown in Video 1.</p>
+          <!-- Video 1 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/software/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
+
+        <!-- ID：machine-->
+        <section id="machine">
+          <h1>Machine Vision Model</h1>
+          <p class="sub">The machine vision model is the core of the "Smart Vac" system's intelligent perception,
+            responsible for transforming raw image information into structured, decision-ready biological status data.
+            The entire model is composed of a cascade of two stages: image pre-processing and the core perception
+            network.</p>
+          <img class="formula" src="/static/upload/page/software/formula1.png" alt="formula1">
+          <p class="sub">I(x) is the observed hazy image, J(x) is the desired clear image, A is the global atmospheric
+            light, and t(x) is the transmission map. Based on the prior assumption that "in most non-sky local regions,
+            at least one color channel has some pixels with very low intensity," the algorithm can effectively estimate
+            the atmospheric light and transmission map, ultimately solving for the clear image </p>
+          <p class="sub">J(x) via inversion. This provides high-quality input for the subsequent training of the vision
+            model.</p>
+
+          <h4>2. Core Perception Model & Performance Validation </h4>
+          <p class="sub">Serving as the system's "eyes," we built a deeply customized VoVNet instance segmentation
+            network based on the Mask R-CNN framework. Its backbone utilizes the high-efficiency VoVNet, the core of
+            which is the One-Shot Aggregation (OSA) module (Figure 3). Unlike traditional networks, it aggregates all
+            preceding features at the end of the unit, significantly improving computational efficiency and making it
+            particularly suitable for real-time tasks. To further optimize performance, we employed Depthwise Separable
+            Convolution to reduce computational complexity and integrated the eSE attention mechanism, which allows the
+            network to adaptively focus on more informative feature channels through a three-step
+            "Squeeze-Excitation-Rescale" process.</p>
+          <p class="sub">The model demonstrates exceptional performance. As shown by the inference results (Figure 4),
+            the model can accurately identify and precisely segment the contours of both individual 'Infectedfish' and
+            'Freshfish' with nearly 100% confidence. Even in complex scenarios with dense fish populations and partial
+            occlusion, the model remains robust, successfully detecting multiple targets with high confidence scores.
+            The training loss curve ( Figure 5) shows that the model's total loss rapidly decreases with increasing
+            iterations, eventually converging stably around 0.06. Ultimately, the model achieved an Average Precision
+            (AP) of 85.7%, a key metric for evaluating object detection performance.</p>
+
+
+          <img src="/static/upload/page/software/software3.png" alt="software3">
+          <p class="figurecaption">Figure 3</p>
+          <img src="/static/upload/page/software/software4.png" alt="software4">
+          <p class="figurecaption">Figure 4</p>
+          <img src="/static/upload/page/software/software5.png" alt="software5">
+          <p class="figurecaption">Figure 5</p>
+
+          <h4>2. Core Perception Model & Performance Validation </h4>
+          <p class="sub">In the inference stage, we leverage the pre-trained static perception model as a frame-by-frame
+            "observation data source" and cascade it with a dynamic spatio-temporal analysis model. This elevates the
+            system from a static "image analyzer" to a "video analysis system" capable of understanding the temporal
+            behavior of objects.</p>
+          <p class="sub">3.1Data Association and Optimal Assignment:</p>
+          <p class="sub">This is the core of the tracking algorithm, for which we adopt the classic
+            Tracking-by-Detection paradigm. To address the central challenge of associating detections in the current
+            frame with existing historical trajectories, we first construct a cost matrix. The elements of this matrix
+            are derived from the Intersection over Union (IoU), which is mathematically defined as:</p>
+          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula2.png" alt="formula2">
+          <p class="sub">Subsequently, we employ a solver based on the Hungarian algorithm to find the globally optimal
+            assignment for the cost matrix. This process matches each historical trajectory to a unique new detection
+            with the minimum possible total cost, thereby maintaining identity consistency across frames.</p>
+
+          <p class="sub">3.2 Trajectory State Smoothing:</p>
+          <!-- Video 2 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/software/video2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="sub">To ensure that the object's tracked trajectory is visually coherent and free from jitter, we
+            apply an Exponential Moving Average (EMA) model to smooth the bounding box positions. Its mathematical
+            expression is:"S" _"t" "=α⋅" "Y" _"t" "+(1-α)⋅" "S" _"t-1" ,Here, St represents the smoothed coordinates in
+            the current frame, Yt are the raw detected coordinates in the current frame, St−1 are the smoothed
+            coordinates from the previous frame, and α is the smoothing factor, which determines the degree of smoothing
+            and the responsiveness to new observations.</p>
+
+        </section>
+
+        <!-- ID：control-->
+        <section id="control">
+          <h1>Control System Model</h1>
+          <p class="sub">To achieve ultra-high-precision and stable control of key environmental parameters during the
+            vaccine production process, we have designed an advanced multi-variable, multi-strategy intelligent control
+            system. This system tailors optimal composite control strategies for the unique dynamic characteristics
+            (e.g., non-linearity, time-delay, actuator coupling) of different controlled variables, such as temperature,
+            dissolved oxygen, and pH. This approach allows for the construction of a highly efficient, robust, and
+            intelligent control core. The table below presents the variables we need to control and their requirements.
+          </p>
+          <img class="formula" style="height: 210px; padding-bottom: 20px;"
+            src="/static/upload/page/software/formula3.png" alt="formula3">
+
+          <h4>1. Temperature Control: A Hybrid Intelligent Strategy with Neural Networks and Feedforward Compensation:
+          </h4>
+          <p class="sub">Recognizing that temperature is a critical variable with the slowest response and strongest
+            non-linearity, we designed a hybrid intelligent control scheme combining adaptive feedback with predictive
+            feedforward. At its core is an adaptive PID controller based on a Back-Propagation (BP) Neural Network. This
+            network, with a 4-7-3 architecture, not only uses the conventional error e(k) and error rate de(k) as inputs
+            but also innovatively incorporates measurable disturbances like coolant flow rate F(k) and inlet temperature
+            Tin(k), endowing the controller with predictive adjustment capabilities. Through online learning, the
+            network can perform real-time, dynamic self-tuning of the PID parameters (Kp,Ki,Kd) to adapt to the
+            reactor's changing dynamics under various operating conditions.</p>
+          <p class="sub">To further enhance performance, we introduced a Hybrid Feedforward Compensator (HFF) to
+            proactively and rapidly counteract external disturbances. This compensator includes: a static feedforward
+            component based on the system's steady-state energy balance equation to compensate for measurable
+            disturbances; and a dynamic feedforward component based on a disturbance observer, which compensates for
+            unmeasurable disturbances and model uncertainties by estimating a "lumped disturbance term" online.</p>
+
+          <h4>2. Dissolved Oxygen, pH, and Salinity Control: A Two-Degree-of-Freedom PID Decoupling Strategy:</h4>
+          <p class="sub">For variables like dissolved oxygen, pH, and salinity, which require a simultaneous balance
+            between fast setpoint tracking and robust disturbance rejection, we employed a Two-Degree-of-Freedom PID
+            (2DOF-PID) controller. A conventional PID controller faces an inherent trade-off between these two
+            performance objectives. The 2DOF-PID successfully decouples these functions by introducing additional
+            setpoint weighting factors, b and c, on the proportional and derivative terms. This allows us to
+            independently optimize the controller's response to setpoint changes and external disturbances, achieving
+            smoother, overshoot-free setpoint tracking without sacrificing disturbance rejection capability. Its control
+            law is given by the following equation, where R(s) is the setpoint and Y(s) is the measured output:</p>
+
+          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula4.png" alt="formula4">
+          <h4>3. Controller Parameter Tuning</h4>
+          <p class="sub">To ensure optimal controller performance, we used the MOMI analytical method to obtain initial
+            values for the PID parameters. This method is based on an open-loop step response, from which multiple
+            integral areas Ai under the response curve are calculated. The PID parameters are then determined using the
+            following formulas:</p>
+
+          <img class="formula" style="height: 240px;" src="/static/upload/page/software/formula5.png" alt="formula5">
+
+          <p class="sub">The simulation architecture in Figure 5 clearly illustrates the complete closed-loop process of
+            this multi-variable control system, including setpoint generation, parallel operation of multiple
+            controllers, the reactor model, and signal feedback.</p>
+          <img src="/static/upload/page/software/software6.png" alt="software6">
+          <p class="figurecaption">Figure 6</p>
+          <div class="usage">
+            <h4>Reference Files</h4>
+            <p>
+            <h5><a href="/static/upload/page/software/md1.md" target="_blank">md-1</a></h5>
+            <h5><a href="/static/upload/page/software/md2.md" target="_blank">md-2</a></h5>
+            <h5><a href="/static/upload/page/software/md3.md" target="_blank">md-3</a></h5>
+            </p>
+          </div>
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="conclusion">
+          <h1>CONCLUSION</h1>
+          <p class="sub">Focusing on our project plan, we have successfully achieved breakthroughs in key technical
+            areas, delivering an integrated software solution that spans from low-level real-time control to high-level
+            intelligent decision-making. This system not only validates the feasibility of combining high-reliability
+            edge computing with high-flexibility cloud management but also integrates preliminary deep learning-based
+            computer vision models and a multi-variable control system founded on advanced process control theory.
+            Collectively, this work lays a solid technical foundation for realizing the vision of an intelligent
+            traditional vaccination process.</p>
+
+          <p class="sub">Commercial bioprocess automation software often presents challenges such as high costs and
+            proprietary systems, which can limit its widespread adoption in academic research. In contrast, the "Smart
+            Vac" system is built upon a modular architecture and mainstream open-source technologies, aiming to enhance
+            its scalability and portability. It is our hope that future iGEM teams and other research projects can adapt
+            our vision algorithms, control models, or system architecture for novel bioprocess automation scenarios,
+            which could in turn increase the project's reuse value and contribute to the iGEM community.</p>
+
+
+          <p class="sub">In summary, the significance of the "Smart Vac" system extends beyond providing an open-source,
+            reusable tool for academic research. More importantly, it serves as an exploratory paradigm, demonstrating
+            how cutting-edge information technologies like IoT, edge computing, and machine learning can be deeply
+            integrated with applications in synthetic biology. Through this integration, we have elevated a traditional,
+            labor-intensive bioprocess into a highly efficient, precise, and traceable digital production paradigm,
+            showcasing significant potential for enhancing production efficiency, process stability, and data
+            traceability. Therefore, this project is more than an effective attempt to solve a specific problem; it
+            provides a field-tested, robust, and open engineering blueprint for the future development of smart
+            agriculture and automated biotechnology.</p>
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

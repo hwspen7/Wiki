@@ -8,7 +8,7 @@
   <div class="gradient"></div>
   <div class="overlay-text">
     <h3>LAB</h3>
-    <h1>DESIGN</h1>
+    <h1>EXPERIMENTS</h1>
   </div>
 </div>
 
@@ -196,291 +196,274 @@
               supernatant. Resuspend the remaining ~100 μL bacterial solution, spread it on LB plates containing the
               corresponding antibiotic, and incubate inverted in a 37°C incubator overnight.</li>
           </ol>
-          <h3></h3>
 
 
+          <h2>8. Colony PCR</h2>
+          <h3>8.1 Introduction</h3>
+          <p class="sub">A commom way to verify if the transformation was successful, through specifically amplifying a
+            sequence which can only exist in recombinant plasmids. In this case, after electrophoresis, those colonies
+            with correct bands will turn out to have been successfully transformed, thus can be sequenced later.</p>
+          <h3>8.2 Materials</h3>
+          <p class="sub">2×Magic Green Taq SuperMix, primers, sterilized EP tubes, LB medium (containing the
+            corresponding antibiotic).</p>
+          <h3>8.3 Procedure</h3>
+          <p class="sub">1. In a biosafety cabinet, prepare a certain number of sterile EP tubes; add 200 μL of LB
+            medium (containing the corresponding antibiotic) to each tube.</p>
+          <p class="sub">2. Use a sterile white pipette tip to pick 12 single colonies from each plate, add them to the
+            pre-prepared medium, pipette to mix, seal the EP tubes with parafilm, and incubate in a 37°C shaker for more
+            than 2 hours.</p>
+          <p class="sub">3. Prepare the PCR system in the first well, and dispense it into the remaining 11 wells using
+            a multi-channel pipette:</p>
+          <p class="figurecaption">Table 3 Colony PCR Reaction System</p>
+          <img src="/static/upload/page/experiments/table3.png" alt="table3">
 
-          <p class="sub">Edwardsiella piscicida is an intracellular parasitic pathogenic bacterium belonging to the
-            genus Edwardsiella. It is a primary causative agent of edwardsiellosis in marine farmed fish worldwide,
-            capable of causing large-scale mortality in economically important fish species such as turbot (Scophthalmus
-            maximus). This bacterium inflicts significant economic losses on the aquaculture industry.</p>
+          <p class="sub">4. Perform colony PCR according to the following program:</p>
+          <p class="figurecaption">Table 4 Colony PCR Reaction Program</p>
+          <img src="/static/upload/page/experiments/table4.png" alt="table4">
+          <p class="sub">5. After PCR, perform 1% agarose gel electrophoresis.</p>
 
-          <img src="/static/upload/page/design/design1.png" alt="design1">
-          <p class="figurecaption">Figure 1 Schematic diagram of Edwardsiella piscicida invading Scophthalmus maximus
-          </p>
+          <h2>9. IPTG induction expression</h2>
+          <h3>9.1 Introduction</h3>
+          <p class="sub">Express the protein controlled by Lac operon.</p>
+          <h3>9.2 Materials</h3>
+          <p class="sub">1 mol/L IPTG (Isopropyl β-D-1-thiogalactopyranoside), sterilized LB medium, antibiotics.</p>
+          <h3>9.3 Procedure</h3>
+          <ol>
+            <li>Inoculate 50 μL of the overnight-cultured seed solution into a vial containing 7 mL of LB medium (with
+              corresponding antibiotics), and culture with shaking at 37°C, 220 rpm.</li>
+            <li>Starting from 2 hours after inoculation, monitor the OD₆₀₀ of the bacterial solution every 30 minutes
+              using a spectrophotometer. Calibrate with 2 mL of deionized water; mix 500 μL of bacterial solution with
+              1.5 mL of deionized water for measurement (4× dilution). Culture until the OD₆₀₀ of the bacterial solution
+              reaches 0.6–0.8.</li>
+            <li>Add 1 mM IPTG, and culture with shaking at 37°C, 220 rpm for 3 hours.</li>
+          </ol>
 
-          <p class="sub">Fish vaccines share a similar mechanism with vaccines administered to humans. They involve
-            introducing specially treated pathogenic microorganisms (such as bacteria, viruses, etc.) or their
-            metabolites into fish bodies via methods like injection and immersion. This process stimulates the fish's
-            own immune system to produce antibodies, thereby protecting the fish against infections caused by the
-            corresponding diseases.</p>
-          <p class="figurecaption">Table 1 comparison of three vaccination routes for fish vaccines</p>
-          <img src="/static/upload/page/design/table1.png" alt="table1">
+          <h2>10. Light induction expression</h2>
+          <h3>10.1 Introduction</h3>
+          <p class="sub">Express the protein controlled by special photosensitive promoters.</p>
+          <h3>10.2 Materials</h3>
+          <p class="sub">Light of a speific wavelength (specialized flashlight), Petri dishes, Erlenmeyer flasks,
+            sterilized LB medium, corresponding antibiotics, spectrophotometer, aluminum foil.</p>
+          <h3>10.3 Procedure</h3>
+          <h4>10.3.1 Green Light Induction</h4>
+          <ol>
+            <li>Aspirate 100 μL of the corresponding bacterial solution and inoculate it into 10 mL of LB medium
+              (supplemented with corresponding antibiotics), followed by shaking culture at 37°C and 220 rpm.</li>
+            <li>Starting from 2 hours after inoculation, monitor the OD₆₀₀ of the bacterial solution every 30 minutes
+              using a spectrophotometer. It was speculated that the slow growth of the engineered strain was due to low
+              viability caused by prolonged storage of the bacterial solution or toxicity from dual resistance. The
+              OD₆₀₀ of the bacterial solution reached 0.6–0.8 after approximately 5 hours of culture.</li>
+            <li>Dispense the remaining bacterial solution into two Petri dishes (with a specific diameter). One dish was
+              set as the light group (induced with a green flashlight for 6 hours), and the other as the non-light group
+              (wrapped with aluminum foil for light protection). Both groups were cultured in a 37°C incubator.</li>
+            <li>For shaking culture occasion, the remaining bacterial solution was distributed into two Erlenmeyer
+              flasks (or disposable shaking flasks), also, with one set as the light group and the other as the
+              non-light group. The former was illuminated by a green flashlight and shaking cultured at a 37°C shaker,
+              while the latter was placed in another dark 37°C shaker.</li>
+          </ol>
 
-          <p class="sub">In the immunization operations of fish vaccines, immersion immunization is the simplest
-            immunization method. It can meet the efficiency requirements of large-scale farming, reduce the stress and
-            mortality risks during the fry stage, and cover the immunization needs across the entire developmental
-            stages of fish. However, the immersion method still has limitations, including relatively low immune
-            protection rate and short duration of immunity.</p>
+          <h4>10.3.2 Blue Light Induction</h4>
+          <p class="sub">The same as above, only changing the flashlight into blue.</p>
 
-          <p class="sub">In the preliminary study, we subjected zebrafish to immersion infection using fluorescent
-            protein-labeled Edwardsiella piscicida, and acquired imaging data via a fluorescence microscope. Image
-            analysis results showed that distinct fluorescent signals were observable in the zebrafish body, confirming
-            that the fluorescent protein-labeled Edwardsiella piscicida had successfully invaded the zebrafish host,
-            colonized relevant tissues, and achieved effective dissemination. This provides direct visual evidence for
-            the infectivity of the bacterium under immersion conditions.
-          </p>
-          <img src="/static/upload/page/design/design2.png" alt="design2">
-          <p class="figurecaption">Figure 2 Fluorescence Microscopic Images of Zebrafish Infected with Fluorescent
-            Protein-Labeled Edwardsiella piscicida</p>
-
-          <p class="sub">Based on the aforementioned research, we plan to replace Edwardsiella piscicida with
-            Escherichia coli to construct an engineered strain capable of linear movement under blue light and tumbling
-            under green light. Furthermore, we will integrate a light irradiation device to achieve precise regulation
-            of the engineered strain's movement states, thereby enhancing the invasive capacity of the vaccine strain.
-            Additionally, we will verify the efficacy of this light-driven micro-nanorobot using equipment such as
-            fluorescence microscopes.</p>
-
-          <img src="/static/upload/page/design/design3.png" alt="design3">
-          <p class="figurecaption">Figure 3 Schematic Diagram of Tumbling and Linear Motion of the Engineered Strain</p>
-        </section>
-
-
-        <!-- ID：strategy1 -->
-        <section id="strategy1">
-          <h1>Strategy 1:The Flagellar Movement Control System in Escherichia coli</h1>
-          <p class="sub">The flagellum of Escherichia coli consists of several key components:
-            Flagellar Motor: Converts the chemical energy from ion gradients (H⁺/Na⁺) into mechanical rotational force
-            to drive flagellar rotation. It includes:
-            MS Ring: The starting point of torque transmission, connecting the C Ring (direction switch) and the Rod.
-          </p>
-          <ul>
-            <li>C Ring: Controls the rotation direction (clockwise/counterclockwise) and responds to chemical signals.
+          <h2>11. Culture collection</h2>
+          <h3>11.1 Introduction</h3>
+          <p class="sub">The technique of maintaining the vitality and genetic characteristics of microbial strains.
+            </h3>
+          <h3>11.2 Materials</h3>
+          <p class="sub">Glycerin, saline water, bacterial solution.</p>
+          <h3>11.3 Procedure</h3>
+          <ol>
+            <li>Mix glycerin and saline in a 1:1 ratio to form a glycerin solution with a final concentration of 50%.
             </li>
-            <li>Stator (e.g., MotA/B): A transmembrane ion channel that generates torque using proton flow to push the
-              MS Ring to rotate.</li>
-            <li>Rod: Transmits the motor's torque to the Hook and requires high rigidity to resist torsional
-              deformation.</li>
-            <li>LP Ring: Supports the rotation of the Rod and reduces friction loss.</li>
-            <li>Hook: A flexible "universal joint" that connects the Rod and the Filament, transmitting torque and
-              buffering deflection stress.</li>
-            <li>Export Apparatus: Assembles flagellar components (similar to Type III secretion system, T3SS) and serves
-              as the assembly base for the Rod.</li>
-          </ul>
+            <li>When used, mix according to the ratio of 50% glycerin: bacterial liquid =1:1, so that the final glycerin
+              concentration is 20-30%.</li>
+            <li>Transfer the glycerin strains to the refrigerator at -20℃ and store for a long time.</li>
+          </ol>
 
-          <p class="sub">Like numerous other biological signaling systems, the E.coli chemotaxis pathway relies on
-            reversible protein phosphorylation as its signaling mechanism.That said, the core signaling biochemistry
-            differs somewhat between prokaryotes and eukaryotes.CheA functions as a kinase that utilizes ATP to undergo
-            autophosphorylation at a particular histidine residue. Subsequently, phospho-CheA molecules act as donors in
-            autokinase reactions, transferring phosphoryl groups to specific aspartate residues within CheY.</p>
+          <h2>12. Bacterial Harvesting and WB Sample Preparation</h2>
+          <h3>12.1 Materials</h3>
+          <p class="sub">1×PBS (pH 7.4), 5×protein loading buffer.</h3>
+          <h3>12.2 Procedure</h3>
+          <ol>
+            <li>Harvest the bacteria: Take 2 mL of the bacterial solution, centrifuge at 8000×g for 2 minutes, and
+              discard the supernatant.</li>
+            <li>Add 1 mL of PBS to the EP tube, resuspend and mix well, then centrifuge at 8000×g for 2 minutes and
+              discard the supernatant. Repeat the washing step 3 times.</li>
+            <li>Add 800 μL of PBS to the EP tube, resuspend and mix well.(4) Take 100 μL of the above bacterial
+              solution, mix it with 900 μL of PBS, and add the mixture to a cuvette for OD measurement. (The
+              spectrophotometer should be preheated in advance; calibrate with 1 mL of PBS before measurement. The OD
+              value measured at this time is for the 10× diluted sample).</li>
+            <li>Take 100 μL of the above bacterial solution, mix it with 900 μL of PBS, and add the mixture to a cuvette
+              for OD measurement. (The spectrophotometer should be preheated in advance; calibrate with 1 mL of PBS
+              before measurement. The OD value measured at this time is for the 10× diluted sample).</li>
+            <li>Determine the final diluted OD value based on the measured OD. An OD value of 1.5 was used in this
+              experiment. Take 500 μL of the bacterial solution from Step (3), and calculate the volume of PBS required
+              for dilution to adjust the OD of the diluted sample to 1.5.</li>
+            <li>Take 80 μL of the above sample solution, add it to a new EP tube, mix it with 20 μL of loading buffer
+              using a vortex mixer, and briefly centrifuge with a microcentrifuge to collect the liquid on the tube
+              wall.</li>
+            <li>Preheat a boiling water bath. Once the water boils, place the EP tube on a floating plate and boil for
+              10 minutes. Store the sample at -20°C for later use.</li>
+          </ol>
 
-          <p class="sub">Phosphorylated CheY promotes clockwise (CW) rotation of the flagellar motors, while
-            phosphorylated CheB exhibits high methylesterase activity toward methyl-accepting chemotaxis proteins
-            (MCPs). These activated response regulators have a brief lifespan due to their rapid loss of phosphoryl
-            groups through spontaneous self-hydrolysis. Additionally, CheZ accelerates the dephosphorylation of
-            phospho-CheY, ensuring that locomotor responses to fluctuations in the availability of signaling phosphoryl
-            groups to CheY occur rapidly.</p>
-
-          <p class="sub">In terms of the molecular mechanism underlying the direction switching of the flagellar motor,
-            when there is no CheY protein binding, the stator units that rotate clockwise are located outside the FliGCC
-            subring of the C ring, driving the flagellar motor to rotate counterclockwise. When CheY binds to the C
-            ring, it promotes a conformational change in the C ring, which contracts toward the center of the flagellar
-            motor and shifts upward as a whole. This further induces a conformational change in the FliGCC domain,
-            ultimately leading to a 180° flip of the αtorque on FliGCC. Consequently, the stator units move from the
-            outside to the inside of FliG, undergoing spatial relocation on the inner membrane, which prompts the C ring
-            to rotate clockwise, thereby achieving the direction switching of the flagellar motor.</p>
-
-          <img src="/static/upload/page/design/design4.png" alt="design4">
-          <p class="figurecaption">Figure 4 Schematic Diagram of Flagellar Rotation Direction Regulated by Partial
-            Bacterial Chemotaxis Networks</p>
-        </section>
-
-        <!-- ID：strategy2 -->
-        <section id="strategy2">
-          <h1>Strategy 2: Blue Light-Controlled Linear Movement of Escherichia coli</h1>
-          <p class="sub">The pDawn system functions as a reliable gene expression platform regulated by light
-            activation. Specifically, blue light triggers the expression of target genes, with this effect being
-            significantly amplified by either higher light intensities or prolonged exposure durations. The underlying
-            molecular mechanism of this system is explained as follows. </p>
-
-          <p class="sub">A key component of the system is the histidine kinase YF1, which contains a
-            light-oxygen-voltage (LOV) domain sensitive to blue light. In the dark (without blue light exposure), YF1
-            undergoes autophosphorylation and transfers the phosphate group to its paired response regulator FixJ.
-            Phosphorylated FixJ then activates substantial transcription from the FixK2 promoter, a process that is
-            inhibited when YF1 absorbs blue light.</p>
-
-          <p class="sub">All elements of the YF1/FixJ two-component system (TCS) are integrated into the medium-copy
-            plasmid pDawn. Here, YF1 and FixJ are constitutively expressed as a bicistronic operon under the control of
-            the LacIq promoter. Target genes can be inserted in a single cloning step through a multiple-cloning site
-            (MCS) located downstream of the pFixK2 promoter. Additionally, the λ phage repressor cI, whose expression is
-            driven by FixK2, inhibits the λ promoter pR within pDawn. This configuration reverses the signal polarity,
-            resulting in light-dependent activation of gene expression: when blue light is present, FixK2 activity is
-            suppressed, leading to reduced cI production. Consequently, the λ promoter pR is derepressed, initiating
-            transcription of the target gene.</p>
-
-          <p class="sub">Thus, we utilize the pDawn system for the expression of the CheZ gene. Under blue light
-            induction, the CheZ protein is expressed, which induces ccw rotation of the flagella and promotes the linear
-            movement of bacteria.</p>
-
-          <img src="/static/upload/page/design/design5.png" alt="design5">
-          <p class="figurecaption">Figure 5 Linear Motion Induced by Blue Light</p>
-        </section>
-
-        <!-- ID：strategy3 -->
-        <section id="strategy3">
-          <h1>Strategy 3: Green Light-Controlled Tumbling Motion of Escherichia coli</h1>
-          <p class="sub">The second light sensor was engineered by cloning the Synechocystis PCC 6803 ccaS-ccaR-cpcG2
-            genomic cluster into a ColE1-origin plasmid, and replacing the native cpcG2 output gene with CheA or
-            CheY.CcaS is a SK with a N-terminal PCB-binding cyanobacteriochrome GAF domain and a C-terminal histidine
-            kinase domain.CcaS holoprotein is produced in a green absorbing, phosphatase active ground state (Pg). Green
-            light switches CcaS Pg to a kinase active Pr conformation, where it phosphorylates the CcaR.CcaR∼P binds to
-            a G-box operator within PcpcG2,activating transcription.</p>
-
-          <p class="sub">In this project, the CcaS/CcaR dual-plasmid green light system was used to express CheA and
-            CheY proteins respectively, thereby achieving the goal of regulating the tumbling movement of engineered
-            strains via green light.</p>
-
-          <img src="/static/upload/page/design/design6.png" alt="design6">
-          <p class="figurecaption">Figure 6 Tumbling Motion Induced by Green Light</p>
-
-        </section>
-
-        <!-- ID：pathway-->
-        <section id="pathway">
-          <h1>Pathway construction</h1>
-          <h4>GROUP 1: pBBR1MCS-5-CheA、pBBR1MCS-5-CheY、pBBR1MCS-5-CheZ</h4>
-          <p class="sub">
-            Group 1 comprises three plasmids.The pBBR1MCS-5 vector was used to express the CheA, CheY, and CheZ genes
-            respectively, which served to familiarize with the experimental procedure and conduct a preliminary
-            exploration of bacterial motility.
+          <h2>13. SDS-PAGE & Western blotting</h2>
+          <h3>13.1 Introduction</h3>
+          <p class="sub">Western immunoblotting is a method of transferring a protein to a membrane and then using
+            antibodies for detection. Western Blot uses polyacrylamide gel electrophoresis. The subject is a protein,
+            the probe is an antibody, and the color rendering uses a labeled secondary antibody. The protein sample
+            separated by PAGE is transferred to a solid-phase carrier (such as nitrocellulose film-pvdf). The
+            solid-phase carrier adsorbs the protein in the form of a non-covalent bond, and can keep the type of
+            polypeptide separated by electrophoresis and its biological activity unchanged. The protein or polypeptide
+            on the solid-phase carrier is used as the antigen, and the corresponding antibody is immunologically
+            reacted, and then the enzyme or isotope-labeled second antibody is reacted, and the substrate is
+            color-developed or radioautoextended to detect the protein component of the specific target gene expression
+            isolated by electrophoresis. This technology is also widely used to detect the expression of protein levels.
           </p>
+          <h3>13.2 Procedure</h3>
+          <ol>
+            <li>Prepare WB samples from the induced bacterial solutions.</li>
+            <li>Take out the precast 12% SDS-PAGE gel cassette (or self-made gels, with detailed preparation method in
+              13.3), place the long plate facing outward (placing the short plate outward will cause an open circuit),
+              and fix it with a clamp. Pour an appropriate amount of MOPS electrophoresis buffer between the two plates;
+              after confirming no leakage, place the cassette into the electrophoresis tank.</li>
+            <li>Pull out the comb, and pour MOPS electrophoresis buffer into the gap between the plates until the liquid
+              level inside the plates is slightly higher than that outside (otherwise, no potential difference can be
+              formed). Load 7.5 μL of sample into each well, use a tricolor pre-stained protein molecular weight marker
+              as the marker, and run electrophoresis at 120 V for 50 minutes.</li>
+            <li>After electrophoresis, check if the marker bands are fully separated. Pry open the plastic plates to
+              take out the gel, cut off the required part, soak the gel in electrotransfer buffer, and cut a PVDF
+              membrane and filter papers of appropriate size.</li>
+            <li>Soak the PVDF membrane in absolute methanol for 30 seconds first, then transfer it to electrotransfer
+              buffer and soak for 2 minutes. Take out the sandwich electrotransfer clamp, and arrange the components in
+              the order of "black plate → sponge → filter paper → gel → PVDF membrane → filter paper → sponge → red
+              plate" before placing it into the electrophoresis tank.</li>
+            <li>Pour 1000 mL of electrotransfer buffer into the tank, place the electrophoresis tank in an ice box, and
+              perform electrotransfer at 100 V for 1.5 hours.</li>
+            <li>Preparation of 20×PBS-T: Mix one package of PBS powder (which should be dissolved in 2000 mL of
+              deionized water) with 100 mL of deionized water, then add 1 mL of Tween.</li>
+            <li>Preparation of blocking solution: 10% non-fat milk powder dissolved in PBS-T. (Add 5 g of non-fat milk
+              powder to 50 mL of 1×PBS-T, mix well in a centrifuge tube; store at -20°C if not used immediately).</li>
+            <li>Place the PVDF membrane into the blocking solution and incubate at room temperature for 2 hours.</li>
+            <li>Primary antibody incubation: Dilute the primary antibody in blocking solution at a ratio of 1:1000 (10
+              μL of mouse-derived primary antibody diluted in 10 mL of blocking solution). Transfer the PVDF membrane to
+              the primary antibody dilution and incubate overnight at 4°C.</li>
+            <li>After primary antibody incubation, wash the membrane with PBS-T 3 times, 10 minutes each time.</li>
+            <li>Secondary antibody incubation: Dilute the secondary antibody in blocking solution at a ratio of 1:1000
+              (10 μL of goat anti-mouse secondary antibody diluted in 10 mL of blocking solution). Transfer the PVDF
+              membrane to the secondary antibody dilution and incubate at 37°C and 75 rpm for 1 hour.</li>
+            <li>After secondary antibody incubation, wash the PVDF membrane with PBS-T 3 times, 10 minutes each time.
+            </li>
+            <li>Aspirate 1 mL of ECL FemtoLight Substrate and 1 mL of ECL FemtoLight Oxidant, mix them well to prepare
+              the developing solution. Blot the residual liquid on the PVDF membrane with filter paper, then perform
+              development and photography.</li>
+          </ol>
 
-          <img src="/static/upload/page/design/design7.png" alt="design7">
-          <p class="figurecaption">Figure 7 schematic diagram of pBBR1-MCS-CheA</p>
+          <h3>13.3 Preparation of SDS-PAGE Gel</h3>
+          <ol>
+            <li>Take out the matching glass plates, wash them with tap water, and rinse with deionized water.</li>
+            <li>Place the long plate inward and the short plate outward, align them, clamp them in a holder, and fix the
+              holder vertically on a rack. Pour deionized water to check for leakage; if the liquid level does not drop,
+              it indicates no leakage. Pour off the deionized water and blot the residual water with filter paper.</li>
+            <li>Preparation of separating gel: For a gel thickness of 1 mm, add 2.7 mL of separating gel solution, 2.7
+              mL of separating gel buffer, and finally 60 μL of modified coagulant. Mix well, use a pipette to add the
+              mixture between the glass plates until the liquid level reaches below the white crossbar. Then fill the
+              gap with isopropanol. Let it stand for about 30 minutes to solidify.</li>
+            <li>After the separating gel solidifies, pour off the isopropanol and blot the residual liquid with filter
+              paper.</li>
+            <li>Preparation of stacking gel: For a gel thickness of 1 mm, add 0.75 mL of stacking gel solution, 0.75 mL
+              of stacking gel buffer, and finally 15 μL of modified coagulant. Mix well, use a pipette to add the
+              mixture between the glass plates until the liquid level is slightly lower than the top of the glass
+              plates. Insert a comb immediately to ensure the liquid fills the gaps without forming air bubbles. Let it
+              stand for about 40 minutes to solidify.</li>
+            <li>Pull out the comb, remove the gel cassette, add an appropriate amount of deionized water to keep it
+              moist, wrap it with plastic wrap, and store it in a 4°C refrigerator for later use.</li>
+          </ol>
 
-          <img src="/static/upload/page/design/design8.png" alt="design8">
-          <p class="figurecaption">Figure 8 schematic diagram of pBBR1-MCS-CheY</p>
+          <!-- 14 -->
+          <h2>14. Configuration of culture medium</h2>
+          <h3>14.1 Introduction</h3>
+          <p class="sub">Medium refers to a nutrient matrix formulated from a combination of different nutrients that
+            supplies microorganisms, plants, or animals (or tissues) for growth and reproduction. Generally, it contains
+            several types of substances such as carbohydrates, nitrogen-containing substances, inorganic salts
+            (including trace elements), vitamins, and water. Media vary in its function, configuration and application,
+            where the use of a medium is generally achieved by changing its configuration.</p>
+          <h3>14.2 Materials</h3>
+          <p class="sub">Tryptone, yeast extract, NaCl, deionized water, agar.</p>
+          <h3>14.3 Procedure</h3>
+          <h4>14.3.1 LB liquid medium</h4>
+          <ol>
+            <li>Weigh 10 g tryptone, 5 g yeast extract, and 10 g sodium chloride.</li>
+            <li>Add about 800 mL of deionized water, stir thoroughly to dissolve.</li>
+            <li>Add deionized water to bulk the medium to 1 L.</li>
+            <li>Sterilize at 115°C for 25 minutes (or 121°C for 20 minutes).</li>
+          </ol>
+          <h4>14.3.2 LB solid medium</h4>
+          <p class="sub">The same as liquid medium, with 2% (w/v) agar powder added as a coagulant before sterilization.
+          </p>
+          <h4>14.3.3 LB semi-solid medium</h4>
+          <p class="sub">The same as liquid medium, with 0.25% (w/v) agar powder added as a coagulant before
+            sterilization.</p>
 
-          <img src="/static/upload/page/design/design9.png" alt="design9">
-          <p class="figurecaption">Figure 9 schematic diagram of pBBR1-MCS-CheZ</p>
-
-          <h4>GROUP 2: pBBR1MCS-5-CheA-Flag、pBBR1MCS-5-CheY-Flag、pBBR1MCS-5-CheZ-Flag</h4>
-          <p class="sub">Group 2 comprises three plasmids.Building upon Group 1, Flag tags were respectively added to
-            the three target genes, which were used in Western blot to verify the protein expression status.</p>
-
-          <img src="/static/upload/page/design/design10.png" alt="design10">
-          <p class="figurecaption">Figure 10 schematic diagram of pBBR1-MCS-CheA-Flag</p>
-
-          <img src="/static/upload/page/design/design11.png" alt="design11">
-          <p class="figurecaption">Figure 11 schematic diagram of pBBR1-MCS-CheY-Flag</p>
-
-          <img src="/static/upload/page/design/design12.png" alt="design12">
-          <p class="figurecaption">Figure 12 schematic diagram of pBBR1-MCS-CheZ-Flag</p>
-
-          <h4>GROUP 3:pDawn-CheZ、pDawn-CheZ-Flag、pDawn-sfGFP</h4>
-          <p class="sub">Group 3 comprises three plasmids, which express CheZ, CheZ-Flag, and sfGFP respectively under
-            blue light induction. Among them, sfGFP is used for fluorescence detection with a multi-functional
-            microplate reader to confirm the successful construction of the expression system and conduct
-            semi-quantitative evaluation of expression intensity, thereby providing a reference for the optimization of
-            induction conditions.</p>
-
-          <img src="/static/upload/page/design/design13.png" alt="design13">
-          <p class="figurecaption">Figure 13 schematic diagram of pDawn-CheZ</p>
-
-          <img src="/static/upload/page/design/design14.png" alt="design14">
-          <p class="figurecaption">Figure 14 schematic diagram of pDawn-CheZ-Flag</p>
-
-          <img src="/static/upload/page/design/design15.png" alt="design15">
-          <p class="figurecaption">Figure 15 schematic diagram of pDawn-CheZ-sfGFP</p>
-
-          <h4>GROUP
-            4:
-            pSR43.6r&pSR58.6、pSR43.6r&pSR58.6-CheA、pSR43.6r&pSR58.6-CheA-Flag、pSR43.6r&pSR58.6-CheY、pSR43.6r&pSR58.6-CheY-Flag
-          </h4>
-          <pp class="sub">Group 4 consists of five groups of dual-plasmid systems. Under green light induction,
-            pSR43.6r&pSR58.6 can express sfGFP, while the remaining four groups express CheA, CheA-Flag, CheY, and
-            CheY-Flag respectively.</pp>
-
-          <img src="/static/upload/page/design/design16.png" alt="design16">
-          <p class="figurecaption">Figure 16 schematic diagram of pSR43.6r</p>
-
-          <img src="/static/upload/page/design/design17.png" alt="design17">
-          <p class="figurecaption">Figure 17 schematic diagram of pSR58.6-CheY</p>
-
-          <img src="/static/upload/page/design/design18.png" alt="design18">
-          <p class="figurecaption">Figure 18 schematic diagram of pSR58.6-CheA</p>
-
-          <img src="/static/upload/page/design/design19.png" alt="design19">
-          <p class="figurecaption">Figure 19 schematic diagram of pSR58.6-CheY-Flag</p>
-
-          <img src="/static/upload/page/design/design20.png" alt="design20">
-          <p class="figurecaption">Figure 20 schematic diagram of pSR58.6-CheA-Flag</p>
-
-          <h4>GROUP 5: pDawn-CheZ-sfGFP、pSR43.6r&pSR58.6-CheA-sfGFP、pSR43.6r&pSR58.6-CheY-sfGFP</h4>
-          <pp class="sub">In group 5, based on groups 3 and 4, plasmid systems for sfGFP-fused CheZ protein, sfGFP-fused
-            CheA protein, and sfGFP-fused CheY protein have been constructed. This is aimed at more clearly localizing
-            bacterial positions and observing flagellar movement. The system is currently under improvement.</pp>
-
-          <img src="/static/upload/page/design/design21.png" alt="design21">
-          <p class="figurecaption">Figure 21 schematic diagram of pDawn-CheZ-sfGFP</p>
-
-          <img src="/static/upload/page/design/design22.png" alt="design22">
-          <p class="figurecaption">Figure 22 schematic diagram of pSR58.6-CheA-sfGFP</p>
-
-          <img src="/static/upload/page/design/design23.png" alt="design23">
-          <p class="figurecaption">Figure 23 schematic diagram of pSR58.6-CheY-sfGFP</p>
+          <!-- 15 -->
+          <h2>15. Bacteria Motility Verification</h2>
+          <h3>15.1 Introduction</h3>
+          <p class="sub">Visualize the diffusion ability of an engineered bacteria through semi-solid medium.</p>
+          <h3>15.2 Materials</h3>
+          <p class="sub">LB semi-solid medium, corresponding antibiotics.</p>
+          <h3>15.3 Procedure</h3>
+          <h4>15.3.1 Original method</h4>
+          <ol>
+            <li>Heat and melt the LB semi-solid medium, cool to approximately 55°C, add corresponding antibiotic, pour
+              into petri dishes with an inner diameter of 6 cm, and let stand in a biosafety cabinet with air flow until
+              the medium solidifies completely.</li>
+            <li>Take 2 μL of the induced bacterial solution, carefully spot it on the center of the prepared semi-solid
+              LB medium plate (avoid piercing the medium surface), and set up 3 biological replicates for each group.
+            </li>
+            <li>Incubate upright at 37°C for 15 hours, observe, and take photos.</li>
+          </ol>
+          <h4>15.3.2 Optimized approach</h4>
+          <p class="sub">Basically the same in operation details as above, with the order of induction and inoculation
+            changed. The bacterial solution (before induction) was spot on the center of the prepared semi-solid LB
+            medium plate first. Then the plate was induced using a flashlight with a specific wavelength.</p>
 
 
-        </section>
+          <!-- 16 -->
+          <h2>16. Multi-Mode Microplate Reader Detection</h2>
+          <h3>16.1 Introduction</h3>
+          <p class="sub">To detect the flurorescent intensity of the engineered bacteria after being induced in contrast
+            to that without induction.</p>
+          <h3>16.2 Procedure</h3>
+          <ol>
+            <li>After harvesting the bacteria, wash them with pure water 3 times, and dilute the bacterial solution to
+              an OD value of 1 for later use.</li>
+            <li>Use a BioTek multi-mode microplate reader: First, turn on the instrument for self-test. Open the Gen 5
+              software, select "Immediate Detection", choose "Fluorescence Detection" as the detection method, and set
+              the optical component type to "Monochromator".</li>
+            <li>Select 488 nm as the excitation wavelength and 509 nm as the emission wavelength, with the optical
+              component position set to "Bottom".</li>
+            <li>Use a black microplate: First detect the empty plate, then load pure water, and samples induced for 0
+              hour, 3 hours, and 6 hours at 100 μL per well. Set up 3 biological replicates for each group.</li>
+            <li>Download the data and compare the fluorescence intensity using relative fluorescence intensity.</li>
+          </ol>
 
-        <!-- ID：references -->
-        <section id="references">
-          <h1>References</h1>
-          <p class="sub">[1] 王启要. 中国鱼类疫苗技术研发及应用研究进展[J]. 大连海洋大学学报,2022,37(1):1-9.</p>
-          <p class="sub">[2] Kojima S, Blair DF. The bacterial flagellar motor: structure and function of a complex
-            molecular machine. Int Rev Cytol. 2004;233:93-134.</p>
-          <p class="sub">[3] Tan J, Zhang X, Wang X, et al. Structural basis of assembly and torque transmission of the
-            bacterial flagellar motor. Cell. 2021 May 13;184(10):2665-2679.e19.</p>
-          <p class="sub">[4] Zhang J, Luo Y, Poh CL. Blue Light-Directed Cell Migration, Aggregation, and Patterning. J
-            Mol Biol. 2020 May 1;432(10):3137-3148. </p>
-          <p class="sub">[5] Tan J, Zhang L, Zhou X, et al. Structural basis of the bacterial flagellar motor rotational
-            switching. Cell Res. 2024 Nov;34(11):788-801.</p>
-          <p class="sub">[6] Perlova T, Gruebele M, Chemla YR. Blue Light Is a Universal Signal for Escherichia coli
-            Chemoreceptors. J Bacteriol. 2019 May 8;201(11):e00762-18.</p>
-          <p class="sub">[7] Schmidl S R, Sheth R U, Wu A, et al. Refactoring and optimization of light-switchable
-            Escherichia coli two-component systems[J]. ACS synthetic biology, 2014, 3(11): 820-831.</p>
-          <p class="sub">[8] Kurzthaler C, Zhao Y, Zhou N, et al. Characterization and control of the run-and-tumble
-            dynamics of Escherichia coli[J]. Physical Review Letters, 2024, 132(3): 038302.</p>
-          <p class="sub">[9] Soffer G, Perry J M, Shih S C C. Real-time optogenetics system for controlling gene
-            expression using a model-based design[J]. Analytical Chemistry, 2021, 93(6): 3181-3188.</p>
-          <p class="sub">[10] Clavier T. Contrôle génétique de la croissance et des conditions de culture pour maximiser
-            la production biotechnologique chez E. coli[D]. Université Grenoble Alpes, 2024.</p>
-          <p class="sub">[11] Kumar S, Khammash M. Platforms for optogenetic stimulation and feedback control[J].
-            Frontiers in bioengineering and biotechnology, 2022, 10: 918917.</p>
-          <p class="sub">[12] Zhang Y, Xue X, Fang M, et al. Upconversion optogenetic engineered bacteria system for
-            time-resolved imaging diagnosis and light-controlled cancer therapy[J]. ACS Applied Materials & Interfaces,
-            2022, 14(41): 46351-46361.</p>
-          <p class="sub">[13] Zhao R, Collins E J, Bourret R B, et al. Structure and catalytic mechanism of the E. coli
-            chemotaxis phosphatase CheZ[J]. Nature structural biology, 2002, 9(8): 570-575.</p>
-          <p class="sub">[14] Kennedy E N, Barr S A, Liu X, et al. Azorhizobium caulinodans chemotaxis is controlled by
-            an unusual phosphorelay network[J]. Journal of bacteriology, 2022, 204(2): e00527-21.</p>
-          <p class="sub">[15] Ou B, Lv H, Ge H, et al. Deletion of the cheZ gene results in the loss of swimming ability
-            and the decrease of adhesion ability to Caco-2 cells in Escherichia coli Nissle 1917[J]. Folia
-            Microbiologica, 2023, 68(3): 395-402.</p>
-          <p class="sub">[16] Karmakar R. State of the art of bacterial chemotaxis[J]. Journal of Basic Microbiology,
-            2021, 61(5): 366-379.</p>
-          <p class="sub">[17] Zhang X, Feng Z, Li H, et al. Ingestible optoelectronic capsules enable bidirectional
-            communication with engineered microbes for controllable therapeutic interventions[J]. Nature Microbiology,
-            2025: 1-13.</p>
-          <p class="sub">[18] Wadhwa N, Berg H C. Bacterial motility: machinery and mechanisms[J]. Nature reviews
-            microbiology, 2022, 20(3): 161-173.</p>
-          <p class="sub">[19] Zhulin I B, Berry M A, Andrianova E P. Diverse domain architectures of CheA histidine
-            kinase, a central component of bacterial and archaeal chemosensory systems[J]. 2023.</p>
-          <p class="sub">[20] Li X, Zhang C, Xu X, et al. A single-component light sensor system allows highly tunable
-            and direct activation of gene expression in bacterial cells. Nucleic Acids Res. 2020 Apr 6;48(6):e33.</p>
-        </section>
+          <!-- 17 -->
+          <h2>17. Microscopic Observation</h2>
+          <h3>17.1 Introduction</h3>
+          <p class="sub">See and record the movement and motion situation of the engineered bacteria based on ordinary
+            optics microscopy through 100×oil immersion lens, with a total magnification ratio of 1000×.</p>
+          <h3>17.2 Materials</h3>
+          <p class="sub">Glass slides, coverslips, ordinary optics microscope.</p>
+          <h3>17.3 Procedure</h3>
+          <ol>
+            <li>Wash the fresh bacterial solution with pure water 3 times, and take out clean glass slides and
+              coverslips.</li>
+            <li>Use a pipette to aspirate 1 μL of the bacterial solution, drop it onto a glass slide, cover with a
+              coverslip, and observe under a microscope with a 40×objective lens.</li>
+            <li>Before using a 100×oil immersion objective, drop cedar oil onto the coverslip. After finding the field
+              of view, take photos and record videos using Image J software.</li>
+          </ol>
 
-        <div class="logo-ring"></div>
+          <div class="logo-ring"></div>
 
       </div>
     </main>
