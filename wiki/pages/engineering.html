@@ -1,31 +1,441 @@
 {% extends "layout.html" %}
-  
-{% block title %}Engineering Success{% endblock %}
-{% block lead %}Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #1</h4>
-      <p>Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/medals">Medals page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>PROJECT</h3>
+    <h1>ENGINEERING</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Tips for Success</h2>
-    <hr />
-    <p>Engineering success can be achieved by documenting your effort to follow the engineering design cycle: Design → Build → Test → Learn</p>
-    <p>We invite you to think about ways to tackle and solve one or more of your project's problems and use synthetic biology tools and/or experimental techniques to generate expected results.</p>
-    <p>When you have completed the cycle once, think about and document what changes in design you would make for the next iteration(s) of the cycle.</p>
-    <p>For example, you can design and build a new Part, measure its performance, document whether it worked or not, and propose how the results would inform the next design or steps (documentation must be on the Part's Pages on the Registry).</p>
-    <p>Visit the <a href="https://technology.igem.org/engineering" target="_blank">Engineering pages</a> for additional guidance on engineering success.</p>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#introduction">INTRODUCTION</a></li>
+            <li><a class="navlink" href="#cycle1">CYCLE 1</a></li>
+            <li><a class="navlink" href="#cycle2">CYCLE 2</a></li>
+            <li><a class="navlink" href="#cycle3">CYCLE 3</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：introduction -->
+        <section id="introduction">
+          <h1>INTRODUCTION</h1>
+          <!-- <h2>1.1 Research Background</h2> -->
+          <p class="sub">
+            The methodology of synthetic biology is rooted in the fundamental principles of engineering, 
+            among which the engineering cycle stands as one of the most core frameworks. This cycle provides 
+            comprehensive and systematic guidance for the design and testing of biological systems, encompassing
+             four key phases: design, build, test, and learn.
+          </p>
+          <p class="sub">
+            In this project, we have enabled Escherichia coli
+             BL21 to exhibit tumbling behavior under green light irradiation and linear movement under blue 
+             light by constructing light-driven micro-nanorobots. Meanwhile, we fully recognize that a standardized
+              engineering cycle is particularly critical for such interdisciplinary research; therefore, 
+              on the basis of strictly adhering to this framework, we have further conducted innovative explorations
+               to ensure that the research process consistently adheres to the full-process logic of engineering
+                problem-solving.
+          </p>
+          <p class="sub">
+            Cycle 1 demonstrates the process of constructing plasmids using seamless cloning, along with the subsequent
+             generation of plasmid-containing engineered strains. Building upon this, Cycle 2 validates the
+              functionality of the constructed pathways, while Cycle 3 elaborates on the efforts undertaken to verify 
+              the motility of the engineered strains.
+          </p>
+        </section>
+
+        <section id="cycle1">
+          <h1>CYCLE 1:Construction of Recombinant Plasmids and Engineered Strains</h1>
+          <h2>1.1 Construction of Recombinant Plasmids</h2>
+          <h3>Design</h3>
+          <p class="sub">
+            To verify the functions of the CheA, CheY, and CheZ genes in Escherichia coli, we first selected 
+            pBBR1MCS-5 as the vector to construct three plasmids, namely pBBR1-MCS-CheA, pBBR1-MCS-CheY, and 
+            pBBR1-MCS-CheZ. Subsequently, we chose the blue light-responsive system pDawn as the vector to construct 
+            pDawn-CheZ, and selected pSR58.6 (from the green light-responsive dual-plasmid system) as the vector to 
+            construct pSR58.6-CheA and pSR58.6-CheY.
+          </p>
+          <img src="/static/upload/page/engineering/engineering1.png" alt="engineering1">
+          <p class="figurecaption">Figure 1.Map of the Recombinant Plasmid Using pBBR1MCS-5 as the Vector</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering2.png" alt="engineering2">
+          <p class="figurecaption">Figure 2.Map of the Recombinant Plasmid Using pDawn as the Vector</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering3.png" alt="engineering3">
+          <p class="figurecaption">Figure 3.Map of the Recombinant Plasmid Using pSR58.6 as the Vector</p>
+          <br>
+          <h3>Build</h3>
+          <p class="sub">
+          Plasmids were constructed via seamless cloning. Taking the pBBR1-MCS-CheA plasmid as an example: first, 
+          PCR amplification was performed. Using the Escherichia coli BL21 genome as the template, primers 
+          BL21-CheA-pBBR1-F/BL21-CheA-pBBR1-R were selected to amplify the target CheA fragment. Subsequently, 
+          using the pBBR1MCS-5 plasmid as the template, primers pBBR1MCS-Che-F/pBBR1MCS-Che-R were chosen to amplify
+           the plasmid backbone.            
+          </p>
+          <p class="sub">
+            The sizes of the target fragment and plasmid backbone bands were confirmed by 1% agarose gel 
+            electrophoresis. If the band sizes were verified to be correct, gel extraction was conducted. After the
+             extraction process, the concentration of the recovered products was determined using a NanoDrop 
+             instrument. The target fragment and plasmid backbone were mixed at a 3:1 ratio, and the ligation
+              reaction was carried out at 50°C for 15 minutes under the action of seamless cloning enzyme to obtain
+               the ligation product.
+          </p>
+          <p class="figurecaption">Table1&nbsp;&nbsp;&nbsp;&nbsp;The primers used in this study</p>
+          <img src="/static/upload/page/engineering/engineering_table1.png" alt="engineering_table1">
+          <br>
+          <br>
+          <img src="/static/upload/page/engineering/engineering4.png" alt="engineering4">
+          <p class="figurecaption">Figure 4.Schematic Diagram of pBBR1-MCS-CheA Construction via Seamless Cloning</p>
+          <h3>Test</h3>
+          <p class="sub">
+            Taking the construction of the pBBR1-MCS-CheA plasmid as an example: Using the Escherichia coli BL21 
+            genome as the template, PCR amplification was performed with the primers
+             BL21-CheA-pBBR1-F/BL21-CheA-pBBR1-R, yielding a target fragment with a band size of 2009 bp. 
+             Using the pBBR1MCS-5 plasmid as the template, PCR amplification was conducted with 
+             pBBR1MCS-Che-F/pBBR1MCS-Che-R, resulting in a plasmid backbone with a band size of 4769 bp.
+          </p>
+          <p class="sub">
+            As shown in the electrophoresis image below, single electrophoresis bands with the correct
+             sizes were clearly observed. Thus, it was confirmed that the CheA gene and the pBBR1MCS-5 plasmid
+              backbone were successfully amplified.
+          </p>
+          <img src="/static/upload/page/engineering/engineering5.png" alt="engineering5">
+          <p class="figurecaption">Figure 5.Electrophoresis Image of the CheA, CheY and CheZ Fragments</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering6.png" alt="engineering6">
+          <p class="figurecaption">Figure 6.Electrophoresis Image of the Vector Backbone</p>
+
+      
+          <h3>Learn</h3>
+          <p class="sub">
+            Initially, when constructing recombinant plasmids using pBBR1MCS-5 as the vector, we observed that 
+            the plasmid size was inconsistent with the expected value. We then attempted restriction enzyme ligation,
+             but the result remained unsatisfactory.Subsequently, we replaced the vector with pET28a, redesigned 
+             primers for seamless cloning, and simultaneously sent the pBBR1MCS-5 vector for sequencing while 
+             repeating the experiment with a new kit. Eventually, we successfully constructed pBBR1-MCS-CheA,
+              pBBR1-MCS-CheY, and pBBR1-MCS-CheZ using pBBR1MCS-5 as the vector, and these plasmids were used for
+               subsequent studies.
+          </p>
+          <p class="sub">Additionally, we found that the current design failed to determine whether the target proteins
+             were successfully expressed in the engineered strains, prompting further design iterations.
+            </p>
+
+
+          <h3>Iteration 1: Construction of Flag-tagged Plasmids for Western Blot</h3>
+          <p class="sub">
+            Building on the work in Section 1.1, the following Flag-tagged plasmids were designed: pBBR1-MCS-CheA-Flag,
+             pBBR1-MCS-CheY-Flag, pBBR1-MCS-CheZ-Flag, pDawn-CheZ-Flag, pSR58.6-CheA-Flag, and pSR58.6-CheY-Flag.
+          </p>
+          <p class="sub">
+            After introducing the aforementioned plasmids into engineered strains and inducing expression, Western 
+            blot (WB) can be used to detect whether the target proteins are successfully expressed. This lays a 
+            foundation for subsequent functional verification.
+          </p>
+          <img src="/static/upload/page/engineering/engineering7.png" alt="engineering7">
+          <p class="figurecaption">Figure 7.Maps of the Recombinant Plasmid Using pBBR1MCS-5 as the Vector</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering8.png" alt="engineering8">
+          <p class="figurecaption">Figure 8.Map of the Recombinant Plasmid Using pDawn as the Vector</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering9.png" alt="engineering9">
+          <p class="figurecaption">Figure 9.Maps of the Recombinant Plasmid Using pSR58.6 as the Vector</p>
+          <br>
+
+
+          <p class="sub">
+            Taking pSR58.6-CheY-Flag as an example:
+          </p>
+          <p class="figurecaption">Table2&nbsp;&nbsp;&nbsp;&nbsp;The primers used in this study</p>
+          <img src="/static/upload/page/engineering/engineering_table2.png" alt="engineering_table2">
+          <br>
+          <br>
+
+          <img src="/static/upload/page/engineering/engineering10.png" alt="engineering10">
+          <p class="figurecaption">Figure 10.Schematic Diagram of pSR58.6-CheY-Flag Construction via Seamless Cloning</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering11.png" alt="engineering11">
+          <p class="figurecaption">Figure 11.Electrophoresis Image of the CheY Fragment with a Flag tag</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering12.png" alt="engineering12">
+          <p class="figurecaption">Figure 12.Electrophoresis Image of the Vector Backbone</p>
+          <br>
+
+
+
+          <h3>Iteration 2: Construction of Light-Inducible Plasmids Expressing sfGFP for Fluorescence Detection</h3>
+          <p class="sub">
+            We consider that confirming the successful expression of target proteins solely through Western blot does not meet our research needs. In the light-inducible expression system, the correlation between induction efficiency and protein expression level can be intuitively reflected by GFP fluorescence intensity, which is particularly suitable for subsequent system optimization.
+          </p>
+          <p class="sub">
+            Since the pSR58.6 plasmid harbors the sfGFP gene, we constructed the pDawn-sfGFP plasmid. Fluorescence intensity was used to characterize the activity of the promoter, thereby analyzing the regulatory effects of different conditions on gene transcription and optimizing the induction conditions.
+          </p>
+
+
+          <img src="/static/upload/page/engineering/engineering13.png" alt="engineering13">
+          <p class="figurecaption">Figure 13.Maps of the Green Light-Responsive Dual-Plasmid Expressing sfGFP</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering14.png" alt="engineering14">
+          <p class="figurecaption">Figure 14.Map of the pDawn-sfGFP Plasmid</p>
+          <br>
+          <br>
+          <p class="figurecaption">Table3&nbsp;&nbsp;&nbsp;&nbsp;The primers used in this study</p>
+          <img src="/static/upload/page/engineering/engineering_table3.png" alt="engineering_table3">
+          <br>
+          <br>
+          <img src="/static/upload/page/engineering/engineering15.png" alt="engineering15">
+          <p class="figurecaption">Figure 15.Schematic Diagram of pDawn-sfGFP Construction via Seamless Cloning</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering16.png" alt="engineering16">
+          <p class="figurecaption">Figure 16.Electrophoresis Image of the sfGFP Fragment</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering17.png" alt="engineering17">
+          <p class="figurecaption">Figure 17.Electrophoresis Image of the Vector Backbone</p>
+
+
+
+          <h3>Iteration 3: Construction of Fusion Expression Systems for sfGFP with CheA, CheY, and CheZ</h3>
+          <p class="sub">In previous studies, we used Edwardsiella piscicida into which GFP was introduced to infect zebrafish, and took photos under a fluorescence microscope. As shown in the images, green fluorescent signals could be observed in multiple parts of the zebrafish body, especially concentrated in the head and the visceral region of the trunk. This indicated that Edwardsiella piscicida successfully invaded the zebrafish and spread to different tissues or organs, verifying the pathogenicity of Edwardsiella piscicida to zebrafish and providing intuitive evidence for studying the infection process.</p>
+          <p class="sub">Ultimately, we hope to construct a co-fusion plasmid of sfGFP and the target protein and introduce it into Edwardsiella piscicida, so as to characterize the bacterial infection ability through fluorescence.</p>
+
+          <img src="/static/upload/page/engineering/engineering18.png" alt="engineering18">
+          <p class="figurecaption">Figure 18.Fluorescence Microscopic Images of Zebrafish Infected with GFP-Labeled </p>
+          <br>
+          <p class="sub" style="text-align: center;">Edwardsiella piscicida</p>
+          <p class="sub">Building on the aforementioned experiments, we aim to better leverage the localization and tracking function of sfGFP. Specifically, we will insert sfGFP in series with CheA, CheY, and CheZ respectively into plasmids via gene cloning, enabling their expression as a single polypeptide chain in cells.</p>
+          <p class="sub">This design ensures that the luminescent property of the fluorescent protein remains unaffected by fusion, while the native function of the target proteins is typically preserved—thus achieving the coupling of "fluorescent labeling-protein tracking". It allows not only the characterization of target protein expression levels via fluorescence intensity (quantified using instruments like a fluorescence spectrophotometer or software such as ImageJ) but also the direct observation of the movement status of engineered strains under a fluorescence microscope.</p>
+          <p class="sub">Currently, this part of the work is under construction.</p>
+
+
+          <img src="/static/upload/page/engineering/engineering19.png" alt="engineering19">
+          <p class="figurecaption">Figure 19.Maps of the Co-fusion Plasmids of sfGFP and the Target Protein</p>
+          <br>
+
+
+          <h2>1.2 Construction of the Engineered Strains</h2>
+          <h3>Design</h3>
+          <p class="sub">
+            To align with this study, two strains of Escherichia coli (E. coli) were selected as chassis strains for functional division of labor:
+          </p>
+          <p class="sub">
+            E. coli DH5α: Used as a cloning strain for the construction and amplification of recombinant plasmids. It lacks the recA recombinase and endA nuclease, which prevents the loss and degradation of plasmids due to homologous recombination, thus ensuring the stability of recombinant plasmids.
+          </p>
+          <p class="sub">
+            E. coli BL21 (DE3): Used as an expression strain for the induced expression of target proteins. It lacks the outer membrane protease ompT and protease lon, which reduces the degradation of target proteins.
+          </p>
+          <p class="sub">
+            The final target strain of this study is Edwardsiella piscicida—a Gram-negative bacterium pathogenic to aquatic organisms, with application potential in the fields of aquaculture disease research and biological control. However, considering biosafety risks, E. coli was used for functional simulation and technical verification in the preliminary experimental stage. As a conventional model strain in biological laboratories, E. coli has a biosafety level of 1, requiring no special protective equipment for operation. Additionally, it has a clear genetic background and mature genetic manipulation tools, enabling efficient simulation of core processes of Edwardsiella piscicida (such as plasmid transformation and target gene expression). This provides a technical reference for the subsequent engineering modification of the actual pathogenic bacterium.
+          </p>
+
+          <p class="figurecaption">Table4&nbsp;&nbsp;&nbsp;&nbsp;Main Strains Used in This Experiment</p>
+          <img src="/static/upload/page/engineering/engineering_table4.png" alt="engineering_table4">
+          <br>
+
+          <h3>Build</h3>
+          <p class="sub">Taking pBBR1-MCS-CheA, pBBR1-MCS-CheY, and pBBR1-MCS-CheZ as examples:</p>
+          <p class="sub">The aforementioned recombinant plasmids were transformed into E. coli DH5α competent cells, plated, and cultured overnight. Colonies were selected for verification using the primers pBBR1MCS-Che-CHECK-F/pBBR1MCS-Che-CHECK-R. Strains with correct verification results were sent for sequencing, and those with confirmed correct sequencing results were named DH5α-pBBR1-MCS-CheA, DH5α-pBBR1-MCS-CheY, and DH5α-pBBR1-MCS-CheZ.</p>
+
+          <br>
+          <p class="figurecaption">Table5&nbsp;&nbsp;&nbsp;&nbsp;The primers used in this study</p>
+          <img src="/static/upload/page/engineering/engineering_table5.png" alt="engineering_table5">
+          <br>
+
+          <p class="sub">The plasmids from the sequencing samples were transformed into E. coli BL21 competent cells, plated, and cultured overnight. The following day, single colonies were picked and cultured in shaking flasks for a certain period, after which plasmids were extracted. These plasmids were subjected to 1% agarose gel electrophoresis. The engineered strains with plasmid bands of the expected size were named BL21-pBBR1-MCS-CheA, BL21-pBBR1-MCS-CheY, and BL21-pBBR1-MCS-CheZ.</p>
+
+
+
+          <h3>Test</h3>
+          <p class="sub">After transformation into E. coli DH5α, colony PCR was performed on 12 randomly picked colonies. The results of PCR electrophoresis verification are shown in Figure 20. Bands with lengths similar to the positive control fragment have been marked in the electrophoresis image. Positive transformants were selected for sequencing, and all sequencing results were correct (Figure 21-23).</p>
+
+
+          <img src="/static/upload/page/engineering/engineering20.png" alt="engineering20">
+          <p class="figurecaption">Figure 20.Electrophoresis Result Image of Colony PCR</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering21.png" alt="engineering21">
+          <p class="figurecaption">Figure 21.Sequence Alignment of DH5α-pBBR1-MCS-CheA Sequencing Results</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering22.png" alt="engineering22">
+          <p class="figurecaption">Figure 22.Sequence Alignment of DH5α-pBBR1-MCS-CheY Sequencing Results</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering23.png" alt="engineering23">
+          <p class="figurecaption">Figure 23.Sequence Alignment of DH5α-pBBR1-MCS-CheZ Sequencing Results</p>
+          <br>
+
+
+          <h3>Learn</h3>
+          <p class="sub">
+            During the construction of engineered strains, initially, colonies were too dense to pick single colonies after transformation and plating. Therefore, the protocol was adjusted from "centrifuging the bacterial culture, discarding the supernatant, and then plating" to "directly pipetting the bacterial culture for plating." After this adjustment, the number of colonies became moderate.
+          </p>
+          <p class="sub">
+            Since the green light-inducible system is a dual-plasmid system, plasmids of the pSR43.6r and pSG58.6 series were co-transformed into BL21, and two types of antibiotics were added to the medium. We observed that the dual-plasmid engineered strains exhibited a slower growth rate compared to the single-plasmid engineered strains. This is presumably due to resource competition for plasmid replication and metabolic burden, though the specific reasons require further investigation.
+          </p>
+        </section>
+
+
+
+        <section id="cycle2">
+          <h1>CYCLE 2: Expression Verification and Intensity Analysis of CheA, CheY, and CheZ Proteins</h1>
+          <h2>2.1 Western blot</h2>
+          <h3>Design</h3>
+          <p class="sub">We aim to demonstrate that the constructed engineered strains can express the target proteins of interest under corresponding induction conditions. For instance, the CheZ protein is expressed under blue light induction, while the CheA or CheY proteins are expressed under green light induction. In the absence of induction, little or no target protein is expressed. To this end, engineered strains harboring Flag-tagged plasmids were used, and Western blot was employed to visualize the expression levels of the target proteins.</p>
+
+          <h3>Build</h3>
+          <p class="sub">
+            Taking the blue light-driven micro-nanorobot—BL21-pDawn-CheZ-Flag—as an example: Blue light induction was initiated when the bacterial culture reached an OD₆₀₀ of approximately 0.6. A flashlight emitting blue light with a wavelength of 470 nm–480 nm was used, and the induction was conducted in a 37 °C incubator for 6 hours. For the dark control group, bacterial cultures were wrapped in aluminum foil and incubated under the same conditions.
+          </p>
+          <p class="sub">
+            After induction, bacterial cells were washed with PBS and uniformly diluted to a bacterial culture with an OD₆₀₀ of 1.5. The diluted culture was mixed with SDS-PAGE Sample Loading Buffer, and the mixture was boiled in boiling water for 10 minutes. Subsequently, SDS-PAGE electrophoresis was performed, followed by membrane transfer. The membrane was blocked overnight at 4 °C. On the next day, the PVDF membrane was incubated with HRP-conjugated Mouse anti-Flag-Tag antibody, then with goat anti-mouse secondary antibody. After the incubation steps, development was carried out.
+          </p>
+
+          <h3>Test</h3>
+          <img src="/static/upload/page/engineering/engineering24.png" alt="engineering24">
+          <p class="figurecaption">Figure 24.WB Development Result Image of BL21-pDawn-CheZ-Flag</p>
+          <br>
+          <p class="sub">The development results are shown in the figure above, and the protein bands generally matched the expected size. BL21-pDawn-CheZ-Flag induced by blue light expressed more CheZ protein, while the band of the control group cultured in the dark was thinner. However, target protein bands were still detected in the non-illuminated group, which deviated from the expected light-responsive regulatory effect.</p>
+
+
+          <h3>Learn</h3>
+          <p class="sub">The Western blot experiment confirmed that the engineered strains we constructed can express the corresponding proteins and are regulated by induction signals. For subsequent experiments, we plan to conduct them in a light-shielded environment. Additionally, we will add an internal reference protein group, which can correct for systematic errors such as differences in sample loading volume, uneven membrane transfer efficiency, and variations in protein extraction efficiency. This group serves as a critical control for quantitative analysis in WB experiments.</p>
+
+
+
+          <h2>2.2 Detection of sfGFP Fluorescence Intensity</h2>
+          <h3>Design</h3>
+          <p class="sub">
+            Building on the Western blot results, we further utilized sfGFP as a "reporter gene," whose expression is regulated by promoters. A higher fluorescence intensity typically indicates higher transcription and translation efficiency of the target gene, allowing direct quantification of the target gene expression levels across different strains or under different culture conditions. Additionally, since induction conditions directly affect target gene expression, fluorescence intensity detection can serve as a rapid and non-invasive optimization indicator to guide subsequent experiments.
+          </p>
+
+
+          <h3>Build</h3>
+          <p class="sub">
+            The engineered strains used in this experiment are the blue light-driven BL21-pDawn-sfGFP and the green light-driven BL21-pSR43.6r&pSR58.6. Three groups were set up: a dark group, a 3-hour light exposure group, and a 6-hour light exposure group, all cultured at 37 °C. At the corresponding time points, aliquots of the bacterial culture were taken, washed with water, and diluted to an OD₆₀₀ of 1. The diluted samples were loaded into a 96-well microplate, and fluorescence data were measured using a multimode microplate reader.
+          </p>
+          <p class="sub">
+            For data processing, the background value of the empty microplate was first subtracted. Then, the fluorescence intensity of the water group was used as a reference for normalization, and the relative fluorescence intensity of the other groups was calculated.
+          </p>
+
+
+          <h3>Test</h3>
+          <img src="/static/upload/page/engineering/engineering25.png" alt="engineering25">
+          <p class="figurecaption">Figure 25.Relative Fluorescence Intensity of Bacterial Culture under Blue Light Induction</p>
+          <br>
+          <img src="/static/upload/page/engineering/engineering26.png" alt="engineering26">
+          <p class="figurecaption">Figure 26.Relative Fluorescence Intensity of Bacterial Culture under Green Light Induction</p>
+          <br>
+
+          <p class="sub">
+            The Water group, serving as a blank control, exhibited the lowest relative fluorescence intensity. This indicates that water itself produces almost no fluorescence, providing a background reference for fluorescence detection in subsequent experimental groups
+          </p>
+          <p class="sub">
+            The bacterial culture group without light treatment showed a significantly higher relative fluorescence intensity than the Water group. This suggests that even in the absence of light, the engineered strains harboring sfGFP-containing plasmids still exhibit a certain level of fluorescence expression.
+          </p>
+          <p class="sub">
+            After 3 hours of light treatment, the relative fluorescence intensity increased further, being significantly higher than that of the No Light group. This demonstrates that light can induce the expression of sfGFP in the engineered strains, and the induction effect is already quite significant with a 3-hour light duration.
+          </p>
+          <p class="sub">
+            When the light duration was extended to 6 hours, the relative fluorescence intensity reached its highest level, showing a further increase compared to the 3-hour group. This indicates that as the light duration increases, the inductive effect on sfGFP expression continues to strengthen; a longer light duration promotes the engineered strains to produce more sfGFP, thereby exhibiting higher fluorescence intensity.
+          </p>
+
+
+
+
+          <h3>Learn</h3>
+          <p class="sub">
+            Overall, the experimental results clearly show that light can effectively induce the expression of sfGFP in engineered strains harboring sfGFP-containing plasmids, and the induction effect strengthens with the extension of light duration. At the same time, the results also indicate that the engineered strains exhibit a certain level of basal sfGFP expression in the absence of light.
+          </p>
+          <p class="sub">
+            Initially, the experimental results were consistently unsatisfactory. After replacing the transparent microplate with an opaque black microplate and repeating the experiment, the aforementioned results were obtained. Through this experiment, the induction time was determined to be 6 hours. Due to experimental constraints, the fluorescence intensity under longer induction durations could not be detected, and this will be improved in subsequent studies.
+          </p>
+
+
+        </section>
+
+
+        <section id="cycle3">
+          <h1>CYCLE 3: Investigation of the Motility of Engineered Strains</h1>
+          <h3>Design</h3>
+          <p class="sub">
+            LB semi-solid medium is prepared by adding 0.25% agar to liquid medium. We designed semi-solid medium for observing bacterial motility primarily based on its specific viscosity and resistance. This resistance not only allows motile bacteria to move actively but also restricts their random diffusion, making bacterial motility more distinct and easier to observe.
+          </p>
+          <p class="sub">
+            In our hypothesis, blue light-driven engineered strains tend to move in a straight line, thereby exhibiting a larger diffusion range with neat edges on the semi-solid plate. In contrast, green light-driven engineered strains tend to tumble, and their colonies are expected to show blurred edges with an uneven internal density gradient.
+          </p>
+
+
+
+          <h3>Build</h3>
+          <p class="sub">
+            Three IPTG-inducible expression systems, namely pBBR1-MCS-5-CheZ, pBBR1-MCS-5-CheY, and pBBR1-MCS-5-CheA, were constructed. Semi-solid medium supplemented with 0.25% agar was dispensed into Petri dishes. For each system, 2 μL of bacterial culture (either induced for 6 hours or cultured in the dark) was carefully spotted onto the center of the Petri dish, followed by incubation at 37 °C in an upright position. The overexpression effect of the target proteins was analyzed by comparing the colony morphology and area of strains between the induced group (with IPTG) and the control group (without IPTG) on the semi-solid plates.
+          </p>
+          <p class="sub">
+            Two green light-inducible expression systems, pSR43.6&pSR58.6-CheY and pSR43.6&pSR58.6-CheA, were constructed. It is expected that green light induction will promote the overexpression of CheY and CheA proteins, thereby inhibiting bacterial diffusion. Additionally, a blue light-inducible expression system, pDawn-CheZ, was constructed; green light induction is expected to promote the overexpression of CheZ protein, which in turn enhances bacterial diffusion.
+          </p>
+
+
+          <h3>Test</h3>
+          <p class="sub">
+            The results indicate that the current semi-solid culture results cannot fully demonstrate the effect of CheY and CheA protein overexpression on flagellar tumbling motion, nor can they completely confirm the enhancing effect of CheZ protein on straight-line motion. Only the potential regulatory trend of these proteins can be preliminarily inferred.
+          </p>
+
+
+          <h3>Learn</h3>
+          <p class="sub">
+            Since no defective strains were constructed, the experimental results were not obvious and were subject to certain human operation interference. Therefore, the study was optimized in two aspects:
+          </p>
+          <p class="sub">
+            First, the experimental design was modified. Bacterial cultures in the uninduced state were spotted onto semi-solid plates. After the bacterial cultures infiltrated the medium, light induction (or IPTG induction) was immediately applied to the plates, ensuring that the bacteria were regulated by the induction signal while initiating motility and diffusion. This modification guarantees that the bacterial motility is regulated by the induction condition throughout the process, and the bacteria are under a unified induction condition from the initial stage of diffusion, resulting in more comparable data. In the original method, local differences in aeration volume and inducer concentration might exist in the bacterial culture container. This could lead to some bacteria overexpressing the target protein in advance while others expressing insufficiently. After spotting, the colony morphology on the plates would be disordered due to "differences in initial protein levels," making it impossible to distinguish whether the phenomenon was caused by "induction effect" or "uneven pre-induction." Additionally, during the pre-induction process, the bacteria might experience metabolic stress due to excessive protein expression, resulting in inconsistent bacterial activity at the time of spotting.
+          </p>
+          <p class="sub">
+            Second, to more clearly compare the differences in bacterial motility, an oil immersion objective was used to observe and record videos. The movement trajectories of bacteria in the field of view were analyzed to improve the accuracy of the experimental results.
+          </p>
+
+
+          <h3>Iteration</h3>
+          <p class="sub">
+            From the experimental results in the figure, after culturing the strain BL21-pSR43.6r&pSR58.6-CheA under dark conditions for 17 hours and green light conditions for 17 hours respectively, the following conclusions can be drawn:
+          </p>
+          <p class="sub">
+            The colonies in both Petri dishes of the dark-cultured group exhibited relatively regular, small, and concentrated morphologies. In contrast, the colonies in the two Petri dishes of the green light-cultured group showed more dispersed morphologies with more irregular edges compared to the dark-cultured group. This suggests that green light induction may have an impact on the growth or related physiological processes of the strain.
+          </p>
+
+
+          <img src="/static/upload/page/engineering/engineering27.png" alt="engineering27">
+          <p class="figurecaption">Figure 27.Comparison Diagram of Semi-Solid Culture Plates With and Without Green Light Induction</p>
+          <br>
+
+
+          <p class="sub">
+            The movement trajectories of the engineered strains were observed using a 100× oil immersion objective, and videos were recorded for analysis. The figure below shows a freeze-frame image from this field of view. Rod-shaped Escherichia coli can be observed; however, due to the three-dimensional structure of the bacteria, clear focusing was not possible in some cases. Nevertheless, this image still indicates that the bacteria move in different dimensions.
+          </p>
+
+          <img src="/static/upload/page/engineering/engineering28.png" alt="engineering28">
+          <p class="figurecaption">Figure 28.Video Screenshot of Bacterial Movement Trajectories Observed via Oil Immersion Objective</p>
+          <br>
+        </section>
+
+
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
