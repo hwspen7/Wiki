@@ -69,8 +69,25 @@
           <h4>2.1 Mie Scattering Theory Model </h4>
           <p class="sub">The Mie scattering theory is a strict mathematical solution describing the scattering effect of uniform spherical particles on electromagnetic waves, whose core is to solve the boundary condition problem of Maxwell's equations in the spherical coordinate system. For microbial particles in the Edwardsiella vaccine solution, when their size is comparable to the wavelength of near-infrared light, the Mie theory can describe the light scattering phenomenon more accurately than the Rayleigh scattering theory.<strong style="color:#9c7b3f;">Scattering efficiency factor</strong> is a core parameter of the Mie theory, expressed as:</p>
           <img src="/static/upload/page/model/formula1.png" alt="formula1">
-          <p class="sub">Among them, <img src="/static/upload/page/model/formula2.png" alt="formula2" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the size parameter, is the particle radius, and is the wavelength of incident light.​and ​are the Mie coefficients, which are closely related to the complex refractive index of the particles.</p>
+          <p class="sub">Among them, <img src="/static/upload/page/model/formula2.png" alt="formula2" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the size parameter, is the particle radius, and is the wavelength of incident light.<img src="/static/upload/page/model/formula3.png" alt="formula3" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">​and <img src="/static/upload/page/model/formula4.png" alt="formula4" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​are the Mie coefficients, which are closely related to the complex refractive index of the particles.</p>
           <p class="sub">​​The <strong style="color:#9c7b3f;">scattering phase function</strong> describes the angular distribution characteristics of light after scattering, and is approximately expressed using the Henvey-Greenstein phase function:</p>
+          <img src="/static/upload/page/model/formula5.png" alt="formula5">
+          <p class="sub">Among them, <img src="/static/upload/page/model/formula6.png" alt="formula6" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the scattering angle, and <img src="/static/upload/page/model/formula7.png" alt="formula7" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the anisotropy factor, with a value range of [-1, 1], representing the degree of forward or backward preference of scattering.</p>
+          <p class="sub">For the Edwardsiella vaccine solution, the <strong style="color:#9c7b3f;">scattering coefficient</strong> <img src="/static/upload/page/model/formula8.png" alt="formula8" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​can be obtained through integral calculation:</p>
+          <img src="/static/upload/page/model/formula9.png" alt="formula9">
+          <p class="sub">Among them, N(r) is the particle size distribution function, and <img src="/static/upload/page/model/formula10.png" alt="formula10" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the scattering cross-section.</p>
+
+          <h4>2.2 Refractive Index Fluctuation Model </h4>
+          <h5>2.2.1 Theoretical Basis and Wave Equation Derivation</h5>
+          <p class="sub">The propagation of light waves in turbulent media follows the basic laws of electromagnetic waves and can be derived from Maxwell's equations. We first make the following assumptions:</p>
+          <ol>
+            <li>The medium is a perfect insulator (conductivity is 0);</li>
+            <li>The magnetic permeability is 1;</li>
+            <li>The wavelength of the electromagnetic wave is much smaller than the inner scale of turbulence;</li>
+            <li>The time dependence of the electromagnetic field is determined by <img src="/static/upload/page/model/formula11.png" alt="formula11" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">;</li>
+            <li>5.The statistical characteristics of the refractive index do not change with time.</li>
+          </ol>
+          <p class="sub">Considering the random fluctuation characteristics of the refractive index, the refractive index is expressed as:</p>
         </section>
 
         <!-- ID：architecture -->
