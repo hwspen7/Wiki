@@ -25,12 +25,10 @@
         <!-- Content Start -->
         <nav>
           <ul class="menu" id="menu">
-            <li><a class="navlink" href="#description">INTRODUCTION</a></li>
-            <li><a class="navlink" href="#strategy">DEVELOPMENT <br>STRATEGY</a></li>
-            <li><a class="navlink" href="#architecture">SYSTEM <br>ARCHITECTURE</a></li>
-            <li><a class="navlink" href="#machine">MACHINE <br>VISION MODEL</a></li>
-            <li><a class="navlink" href="#control">CONTROL <br> SYSTEM MODEL</a></li>
-            <li><a class="navlink" href="#conclusion">CONCLUSION</a></li>
+            <li><a class="navlink" href="#description">DESCRIPTION</a></li>
+            <li><a class="navlink" href="#model1">MODEL 1</a></li>
+            <li><a class="navlink" href="#model2">MODEL 2</a></li>
+            <li><a class="navlink" href="#model3">MODEL 3</a></li>
           </ul>
         </nav>
       </div>
@@ -42,90 +40,37 @@
 
         <!-- ID：introduction -->
         <section id="introduction">
-          <h1>INTRODUCTION</h1>
-          <p class="sub">In the precision bioprocessing of modern aquaculture, immersion vaccination mandates
-            near-stringent requirements for process environment stability and operational repeatability. Conventional
-            control methodologies, due to their inherent latency and limitations, struggle to perform real-time,
-            dynamic, and precise regulation of Key Process Parameters (KPPs) such as vaccine concentration, temperature,
-            and salinity, thereby directly impacting vaccine bio-activity and inoculation success rates.</p>
-
-          <p class="sub">To overcome this technical bottleneck, we have developed an intelligent control system based on
-            multi-source IoT perception—"Smart Vac". This system is not an isolated remote monitoring tool, but rather
-            an end-to-end, closed-loop solution that deeply integrates data sensing, intelligent decision-making, and
-            precision execution.</p>
-          <h4>The core innovative value of our system is manifested on several levels:</h4>
-          <h4>1.From Passive Monitoring to Proactive Process Control: </h4>
-          <p class="sub">We engineered a real-time process control system with a PLC at its core. By deploying Advanced
-            Process Control (APC) algorithms, it proactively modulates actuators to dynamically maintain critical
-            process parameters within exceptionally tight setpoint windows.</p>
-          <h4>2.Machine Learning as an Intelligent Decision Engine: </h4>
-          <p class="sub">The system innovatively incorporates a machine learning decision engine. It not only performs
-            predictive assessments of the biological state of fry through visual analysis but also executes real-time
-            dynamic optimization of physical processes like material handling, marking a pivotal leap from automation to
-            intelligence.
-          </p>
-          <h4>3.A Hybrid Edge-Cloud Collaborative Architecture: </h4>
-          <p class="sub">We designed a unique dual-software architecture, creating a hybrid edge-cloud model that
-            balances reliability with flexibility. The Qt-based edge control software ensures mission-critical local
-            control and data security, while the uni-app-based cross-platform software provides powerful remote
-            collaboration and scalable supervisory control capabilities.</p>
+          <h1>DESCRIPTION</h1>
+          <p class="sub">Our modeling work is systematically carried out along the logical chain of "Light-Fluid-Bacteria":</p>
+          <ol>
+            <li>First, a <strong style="color:#9c7b3f;">Mie scattering-refractive index fluctuation coupling model</strong> is constructed to quantify the dynamic light intensity attenuation in the weak turbulent environment of the Archimedean screw, providing accurate dosages for subsequent optical regulation.</li>
+            <li>A <strong style="color:#9c7b3f;">7-compartment diffusion-mass transfer equation</strong> is used to describe the cross-barrier mass transfer process of engineered bacteria in fish bodies, converting the light-controlled bacterial quantity into immune endpoints of compartment equilibrium through model language.</li>
+            <li>A <strong style="color:#9c7b3f;">green/blue/red three-color photogenetic circuit</strong> activated by NIR (Near-Infrared Radiation) is designed, and a two-component kinase-response regulatory network is utilized to achieve instantaneous, reversible, and saturated control of the swimming mode of Escherichia coli.</li>
+          </ol>
+          <p class="sub">The three modules are sequentially connected, covering three scales of photon-fluid-bacteria, and comprehensively explain the vaccine immunization results of the screw device innovatively developed by us.</p>
+          <p class="sub">The modeling methods span classical mass transfer equations, bacterial kinetics, machine learning, Monte Carlo simulation, and other approaches. They provide a quantitative solution for "optical regulation-live bacteria delivery-aquatic immunity" and solve the modeling challenge of difficult quantification of bacterial indicators in aquatic immunity.</p>
+          <!-- Video 1 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/model/modelvideo1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
         </section>
+      
+        <!-- ID：model1 -->
+        <section id="model1">
+          <h1>Modeling and Analysis of Light Transmission Characteristics Based on Mie Scattering and Refractive Index Fluctuation Model</h1>
+          <p class="sub">This model mainly constructs a mathematical model of light intensity attenuation for Edwardsiella vaccine solution in a weak turbulence system to analyze and predict the transmission behavior of light in the Edwardsiella vaccine solution. The model combines the Mie scattering theory (for particle scattering) and the refractive index fluctuation model (for turbulence scattering), and extends the model to a time-varying form for the dynamic environment of the Archimedes screw system. Numerical methods such as Monte Carlo and Runge-Kutta are used for solving, the light intensity attenuation characteristics are systematically analyzed, and the key influencing parameters are determined using Sobol global sensitivity analysis. The research provides important theoretical basis and design guidance for optimizing the optical detection and therapeutic technologies of vaccines.</p>
+          
+          <h3>1.Overview of Model Meaning</h3>
+          <p class="sub">The study of light transmission characteristics in turbid media is an important topic in fields such as bio-optics, atmospheric physics, and ocean optics. Especially in the Edwardsiella vaccine solution system, the light transmission process is comprehensively affected by microbial particle scattering and turbulence effects, showing complex attenuation and polarization characteristics. The Mie scattering theory provides a strict mathematical basis for analyzing the scattering phenomenon when the particle size is comparable to the wavelength of light, while the refractive index fluctuation model well describes the random scattering effect caused by turbulence. This paper will combine these two theories to establish a complete light transmission model, solve it using numerical methods, and finally display the variation law of light transmission characteristics with various parameters through visualization methods. This study aims to construct a mathematical model that can accurately predict the transmission behavior of light in the Edwardsiella vaccine solution, providing a theoretical basis for optimizing vaccine optical detection methods and developing new optical therapeutic technologies. The model not only considers the scattering and absorption of microbial particles but also introduces the influence of turbulence effects, making the model more in line with practical application scenarios. Through systematic parameter research and visual analysis, this paper reveals the key physical mechanisms and laws in the light transmission process. </p>
 
-
-        <!-- ID：strategy -->
-        <section id="strategy">
-          <h1>DEVELOPMENT STRATEGY</h1>
-          <p class="sub">Intelligent system of "Smart Vac", we adopted a modular, phased-empowerment agile development
-            strategy. This strategy partitioned the entire system's construction into three logically distinct and
-            progressive phases: first, building an autonomous hardware control core; second, constructing a
-            collaborative local and cloud interaction layer; and finally, integrating a data-driven intelligent
-            decision engine. Each phase focused on the delivery of a core capability, ensuring through continuous
-            feedback and testing that a stable, reliable, and intelligent system could be seamlessly integrated in the
-            end.</p>
-          <!-- Phase 1 -->
-          <H4>Phase I: Building the Autonomous Hardware Control Core</H4>
-          <p class="sub">Purpose: Forge a functionally complete and standalone automated physical unit, concentrating
-            on the precise process control of the underlying hardware.</p>
-          <p class="sub">Tasks: To complete the control logic programming for the Siemens S7-1214C PLC , implementing
-            closed-loop control for key parameters such as temperature and concentration. Concurrently, to integrate
-            various high-precision sensors and actuators, establishing a complete link from data perception to
-            physical execution.</p>
-          <p class="sub">Achievement: A fully-equipped, standalone automated device that achieves unmanned and
-            standardized operation of the core production process.</p>
-
-          <!-- Phase 2 -->
-          <H4>Phase II: Constructing the Local and Cloud Collaborative Interaction Layer</H4>
-          <p class="sub">Purpose: Establish a seamless communication bridge between human operators and the machine,
-            as
-            well as between local and remote access, to enable comprehensive data management and supervisory control.
-          </p>
-          <p class="sub">Tasks: Initially, to develop the Qt-based edge control software to serve as the primary local
-            Human-Machine Interface (HMI) for local parameter setting and real-time monitoring. Subsequently, to
-            develop the uni-app-based cross-platform control software and its IoT backend, enabling remote monitoring,
-            parameter calibration, and an innovative one-to-many device management function.</p>
-          <p class="sub">Achievement: A collaborative control system with full IoT capabilities, allowing operators to
-            securely monitor and manage one or more devices from either local or remote terminals.</p>
-
-          <!-- Phase 3 -->
-          <H4>Phase III: Integrating the Data-Driven Intelligent Decision Engine</H4>
-          <p class="sub">Purpose:Empower the system with the ability to analyze, judge, and self-optimize based on
-            data.
-          </p>
-          <p class="sub">Core Tasks: To develop and deploy a visual assessment model for fish health status, providing
-            a scientific basis for inoculation decisions. Simultaneously, to develop a dynamic optimization model for
-            the automated fish separation process, which intelligently adjusts actuators based on visual feedback to
-            maximize process efficiency. Finally, to link the model's decision outputs with the underlying control
-            system to close the intelligent loop.</p>
-          <p class="sub">Achievement: An intelligent vaccination system equipped with autonomous perception, analysis,
-            and decision-making capabilities, achieving a process that is highly efficient, precise, and safe.</p>
-
-          <p class="sub">Through this phased and iterative development path, we ensured that the project had clear,
-            deliverable outcomes at each stage. We systematically addressed all technical challenges, from low-level
-            hardware control to high-level intelligent applications, ultimately architecting an innovative software
-            solution that is robust, powerful, and forward-looking.</p>
-
-          <img src="/static/upload/page/software/software1.png" alt="software1">
-          <p class="figurecaption">Figure 1</p>
+          <h3>2 Model Establishment and Mathematical Expression </h3>
+          <h4>2.1 Mie Scattering Theory Model </h4>
+          <p class="sub">The Mie scattering theory is a strict mathematical solution describing the scattering effect of uniform spherical particles on electromagnetic waves, whose core is to solve the boundary condition problem of Maxwell's equations in the spherical coordinate system. For microbial particles in the Edwardsiella vaccine solution, when their size is comparable to the wavelength of near-infrared light, the Mie theory can describe the light scattering phenomenon more accurately than the Rayleigh scattering theory.<strong style="color:#9c7b3f;">Scattering efficiency factor</strong> is a core parameter of the Mie theory, expressed as:</p>
+          <img src="/static/upload/page/model/formula1.png" alt="formula1">
+          <p class="sub">Among them, <img src="/static/upload/page/model/formula2.png" alt="formula2" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the size parameter, is the particle radius, and is the wavelength of incident light.​and ​are the Mie coefficients, which are closely related to the complex refractive index of the particles.</p>
+          <p class="sub">​​The <strong style="color:#9c7b3f;">scattering phase function</strong> describes the angular distribution characteristics of light after scattering, and is approximately expressed using the Henvey-Greenstein phase function:</p>
         </section>
 
         <!-- ID：architecture -->
