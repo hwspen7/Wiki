@@ -38,8 +38,8 @@
     <main class="content">
       <div class="paper">
 
-        <!-- ID：introduction -->
-        <section id="introduction">
+        <!-- ID：description -->
+        <section id="description">
           <h1>DESCRIPTION</h1>
           <p class="sub">Our modeling work is systematically carried out along the logical chain of "Light-Fluid-Bacteria":</p>
           <ol>
@@ -55,6 +55,7 @@
               <source src="/static/upload/page/model/modelvideo1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
+          </div>
         </section>
       
         <!-- ID：model1 -->
@@ -68,261 +69,601 @@
           <h3>2 Model Establishment and Mathematical Expression </h3>
           <h4>2.1 Mie Scattering Theory Model </h4>
           <p class="sub">The Mie scattering theory is a strict mathematical solution describing the scattering effect of uniform spherical particles on electromagnetic waves, whose core is to solve the boundary condition problem of Maxwell's equations in the spherical coordinate system. For microbial particles in the Edwardsiella vaccine solution, when their size is comparable to the wavelength of near-infrared light, the Mie theory can describe the light scattering phenomenon more accurately than the Rayleigh scattering theory.<strong style="color:#9c7b3f;">Scattering efficiency factor</strong> is a core parameter of the Mie theory, expressed as:</p>
-          <img src="/static/upload/page/model/formula1.png" alt="formula1">
-          <p class="sub">Among them, <img src="/static/upload/page/model/formula2.png" alt="formula2" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the size parameter, is the particle radius, and is the wavelength of incident light.​and ​are the Mie coefficients, which are closely related to the complex refractive index of the particles.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula1.webp" alt="formula1">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula2.webp" alt="formula2" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the size parameter, is the particle radius, and is the wavelength of incident light.<img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula3.webp" alt="formula3" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">​and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula4.webp" alt="formula4" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​are the Mie coefficients, which are closely related to the complex refractive index of the particles.</p>
           <p class="sub">​​The <strong style="color:#9c7b3f;">scattering phase function</strong> describes the angular distribution characteristics of light after scattering, and is approximately expressed using the Henvey-Greenstein phase function:</p>
-        </section>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula5.webp" alt="formula5">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula6.webp" alt="formula6" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the scattering angle, and g is the anisotropy factor, with a value range of [-1, 1], representing the degree of forward or backward preference of scattering.</p>
+          <p class="sub">For the Edwardsiella vaccine solution, the <strong style="color:#9c7b3f;">scattering coefficient</strong> <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula8.webp" alt="formula8" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​can be obtained through integral calculation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula9.webp" alt="formula9">
+          <p class="sub">Among them, N(r) is the particle size distribution function, and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula10.webp" alt="formula10" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the scattering cross-section.</p>
 
-        <!-- ID：architecture -->
-        <section id="architecture">
-          <h1>System Architecture</h1>
-          <p class="sub">To support the high-reliability, high-intelligence, and high-collaboration design goals of
-            the "Smart Vac" system, we architected an advanced, decoupled, three-layer collaborative IoT framework,
-            as illustrated in Figure 1. This architecture distinctly separates real-time and non-real-time tasks,
-            ensuring both the ultra-low latency of local control and the powerful analytical capabilities of cloud
-            services. The overall design balances system stability, scalability, and security.</p>
+          <h4>2.2 Refractive Index Fluctuation Model </h4>
+          <h5>2.2.1 Theoretical Basis and Wave Equation Derivation</h5>
+          <p class="sub">The propagation of light waves in turbulent media follows the basic laws of electromagnetic waves and can be derived from Maxwell's equations. We first make the following assumptions:</p>
+          <ol>
+            <li>The medium is a perfect insulator (conductivity is 0);</li>
+            <li>The magnetic permeability is 1;</li>
+            <li>The wavelength of the electromagnetic wave is much smaller than the inner scale of turbulence;</li>
+            <li>The time dependence of the electromagnetic field is determined by <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula11.webp" alt="formula11" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">;</li>
+            <li>5.The statistical characteristics of the refractive index do not change with time.</li>
+          </ol>
+          <p class="sub">Considering the random fluctuation characteristics of the refractive index, the refractive index is expressed as:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula12.webp" alt="formula12">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula13.webp" alt="formula13" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">​ is the average refractive index, and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula14.webp" alt="formula14" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the fluctuating component of the refractive index, which satisfies <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula15.webp" alt="formula15" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</p>
+          <p class="sub">Starting from Maxwell's equations, the vector wave equation can be derived:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula16.webp" alt="formula16">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula17.webp" alt="formula17" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the wave number in vacuum.</p>
 
-          <h4>The core of this architecture is composed of three tightly integrated layers. </h4>
-          <p class="sub">1.The Perception & Control Layer, acting as the system's on-site "brain", consists of a
-            Siemens S7-1214C PLC controller and various high-precision sensors, responsible for the most critical
-            real-time data acquisition and autonomous device control. Sensor data is transmitted at high speed via
-            the industrial-grade Snap7 protocol to the edge control software. Developed on the robust Qt framework,
-            this software runs directly on a local industrial host, enabling direct command issuance to the PLC. The
-            primary advantage of this design is its ability to guarantee the autonomous and stable operation of the
-            core production process even under extreme conditions, such as a network outage.</p>
+          <p class="sub">When the inner scale of turbulence <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula18.webp" alt="formula18" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​is much larger than the wavelength <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula19.webp" alt="formula19" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">，the last term <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula20.webp" alt="formula20" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> in the above equation is a high-order infinitesimal quantity and can be ignored. At the same time, the depolarization effect of the atmosphere can usually be ignored, so the vector equation can be simplified to a scalar equation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula21.webp" alt="formula21">
 
-          <p class="sub">2.The Application & Interaction Layer is the system's "window" to the user, dedicated to
-            providing an intuitive and accessible remote control and data insight experience from anywhere, at any
-            time. Its core is the cross-platform control software based on the uni-app framework. We chose uni-app
-            for its "code once, deploy anywhere" capability, which significantly enhanced development efficiency and
-            ensured a consistent user experience across different platforms.</p>
+          <h5>2.2.2 Rytov Approximation and Perturbation Solution Method</h5>
+          <p class="sub">For solving the above wave equation, the Rytov approximation (gentle perturbation method) is usually used. Let <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula22.webp" alt="formula22" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">，where <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula23.webp" alt="formula23" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the complex phase, expressed as:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula24.webp" alt="formula24">
+          <p class="sub">Here, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula25.webp" alt="formula25" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the logarithmic amplitude fluctuation, and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula26.webp" alt="formula26" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the phase fluctuation.</p>
 
-          <p class="sub">3.At the apex of the architecture is the Decision & Intelligence Layer, the wellspring of
-            the system's "intelligence". It operates independently of the core control loop, focusing on
-            transforming data into decisions. The cloud-deployed machine vision models invoke vast amounts of
-            historical data to perform inference and issue high-level directives, such as "prohibit inoculation" or
-            "optimize fish separation frequency". These commands are then relayed to the control layer for
-            execution, forming a complete, intelligent loop of "Data-Analysis-Decision-Execution".</p>
-        </section>
+          <p class="sub">After substituting into the wave equation, the Riccati equation is obtained:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula27.webp" alt="formula27">
 
-        <!-- ID：implementation -->
-        <section id="implementation">
-          <h1>Software Implementation</h1>
-          <p class="sub">Guided by a clear architecture, we translated our layered design blueprint into a suite of
-            powerful and user-friendly software applications. Our implementation focused on providing two distinct
-            operational experiences: first, stable and reliable core control at the edge, and second, flexible and
-            convenient mobile collaborative management in the cloud.</p>
+          <p class="sub">The perturbation method is used for solving, and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula28.webp" alt="formula28" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is expanded as <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula29.webp" alt="formula29" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, where <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula30.webp" alt="formula30" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​corresponds to the solution under the condition of no turbulence, and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula31.webp" alt="formula31" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> ​is the first-order perturbation term. For the case of plane wave incidence, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula32.webp" alt="formula32" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</p>
+          <p class="sub">The equation satisfied by the first-order perturbation term <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula31.webp" alt="formula31" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula33.webp" alt="formula33">
 
-          <h4>1. Edge Control Software: The Localized, High-Reliability Interaction Core </h4>
-          <p class="sub">As the primary interface for direct equipment interaction, we implemented this high-performance
-            edge control software based on the Qt framework. Its main interface is a highly integrated "digital
-            cockpit", as shown in Figure 2. Here, operators can gain a comprehensive real-time overview of the dynamic
-            values of six core parameters, including temperature, salinity, and vaccine concentration, while also
-            intuitively grasping the device's operational status and the latest event list to ensure immediate
-            situational awareness. For in-depth control, the software integrates four task-oriented, independent
-            sub-menus (as shown in Figures 2):</p>
-          <img src="/static/upload/page/software/software2.png" alt="software2">
-          <p class="figurecaption">Figure 2</p>
+          <p class="sub">The solution of this equation can be obtained using the Green's function method:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula34.webp" alt="formula34">
 
+          <h5>2.2.3 Refractive Index Fluctuation Statistics and Power Spectrum Model</h5>
+          <p class="sub">The statistical characteristics of the refractive index fluctuation <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula14.webp" alt="formula14" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> are usually described by its power spectrum function <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula35.webp" alt="formula35" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">. Under the assumption of homogeneous and isotropic turbulence, there is a definite relationship between the power spectrum of refractive index fluctuation and the structure function of turbulence.</p>
+          <p class="sub">According to the Kolmogorov turbulence theory, the structure function of refractive index fluctuation is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula36.webp" alt="formula36">
 
-          <p class="sub">1.1 The Parameter Calibration module allows users to precisely define setpoints (SV) for
-            various variables and observe their process values (PV).</p>
-          <p class="sub">1.2 The Data Curves module visualizes historical data of key parameters for traceability and
-            analysis</p>
-          <p class="sub">1.3 The Vaccine Configuration module provides a procedural interface to mitigate operational
-            errors.</p>
-          <p class="sub">1.4 The Alarm Query module automatically logs all abnormal events, providing a critical basis
-            for troubleshooting.</p>
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula37.webp" alt="formula37" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the refractive index structure constant, which characterizes the turbulence intensity. The corresponding three-dimensional power spectrum function is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula38.webp" alt="formula38">
 
-          <h4>2. Cross-Platform Control Software: The Mobile, Scalable Management Hub</h4>
+          <p class="sub">In the actual atmospheric environment, it is necessary to consider the influence of the inner scale <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula39.webp" alt="formula39" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> and outer scale <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula40.webp" alt="formula40" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> of turbulence. The commonly used modified models include the Tatarski spectrum and the Von Karman spectrum:</p>
+          <p class="sub">Tatarski spectrum:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula41.webp" alt="formula41">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula42.webp" alt="formula42" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</p>
+          <p class="sub">Von Karman spectrum:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula43.webp" alt="formula43">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula44.webp" alt="formula44" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</p>
 
-          <p class="sub">The cross-platform control software, based on the uni-app framework, resides in the Application
-            and Interaction Layer and serves as the core portal for users to achieve remote monitoring and management.
-            Its implementation aims to seamlessly extend the powerful control capabilities of the edge to mobile smart
-            devices and to expand functionality to meet more complex management needs. To ensure a consistent user
-            experience, we replicated all the core functionalities of the edge software on the mobile client—such as
-            Data Calibration, Event List, Vaccine Configuration, and Historical Data query—while optimizing them for
-            mobile interaction characteristics.</p>
-          <p class="sub">The most significant innovation of this software is the implementation of a powerful "My
-            Devices" management module, which completely overcomes the one-to-one control limitation of the edge
-            software. As illustrated, within the "My" page, users have permissions to "Add Device" and "Manage Devices,"
-            allowing them to bring all their "Smart Vac" units under unified management. The device list clearly
-            displays the ID and status of each unit. With a simple tap, users can quickly switch their control focus
-            between different devices, dramatically enhancing management efficiency and collaborative capabilities in
-            multi-device scenarios.</p>
-          <p class="sub">Finally, the interface and functions of this software are as shown in Video 1.</p>
-          <!-- Video 1 -->
-          <div class="video-container">
-            <video controls>
-              <source src="/static/upload/page/software/video1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </section>
+          <h5>2.2.4 Statistical Characteristics of Light Field Under Weak Turbulence Conditions</h5>
+          <p class="sub">In the context of this study, the flow of the Edwardsiella vaccine solution in the Archimedes screw immersion device with a rotation speed of 3 r/min is regarded as a weak turbulence situation.</p>
 
-        <!-- ID：machine-->
-        <section id="machine">
-          <h1>Machine Vision Model</h1>
-          <p class="sub">The machine vision model is the core of the "Smart Vac" system's intelligent perception,
-            responsible for transforming raw image information into structured, decision-ready biological status data.
-            The entire model is composed of a cascade of two stages: image pre-processing and the core perception
-            network.</p>
-          <img class="formula" src="/static/upload/page/software/formula1.png" alt="formula1">
-          <p class="sub">I(x) is the observed hazy image, J(x) is the desired clear image, A is the global atmospheric
-            light, and t(x) is the transmission map. Based on the prior assumption that "in most non-sky local regions,
-            at least one color channel has some pixels with very low intensity," the algorithm can effectively estimate
-            the atmospheric light and transmission map, ultimately solving for the clear image </p>
-          <p class="sub">J(x) via inversion. This provides high-quality input for the subsequent training of the vision
-            model.</p>
+          <p class="sub">Under weak turbulence conditions (Rytov variance <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula45.webp" alt="formula45" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">), the first-order solution of the Rytov approximation can be used to derive the statistical characteristics of the light field. The variances of the logarithmic amplitude fluctuation χ and the phase fluctuation S can be expressed as follows:</p>
+          <p class="sub">For plane waves:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula46.webp" alt="formula46">
+          <p class="sub">For spherical waves:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula47.webp" alt="formula47">
 
-          <h4>2. Core Perception Model & Performance Validation </h4>
-          <p class="sub">Serving as the system's "eyes," we built a deeply customized VoVNet instance segmentation
-            network based on the Mask R-CNN framework. Its backbone utilizes the high-efficiency VoVNet, the core of
-            which is the One-Shot Aggregation (OSA) module (Figure 3). Unlike traditional networks, it aggregates all
-            preceding features at the end of the unit, significantly improving computational efficiency and making it
-            particularly suitable for real-time tasks. To further optimize performance, we employed Depthwise Separable
-            Convolution to reduce computational complexity and integrated the eSE attention mechanism, which allows the
-            network to adaptively focus on more informative feature channels through a three-step
-            "Squeeze-Excitation-Rescale" process.</p>
-          <p class="sub">The model demonstrates exceptional performance. As shown by the inference results (Figure 4),
-            the model can accurately identify and precisely segment the contours of both individual 'Infectedfish' and
-            'Freshfish' with nearly 100% confidence. Even in complex scenarios with dense fish populations and partial
-            occlusion, the model remains robust, successfully detecting multiple targets with high confidence scores.
-            The training loss curve ( Figure 5) shows that the model's total loss rapidly decreases with increasing
-            iterations, eventually converging stably around 0.06. Ultimately, the model achieved an Average Precision
-            (AP) of 85.7%, a key metric for evaluating object detection performance.</p>
+          <p class="sub">The relationship between the variance of light intensity fluctuation (scintillation) and the logarithmic amplitude fluctuation is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula48.webp" alt="formula48">
 
+          <h5>2.2.5 Derivation of Turbulence Scattering Coefficient</h5>
+          <p class="sub">Based on the above theory, we can derive the scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula96.webp" alt="formula96" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> caused by turbulence. The turbulence scattering coefficient is defined as the proportion of light intensity attenuated by turbulence scattering per unit distance. Considering the light intensity expression <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula49.webp" alt="formula49" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> and combining the statistical characteristics of light intensity fluctuation under the Rytov approximation, the relationship between the turbulence scattering coefficient and the refractive index structure constant can be obtained:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula50.webp" alt="formula50">
 
-          <img src="/static/upload/page/software/software3.png" alt="software3">
-          <p class="figurecaption">Figure 3</p>
-          <img src="/static/upload/page/software/software4.png" alt="software4">
-          <p class="figurecaption">Figure 4</p>
-          <img src="/static/upload/page/software/software5.png" alt="software5">
-          <p class="figurecaption">Figure 5</p>
+          <p class="sub">This expression reflects the dependence of turbulence scattering on the wave number k, turbulence intensity <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula37.webp" alt="formula37" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, and transmission distance L. It should be noted that this formula is applicable to weak turbulence conditions and assumes turbulence in a uniform path. In the practical application of the Edwardsiella vaccine solution, it is also necessary to consider the influence of temperature gradient, concentration inhomogeneity, and flow characteristics inside the solution on the refractive index fluctuation. These factors together determine the effective turbulence intensity <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula37.webp" alt="formula37" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> in the solution.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula51.webp" alt="formula51">
 
-          <h4>2. Core Perception Model & Performance Validation </h4>
-          <p class="sub">In the inference stage, we leverage the pre-trained static perception model as a frame-by-frame
-            "observation data source" and cascade it with a dynamic spatio-temporal analysis model. This elevates the
-            system from a static "image analyzer" to a "video analysis system" capable of understanding the temporal
-            behavior of objects.</p>
-          <p class="sub">3.1Data Association and Optimal Assignment:</p>
-          <p class="sub">This is the core of the tracking algorithm, for which we adopt the classic
-            Tracking-by-Detection paradigm. To address the central challenge of associating detections in the current
-            frame with existing historical trajectories, we first construct a cost matrix. The elements of this matrix
-            are derived from the Intersection over Union (IoU), which is mathematically defined as:</p>
-          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula2.png" alt="formula2">
-          <p class="sub">Subsequently, we employ a solver based on the Hungarian algorithm to find the globally optimal
-            assignment for the cost matrix. This process matches each historical trajectory to a unique new detection
-            with the minimum possible total cost, thereby maintaining identity consistency across frames.</p>
+          <h4>2.3 Light Transmission Equation </h4>
+          <p class="sub">Comprehensively considering the absorption, particle scattering, and turbulence scattering effects, the transmission of light in the solution follows the extended form of the Beer-Lambert law:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula52.webp" alt="formula52">
+          <p class="sub">Among them, α is the absorption coefficient, and s is the transmission path length. After considering the multiple scattering effect, the outgoing light intensity can be expressed as:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula53.webp" alt="formula53">
+          <p class="sub">This expression uses the empirical correction factor <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula54.webp" alt="formula54" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> to approximate the influence of multiple scattering.</p>
 
-          <p class="sub">3.2 Trajectory State Smoothing:</p>
+          <h4>2.4Extension of Time-Varying Light Transmission Model: Dynamic Light Intensity Attenuation in the Archimedes Screw System</h4>
+          <p class="sub">Based on the parameters of the Archimedes screw system in the context of this study, the original model is extended, and the light transmission distance L is replaced by a time-varying function L(t) .</p>
+
+          <h5>2.4.1. ​​Geometric and Kinematic Analysis of the Screw System</h5>
+          <p class="sub"><strong style="color:#9c7b3f;">Core parameters:</strong></p>
+          <p class="sub">Screw length: <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula55.webp" alt="formula55" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></p>
+          <p class="sub">Screw radius: R=0.5m</p>
+          <p class="sub">Pitch: P=0.5m</p>
+          <p class="sub">Rotation speed: <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula56.webp" alt="formula56" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></p>
+          <p class="sub">Axial flow velocity:<img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula57.webp" alt="formula57" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></p>
+          <p class="sub">​​It is approximately considered that light propagates along the axial direction of the screw, but affected by the spiral structure, the effective path length changes periodically with time. The actual path length L(t) is determined by the axial distance and spiral curvature together.</p>
+
+          <h5>2.4.2 ​Mathematical Modeling of Time-Varying Transmission Distance L(t)​</h5>
+          <p class="sub">The parametric equation of the spiral line of the screw (in the cylindrical coordinate system):</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula58.webp" alt="formula">
+          <p class="sub">The differential of the actual path length of light in the spiral path:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula59.webp" alt="formula">
+          <p class="sub">After integration:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula60.webp" alt="formula">
+          <p class="sub">Calculate the constant part:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula61.webp" alt="formula">
+          <p class="sub">Therefore:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula62.webp" alt="formula">
+          <p class="sub">However, this model assumes that light always propagates along the spiral path. In practice, it is necessary to consider the mean free path of light in the fluid. A more reasonable simplification is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula63.webp" alt="formula">
+          <p class="sub">Among them, <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula55.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> (average path), and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula64.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> (amplitude, caused by turbulence disturbance).</p>
+
+          <h5>2.4.3. ​​Time-Varying Extension of the Light Intensity Attenuation Model</h5>
+          <p class="sub">Original attenuation model:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula65.webp" alt="formula">
+          <p class="sub">After replacing L with L(t), the time-varying light intensity is:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula66.webp" alt="formula">
+          <p class="sub">​Update of the turbulence scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula68.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula67.webp" alt="formula">
+
+          <h3>3 Numerical Methods and Algorithm Design </h3>
+          <h4>3.1 Monte Carlo Method for Simulating Multiple Scattering </h4>
+          <p class="sub">The Monte Carlo method simulates the transmission process of light in turbid media by tracking the random walk paths of a large number of photons. The fate of each photon is determined by probabilistic events such as absorption, scattering, and transmission distance.</p>
+          <p class="sub">The <strong style="color:#9c7b3f;">algorithm flow</strong> is as follows:</p>
+          <ol>
+            <li>Photon initialization: Set the initial position, direction, and energy weight <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula69.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> of the photon.</li>
+            <li>Step size calculation: Determine the photon free path <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula70.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> according to the total attenuation coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula71.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, where <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula72.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is a random number uniformly distributed in (0, 1).</li>
+            <li>Absorption event: The photon weight is attenuated as <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula73.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</li>
+            <li>Scattering event: Determine the new scattering direction by sampling the phase function.</li>
+            <li>Boundary processing: When the photon reaches the boundary of the solution, record the outgoing information.</li>
+            <li>Termination condition: Terminate the tracking when the photon weight is below the threshold or the photon escapes from the solution.</li>
+            <li>Result statistics: After repeating the tracking of a large number of photons, statistically analyze the outgoing light intensity, polarization state, and time broadening.</li>
+          </ol>
+
+          <h4>3.2 Fourth-Order Runge-Kutta Algorithm for Solving the Transmission Equation</h4>
+          <p class="sub">For simple cases where multiple scattering is not considered, the fourth-order Runge-Kutta algorithm can be used to directly solve the light transmission equation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula74.webp" alt="formula">
+          <p class="sub">The <strong style="color:#9c7b3f;">algorithm steps</strong> are as follows:</p>
+          <ol>
+            <li>Set the step size h and the initial value <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula75.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Calculate the iteration point <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula76.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Calculate <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula77.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Calculate <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula78.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Calculate <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula79.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Update <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula80.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"></li>
+            <li>Repeat until s=L</li>
+            <li>Among them <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula81.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">is the derivative function.</li>
+          </ol>
+
+          <h4>3.3 Parameter Setting and Grid Design </h4>
+          <p class="sub">To accurately simulate the light transmission characteristics, it is necessary to reasonably set the numerical calculation parameters:</p>
+          <ul>
+            <li><strong style="color:#9c7b3f;">Geometric parameters:</strong> The solution thickness <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula82.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, and logarithmic grid sampling is used.</li>
+            <li><strong style="color:#9c7b3f;">Light intensity parameters:</strong> The incident light intensity <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula83.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, and logarithmic sampling is used.</li>
+            <li><strong style="color:#9c7b3f;">Optical parameters:</strong> The absorption coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula84.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, and the scattering cross-section <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula85.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</li>
+            <li><strong style="color:#9c7b3f;">Turbulence parameters:</strong> The refractive index structure constant <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula86.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</li>
+            <li><strong style="color:#9c7b3f;">Particle parameters:</strong> The concentration <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula87.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, and the radius <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula88.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</li>
+          </ul>
+
+          <p class="sub">The grid generation adopts logarithmic equidistant division to ensure the stability and accuracy of numerical calculation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula89.webp" alt="formula">
+
+          <h3>4 Simulation Results and Visualization Analysis</h3>
+          <p class="sub">Table of Key Parameter Simulation Results:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula90.webp" alt="formula">
+
+          <h4>4.1 Analysis of Light Intensity Attenuation Characteristics </h4>
+          <p class="sub">By numerically solving the light transmission equation, we obtained the variation law of the outgoing light intensity with the transmission distance and incident light intensity. Figure 1 shows a heat map of light intensity attenuation in a double logarithmic coordinate system, where the color represents the logarithm of the outgoing light intensity.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model1.webp" alt="model">
+          <p class="figurecaption">Figure 1: Heat Map of Outgoing Light Intensity Attenuation with Propagation Distance and Incident Light Intensity</p>
+          <p class="sub">The results show that with the increase of the transmission distance, the light intensity shows an exponential attenuation trend, which is consistent with the theoretical expectation. </p>
+
+          <p class="sub">The <strong style="color:#9c7b3f;">contour analysis</strong> shows that under a fixed transmission distance, the outgoing light intensity has a linear relationship with the incident light intensity. Under the condition of fixed incident light intensity, the outgoing light intensity decreases exponentially with the increase of the transmission distance. The specially marked 50 W/m² contour identifies the effective working boundary of the light transmission system. When the incident light intensity is higher than this intensity, the Edwardsiella vaccine will produce an effective immune response in the fish body.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula91.webp" alt="formula">
+
+          <h4>4.2Analysis of Dynamic Light Intensity Attenuation Characteristics </h4>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2.webp" alt="model">
+          <p class="figurecaption">Figure 2: Heat Map of Dynamic Light Intensity Attenuation</p>
+
+          <p class="sub">This heat map reveals the spatiotemporal dynamic characteristics of light transmission in the Edwardsiella vaccine solution in the Archimedes screw system. The horizontal axis (time) shows that the screw rotation has a period of 45 seconds. The vertical axis (incident light intensity, 0.1-100,000 W/m²) is expressed in a logarithmic coordinate system. The color mapping reflects the outgoing light intensity after attenuation by absorption, particle scattering, and turbulence scattering of the vaccine solution. The clear inclined stripe pattern in the figure indicates that to achieve a specific therapeutic effect (such as the 50 W/m² threshold), the required incident light intensity changes periodically with the position of the screw.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3.webp" alt="model">
+          <p class="figurecaption">Figure 3: Time-Varying Curves of Transmission Distance and Light Intensity</p>
+
+          <p class="sub">The time-varying diagram of transmission distance intuitively shows the optical path length modulation caused by the geometry of the Archimedes screw. It can be seen that the path length fluctuation originates from the optical effect of the spiral geometry. The minimum value corresponds to the approximately straight path, and the maximum value corresponds to the fully developed spiral path. The time-varying diagram of light intensity clearly shows the dynamic response of the outgoing light intensity under different incident light intensity levels, which is synchronized with the change of transmission distance. The high incident light intensity (1000 W/m²) produces an effective therapeutic window of 25-100 W/m², while the low incident light intensity (1 W/m²) is almost completely attenuated. It is worth noting that the modulation depth of all curves remains consistent (about 75%), indicating that the path length change rate is the dominant factor, independent of the incident light intensity.</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model4.webp" alt="model">
+          <p class="figurecaption">Figure 4: Coupling Heat Map of Turbulence Intensity and Light Intensity</p>
+
+          <p class="sub">Based on the mathematical model constructed above, the above figure represents the relationship between the outgoing light intensity, the fluid turbulence degree, and the propagation distance when the fixed incident light intensity is <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula92.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> = 1000 W/m². It can be seen from the above figure that there is a <strong style="color:#9c7b3f;">nonlinear coupling effect</strong> between turbulence intensity and light intensity: there is a strong nonlinear coupling relationship between the turbulence intensity <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula37.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> and the transmission distance L. When the transmission exceeds a certain distance (about L = 0.1 m), even weak turbulence will lead to significant light intensity attenuation. In addition, there is a <strong style="color:#9c7b3f;">critical threshold phenomenon</strong>: there is a critical turbulence intensity threshold (about <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula93.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">). Beyond this threshold, turbulence scattering becomes the dominant mechanism of light attenuation. In the context of this study, when Edwardsiella flows in the Archimedes screw with weak turbulence, if <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula37.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> exceeds <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula94.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, the dominant mechanism of light attenuation is turbulence scattering; otherwise, the dominant mechanisms are still absorption and particle scattering.</p>
+
+          <h3>5.Sensitivity Analysis</h3>
+          <p class="sub">To evaluate the influence degree of each parameter in the light transmission model on the output results, the model adopts the Sobol global sensitivity analysis method. This method can comprehensively evaluate the first-order effects, high-order interaction effects, and total effects of parameters, and is suitable for the sensitivity analysis of the nonlinear mathematical model of the weak turbulence fluid system in the Archimedes screw immersion device under the background of this study.</p>
+
+          <h4>5.1 Range of Analysis Parameters</h4>          
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/table1.webp" alt="table">
+          <p class="sub">Sample setting strategy: Sobol sequence sampling is used, and a total of 8192 sample points are generated to ensure uniform coverage of the parameter space.</p>
+
+          <h4>5.2 Sensitivity Analysis Results</h4>
+          <h5>5.2.1 First-Order and Total Effect Analysis</h5>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model5.webp" alt="model">
+          <p class="figurecaption">Figure 5: Comparison Diagram of First-Order Sobol Index and Total Effect Index</p>
+          <p class="sub">Figure 1 shows the comparison results of the first-order Sobol index and the total effect index of each parameter. It can be seen from the analysis results that:</p>
+          <p class="sub">The attenuation coefficient α has the highest sensitivity, with a first-order index of 0.4133 and a total effect index of 0.7613, indicating that α not only has a significant impact on light intensity transmission itself but also has a strong interaction with other parameters.</p>
+          <p class="sub">The sensitivity of the particle scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula8.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the second highest, with a first-order index of 0.2078 and a total effect index of 0.5023, indicating that it also plays an important role in the model.</p>
+          <p class="sub">The influence of the turbulence scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula96.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is relatively small, with a first-order index of only 0.0267 and a total effect index of 0.1104, indicating that its direct impact on light transmission is limited.</p>
+
+          <h5>5.2.2 Parameter Interaction Effect Analysis</h5>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model6.webp" alt="model">
+          <p class="figurecaption">Figure 6: Heat Map of Second-Order Interaction Effects</p>
+          <p class="sub">This heat map of second-order interaction effects reveals the coupling effect between parameters: there is a significant interaction effect (0.128) between α and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula8.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, which indicates that the attenuation process and the particle scattering process are coupled with each other and jointly affect the light transmission characteristics. The interaction effects between other parameters are relatively weak, all below 0.05, indicating that the influence of these parameters on the model output is mainly through independent effects.</p>
+
+          <h4>5.3 Discussion of Results</h4>
+          <p class="sub">It can be seen from the result diagram that in the light transmission model, the attenuation coefficient α is the most critical influencing factor, with a total effect index of 0.7613, which dominates. Although the first-order effect of the particle scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula8.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is only 0.2078, its total effect is increased to 0.5023 through the interaction with other parameters, showing a strong influence potential. In contrast, the influence of the turbulence scattering coefficient <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula96.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is the most limited, with both direct and interaction effects being relatively small, indicating that there is an obvious synergistic effect between α and <img src="https://static.igem.wiki/teams/5972/uploads/page/model/formula8.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">.</p>
+
+          <h3>Conclusion </h3>
+          <p class="sub">This model establishes a comprehensive model that can accurately describe the transmission of light in dynamic and turbid fluids, covering multiple physical processes from micro-particle scattering to macro-turbulence effects. From the simulation results, the absorption coefficient α of the solution should be prioritized for control and accurate measurement, as it has the greatest impact on the final light intensity. For process control, the turbulence intensity of the solution should be controlled below the critical threshold, which can prevent turbulence scattering from becoming an unnecessary attenuation source and improve the light transmission efficiency.</p>
+
           <!-- Video 2 -->
           <div class="video-container">
             <video controls>
-              <source src="/static/upload/page/software/video2.mp4" type="video/mp4">
+              <source src="/static/upload/page/model/modelvideo2.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-          <p class="sub">To ensure that the object's tracked trajectory is visually coherent and free from jitter, we
-            apply an Exponential Moving Average (EMA) model to smooth the bounding box positions. Its mathematical
-            expression is:"S" _"t" "=α⋅" "Y" _"t" "+(1-α)⋅" "S" _"t-1" ,Here, St represents the smoothed coordinates in
-            the current frame, Yt are the raw detected coordinates in the current frame, St−1 are the smoothed
-            coordinates from the previous frame, and α is the smoothing factor, which determines the degree of smoothing
-            and the responsiveness to new observations.</p>
 
-        </section>
+          <p class="sub"><br></p>
 
-        <!-- ID：control-->
-        <section id="control">
-          <h1>Control System Model</h1>
-          <p class="sub">To achieve ultra-high-precision and stable control of key environmental parameters during the
-            vaccine production process, we have designed an advanced multi-variable, multi-strategy intelligent control
-            system. This system tailors optimal composite control strategies for the unique dynamic characteristics
-            (e.g., non-linearity, time-delay, actuator coupling) of different controlled variables, such as temperature,
-            dissolved oxygen, and pH. This approach allows for the construction of a highly efficient, robust, and
-            intelligent control core. The table below presents the variables we need to control and their requirements.
-          </p>
-          <img class="formula" style="height: 210px; padding-bottom: 20px;"
-            src="/static/upload/page/software/formula3.png" alt="formula3">
-
-          <h4>1. Temperature Control: A Hybrid Intelligent Strategy with Neural Networks and Feedforward Compensation:
-          </h4>
-          <p class="sub">Recognizing that temperature is a critical variable with the slowest response and strongest
-            non-linearity, we designed a hybrid intelligent control scheme combining adaptive feedback with predictive
-            feedforward. At its core is an adaptive PID controller based on a Back-Propagation (BP) Neural Network. This
-            network, with a 4-7-3 architecture, not only uses the conventional error e(k) and error rate de(k) as inputs
-            but also innovatively incorporates measurable disturbances like coolant flow rate F(k) and inlet temperature
-            Tin(k), endowing the controller with predictive adjustment capabilities. Through online learning, the
-            network can perform real-time, dynamic self-tuning of the PID parameters (Kp,Ki,Kd) to adapt to the
-            reactor's changing dynamics under various operating conditions.</p>
-          <p class="sub">To further enhance performance, we introduced a Hybrid Feedforward Compensator (HFF) to
-            proactively and rapidly counteract external disturbances. This compensator includes: a static feedforward
-            component based on the system's steady-state energy balance equation to compensate for measurable
-            disturbances; and a dynamic feedforward component based on a disturbance observer, which compensates for
-            unmeasurable disturbances and model uncertainties by estimating a "lumped disturbance term" online.</p>
-
-          <h4>2. Dissolved Oxygen, pH, and Salinity Control: A Two-Degree-of-Freedom PID Decoupling Strategy:</h4>
-          <p class="sub">For variables like dissolved oxygen, pH, and salinity, which require a simultaneous balance
-            between fast setpoint tracking and robust disturbance rejection, we employed a Two-Degree-of-Freedom PID
-            (2DOF-PID) controller. A conventional PID controller faces an inherent trade-off between these two
-            performance objectives. The 2DOF-PID successfully decouples these functions by introducing additional
-            setpoint weighting factors, b and c, on the proportional and derivative terms. This allows us to
-            independently optimize the controller's response to setpoint changes and external disturbances, achieving
-            smoother, overshoot-free setpoint tracking without sacrificing disturbance rejection capability. Its control
-            law is given by the following equation, where R(s) is the setpoint and Y(s) is the measured output:</p>
-
-          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula4.png" alt="formula4">
-          <h4>3. Controller Parameter Tuning</h4>
-          <p class="sub">To ensure optimal controller performance, we used the MOMI analytical method to obtain initial
-            values for the PID parameters. This method is based on an open-loop step response, from which multiple
-            integral areas Ai under the response curve are calculated. The PID parameters are then determined using the
-            following formulas:</p>
-
-          <img class="formula" style="height: 240px;" src="/static/upload/page/software/formula5.png" alt="formula5">
-
-          <p class="sub">The simulation architecture in Figure 5 clearly illustrates the complete closed-loop process of
-            this multi-variable control system, including setpoint generation, parallel operation of multiple
-            controllers, the reactor model, and signal feedback.</p>
-          <img src="/static/upload/page/software/software6.png" alt="software6">
-          <p class="figurecaption">Figure 6</p>
-          <div class="usage">
-            <h4>Reference Files</h4>
-            <p>
-            <h5><a href="/static/upload/page/software/md1.md" target="_blank">md-1</a></h5>
-            <h5><a href="/static/upload/page/software/md2.md" target="_blank">md-2</a></h5>
-            <h5><a href="/static/upload/page/software/md3.md" target="_blank">md-3</a></h5>
-            </p>
+          <!-- Video 3 -->
+          <div class="video-container">
+            <video controls>
+              <source src="/static/upload/page/model/modelvideo3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
 
-        <!-- ID: conclusion -->
-        <section id="conclusion">
-          <h1>CONCLUSION</h1>
-          <p class="sub">Focusing on our project plan, we have successfully achieved breakthroughs in key technical
-            areas, delivering an integrated software solution that spans from low-level real-time control to high-level
-            intelligent decision-making. This system not only validates the feasibility of combining high-reliability
-            edge computing with high-flexibility cloud management but also integrates preliminary deep learning-based
-            computer vision models and a multi-variable control system founded on advanced process control theory.
-            Collectively, this work lays a solid technical foundation for realizing the vision of an intelligent
-            traditional vaccination process.</p>
+        
+        <!-- ID：model2 -->
+        <section id="model2">
+          <h1>Fish vaccine diffusion mass transfer model</h1>
+          <h3>1.Overview</h3>
+          <p class="sub">In aquaculture, vaccination serves as a vital measure to prevent disease transmission. However, traditional vaccination methods suffer from inefficiency and challenges in precise control. To address these issues, we developed a diffusion-transport model for vaccine administration, aiming to investigate the transport process of vaccines within fish bodies through mathematical modeling and numerical simulations.</p>
+          <p class="sub">The model takes into account the following key steps:</p>
+          <ol>
+            <li>Diffusion of water body to mucous layer: The vaccine diffuses from the water body to the mucous layer on the surface of the fish.</li>
+            <li>Mass transfer between mucus layer and gill mucosa: The vaccine is transmitted to the gill mucosa through the mucus layer.</li>
+            <li>Internal diffusion of the gill mucosa: the process of vaccine diffusion in the gill mucosa.</li>
+            <li>Transport in the body circulation: The vaccine enters the blood from the gill mucosa and is distributed in the body circulation.</li>
+            <li>Mass transfer from blood to intestinal mucosa: The vaccine is transferred from blood to intestinal mucosa.</li>
+            <li>Internal intestinal mucosal spread: The vaccine spreads in the intestinal mucosa.</li>
+            <li>Colon colonization: The vaccine is ultimately colonized in the intestinal lumen.</li>
+          </ol>
+          <p class="sub">In this model, the finite difference method was used for numerical solution, the implicit format was used for long-term simulation analysis, and the Sobol index was used for parameter sensitivity analysis to evaluate the influence of each parameter on vaccine effect, so as to provide a scientific basis for the optimization of vaccination strategy.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model1.webp" alt="model">
+          <p class="figurecaption">Figure 1. Flow chart of bacterial infection</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model2.webp" alt="model">
+        <p class="figurecaption">Figure 2. Schematic diagram of bacterial infection</p>
 
-          <p class="sub">Commercial bioprocess automation software often presents challenges such as high costs and
-            proprietary systems, which can limit its widespread adoption in academic research. In contrast, the "Smart
-            Vac" system is built upon a modular architecture and mainstream open-source technologies, aiming to enhance
-            its scalability and portability. It is our hope that future iGEM teams and other research projects can adapt
-            our vision algorithms, control models, or system architecture for novel bioprocess automation scenarios,
-            which could in turn increase the project's reuse value and contribute to the iGEM community.</p>
+        <h3>2. Main models and interpretations</h3>
+        <p class="sub"><strong style="color:#9c7b3f;">Step 1: Water diffusion into the mucus layer</strong></p>
+        <p class="sub">When examining the immersion process of fish in vaccine solution, we observe a thin mucilage layer on their bodies. Consequently, the vaccine spreads into this mucilage layer first as the water flow propagates. Given the complex composition of the mucilage, we simplify its properties by assuming it matches the water composition. Additionally, since the water flow volume is significantly larger than the fish's body volume, the disturbance to water remains minimal during immersion. This results in weak convective effects, allowing us to disregard the convective term when applying Fick's Second Law. The simplified equation can be expressed as:</p>
 
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula1.webp" alt="formula">
 
-          <p class="sub">In summary, the significance of the "Smart Vac" system extends beyond providing an open-source,
-            reusable tool for academic research. More importantly, it serves as an exploratory paradigm, demonstrating
-            how cutting-edge information technologies like IoT, edge computing, and machine learning can be deeply
-            integrated with applications in synthetic biology. Through this integration, we have elevated a traditional,
-            labor-intensive bioprocess into a highly efficient, precise, and traceable digital production paradigm,
-            showcasing significant potential for enhancing production efficiency, process stability, and data
-            traceability. Therefore, this project is more than an effective attempt to solve a specific problem; it
-            provides a field-tested, robust, and open engineering blueprint for the future development of smart
-            agriculture and automated biotechnology.</p>
+        <p class="sub">Among them, cwi refers to the vaccine concentration in the mucus layer (CFU/m³), Dw refers to the diffusion coefficient of the vaccine in the main body of the water flow (m²/s), δ refers to the thickness of the mucus layer (m), and t refers to the time (s).</p>
+
+        <p class="sub"><strong style="color:#9c7b3f;">Step 2: Mucosal boundary and mucosal boundary mass transfer</strong></p>
+        <p class="sub">After the vaccine spreads to the boundary of the mucosal layer, the classical two-film theory is considered to simulate the vaccine transfer between the mucosal layer and the gill mucosa. Using the interfacial mass transfer formula, it can be obtained that:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula2.webp" alt="formula">
+
+        <p class="sub">Among them, Nw→m refers to the rate of vaccine transmission from mucous side to mucosal side (CFU/s·m2), kw→m refers to the total mass transfer coefficient of bacteria in mucous side and mucosal side (m/s), cwi refers to the concentration of mucous layer (CFU/m3), and cm refers to the concentration of mucosal layer (CFU/m3).</p>
+
+        <p class="sub"><strong style="color:#9c7b3f;">Step 3: Internal mucosal self-diffusion</strong></p>
+        <p class="sub">The chemical composition and structure of mucous membranes in organisms are highly complex. To better describe vaccine diffusion within mucosal tissues, we propose the following assumption: The mucosa acts as a homogeneous medium where vaccines can diffuse freely. Considering its biological effects, we incorporate first-order elimination reactions on the right side of the diffusion equation, yielding:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula3.webp" alt="formula">
+
+        <p class="sub">Among them, cm refers to the vaccine concentration on the mucosal side (CFU/m3), Dm refers to the diffusion coefficient of the vaccine on the mucosal side (m2/s), km is the elimination coefficient inside the mucosa (S-1), and Lm refers to the mucosal thickness (m).</p>
+
+        <p class="sub"><strong style="color:#9c7b3f;">Step 4: Systemic circulation compartmentalization balance</strong></p>
+        <p class="sub">When the vaccine spreads within the mucosal lining, it gradually enters the bloodstream. At this stage, the vaccine traverses the submucosal microvessels. Given their extremely fine and thin nature, their mass transfer effects can be disregarded. Consequently, the model is further simplified to direct contact between the mucosa and blood, resulting in mucosal-blood mutual mass transfer. The equations can be expressed as:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula4.webp" alt="formula">
+
+        <p class="sub">Among them, Nm→b refers to the rate of vaccine transmission from mucosal side to blood side (CFU/s·m2), km→b refers to the total mass transfer coefficient between mucosal side and blood side (m/s), cm refers to mucosal layer concentration (CFU/m3), and cb refers to blood layer concentration (CFU/m3).</p>
+
+        <p class="sub">In fish, the blood volume is relatively small compared to the mucosal surface area. This allows for instantaneous homogenization and equilibrium of vaccine distribution in the bloodstream without prolonged diffusion mixing. Based on this mechanism, we can further simplify the model: The blood concentration of vaccine components originates from direct diffusion through the skin and gill mucosa, while diffusion loss occurs at the intestinal mucosa and natural clearance within the bloodstream. The simplified equation can be expressed as:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula5.webp" alt="formula">
+
+        <p class="sub">Among them, Vb refers to the blood volume of fish (m3), cb refers to the vaccine concentration in blood (CFU/m3), kb refers to the clearance coefficient in blood (S-1), Jb→g refers to the flux of vaccine from blood to intestinal mucosa (CFU/s), and Jm→b refers to the flux of vaccine from mucosa to blood (CFU/s).</p>
+
+        <p class="sub"><strong style="color:#9c7b3f;">Step 5: Blood-intestinal mucosal mass transfer</strong></p>
+
+        <p class="sub">When the vaccine is in equilibrium with the blood, the vaccine will undergo blood-intestinal mucosal interaction mass transfer, and it can be obtained:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula6.webp" alt="formula">
+
+        <p class="sub">Among them, Nb→g vaccine transmission rate from blood side to intestinal mucosal side (CFU/s·m2), kb→g refers to the total mass transfer coefficient of vaccine from blood side to intestinal mucosal side (m/s), cb refers to the concentration of blood side, and cg intestinal mucosal side concentration (CFU/m3).</p>
+
+        <p class="sub">Using (4) and (6), the expressions for flux Jm→b and Jb→g are obtained:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula7.webp" alt="formula">
+
+        <p class="sub">Here, cm(Lm, t) represents the concentration (CFU/m³) in the mucosal lining at time t, cb(t) denotes the vaccine concentration in blood at time t (CFU/m³), Am→b indicates the contact area between mucosa and blood (m²), Ab→g refers to the contact area between blood and intestinal mucosa (m²), and cg(0, t) stands for the vaccine concentration (CFU/m³) on the outer surface of intestinal mucosa at time t.</p>
+
+        <p class="sub"><strong style="color:#9c7b3f;">Step 6: Intestinal mucosal spread</strong></p>
+
+        <p class="sub">In the mucosa of fish intestines, we also simplify it as a homogeneous medium in which the vaccine diffuses freely. Similar to the gill mucosa, this area also has biological effects. By introducing a first-order reaction elimination term, we can obtain:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula8.webp" alt="formula">
+
+        <p class="sub">Among them, CG refers to mucosal side concentration (CFU/m3), Dg refers to intestinal mucosal diffusion coefficient of vaccine (m2/s), kg refers to intestinal mucosal clearance coefficient (S-1), and Lg refers to intestinal mucosal thickness (m).</p>
+
+        
+        <p class="sub"><strong style="color:#9c7b3f;">Step 7: Gut Balance</strong></p>
+        <p class="sub">After the vaccine passes through the intestinal mucosal barrier and reaches the intestinal lumen, it can play a role. Here we also assume that the intestinal lumen can reach instantaneous equilibrium, so the following expression can be obtained by using the vaccine flux:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula9.webp" alt="formula">
+
+        <p class="sub">Among them, the expression of flux Jg→in is as follows:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula10.webp" alt="formula">
+
+        <p class="sub">Among them, kin intestinal lumen clearance coefficient (S-1), kg→in total mass transfer coefficient of the vaccine on the intestinal mucosal side and intestinal lumen side (m/s), Jg→in refers to the flux of the vaccine from the blood into the intestinal mucosa (CFU/s·m2), Ag→in refers to the contact area between the intestinal mucosa and intestinal lumen (m2), Vin refers to the intestinal lumen volume of the fish (m3).</p>
+
+        <p class="sub">In conclusion, we get the system of equations</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula11.webp" alt="formula">
+
+        <p class="sub"> initial condition ：</p>
+
+        <p class="sub">Since the fish body has not been exposed to the vaccine immersion solution at the initial inoculation, the vaccine concentration is zero everywhere in the fish body. In addition, since the water volume is much larger than the fish body volume, the vaccine concentration in the water remains stable for a long time, so the initial conditions (13) ~ (18) can be obtained.</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula12.webp" alt="formula">
+
+        <p class="sub"> boundary condition ：</p>
+
+        <p class="sub">First of all, based on dimensional analysis, the relationship between mass transfer rate and concentration change can be obtained:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula13.webp" alt="formula">
+
+        <p class="sub">Using Equation (19), we can obtain the mucosal-mucosal boundary (Equation (21)), mucosal-blood boundary (Equation (22)), blood-intestinal mucosal boundary (Equation (23)), and intestinal mucosal-lumen boundary (Equation (24)).</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula14.webp" alt="formula">
+
+        <h3>3. Numerical simulation and stability analysis</h3>
+
+        <p class="sub">In order to solve the model's partial differential equation, we consider using the finite difference method for solving. Based on the characteristics of the model, we decide to use the implicit difference for numerical solution.</p>
+
+        <p class="sub">Take the internal diffusion of the mucosa as an example (see Equation (3) for details):</p>
+
+        <p class="sub">First, we discretize cm and use the symbol umn, where the superscript refers to time and the subscript refers to displacement.</p>
+
+        <p class="sub">The second step is to replace the differential form with a difference. In time, we adopt the Euler front format and get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula15.webp" alt="formula">
+
+        <p class="sub">Next, the space is trapezoidal, so we get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula16.webp" alt="formula">
+
+        <p class="sub">Since (24) is equal to (25), we can get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula17.webp" alt="formula">
+
+        <p class="sub">Simplifying <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula18.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, we have</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula19.webp" alt="formula">
+
+        <p class="sub">Furthermore, we use the Von Neumann stability analysis to derive its growth factor G(k), which helps us to classify the formats.</p>
+
+        <p class="sub">Introducing Fourier mode errors</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula20.webp" alt="formula">
+
+        <p class="sub">Substituting (28) into (27), we get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula21.webp" alt="formula">
+
+        <p class="sub">Divide both sides <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula22.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> by, and simplify to get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula23.webp" alt="formula">
+
+        <p class="sub">For the growth factor <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula24.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">, if the amplitude ratio between two consecutive oscillations is not more than 1 to maintain the stability of numerical simulation, it can be deduced that:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula25.webp" alt="formula">
+
+        <p class="sub">Using Euler's formula to simplify equation (30), we can get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula26.webp" alt="formula">
+
+        <p class="sub">Using trigonometric <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula27.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> functions, we can further simplify it as follows:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula28.webp" alt="formula">
+
+        <p class="sub">It can be deduced from Equation (31)</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula29.webp" alt="formula">
+
+        <p class="sub">Similarly, we can treat Equation (1) and Equation (9) to get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula30.webp" alt="formula">
+
+        <p class="sub">In this case, Equation (35) is always true, and Equation (34) and Equation (36) are conditionally true.</p>
+
+        <p class="sub">After completing the construction and numerical simulation of the vaccine diffusion model, we conducted in-depth analysis of how various parameters influence the model's output results. To clarify which parameters play a dominant role in vaccine diffusion processes, we performed parameter sensitivity analysis. This research provides crucial insights for subsequent experimental design and model optimization.</p>
+
+        <p class="sub">Based on this, we selected the area under the blood administration curve (AUC) as the evaluation index, that is:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula31.webp" alt="formula">
+
+        <p class="sub">Furthermore, we use Sobol sensitivity analysis, that is, using different output parameters to obtain the function value for variance decomposition to evaluate the significance of each parameter, and introduce the main effect sensitivity analysis index (Si) and total effect sensitivity index STi.</p>
+
+        <p class="sub"> among ：</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula32.webp" alt="formula">
+
+        <p class="sub">So we define the output variable matrix Y as:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula33.webp" alt="formula">
+
+        <p class="sub">Introducing the parameter input matrix A (N×11), B (N×11) can be obtained</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula34.webp" alt="formula">
+
+        <p class="sub">By successively replacing the same columns of matrix A with columns of matrix  <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula35.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">B, 11 mixed matrices can be obtained, which are denoted as (i represents the replacement of the i-th column of A by the i-th column of matrix B).</p>
+
+        <p class="sub">For example:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula36.webp" alt="formula">
+
+        <p class="sub">Furthermore, we bring the parameter matrix into the model for calculation, and we get:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula37.webp" alt="formula">
+
+        <p class="sub">In the same way, 11 mixed matrices can be calculated:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula38.webp" alt="formula">
+
+        <p class="sub">To calculate Si and STi, the calculation formula is introduced as follows:</p>
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula39.webp" alt="formula">
+
+        <p class="sub">Among them, it is the variance of the expected value of the output Y with other variables X~i under fixed Xi. It refers to the average influence of the input variable Xi on the output variable Y considering the uncertainty of all other input variables.</p>
+
+        <h3>4. Operation parameter table and result analysis</h3>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/table1.webp" alt="model">
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/table2.webp" alt="model">
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/table3.webp" alt="model">
+        <p class="sub"><br></p>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model3.webp" alt="model">
+        <p class="figurecaption">Figure 3. Time variation of vaccine concentration in fish</p>
+
+        <p class="sub">Figure 3(A) illustrates the vaccine diffusion process from the aqueous phase to the mucosal layer as described in Model (1). Simulation results show that vaccine concentration initially rises rapidly, then declines sharply due to mass transfer between the mucosal layer and gill mucosa (Model (2)). This trend aligns with the dynamic behavior predicted by the model. Figure 3(B) demonstrates that blood concentration first surges before gradually decreasing, consistent with the mucosal-blood interfacial mass transfer and clearance effects described in Models (4) and (5). The peak concentration may relate to transport rates through submucosal microvessels, while subsequent decline likely stems from blood clearance coefficient (kb). Figure 3(C) reveals that mass transfer from blood to intestinal mucosa and internal diffusion drive concentration elevation under Models (6) and (9). The observed concentration peaks and subsequent decline match model predictions, illustrating the distribution and elimination processes of vaccines in intestinal mucosa. Figure 3(D) shows concentration trends consistent with Models (10) to (12). After crossing the intestinal mucosal barrier, vaccines achieve transient equilibrium in the intestinal lumen, followed by gradual concentration reduction due to intestinal clearance coefficient (kin), reflecting their dynamic behavior within the intestinal cavity.</p>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model4.webp" alt="model">
+        <p class="figurecaption">Figure 4. Sobol index convergence diagram</p>
+
+        <p class="sub">Analysis of the graph reveals that k_bg (blood-intestinal mucosa mass transfer coefficient), Dg (intestinal mucosa mass transfer coefficient), k_g_del (intestinal mucosa elimination coefficient), k_in_del (intestinal lumen elimination coefficient), and k_g_in (intestinal mucosa-lumen mass transfer coefficient) show negligible impact on AUC (area under the curve of blood vaccine concentration) within minor fluctuation ranges. Six parameters exert significant influence on AUC: Dw (main water flow mass transfer coefficient), k_wm (mucus layer-mucosal mass transfer coefficient), k_m_del (mucosal elimination coefficient), Dm (mucosal mass transfer coefficient), k_mb (mucosal-blood mass transfer coefficient), and k_b_del (blood elimination coefficient). Notably, AUC demonstrates highest sensitivity to changes in k_mb (mucosal-blood mass transfer coefficient) and k_b_del (blood elimination coefficient). Additionally, the Sobol index converges after approximately 900 simulation runs, indicating that the optimal number of simulations should be N> 900.</p>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model5.webp" alt="model">
+        <p class="figurecaption">Figure 5. Sensitivity analysis of vaccination model</p>
+
+        <p class="sub">The figure reveals that AUC demonstrates the highest sensitivity to blood elimination coefficient, followed by parameters such as the mucosal-blood mass transfer coefficient, Dw (mass transfer coefficient in the fluid phase), k_wm (mucosal-luminal mass transfer coefficient), k_m_del (mucosal elimination coefficient), Dm (mucosal mass transfer coefficient), k_mb (mucosal-blood mass transfer coefficient), and k_b_del (blood elimination coefficient). Other parameters show slightly lower sensitivity. Notably, k_bg (blood-intestinal mucosa mass transfer coefficient), Dg (intestinal mucosa mass transfer coefficient), k_g_del (intestinal mucosa elimination coefficient), k_in_del (lumen elimination coefficient), and k_g_in (mucosal-lumen mass transfer coefficient) remain unaffected by minor fluctuations in AUC (area under the curve of vaccine concentration in blood).</p>
+
+        </section>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula.webp" alt="formula">
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/formula.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">
+
+        <strong style="color:#9c7b3f;"></strong>
+
+        <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model2/model.webp" alt="model">
+        <p class="figurecaption"></p>
+
+        <!-- ID：model3 -->
+        <section id="model3">
+          <h1>Dynamical Analysis of Multi-Light-Regulated Biological Systems</h1>
+
+          <h3>1. Proteomic analysis of proteins involved in directional movement of Escherichia coli under green and blue light regulation</h3>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table1.webp" alt="formula">
+
+          <p class="sub"><br></p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model1.webp" alt="model">
+
+          <p class="sub"><br></p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table2.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table3.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table4.webp" alt="formula">
+
+          <p class="sub">Modeling idea:</p>
+
+          <p class="sub">Step 1: Input of optical signals: Firstly, CcaS (histidine kinase) is activated. It should be noted that red light and green light are antagonistic to each other. In addition, we believe that during the reaction, there is a certain rate at which CcaS protein can be converted into a non-activated state, thus obtaining the following equation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula1.webp" alt="formula">
+
+          <p class="sub">The second step is the phosphorylation of CcaR. At this time, we introduce the literature and relevant formulas to obtain phosphorylation and dephosphorylation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula2.webp" alt="formula">
+
+          <p class="sub"> among ：</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula3.webp" alt="formula">
+
+          <p class="sub">Step 3 phosphorylated CcaR promotes cheA transcription activation</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula4.webp" alt="formula">
+
+          <p class="sub">Step 4: CheA catalyzes the conversion of CheY to CheY_P. Similarly, we also use the formula in this paper:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula5.webp" alt="formula">
+
+          <p class="sub"> among ：</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula6.webp" alt="formula">
+
+          <p class="sub"><br></p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model2.webp" alt="model">
+          <p class="figurecaption">Figure 1. Phosphorylation and dephosphorylation transformation diagram</p>
+
+          <p class="sub">Based on the above model, we carry out numerical simulation to assist experimental research. The simulated values of each parameter are as follows</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table5.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table6.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table7.webp" alt="formula">
+
+          <p class="sub">First, we conducted numerical simulations using the aforementioned parameters to obtain Figure 1.2. The results showed that CcaS and CcaS* reached steady states within an extremely short time (less than 41 seconds), consistent with our literature review findings that light-sensitive proteins undergo conformational changes rapidly under illumination to perform their functions. Other key components (CheA and CheY_P) gradually stabilized over approximately 500 seconds of exposure, aligning with our expectations. Western blot analysis revealed increased levels of these critical components after prolonged illumination, while repeated wet-lab experiments confirmed minimal pre-and post-exposure variations in their concentrations (<5%), which perfectly matches our simulation predictions.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model3.webp" alt="model">
+          <p class="figurecaption">Figure 1.2 Concentration variation curve of each component over time (<img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula19.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">)</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model4.webp" alt="model">
+          <p class="figurecaption"></p>
+
+          <p class="sub">Furthermore, we attempted to analyze the specific effects of light intensity on protein CcaS and CcaS* using the aforementioned parameter values. It should be noted that we have not found direct literature specifying their interaction mechanisms. Our approach was based on a genetic design concept, where we hypothesized antagonism between green and red light (already reflected in previous equations) for numerical simulation. Through computer simulations capturing protein concentration data after 1500 seconds of single-light exposure (Figure 1.3), it is evident (as shown in the upper two panels of Figure 1.3) that minimal response occurred at extremely low light intensities (maintaining original concentrations). At 25lx light intensity (applicable to both green and red light), the photosensitive protein concentration remained constant. This indicates that exceeding 25lx at 1500 seconds achieves equilibrium in the photosensitive protein, representing the saturation light intensity.</p>
+
+          <p class="sub">To evaluate the appropriateness of our light capture timing parameters, we conducted steady-state duration monitoring across multiple illumination conditions. As shown in the two subplots of Figure 1.3, green light at 50lx achieves rapid protein activation within <40 seconds, while red light demonstrates a significantly delayed response, reaching approximately 400 seconds at 100 lx. It should be noted that our simulations utilize estimated parameters which may deviate substantially from real-world conditions. Nevertheless, this study establishes a framework and methodology for systematic analysis.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model5.webp" alt="model">
+          <p class="figurecaption">Figure 1.4 Response surface analysis of green and red light on S/S* concentration</p>
+
+          <p class="sub">Through comprehensive analysis of green and red light, we developed Figure 1.4. The figure clearly demonstrates a distinct plateau phase in their interaction, indicating that even with sufficient green light intensity, saturation can still be achieved under red light interference (acquisition duration: 1500 seconds). We plan to validate this simulation result through experimental verification in subsequent studies.</p>
+
+          <p class="sub">Finally, to identify which parameters most significantly influence the model's output, we employed Sobol's global sensitivity analysis (for detailed methodology, see "Model Development for Vaccine Free Diffusion into Fish"). The core approach involves breaking down the variance in outputs into smaller components: individual parameter contributions (Sᵢ) and their combined interaction effects with other parameters (STᵢ). Both Sᵢ and STᵢ range between 0 and 1, where higher values indicate greater parameter significance.</p>
+
+          <p class="sub">The operation steps are as follows:</p>
+
+          <ol>
+            <li>Select 6 potentially sensitive parameters: Vmax_g, Vmax_r, Vmax_A, β_A, V1_Y, V1star_Y, each of which varies within the range of 20% of the baseline value.</li>
+            <li>1000 parameter combinations are generated by Latin hypercube sampling to ensure uniform coverage.</li>
+            <li>Run the model for each group of parameters for 2000s, and take the steady-state concentration of phosphorylated CheY (CheY_P) as the output.</li>
+            <li>Calculate the first-order index Sᵢ and the total order index STᵢ according to the Saltelli method; the total order index can find the "hidden" interaction effect.</li>
+            <li>In order to reduce the random error, the sample size is gradually increased from 200 to 1000, and stopped when STᵢ changes by less than 1%, and finally it is determined that 1000 samples can meet the accuracy.</li>
+          </ol>
+
+          <p class="sub">By comparing the size of STᵢ, the "high sensitivity" parameters can be quickly screened out to provide a basis for subsequent experimental determination or model simplification.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table8.webp" alt="formula">
+
+          <p class="sub"><br></p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model6.webp" alt="model">
+          <p class="figurecaption">Figure 1.5 Sobol parameter sensitivity analysis</p>
+
+          <p class="sub">We found <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula20.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> that the concentration of CheY_P had the most significant effect, which provided a direction for our subsequent experiments.</p>
+
+          <h3>2.Protein component analysis of E. coli rectal motility under blue light regulation</h3>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table9.webp" alt="formula">
+
+          <p class="sub"><br></p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model7.webp" alt="model">
+
+          <p class="sub">Running logic:</p>
+
+          <p class="sub">Under blue light: YF1 is inactivated, FixJ can not be phosphorylated → inhibit pFixK2 promoter → decrease of cI protein → increase of CheZ expression → dephosphorylation of CheZ CheY-P → decrease of CheY-P → enhance of linear movement of cells.</p>
+
+          <p class="sub">Catalog of parameters</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table10.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table11.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table12.webp" alt="formula">
+
+          <p class="sub">First, when exposed to blue light: The YF1 structure undergoes structural alteration and inactivation, losing its ability to phosphorylate the FixJ protein. At this stage, we believe that the rate of YF1 protein inactivation is influenced by two factors: the intensity of blue light and the concentration of YF1. It's important to note that for light-sensitive proteins, the response to light is extremely rapid, allowing us to formulate the following equation:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula7.webp" alt="formula">
+
+          <p class="sub">Next, for FixJ phosphorylation and dephosphorylation, we constructed our equations using steady-state enzyme kinetics formulas reported in the literature:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula8.webp" alt="formula">
+
+          <p class="sub"> among ：</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula9.webp" alt="formula">
+
+          <p class="sub">Next, we describe the relationship between phosphorylated FixJ and the repressor protein cI (using Hill equations to describe it):</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula10.webp" alt="formula">
+
+          <p class="sub">Then the interaction between cI and chez:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula11.webp" alt="formula">
+
+          <p class="sub">Finally, for the transition between cheY and cheY_P:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula12.webp" alt="formula">
+
+          <p class="sub"> among ：</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula13.webp" alt="formula">
+
+          <p class="sub">Similarly, we carry out numerical simulation based on the above model to assist experimental research. The simulated values of each parameter are as follows:</p>
+          <p class="figurecaption">Table 2.1 Parameter value estimation table</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table13.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table14.webp" alt="formula">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/table15.webp" alt="formula">
+
+          <p class="sub">The analytical approach for this pathway is fundamentally consistent with the previous study. First, we conducted numerical simulations using the aforementioned parameters to obtain Figure 2.1. Our findings reveal that YF1 and YF1* reached steady states within an extremely short duration (<12s), which aligns with the magnitude of results from literature reviews—photosensitive proteins undergo conformational changes under light stimulation within brief periods, thereby altering their functions. Other key components (CheZ, CheY_P) achieved steady states over approximately 300 seconds after blue light activation, consistent with our expectations. Western blot analysis demonstrated increased levels of these critical components following prolonged illumination. Repeated wet-lab experiments confirmed minimal temporal variations in CheZ and CheY_P concentrations (less than 5%), which corroborates our simulation results.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model8.webp" alt="model">
+          <p class="figurecaption">Figure 2.1 Concentration curves of each component over time (dark for the first 500s, after 500s)</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model9.webp" alt="model">
+          <p class="figurecaption">Figure 2.2 Light intensity response analysis</p>
+
+          <p class="sub">Furthermore, we attempted to analyze the specific effects of light intensity on proteins YF1 and YF1* using the aforementioned parameter values. It should be noted that we have not found direct literature specifying their interaction mechanisms. Through computer simulations capturing protein concentration data after 2000 seconds of blue light exposure (Figure 2.2), it is evident that both YF1 and YF1* exhibit extreme sensitivity to blue light. At an irradiance of IB=15 lx, they reach half-saturation light intensity. To evaluate the rationality of our illumination duration settings, we conducted steady-state time monitoring across multiple lighting conditions. As shown in the right panel of Figure 2.2, low light intensities (approximately 15 lx) can rapidly activate the proteins within <6 seconds. While it should be emphasized that our simulations utilize estimated parameters which may deviate significantly from real-world conditions, we have nevertheless established a framework and methodology for analytical purposes.</p>
+
+          <p class="sub">Finally, to identify the parameters with the most significant impact on the model's output, we conducted parameter sensitivity analysis. Seven key parameters (Vmax_B, IB_50, k_YF1, V1_F, V2_Y, Vmax_Fp_cI, Vmax_cI_Z) were selected for ±10% relative perturbations while keeping other parameters constant. After each disturbance, the ODE system was re-integrated during the blue light activation phase (500-1000 s), and the steady-state CheY-P concentration Yp at t = 1000s was extracted.</p>
+
+          <p class="sub">The sensitivity index <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula16.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;"> is defined as follows:</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula15.webp" alt="formula">
+
+          <p class="sub"> among ：</p>
+
+          <p class="sub"><img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula17.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">: CheY-P steady-state concentration under reference category;</p>
+
+          <p class="sub"><img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/formula18.webp" alt="formula" style="display: inline !important; margin: 0 2px !important; vertical-align: middle !important;">: CheY-P steady-state concentration after increasing or decreasing the parameters by 10%;</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model10.webp" alt="model">
+          <p class="figurecaption">Figure 1.5 Parameter sensitivity analysis (1)</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/model/model3/model11.webp" alt="model">
+          <p class="figurecaption">Figure 1.6 Parameter sensitivity parameter ranking (2)</p>
+
+          <p class="sub">According to the simulation results, we found that the maximum reaction rate of CheY phosphorylase and the maximum response rate of blue light were the most sensitive to the biological system, which provided a preferred target for subsequent experimental verification.</p>
+
         </section>
 
         <div class="logo-ring"></div>
