@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.addEventListener("mousemove", (e) => {
-            if (menu.style.display === "block" && e.clientY > window.innerHeight * 0.4) {
+            if (menu.style.display === "block" && e.clientY > window.innerHeight * 0.5) {
                 menu.style.display = "none";
                 isMouseOverTrigger = false;
                 isMouseOverMenu = false;

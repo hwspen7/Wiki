@@ -39,6 +39,11 @@ def home():
 def teammember():
     return render_template("pages/teammember.html")
 
+# Attributions
+@app.route("/attributions")
+def attributions():
+    return render_template("pages/attributions.html")
+
 # Collaborations
 # Team
 @app.route("/collaborations")

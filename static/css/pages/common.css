@@ -62,8 +62,8 @@ body {
 .overlay-text {
     position: absolute;
     top: 55%;
-    right: 10%;
-    transform: translateY(-100%);
+    right: 8%;
+    transform: translateY(-175%);
     text-align: right;
 }
 
