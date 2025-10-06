@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/team.css') }}">
+
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>TEAM</h3>
+    <!-- 是否考虑给common.css加上这个style? -->
+    <h1 style="text-align: right;">TEAM MEMBER<br>&ATTRIBUTIONS</h1>
+  </div>
+</div>
+
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OUR TEAM</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#team">OUR TEAM</a></li>
+            <li><a class="navlink" href="#attributions">ATTRIBUTIONS</a></li>
+            <li><a class="navlink" href="#sponsors">OUR SPONSEORS &<br>PARTNERS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：team -->
+        <section id="team">
+        <!-- 成员卡片示例 1 -->
+        <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+                <img src="/static/upload/page/team/man!.png" alt="成员照片">
+            </div>
+            <div class="member-info">
+                <h2>Chenwei Luo</h2>
+                <hr>
+                <!-- 这部分可以修改成table更好看，也更方便管理加粗/字体，个人信息可以用js更方便录入~ -->
+                <p class="default">
+                Field of Study:  Information Engineering
+                <br>
+                Spirit Animal:  Pigeon
+                <br>
+                Study Snack Bliss:  Chocolate
+                </p>
+                <p class="more">
+                Self-description: Chenwei Luo, full of passion for life,has a clear perception of his future goals and direction.He strives to be proactive and energetic in life, constantly reflecting and improving himself. He maintain a serious and rigorous attitude toward scientific research and is willing to devote himself to fundamental research work . In daily life, Chenwei Luo always eagerly follow the latest academic advancements to broaden his horizons.
+                </p>
+            </div>
+        </div>
+
+        <!-- 成员卡片示例 2 -->
+        <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+                <img src="/static/upload/page/team/man!.png" alt="成员照片">
+            </div>
+            <div class="member-info">
+                <h2>Wenqi Wu</h2>
+                <hr>
+                <p class="default">
+                Field of Study:  Art Design
+                <br>
+                Spirit Animal:  Fox
+                <br>
+                Study Snack Bliss:  Plum Cake
+                </p>
+                <p class="more">
+                Self-description: Edward love exploring the world and he is quite enthusiatic about photography right now. When not diving into study, you can often find him strolling around to his heart’s content. With a quite jumpy thinking and clear goals in life, he navigates life with a passionate and easygoing approach.Relaxed about uncertainty and valuing experience over results, Edward is always learning about this world vigorously.
+                </p>
+            </div>
+        </div>
+
+
+
+        </section>
+
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
