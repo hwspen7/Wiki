@@ -25,6 +25,7 @@
         <!-- Content Start -->
         <nav>
           <ul class="menu" id="menu">
+            <li><a class="navlink" href="#general">GENERAL</a></li>
             <li><a class="navlink" href="#design">EQUIPMENT <br> DESIGN</a></li>
             <li><a class="navlink" href="#build">BUILD</a></li>
             <li><a class="navlink" href="#analysis">ANSYS <br> FINITE ELEMENT <br> ANALYSIS</a></li>
@@ -37,6 +38,17 @@
     <!-- 右侧正文 -->
     <main class="content">
       <div class="paper">
+
+
+        <!-- ID：general -->
+        <section id="general">
+          <h1>General</h1>
+          <p class="sub">To address the challenges of process stability and scaling when applying synthetic
+biology products, such as live bacteria vaccines, in modern aquaculture, we have developed a fully automatic continuous immersion inoculation hardware system. The system is designed to provide a stable and controllable bioprocess environment. It integrates modules such as automatic delivery, visual inspection, immersion inoculation, vaccine preparation and intelligent sorting, upgrading traditional,unstable manual operations into an efficient, precise and traceableautomated production mode. It provides a powerful hardware engineering solution for the large-scale application of synthetic biology in smart agriculture.</p>
+          <p class="sub">Our design is rooted in addressing real industrial pain points. In the development of the intelligent module, the accuracy of the disease identification model and the key parameters of the control system were determined through repeated iterations and fine-tuning based on feedback from  our  continuous  communication  with  front-line  aquaculture enterprises and farmers. Likewise, the core parameters of the hardware, such as sorting specifications and delivery flow rates, were also strictly tested and verified by them in real farming environments, thus ensuring the practicality and reliability of the solution.</p>
+          <p class="sub">The practicality and functionality of the hardware system have been verified. The core functionality of the system is driven by mechanical structures such as the Archimedes spiral and two intelligent engines: one is a machine vision system based on a customized VoVNet model, which can accurately identify and make decisions ; The advanced control system,  composed of algorithms such as neural Network Adaptive PID (BP-PID), is used to ensure ultra-high precision stability in the vaccine environment. We used ANSYS finite element analysis to conduct mechanical simulations of key components such as the classification plate and support structure. The results confirmed that the structural strength was sufficient and the deformation could be completely ignored, ensuring from the design source that the equipment would not cause physical damage to the fish, and it was successfully applied in the farm.</p>
+          <p class="sub">To support future innovation and collaboration, we have prepared  detailed technical documentation, which includes complete design ideas, functional details of each unit, key performance parameters, and engineering analysis reports. This document clearly demonstrates the  innovation and reliability of our hardware and provides a solid foundation for future teams to understand, evaluate, and carry out secondary development and improvement based on our work.</p>
+        </section>
 
         <!-- ID：design -->
         <section id="design">
@@ -292,6 +304,22 @@
               and activate bottom valves for centralized discharge, achieving a sorting efficiency of ≥1000 per minute.
             </li>
           </ol>
+
+          <p class="sub"><br></p>
+          <p class="sub">To make our design more visually intuitive in the presentation：</p>
+          <p class="sub">The attached file below contains the drawing diagrams of  our components.</p>
+          <div class="usage">
+            <p>        
+            <h5><a href="https://static.igem.wiki/teams/5972/uploads/page/hardware/mechanical-engineering-drawings.pdf" target="_blank">Mechanical Engineering Drawings.pdf</a></h5>
+            </p>
+          </div>
+
+          <h2>2.6 Intelligent detection system</h2>
+          <p class="sub">Machine learning endows the system with an "intelligent brain": The system innovatively integrates a machine learning decision-making system, which can intelligently assess the health status of fish larvae through visual analysis and dynamically optimize the fish sorting process, achieving a leap from automation to intelligence. The system first acquires the current image of the fish pond through the camera, uses image processing technology, and analyzes the photos of the fish pond to calculate health indicators, such as color, spots, gill movement frequency, and fish body defects. Based on the health indicators calculated, the system makes a decision: whether it is suitable for vaccination.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware1.webp" alt="hardware1">
+
+          <p class="sub">Furthermore, in order to ensure the stability of the vaccination environment and reduce the stress-induced injury rate of the fish, we have also developed a hardware control system. Users can monitor parameters such as dissolved oxygen, temperature, salinity, and vaccine concentration in real time through the Internet of Things control platform. The system supports one-click startup, fault alarm, and data traceability. The operation interface is simple and intuitive, allowing for full-process management without the need for professional personnel.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware19.webp" alt="hardware19">
         </section>
 
         <!-- ID：analysis -->
