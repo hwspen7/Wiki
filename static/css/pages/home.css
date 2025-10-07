@@ -8,6 +8,7 @@ header.bg-hero {
     box-sizing: border-box;
 }
 
+
 @font-face {
     font-family: "Abhaya Libre";
     src: url("/static/fonts/AbhayaLibre-SemiBold.ttf") format("truetype");
@@ -224,6 +225,14 @@ body {
     overflow: hidden;
 }
 
+.video-box-1 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
 
 /* Third Section */
 .title-1 p {
@@ -270,7 +279,6 @@ body {
     overflow: hidden;
 }
 
-/* 初始状态：隐藏在左右两边 */
 .left-card,
 .right-card {
     opacity: 0;
@@ -306,6 +314,14 @@ body {
     overflow: hidden;
 }
 
+.video-box-2 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
 
 
 .video-box-3 {
@@ -320,6 +336,14 @@ body {
     overflow: hidden;
 }
 
+.video-box-3 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
 .eigth-section {
     position: relative;
 }
@@ -329,6 +353,14 @@ body {
     justify-content: center;
     margin-bottom: 20px;
 }
+
+.video-fifth iframe {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
 
 .factory-farming {
     width: 1226px;
@@ -372,22 +404,25 @@ body {
 }
 
 
-.video-box-6 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    z-index: 2;
-    margin-top: -190px;
-}
 
-.video-box-6 video {
+.video-box-3 {
     width: 1920px;
-    max-width: 1920px;
-    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -190px;
+    z-index: 2;
     display: block;
 }
+
+.video-box-3 iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
 
 /* Lab Button */
 .lab-button {

@@ -31,5 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
     targets.forEach(el => observer.observe(el));
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const iframes = document.querySelectorAll("[class^='video-box-'] iframe");
 
+    const videoObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                const dataSrc = iframe.getAttribute("data-src");
+                if (dataSrc && !iframe.src) {
+                    iframe.src = dataSrc;
+                }
+                obs.unobserve(iframe);
+            }
+        });
+    }, { threshold: 0.01 });
 
+    iframes.forEach(iframe => {
+        const src = iframe.src;
+        iframe.removeAttribute("src");
+        iframe.setAttribute("data-src", src);
+        videoObserver.observe(iframe);
+    });
+});

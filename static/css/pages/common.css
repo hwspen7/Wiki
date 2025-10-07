@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+header,
+section,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
 header.bg-hero {
     display: none !important;
 }
@@ -128,7 +136,7 @@ img {
     position: absolute;
     left: 0;
     top: 0;
-    height: 810px;
+    height: 80%;
     width: 10px;
     border-radius: 0 6px 6px 0;
     background: linear-gradient(180deg, #ffe28a 0%, #e7b21a 45%, #c48b0b 100%);
@@ -214,7 +222,7 @@ img {
 
 .paper {
     width: 100%;
-    min-height: 707px;
+    min-height: 1650px;
     background: #fbf8f0;
     color: #222;
     border: 3px solid #DFB155;
@@ -381,7 +389,7 @@ h1::after {
     background-color: #000;
 }
 
-.video-container video {
+.video-container iframe {
     max-width: 100%;
     height: auto;
     border-radius: 12px;

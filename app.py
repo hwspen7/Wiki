@@ -22,11 +22,6 @@ def freeze():
 def serve():
     freezer.run()
 
-# Templete
-@app.route("/members")
-def members():
-    return render_template("pages/members.html")
-
 
 # Home
 @app.route('/')
@@ -62,11 +57,6 @@ def projectdescription_view():
 @app.route("/engineering")
 def engineering():
     return render_template("pages/engineering.html")
-
-# Implementation
-@app.route("/implementation")
-def implementation():
-    return render_template("pages/implementation.html")
 
 # Contribution
 @app.route("/contribution")
