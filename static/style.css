@@ -101,8 +101,6 @@ header.bg-hero {
     height: 94px;
     top: 0;
     left: 0;
-    /* 添加这行 */
-    /* 添加这行 */
     width: 1440px;
     max-width: 1920px;
     z-index: 3000;
@@ -381,7 +379,7 @@ footer {
 }
 
 .footer-logo {
-    height: 67px;
+    height: 35px;
     width: 67px;
 }
 
