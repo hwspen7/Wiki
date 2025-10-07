@@ -1,32 +1,45 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/header/common.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/header/team.css') }}">
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/header/common.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/header/team.css') }}"
+/>
 
 <div class="project-section d-flex align-items-start">
-    <div class="container-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left Title -->
+      <div
+        class="col-md-6 project-title d-flex flex-column justify-content-center"
+      >
+        <h1>OUR TEAM</h1>
+      </div>
+      <!-- Right Two Columns -->
+      <div class="col-md-6">
         <div class="row">
-            <!-- Left Title -->
-            <div class="col-md-6 project-title d-flex flex-column justify-content-center">
-                <h1>OUR TEAM</h1>
-            </div>
-
-            <!-- Right Two Columns -->
-            <div class="col-md-6">
-                <div class="row">
-                    <!-- Right Upper -->
-                    <div class="col-md-6 project-links">
-                        <ul>
-                            <li><a href="{{ url_for('attributions') }}">TEAM MEMBER <br>&ATTRIBUTIONS</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Right Bottom -->
-                    <div class="col-md-6 project-links">
-                        <ul>
-                            <li><a href="{{ url_for('collaborations') }}">COLLABORATIONS</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          <div class="col-md-6 project-links">
+            <ul>
+              <li><a href="{{ url_for('teammember') }}">TEAM MEMBER </a></li>
+            </ul>
+          </div>
+          <!-- Right Upper -->
+          <div class="col-md-6 project-links">
+            <ul>
+              <li><a href="{{ url_for('attributions') }}">ATTRIBUTIONS</a></li>
+            </ul>
+          </div>
+          <!-- Right Bottom -->
+          <div class="col-md-6 project-links">
+            <ul>
+              <li>
+                <a href="{{ url_for('collaborations') }}">COLLABORATIONS</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
