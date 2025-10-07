@@ -15,8 +15,8 @@
             rgba(0, 0, 0, .12) 50%,
             rgba(0, 0, 0, .22) 75%,
             rgba(0, 0, 0, .30) 100%),
-        url("/static/upload/page/pagebackground1.png"),
-        url("/static/upload/page/topback/modelback.png");
+        url("https://static.igem.wiki/teams/5972/uploads/page/pagebackground1.webp"),
+        url("https://static.igem.wiki/teams/5972/uploads/page/topback/modelback.webp");
 
     background-size:
         100% 45%,

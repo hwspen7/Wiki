@@ -98,22 +98,22 @@
           <h2>1.4 Overall Approach</h2>
           <p class="sub">This project addresses the technical challenges of traditional aquaculture vaccination
             methods—high-stress injections and inefficient immersion inoculation—with two fish-specific live bacterial
-            vaccines certified as Class I veterinary drugs. We have pioneered an IoT-powered continuous immersion system
-            for smart vaccine administration using Archimedes screw technology. Through systematic experiments, we
+            vaccines certified as Class I veterinary drugs. <strong style="color:#9c7b3f;">We have pioneered an IoT-powered continuous immersion system
+            for smart vaccine administration using Archimedes screw technology.</strong> Through systematic experiments, we
             determined physiological stress responses of turbot fry under varying immersion densities and dissolved
             oxygen levels, established safe operational thresholds, and optimized core module designs based on
             immunological parameters. The system integrates conveying units, detection modules, Archimedes screw-based
             immersion units, vaccine stations, and machine vision-assisted post-inoculation sorting. It enables
-            continuous fry delivery, uniform immersion, efficient vaccine recycling, and post-inoculation sorting. The
+            continuous fry delivery, uniform immersion, efficient vaccine recycling, and post-inoculation sorting. <strong style="color:#9c7b3f;">The
             intelligent control system monitors dissolved oxygen and vaccine concentration in real-time through
             multi-sensor networks (visual, bioimpedance, infrared spectroscopy), while LSTM neural networks dynamically
-            optimize inoculation procedures. This ensures dissolved oxygen fluctuations≤0.2mg/L and vaccine
-            utilization≥95%. Modular design accommodates 10m³to 1000m³aquaculture scales, achieving 40,000 fry/hour
-            inoculation efficiency—40 times higher than traditional methods—with stress damage rates≤0.5%.Application
-            validation demonstrates 90% reduction in antibiotic usage and 75% decrease in per-fish inoculation costs,
+            optimize inoculation procedures. </strong>This ensures dissolved oxygen fluctuations<strong style="color:#9c7b3f;">≤0.2mg/L</strong> and vaccine
+            utilization<strong style="color:#9c7b3f;">≥95%</strong>. Modular design accommodates <strong style="color:#9c7b3f;">10m³</strong> to <strong style="color:#9c7b3f;">1000m³</strong> aquaculture scales, achieving <strong style="color:#9c7b3f;">40,000</strong> fry/hour
+            inoculation efficiency—<strong style="color:#9c7b3f;">40</strong> times higher than traditional methods—with stress damage rates<strong style="color:#9c7b3f;">≤0.5%</strong>.Application
+            validation demonstrates <strong style="color:#9c7b3f;">90%</strong> reduction in antibiotic usage and <strong style="color:#9c7b3f;">75%</strong> decrease in per-fish inoculation costs,
             significantly supporting sustainable aquaculture transformation.</p>
 
-          <img src="/static/upload/page/hardware/hardware2.png" alt="hardware2">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware2.webp" alt="hardware2">
           <p class="figurecaption">Figure 1.Overall flow chart of the equipment</p>
         </section>
 
@@ -126,12 +126,12 @@
             equipment, the fish conveying module shown in the diagram was designed. This module features an adjustable
             negative pressure suction pump with a soft silicone suction nozzle that automatically adjusts pressure based
             on fish size (preventing abrasions or minimizing stress responses). The system extracts fry from breeding
-            facilities (ponds, tanks, etc.) using PTFE corrosion-resistant hoses, delivering them to a water-fish
+            facilities (ponds, tanks, etc.) using <strong style="color:#9c7b3f;">PTFE corrosion-resistant hoses</strong>, delivering them to a water-fish
             separation plate equipped with high-pressure backflush nozzles for automatic filter cleaning and preventing
             sediment buildup. The aluminum alloy inclined grating panel is impact-resistant and seawater
             corrosion-resistant. Side baffles prevent fry from escaping, while a water collection tank at the bottom
             collects purified water, which is then pumped back into the breeding pond for reuse.</p>
-          <img src="/static/upload/page/hardware/hardware3.png" alt="hardware3">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware3.webp" alt="hardware3">
           <p class="figurecaption">Figure 2.Assembly drawing of conveying unit and verification of 3D printing
             principle</p>
 
@@ -146,7 +146,7 @@
             irregularities, bleeding, rotting fins, ulcers, or physical deformities) are detected, the fish suction pump
             automatically pauses to prevent diseased or abnormal fish from entering subsequent processes, thereby
             avoiding inoculation damage or cross-contamination.</p>
-          <img src="/static/upload/page/hardware/hardware4.png" alt="hardware4">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware4.webp" alt="hardware4">
           <p class="figurecaption">Figure 3.Assembly drawing of detection unit and physical picture of 3D printing
             principle verification machine</p>
           <p class="sub">After passing through the detection and conveying unit, the fish fry enter a chute equipped
@@ -154,7 +154,7 @@
             chute prevent escape. The vaccine infusion device pumps immersion liquid from the storage tank into the
             chute, allowing the fish fry and their immersion solution to be transferred into the screw inoculation
             module.</p>
-          <img src="/static/upload/page/hardware/hardware5.png" alt="hardware5">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware5.webp" alt="hardware5">
           <p class="figurecaption">Figure 4.Import simulation diagram and import schematic diagram</p>
 
           <!-- 2.3 -->
@@ -164,8 +164,8 @@
             The screw features spiral blades along its inner wall that divide the interior into six sealed compartments.
             When viewed horizontally from below the screw axis, each compartment contains independent vaccine solutions
             that remain mutually isolated. These compartments advance synchronously with the screw's rotation. During
-            the single-revolution cycle where a compartment travels from the screw's tip to tail, fish fry achieve
-            non-assemble immersion and minimal stress response gentle and uniform immersion immunization.</p>
+            the single-revolution cycle where a compartment travels from the screw's tip to tail, <strong style="color:#9c7b3f;">fish fry achieve
+            non-assemble immersion and minimal stress response gentle and uniform immersion immunization.</strong></p>
           <p class="sub">The screw head features a baffle positioned above the highest internal liquid level, preventing
             vaccine leakage while maintaining chamber sealing integrity. The hollow rotating shaft connects to a
             dissolved oxygen cone at one end and is perforated with evenly spaced vents to regulate oxygen levels in the
@@ -173,7 +173,7 @@
             Vertical bearing housings support both ends of the shaft, while a coupling at its rear connects to a
             high-torque DC motor for rotation. A built-in camera in the screw head's bearing housing monitors real-time
             inoculation progress, detecting and preventing abnormal fish body conditions during the process.</p>
-          <img src="/static/upload/page/hardware/hardware6.png" alt="hardware6">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware6.webp" alt="hardware6">
           <p class="figurecaption">Figure 5.Photo of soaking unit model and 3D printing principle verification machine
           </p>
 
@@ -181,7 +181,7 @@
             vaccine liquid at the fish liquid separation plate at the tail of the screw and enter the next module; the
             vaccine liquid falls into the vaccine liquid recovery pool below the separation plate, and after filtration
             and disinfection, it is pumped back to the automatic vaccine preparation workstation.</p>
-          <img src="/static/upload/page/hardware/hardware7.png" alt="hardware7">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware7.webp" alt="hardware7">
           <p class="figurecaption">Figure 6.Model of fish liquid separation plate and physical picture of 3D printing
             principle verification machine</p>
 
@@ -217,11 +217,11 @@
               sensors, preventing external contamination.
             </li>
           </ul>
-          <img src="/static/upload/page/hardware/hardware8.png" alt="hardware8">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware8.webp" alt="hardware8">
           <p class="figurecaption">Figure 7.Model of vaccine preparation tank based on bioreactor engineering and
             physical picture of 3D printing principle verification equipment</p>
 
-          <img src="/static/upload/page/hardware/hardware9.png" alt="hardware9">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware9.webp" alt="hardware9">
           <p class="figurecaption">Figure 8.Vaccine fluid replacement device structure diagram and 3D printing
             principle verification model diagram</p>
 
@@ -243,7 +243,7 @@
             blocked by the baffle and enters the waste vial collection box set in the frame layer through the slide
             rail.</p>
 
-          <img src="/static/upload/page/hardware/hardware10.png" alt="hardware10">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware10.webp" alt="hardware10">
           <p class="figurecaption">Figure 9.Vaccine liquid resolution and extraction device&Vaccine bottle opener
             &Rotary table transport and blocking device
           </p>
@@ -257,18 +257,18 @@
           <h2>2.5 Intelligent Sorting Unit</h2>
           <p class="sub">The intelligent sorting unit employs a multi-stage physical screening system integrated
             with machine vision technology to achieve automated and precise fry fish grading.
-            The core module features a 15° incline metal grading plate equipped with 5mm fine mesh
+            The core module features a <strong style="color:#9c7b3f;">15°</strong> incline metal grading plate equipped with <strong style="color:#9c7b3f;">5mm</strong> fine mesh
             holes at the front and 8mm medium mesh holes at the rear, maintaining a tolerance of
-            &plusmn;0.2mm. A spray shower system above the plate generates continuous water film
-            through 0.2MPa pressure, assisting fry fishes in sliding while flushing surface mucus.
+            <strong style="color:#9c7b3f;">&plusmn;0.2mm</strong>. A spray shower system above the plate generates continuous water film
+            through <strong style="color:#9c7b3f;">0.2MPa</strong> pressure, assisting fry fishes in sliding while flushing surface mucus.
             An industrial-grade camera mounted on the plate's support frame captures real-time
-            movement trajectories at 1920&times;1080 resolution. Visual algorithms simultaneously
-            perform three-category quantity statistics (error &lt; 2%) and surface disease detection
-            (accuracy &ge; 95%). Three independent collection tanks for small, medium, and large fish
+            movement trajectories at <strong style="color:#9c7b3f;">1920&times;1080</strong> resolution. Visual algorithms simultaneously
+            perform three-category quantity statistics <strong style="color:#9c7b3f;">(error &lt; 2%)</strong> and surface disease detection
+            <strong style="color:#9c7b3f;">(accuracy &ge; 95%)</strong>. Three independent collection tanks for small, medium, and large fish
             are positioned below the plate, which are all constructed from PP material with bottom
             discharge valves and swivel casters for efficient transfer after sorting.</p>
 
-          <img src="/static/upload/page/hardware/hardware11.png" alt="hardware11">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware11.webp" alt="hardware11">
           <p class="figurecaption">Figure 10.Assembly diagram of intelligent sorting unit and physical picture of 3D
             printing principal verification machine
           </p>
@@ -297,17 +297,17 @@
         <!-- ID：analysis -->
         <section id="analysis">
           <h1>ANSYS Finite Element Analysis</h1>
-          <p class="sub">Fish Separator Grading Plate</p>
-          <p class="sub">Material and yield strength: The main material is medical grade 316L stainless "σ" _"y" steel,
+          <p class="sub"><strong style="color:#9c7b3f;">Fish Separator Grading Plate</strong></p>
+          <p class="sub"><strong style="color:#9c7b3f;">Material and yield strength:</strong> The main material is medical grade 316L stainless "σ" _"y" steel,
             whose yield strength at room temperature is 170 MPa. This material is selected to consider corrosion
             resistance, biocompatibility and sufficient mechanical strength.</p>
-          <p class="sub">Boundary condition: The analysis model fixes the rigidity of the lower plate (simulating the
+          <p class="sub"><strong style="color:#9c7b3f;">Boundary condition:</strong> The analysis model fixes the rigidity of the lower plate (simulating the
             foundation constraint) and applies a uniform normal load of 1000 N in the central area of the upper plate
             (simulating the operating pressure or fish body force).</p>
-          <p class="sub">Stress analysis: The maximum von Mises "σ_max " effect stress appears in the central area of
+          <p class="sub"><strong style="color:#9c7b3f;">Stress analysis:</strong> The maximum von Mises "σ_max " effect stress appears in the central area of
             the upper plate, and its value is 0.01664 MPa.</p>
 
-          <img src="/static/upload/page/hardware/hardware12.png" alt="hardware12">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware12.webp" alt="hardware12">
           <p class="figurecaption">Figure 11.Stress cloud diagram of fisher
           </p>
 
@@ -316,12 +316,12 @@
             is very large, indicating that the structural strength is very abundant,
             and there is no risk of plastic deformation or static failure.</p>
 
-          <img src="/static/upload/page/hardware/hardware13.png" alt="hardware13">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware13.webp" alt="hardware13">
           <p class="figurecaption">Figure 12.Deformation cloud map of fisher
           </p>
 
-          <p class="sub">Deformation analysis: As shown in the "σ_max " figure, the maximum deformation occurs in the
-            central load-bearing area of the upper plate, and its value is 2.4×10-⁶ mm. This deformation is extremely
+          <p class="sub"><strong style="color:#9c7b3f;">Deformation analysis:</strong> As shown in the "σ_max " figure, the maximum deformation occurs in the
+            central load-bearing area of the upper plate, and its value is <strong style="color:#9c7b3f;">2.4×10-⁶</strong> mm. This deformation is extremely
             small, far lower than the manufacturing tolerance and measurement accuracy (usually in microns or higher
             order), which can be completely ignored in engineering.</p>
           <p class="sub">For the fish body, this magnitude of deformation does not produce any perceptible crushing or
@@ -329,15 +329,15 @@
             separation funnel material and yield strength. </p>
           <p class="sub">The material is also 316L stainless steel (yield strength 170 MPa) to ensure that it is
             consistent with the material properties of the fish separator and corrosion resistant.</p>
-          <p class="sub">Boundary conditions: The analysis model will completely constrain the bottom surface of the
+          <p class="sub"><strong style="color:#9c7b3f;">Boundary conditions:</strong> The analysis model will completely constrain the bottom surface of the
             support frame (simulating the connection with the foundation or rack), and apply an equivalent total load of
             2000 N simulating the gravity of the fluid or fish weight on the side wall and/or inner surface of the
             bottom of the funnel (specify the force application surface and the nature of the simulated load).</p>
-          <p class="sub">Stress analysis: The maximum von Mises" " equivalent stress("σ_max" ) appears at the root area
+          <p class="sub"><strong style="color:#9c7b3f;">Stress analysis:</strong> The maximum von Mises" " equivalent stress("σ_max" ) appears at the root area
             of the connection between the support frame and the main body of the funnel, and the value is 0.58499 MPa.
           </p>
 
-          <img src="/static/upload/page/hardware/hardware14.png" alt="hardware14">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware14.webp" alt="hardware14">
           <p class="figurecaption">Figure 13. Fish water separation funnel deformation cloud map
           </p>
 
@@ -346,9 +346,9 @@
             indicating that the strength of funnel structure is reliable
             and meets the design bearing requirements.</p>
 
-          <img src="/static/upload/page/hardware/hardware15.png" alt="hardware15">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware15.webp" alt="hardware15">
           <p class="figurecaption">Figure 14. Archimedes screw and bearing stress cloud diagram</p>
-          <p class="sub">Deformation Analysis:</p>
+          <p class="sub"><strong style="color:#9c7b3f;">Deformation Analysis:</strong></p>
           <p class="sub">The maximum deformation "σ_max " occurs at the free edge or central region of the funnel, and
             its value is "0.016524 mm(~16.5 μm" ). This deformation is small in magnitude and can usually be ignored in
             engineering applications (especially considering the manufacturing accuracy of the funnel itself and water
@@ -356,19 +356,19 @@
           <p class="sub">For the fish and water separation function, this deformation will not affect the permeability
             of particulate matter, nor will it cause damage to the retained fish body.</p>
 
-          <img src="/static/upload/page/hardware/hardware16.png" alt="hardware16">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware16.webp" alt="hardware16">
           <p class="figurecaption">Figure 15. Deformation cloud diagram of screw outlet support </p>
 
           <p class="sub">Screw and support structure: stress and deformation analysis was carried out on the outlet
             support, bearing support and installation platform of the screw system. The results of stress analysis are
             as follows.</p>
-          <p class="sub">Screw outlet support: the maximum stress"(σmax)" occurs at both ends of the support, and the
+          <p class="sub"><strong style="color:#9c7b3f;">Screw outlet support:</strong> the maximum stress"(σmax)" occurs at both ends of the support, and the
             value is "0.0037 MPa" . This value is far lower than the yield strength of the material valuing 170 MPa,
             indicating that the support strength is sufficient.</p>
-          <p class="sub">Bearing support: The " σmax," maximum stress occurs at the bottom of the bearing seat, the
+          <p class="sub"><strong style="color:#9c7b3f;">Bearing support:</strong> The " σmax," maximum stress occurs at the bottom of the bearing seat, the
             connection with the platform or the stress concentration area, and the value is 0.04 MPa. It is far lower
             than the yield strength of the material 170 MPa, indicating that the support strength is sufficient.</p>
-          <p class="sub">Screw platform: The maximum "σmax," stress occurs around the screw bearing installation hole,
+          <p class="sub"><strong style="color:#9c7b3f;">Screw platform:</strong> The maximum "σmax," stress occurs around the screw bearing installation hole,
             below the center of the base plate or at the joint of the rib plate, with a value of W MPa. The safety is
             evaluated. It is pointed out that the stress of the three key support components is within the safe range.
           </p>
@@ -412,7 +412,7 @@
           <p class="sub">The whole set of equipment is highly complex (requiring supporting classification modules) and
             costs more than $500,000.</p>
 
-          <img src="/static/upload/page/hardware/hardware17.png" alt="hardware17">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware17.webp" alt="hardware17">
           <p class="figurecaption">Figure 16. Maskon company fishing vaccine automatic injection inoculator (single
             unit and double unit) </p>
 
@@ -430,7 +430,7 @@
           <p class="sub">C. The inoculation efficiency can reach 1000-1500 kg/day (average fish weight of 2g per tail),
             and the average inoculation amount is 30,000 per hour.</p>
 
-          <img src="/static/upload/page/hardware/hardware18.png" alt="hardware18">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/hardware/hardware18.webp" alt="hardware18">
           <p class="figurecaption">Figure 17. Spanish FFFF fish vaccine intermittent immersion inoculator </p>
 
           <h3>Technical comparison</h3>
@@ -465,11 +465,11 @@
 
           <ol>
             <li>
-              Inefficiency. Traditional vaccination relies solely on manual injection, while immersion techniques
+              <strong style="color:#9c7b3f;">Inefficiency.</strong> Traditional vaccination relies solely on manual injection, while immersion techniques
               require batch-wise intermittent operations that lack precise dosage control. With processing capacity of
               only 1,000-3,000 fry per hour, this approach fails to meet large-scale breeding demands. </li>
             <li>
-              Stress-induced damage. Injection vaccinations have a 95% survival rate (requiring anesthesia) but
+              <strong style="color:#9c7b3f;">Stress-induced damage.</strong> Injection vaccinations have a 95% survival rate (requiring anesthesia) but
               carry a 5-10% risk of secondary bacterial infections due to improper handling.
             </li>
           </ol>
@@ -479,15 +479,15 @@
 
           <ol>
             <li>
-              Specialized adaptation module. The Archimedes screw compartment volume is optimized to 0.5L/cavity,
+              <strong style="color:#9c7b3f;">Specialized adaptation module.</strong> The Archimedes screw compartment volume is optimized to 0.5L/cavity,
               matching the body length of turbot fry (3-5cm), with precise control of vaccine solution circulation flow
               rate at 0.3L/s to ensure uniform contact with fish bodies.
             <li>
-              Low-stress assurance. Through multi-source perception real-time monitoring of dissolved oxygen (≥6
+              <strong style="color:#9c7b3f;">Low-stress assurance.</strong> Through multi-source perception real-time monitoring of dissolved oxygen (≥6
               mg/L) and flow rate (≤0.2 m/s), combined with AI algorithm dynamic adjustment, respiratory frequency is
               stabilized at 40-45 breaths/min (traditionally fluctuating up to 80 breaths/min).</li>
             <li>
-              Efficient vaccination verification. Pilot tests at a seedling base in Shandong, China showed that the
+              <strong style="color:#9c7b3f;">Efficient vaccination verification.</strong> Pilot tests at a seedling base in Shandong, China showed that the
               system processing efficiency reached 40,000 birds per hour, with a vaccine absorption rate of 98.2% and a
               survival rate ≥99.5%, representing a 15 percentage point improvement over traditional methods.</li>
           </ol>
@@ -502,20 +502,20 @@
           <p class="sub">For crustaceans such as white leg shrimp and swimming crab:</p>
           <ul>
             <li>
-              Osmotic adaptation: Develop a nano-micromole vaccine chamber (particle size ≤50nm) and enhance the
+              <strong style="color:#9c7b3f;">Osmotic adaptation:</strong> Develop a nano-micromole vaccine chamber (particle size ≤50nm) and enhance the
               absorption of chitinous vaccine through negative pressure osmosis.</li>
             <li>
-              Low damage sorting: integrated flexible vibrating screen (frequency ≤10Hz), the sorting damage rate can
+              <strong style="color:#9c7b3f;">Low damage sorting:</strong> integrated flexible vibrating screen (frequency ≤10Hz), the sorting damage rate can
               be controlled below 0.1%. </li>
           </ul>
           <h4>Deep sea aquaculture scenario</h4>
           <ul>
             <li>
-              Waves resistance design: The modular inoculation cabin can be carried on the deep-sea aquaculture
+              <strong style="color:#9c7b3f;">Waves resistance design:</strong> The modular inoculation cabin can be carried on the deep-sea aquaculture
               platform such as intelligent cage, aquaculture fence and aquaculture work boat, and can be operated
               offshore through wave energy drive.
             <li>
-              Vaccine cold chain: Develop a phase change material temperature control system (4-8℃ constant
+              <strong style="color:#9c7b3f;">Vaccine cold chain:</strong> Develop a phase change material temperature control system (4-8℃ constant
               temperature for 72 hours) to meet the needs of deep-sea transportation.</li>
           </ul>
 
@@ -523,10 +523,10 @@
           <h3>Multi-functional extension applications</h3>
           <ul>
             <li>
-              Seedling pre-treatment: Integrate the function of gene editing vector to realize the synergistic
+              <strong style="color:#9c7b3f;">Seedling pre-treatment:</strong> Integrate the function of gene editing vector to realize the synergistic
               regulation of immunity enhancement and stress resistance.
             <li>
-              Precise drug delivery: adapted to the slow-release technology of parasitic control drugs, reducing the
+              <strong style="color:#9c7b3f;">Precise drug delivery:</strong> adapted to the slow-release technology of parasitic control drugs, reducing the
               dosage by 50% in a single treatment.</li>
           </ul>
 
@@ -535,36 +535,36 @@
           <h4>Direct economic value</h4>
           <ul>
             <li>
-              Equipment sales: calculated according to the annual output of 200 units (unit price of 600,000 yuan),
+              <strong style="color:#9c7b3f;">Equipment sales:</strong> calculated according to the annual output of 200 units (unit price of 600,000 yuan),
               the output value reaches 120 million yuan.
             <li>
-              Service income: vaccine supporting and technical service fee is about 30 yuan / 10,000 animals, annual
+              <strong style="color:#9c7b3f;">Service income:</strong> vaccine supporting and technical service fee is about 30 yuan / 10,000 animals, annual
               processing of 1 billion animals can generate revenue of 30 million yuan.</li>
             <li>
-              Cost saving: The cost of single tail inoculation is reduced from 0.12 yuan in traditional injection to
+              <strong style="color:#9c7b3f;">Cost saving:</strong> The cost of single tail inoculation is reduced from 0.12 yuan in traditional injection to
               0.03 yuan, saving more than 200 million yuan of breeding cost annually.</li>
           </ul>
 
           <h4>Industrial chain pulling effect</h4>
           <ul>
             <li>
-              Vaccine industry: Promote the development of adjuvant, sustained-release carrier and other supporting
+              <strong style="color:#9c7b3f;">Vaccine industry:</strong> Promote the development of adjuvant, sustained-release carrier and other supporting
               technologies, which is expected to drive the market size of more than 2 billion yuan.
             <li>
-              Equipment manufacturing: Promote the localization of high-precision sensors, servo motors and other
+              <strong style="color:#9c7b3f;">Equipment manufacturing:</strong> Promote the localization of high-precision sensors, servo motors and other
               products to replace imports, and increase the replacement rate to 60%.</li>
           </ul>
 
           <h4>Social and ecological benefits</h4>
           <ul>
             <li>
-              Antibiotic reduction action: A set of equipment can reduce the annual use of antibiotics by more than
+              <strong style="color:#9c7b3f;">Antibiotic reduction action:</strong> A set of equipment can reduce the annual use of antibiotics by more than
               90% ,helping achieve the goal of reducing the use of antibiotics in aquaculture by 30% by 2025.
             <li>
-              Food safety: the risk of drug residues reduces, and the project is expected to increase the
+              <strong style="color:#9c7b3f;">Food safety:</strong> the risk of drug residues reduces, and the project is expected to increase the
               qualification rate of aquatic products from 97.5% to 99.8%.</li>
             <li>
-              Employment promotion: every 1,000 equipment operation and maintenance requirement can create 5,000 new
+              <strong style="color:#9c7b3f;">Employment promotion:</strong> every 1,000 equipment operation and maintenance requirement can create 5,000 new
               technical jobs, promoting rural industrial upgrading.</li>
           </ul>
         </section>

@@ -50,7 +50,7 @@ body {
             rgba(0, 0, 0, .12) 50%,
             rgba(0, 0, 0, .22) 75%,
             rgba(0, 0, 0, .30) 100%),
-        url("/static/upload/page/pagebackground1.png");
+        url("https://static.igem.wiki/teams/5972/uploads/page/pagebackground1.webp");
 
     background-size:
         100% 45%,
@@ -105,7 +105,7 @@ img {
     padding: 0 !important;
     margin-bottom: 50px !important;
     padding-top: -40px !important;
-    background: url("/static/upload/page/pagebackground2.png") no-repeat;
+    background: url("https://static.igem.wiki/teams/5972/uploads/page/pagebackground2.webp") no-repeat;
 }
 
 .layout {
@@ -314,7 +314,7 @@ ol {
     content: "";
     position: absolute;
     inset: 3%;
-    background: url("/static/upload/page/up.png") center/contain no-repeat;
+    background: url("https://static.igem.wiki/teams/5972/uploads/page/up.webp") center/contain no-repeat;
     border-radius: 50%;
     z-index: 2;
 }
@@ -324,7 +324,7 @@ ol {
     content: "";
     position: absolute;
     inset: 3%;
-    background: url("/static/upload/page/upsurround.png") center/contain no-repeat;
+    background: url("https://static.igem.wiki/teams/5972/uploads/page/upsurround.webp") center/contain no-repeat;
     border-radius: 50%;
     animation: spin 6s linear infinite;
     z-index: 1;

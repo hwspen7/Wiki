@@ -35,7 +35,7 @@
 }
 
 .project-links li::before {
-    content: url("/static/upload/header_subpage/teamsubyellow.svg");
+    content: url("https://static.igem.wiki/teams/5972/uploads/header-subpage/teamsubyellow.svg");
     display: inline-block;
     margin-right: 0px;
     vertical-align: middle;

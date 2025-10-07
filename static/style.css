@@ -123,7 +123,7 @@ header.bg-hero {
     display: none;
     z-index: 2000;
     background:
-        url("/static/upload/header_subpage/headersubback.png");
+        url("https://static.igem.wiki/teams/5972/uploads/header-subpage/headersubback.webp");
     background-size: 100% 1000px, 100% 1000px;
     background-position: center top, center top;
     background-repeat: no-repeat, no-repeat;
@@ -172,14 +172,14 @@ header.bg-hero {
     width: 22px;
     height: 20px;
     margin-right: 2px;
-    background: url("/static/upload/header/homewhite.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/homewhite.webp") no-repeat center/contain;
     position: relative;
     top: -1px;
     background-size: contain;
 }
 
 .home-link:hover::before {
-    background: url("/static/upload/header/homeyellow.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/homeyellow.webp") no-repeat center/contain;
     background-size: contain;
 }
 
@@ -193,12 +193,12 @@ header.bg-hero {
     margin-right: 2px;
     position: relative;
     top: -1px;
-    background: url("/static/upload/header/teamwhite.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/teamwhite.webp") no-repeat center/contain;
     background-size: contain;
 }
 
 .team-link:hover::before {
-    background: url("/static/upload/header/teamyellow.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/teamyellow.webp") no-repeat center/contain;
     background-size: contain;
 }
 
@@ -211,12 +211,12 @@ header.bg-hero {
     margin-right: 1px;
     position: relative;
     top: -1px;
-    background: url("/static/upload/header/projectwhite.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/projectwhite.webp") no-repeat center/contain;
     background-size: contain;
 }
 
 .project-link:hover::before {
-    background: url("/static/upload/header/projectyellow.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/projectyellow.webp") no-repeat center/contain;
     background-size: contain;
 }
 
@@ -228,12 +228,12 @@ header.bg-hero {
     margin-right: 1px;
     position: relative;
     top: -1px;
-    background: url("/static/upload/header/labwhite.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/labwhite.webp") no-repeat center/contain;
     background-size: contain;
 }
 
 .lab-link:hover::before {
-    background: url("/static/upload/header/labyellow.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/labyellow.webp") no-repeat center/contain;
     background-size: contain;
 }
 
@@ -244,12 +244,12 @@ header.bg-hero {
     height: 20px;
     position: relative;
     top: -2px;
-    background: url("/static/upload/header/humanwhite.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/humanwhite.webp") no-repeat center/contain;
     background-size: contain;
 }
 
 .human-practice-link:hover::before {
-    background: url("/static/upload/header/humanyellow.png") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/humanyellow.webp") no-repeat center/contain;
     background-size: contain;
 }
 
@@ -324,7 +324,7 @@ footer {
     max-width: 1920px;
     height: 236px;
     left: 1px;
-    background-image: url(../static/upload/footer/footerlogo.png), url(../static/upload/footer/footerbackground.png);
+    background-image: url(https://static.igem.wiki/teams/5972/uploads/footer/footerlogo.webp), url(https://static.igem.wiki/teams/5972/uploads/footer/footerbackground.webp);
     background-size: 213px 194px, cover;
     background-position: 11px -11px, bottom center;
     background-color: #E6AA27;
@@ -423,7 +423,7 @@ footer {
     right: -115px;
     width: 240px;
     height: 185px;
-    background: url(../static/upload/footer/fish.png) no-repeat center/contain;
+    background: url(https://static.igem.wiki/teams/5972/uploads/footer/fish.webp) no-repeat center/contain;
     z-index: 0;
     transform: rotate(60deg) scaleX(-1);
     pointer-events: none;

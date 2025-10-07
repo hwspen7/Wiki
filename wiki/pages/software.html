@@ -124,7 +124,7 @@
             hardware control to high-level intelligent applications, ultimately architecting an innovative software
             solution that is robust, powerful, and forward-looking.</p>
 
-          <img src="/static/upload/page/software/software1.png" alt="software1">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software1.webp" alt="software1">
           <p class="figurecaption">Figure 1</p>
         </section>
 
@@ -176,7 +176,7 @@
             intuitively grasping the device's operational status and the latest event list to ensure immediate
             situational awareness. For in-depth control, the software integrates four task-oriented, independent
             sub-menus (as shown in Figures 2):</p>
-          <img src="/static/upload/page/software/software2.png" alt="software2">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software2.webp" alt="software2">
           <p class="figurecaption">Figure 2</p>
 
 
@@ -226,7 +226,7 @@
             responsible for transforming raw image information into structured, decision-ready biological status data.
             The entire model is composed of a cascade of two stages: image pre-processing and the core perception
             network.</p>
-          <img class="formula" src="/static/upload/page/software/formula1.png" alt="formula1">
+          <img class="formula" src="https://static.igem.wiki/teams/5972/uploads/page/software/formula1.webp" alt="formula1">
           <p class="sub">I(x) is the observed hazy image, J(x) is the desired clear image, A is the global atmospheric
             light, and t(x) is the transmission map. Based on the prior assumption that "in most non-sky local regions,
             at least one color channel has some pixels with very low intensity," the algorithm can effectively estimate
@@ -252,11 +252,11 @@
             (AP) of 85.7%, a key metric for evaluating object detection performance.</p>
 
 
-          <img src="/static/upload/page/software/software3.png" alt="software3">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software3.webp" alt="software3">
           <p class="figurecaption">Figure 3</p>
-          <img src="/static/upload/page/software/software4.png" alt="software4">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software4.webp" alt="software4">
           <p class="figurecaption">Figure 4</p>
-          <img src="/static/upload/page/software/software5.png" alt="software5">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software5.webp" alt="software5">
           <p class="figurecaption">Figure 5</p>
 
           <h4>2. Core Perception Model & Performance Validation </h4>
@@ -269,7 +269,7 @@
             Tracking-by-Detection paradigm. To address the central challenge of associating detections in the current
             frame with existing historical trajectories, we first construct a cost matrix. The elements of this matrix
             are derived from the Intersection over Union (IoU), which is mathematically defined as:</p>
-          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula2.png" alt="formula2">
+          <img class="formula" style="height: 70px;" src="https://static.igem.wiki/teams/5972/uploads/page/software/formula2.webp" alt="formula2">
           <p class="sub">Subsequently, we employ a solver based on the Hungarian algorithm to find the globally optimal
             assignment for the cost matrix. This process matches each historical trajectory to a unique new detection
             with the minimum possible total cost, thereby maintaining identity consistency across frames.</p>
@@ -302,7 +302,7 @@
             intelligent control core. The table below presents the variables we need to control and their requirements.
           </p>
           <img class="formula" style="height: 210px; padding-bottom: 20px;"
-            src="/static/upload/page/software/formula3.png" alt="formula3">
+            src="https://static.igem.wiki/teams/5972/uploads/page/software/formula3.webp" alt="formula3">
 
           <h4>1. Temperature Control: A Hybrid Intelligent Strategy with Neural Networks and Feedforward Compensation:
           </h4>
@@ -330,19 +330,19 @@
             smoother, overshoot-free setpoint tracking without sacrificing disturbance rejection capability. Its control
             law is given by the following equation, where R(s) is the setpoint and Y(s) is the measured output:</p>
 
-          <img class="formula" style="height: 70px;" src="/static/upload/page/software/formula4.png" alt="formula4">
+          <img class="formula" style="height: 70px;" src="https://static.igem.wiki/teams/5972/uploads/page/software/formula4.webp" alt="formula4">
           <h4>3. Controller Parameter Tuning</h4>
           <p class="sub">To ensure optimal controller performance, we used the MOMI analytical method to obtain initial
             values for the PID parameters. This method is based on an open-loop step response, from which multiple
             integral areas Ai under the response curve are calculated. The PID parameters are then determined using the
             following formulas:</p>
 
-          <img class="formula" style="height: 240px;" src="/static/upload/page/software/formula5.png" alt="formula5">
+          <img class="formula" style="height: 240px;" src="https://static.igem.wiki/teams/5972/uploads/page/software/formula5.webp" alt="formula5">
 
           <p class="sub">The simulation architecture in Figure 5 clearly illustrates the complete closed-loop process of
             this multi-variable control system, including setpoint generation, parallel operation of multiple
             controllers, the reactor model, and signal feedback.</p>
-          <img src="/static/upload/page/software/software6.png" alt="software6">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/software/software6.webp" alt="software6">
           <p class="figurecaption">Figure 6</p>
           <div class="usage">
             <h4>Reference Files</h4>

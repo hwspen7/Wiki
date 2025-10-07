@@ -48,7 +48,7 @@
     height: 24px;
     margin-right: 6px;
     vertical-align: middle;
-    background: url("/static/upload/header_subpage/labsubyellow.svg") no-repeat center/contain;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header-subpage/labsubyellow.svg") no-repeat center/contain;
     flex-shrink: 0;
 }
 
