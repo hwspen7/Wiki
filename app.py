@@ -108,9 +108,9 @@ def software():
 
 # Human Practice
 # Practical Content
-@app.route("/practicalcontent")
+@app.route("/human-practices")
 def practicalcontent():
-    return render_template("pages/practicalcontent.html")
+    return render_template("pages/human-practices.html")
 
 # Education
 @app.route("/education")
