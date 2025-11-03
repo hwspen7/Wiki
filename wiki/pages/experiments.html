@@ -1,28 +1,496 @@
 {% extends "layout.html" %}
-  
-{% block title %}Experiments{% endblock %}
-{% block lead %}Describe the research, experiments, and protocols you used in your project. It is designed to provide sufficient information for other teams to replicate our work.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/wetlab.css') }}">
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What Should this Page Contain?</h2>
-    <hr />
-    <p>Provide comprehensive, step-by-step protocols for all experiments conducted. Include a list of materials, reagents, and equipment used. Specify concentrations, volumes, incubation times, temperatures, and other critical parameters. Document any modifications or optimizations made to standard protocols.</p>
-    <p>Explain the purpose of each experiment and its relevance to your project goals. Describe the experimental design, including controls and replicates. Provide a clear rationale for the chosen methods and approaches.</p>
-    <p>Document any troubleshooting steps taken and optimizations made during the experimental process. Share any lessons learned that could benefit future teams.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/heidelberg/experiments">2024 Heidelberg</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/experiments">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/epfl/experiments">2024 EPFL</a></li>
-      <li><a href="https://2023.igem.wiki/estonia-tuit/experiments">2023 Estonia-TUIT</a></li>
-    </ul>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>LAB</h3>
+    <h1>EXPERIMENTS</h1>
   </div>
 </div>
 
-{% endblock %}
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#protocol">PROTOCOL</a></li>
+            <li><a class="navlink" href="#parts">PARTS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：protoco -->
+        <section id="protoco">
+          <h1>Protocol</h1>
+          <h2>1. Plasmid Extraction (Using a Trial Kit)</h2>
+          <h3>1.1 Introduction</h3>
+          <p class="sub">Extract plasmid DNA from the bacteria.</p>
+
+          <h3>1.2 Materials</h3>
+          <p class="sub">TIANprep Mini Plasmid Kit</p>
+
+          <h3>1.3 Procedure</h3>
+          <ul>
+            <li>Take the overnight-cultured bacterial solution, centrifuge at 10,000×g for 1 minute, and discard the
+              supernatant (aspirate as much as possible). For large volumes of bacterial solution, centrifuge in
+              multiple batches to collect the bacterial pellet.</li>
+            <li>Add 500 μL of colorless Solution RB (containing RNase A) and vortex to resuspend the bacterial pellet;
+              no small bacterial clumps should remain.</li>
+            <li>Add 250 μL of blue Solution LB, gently invert and mix 4–6 times to fully lyse the bacteria, forming a
+              clear blue solution. A color change from translucent to clear blue indicates complete lysis (lysis time
+              should not exceed 5 minutes).</li>
+            <li>Add 750 μL of yellow Solution NB, gently mix 5–6 times (the color changes from blue to yellow
+              completely, indicating thorough mixing and neutralization) until a tight yellow aggregate is formed, and
+              let stand at room temperature for 2 minutes.</li>
+            <li>Centrifuge at 12,000×g for 5 minutes, carefully aspirate the supernatant and add it to a spin column.
+              Centrifuge at 12,000×g for 1 minute, and discard the flow-through. If the supernatant volume exceeds 800
+              μL, add it to the column in multiple batches, centrifuge as above, and discard the flow-through each time.
+            </li>
+            <li>Add 650 μL of Solution WB, centrifuge at 12,000×g for 1 minute, and discard the flow-through.</li>
+            <li>Centrifuge at 12,000×g for 1–2 minutes to completely remove residual WB.</li>
+            <li>Place the spin column in a clean centrifuge tube, add 30–50 μL of Elution Buffer (EB) or deionized water
+              (pH > 7.0) to the center of the column membrane, and let stand at room temperature for 1 minute.(Note:
+              Preheating EB or deionized water in a 60–70°C water bath improves elution efficiency).</li>
+            <li>Centrifuge at 10,000×g for 1 minute to elute DNA. Store the eluted DNA at -20°C.</li>
+          </ul>
+
+          <h2>2. PCR</h2>
+          <h3>2.1 Introduction</h3>
+          <p class="sub">A nucleic acid synthesis technique that utilizes the principle of DNA double-strand replication
+            to replicate specific DNA fragments outside of living organisms.</p>
+
+          <h3>2.2 Materials</h3>
+          <p class="figurecaption">Table 1 General PCR Reaction System</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table1.webp" alt="table1">
+
+
+          <h3>2.3 Program</h3>
+          <p class="figurecaption">Table 2 General PCR Reaction Program</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table2.webp" alt="table2">
+
+          <h2>3. DNA purification</h2>
+          <h3>3.1 Introduction</h3>
+          <p class="sub">A crucial step in molecular biology experiments in order to remove impurities such as primers,
+            dNTPs, and nonspecific amplification products in the PCR system, so as to avoid interference with subsequent
+            applications such as DNA sequencing, cloning, and restriction enzyme digestion.</p>
+          <h3>3.2 Materials</h3>
+          <p class="sub">TIANgel Purification Kit</p>
+
+          <h3>3.3 Procedure</h3>
+          <ol>
+            <li>Add 3 volumes of Buffer DP to the PCR tube containing the PCR product, vortex to mix, and centrifuge
+              briefly.</li>
+            <li>Transfer the mixture to a HiPure DNA column with a collection tube, and centrifuge at 12,000 rpm for 1
+              minute.</li>
+            <li>Discard the liquid, add 600 μL of Buffer DW2, and centrifuge at 12,000 rpm for 30 seconds.</li>
+            <li>Repeat step (3) once.</li>
+            <li>Discard the liquid, and centrifuge the column empty for 2 minutes.</li>
+            <li>After centrifugation, dry the column in a 65°C metal bath for 7–8 minutes to completely evaporate
+              ethanol.</li>
+            <li>Finally, add 20 μL of preheated ddH₂O to the column, let stand for 2 minutes, and centrifuge at 12,000
+              rpm for 2 minutes.</li>
+            <li>Re-aspirate the filtrate and pass it through the column again; repeat step (7).</li>
+            <li>Discard the collection tube. Determine the concentration of the purified product using a NanoDrop
+              instrument, and store it at 4°C for later use.</li>
+          </ol>
+
+          <h2>4. Agarose Gel Electrophoresis</h2>
+          <h3>4.1 Introduction</h3>
+          <p class="sub">An electrophoresis method that uses agar or agarose as the supporting medium. It's the standard
+            lab procedure for separating DNA by size.</p>
+
+          <h3>4.2 Materials</h3>
+          <h4>4.2.1 equipment</h4>
+          <p class="sub">electrophoresis tank, voltage source, well combs, microwave.</p>
+          <h4>4.2.2 reagent</h4>
+          <p class="sub">running buffer (1×TAE), agarose, 6×gel loading buffer, gelred gel dye.</p>
+
+          <h3>4.3 Procedure</h3>
+          <ol>
+            <li>Weigh the appropriate amount of agarose powder according to the desired concentration, mix the agarose
+              with the running buffer, and place in the microwave oven until the agarose is completely dissolved.</li>
+            <li>After cooling to about 50°C, add an appropriate amount of DNA dye and mix gently. Pour the solution into
+              the gel casting mold, insert the comb, and allow it to solidify (about 30 min).</li>
+            <li>Remove the gel, remove the comb, and place the gel in the electrophoresis tank, adding the running
+              buffer to ensure that the gel is completely submerged.Use a micropipette to carefully load the sample into
+              the wells of the gel.</li>
+            <li>Connect the electrophoresis apparatus, set the appropriate voltage to 140 volts, and start the
+              electrophoresis. The electrophoresis time varies depending on the size of the DNA fragment and gel
+              concentration, typically ranging from 30 minutes to 2 hours.</li>
+          </ol>
+
+          <h2>5. Gel Extraction</h2>
+          <h3>5.1 Introduction</h3>
+          <p class="sub">A standard step used to recover DNA fragments separated by electrophoresis in agarose gel.</p>
+          <h3>5.2 Materials</h3>
+          <p class="sub">TIANgel Purification Kit.</p>
+          <h3>5.3 Procedure</h3>
+          <ol>
+            <li>First, perform 1% agarose gel electrophoresis to separate the target fragment. Under UV light, cut the
+              gel block corresponding to the target fragment and place it in a 1.5 mL EP tube.</li>
+            <li>Weigh the gel block, add an appropriate volume of Buffer GDP according to the corresponding ratio, and
+              melt the gel in a 55°C metal bath.</li>
+            <li>After the gel is completely melted, centrifuge briefly to collect droplets on the tube wall. Assemble
+              the HiPure DNA Mini Column, transfer all the solution to the column, and centrifuge at 12,000 rpm for 1
+              minute.</li>
+            <li>Discard the filtrate, reattach the column to the collection tube, add 300 μL of Buffer GDP, let stand,
+              and centrifuge at 12,000 rpm for 1 minute.</li>
+            <li>Discard the filtrate, reattach the column to the collection tube, add 600 μL of Buffer DW2, and
+              centrifuge at 12,000 rpm for 1 minute.</li>
+            <li>Repeat step (5) once.</li>
+            <li>Discard the filtrate, and centrifuge the column empty for 2 minutes.</li>
+            <li>After centrifugation, dry the column in a 65°C metal bath for 7–8 minutes. Add 25 μL of ddH₂O to the
+              center of the column, let stand for 2 minutes, and centrifuge at 12,000 rpm for 2 minutes.</li>
+            <li>Re-aspirate the filtrate and pass it through the column again; repeat step (8).</li>
+            <li>Discard the collection tube. Determine the concentration of the gel-extracted product using a NanoDrop
+              instrument, and store it at 4°C for later use.</li>
+          </ol>
+
+          <h2>6. Gibson Assembly</h2>
+          <h3>6.1 Introduction</h3>
+          <p class="sub">A molecular biology technique used for the seamless joining of multiple DNA fragments in a
+            single reaction without the need for restriction enzymes or DNA ligases.</p>
+          <h3>6.2 Materials</h3>
+          <p class="sub">DNA fragments to be assembled, 2×MultiF Seamless Assembly Mix, Sterile and nuclease-free water.
+          </p>
+          <h3>6.3 Procedure</h3>
+          <ul>
+            <li>Mix the purified target fragment and plasmid backbone (0.03 pmol) at a molar ratio of 3:1.</li>
+            <li>Add ddH2O up to 20 μL.</li>
+            <li>Ligate at 50°C for 15 minutes to obtain the ligation product.</li>
+          </ul>
+
+
+          <h2>7. Calcium transformation</h2>
+          <h3>7.1 Introduction</h3>
+          <p class="sub">A widely used method for introducing foreign DNA into bacterial cells. This technique exploits
+            the natural competence of bacteria to take up DNA from their environment, facilitated by calcium ions.</p>
+          <h3>7.2 Materials</h3>
+          <p class="sub">Gibson assembly product, BL21 competent cells, sterilized LB medium, antibiotics.</p>
+          <h3>7.3 Procedure</h3>
+          <ol>
+            <li>Take E. coli BL21 competent cells out of the -80°C refrigerator, and thaw on ice for 5–10 minutes.</li>
+            <li>Add 10 μL of Gibson assembly product to 100 μL of BL21, gently tap the bottom of the tube 2–3 times, and
+              incubate on ice for 30 minutes.</li>
+            <li>After ice incubation, heat-shock in a 42°C water bath for 90 seconds.</li>
+            <li>Immediately transfer to ice for 2 minutes after heat shock.</li>
+            <li>In a biosafety cabinet, add 900 μL of LB medium, and incubate in a 37°C shaker for 45 minutes to 1 hour.
+            </li>
+            <li>After incubation, centrifuge at 5000×g for 1 minute, aspirate and discard approximately 900 μL of
+              supernatant. Resuspend the remaining ~100 μL bacterial solution, spread it on LB plates containing the
+              corresponding antibiotic, and incubate inverted in a 37°C incubator overnight.</li>
+          </ol>
+
+
+          <h2>8. Colony PCR</h2>
+          <h3>8.1 Introduction</h3>
+          <p class="sub">A commom way to verify if the transformation was successful, through specifically amplifying a
+            sequence which can only exist in recombinant plasmids. In this case, after electrophoresis, those colonies
+            with correct bands will turn out to have been successfully transformed, thus can be sequenced later.</p>
+          <h3>8.2 Materials</h3>
+          <p class="sub">2×Magic Green Taq SuperMix, primers, sterilized EP tubes, LB medium (containing the
+            corresponding antibiotic).</p>
+          <h3>8.3 Procedure</h3>
+          <p class="sub">1. In a biosafety cabinet, prepare a certain number of sterile EP tubes; add 200 μL of LB
+            medium (containing the corresponding antibiotic) to each tube.</p>
+          <p class="sub">2. Use a sterile white pipette tip to pick 12 single colonies from each plate, add them to the
+            pre-prepared medium, pipette to mix, seal the EP tubes with parafilm, and incubate in a 37°C shaker for more
+            than 2 hours.</p>
+          <p class="sub">3. Prepare the PCR system in the first well, and dispense it into the remaining 11 wells using
+            a multi-channel pipette:</p>
+          <p class="figurecaption">Table 3 Colony PCR Reaction System</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table3.webp" alt="table3">
+
+          <p class="sub">4. Perform colony PCR according to the following program:</p>
+          <p class="figurecaption">Table 4 Colony PCR Reaction Program</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table4.webp" alt="table4">
+          <p class="sub">5. After PCR, perform 1% agarose gel electrophoresis.</p>
+
+          <h2>9. IPTG induction expression</h2>
+          <h3>9.1 Introduction</h3>
+          <p class="sub">Express the protein controlled by Lac operon.</p>
+          <h3>9.2 Materials</h3>
+          <p class="sub">1 mol/L IPTG (Isopropyl β-D-1-thiogalactopyranoside), sterilized LB medium, antibiotics.</p>
+          <h3>9.3 Procedure</h3>
+          <ol>
+            <li>Inoculate 50 μL of the overnight-cultured seed solution into a vial containing 7 mL of LB medium (with
+              corresponding antibiotics), and culture with shaking at 37°C, 220 rpm.</li>
+            <li>Starting from 2 hours after inoculation, monitor the OD₆₀₀ of the bacterial solution every 30 minutes
+              using a spectrophotometer. Calibrate with 2 mL of deionized water; mix 500 μL of bacterial solution with
+              1.5 mL of deionized water for measurement (4× dilution). Culture until the OD₆₀₀ of the bacterial solution
+              reaches 0.6–0.8.</li>
+            <li>Add 1 mM IPTG, and culture with shaking at 37°C, 220 rpm for 3 hours.</li>
+          </ol>
+
+          <h2>10. Light induction expression</h2>
+          <h3>10.1 Introduction</h3>
+          <p class="sub">Express the protein controlled by special photosensitive promoters.</p>
+          <h3>10.2 Materials</h3>
+          <p class="sub">Light of a speific wavelength (specialized flashlight), Petri dishes, Erlenmeyer flasks,
+            sterilized LB medium, corresponding antibiotics, spectrophotometer, aluminum foil.</p>
+          <h3>10.3 Procedure</h3>
+          <h4>10.3.1 Green Light Induction</h4>
+          <ol>
+            <li>Aspirate 100 μL of the corresponding bacterial solution and inoculate it into 10 mL of LB medium
+              (supplemented with corresponding antibiotics), followed by shaking culture at 37°C and 220 rpm.</li>
+            <li>Starting from 2 hours after inoculation, monitor the OD₆₀₀ of the bacterial solution every 30 minutes
+              using a spectrophotometer. It was speculated that the slow growth of the engineered strain was due to low
+              viability caused by prolonged storage of the bacterial solution or toxicity from dual resistance. The
+              OD₆₀₀ of the bacterial solution reached 0.6–0.8 after approximately 5 hours of culture.</li>
+            <li>Dispense the remaining bacterial solution into two Petri dishes (with a specific diameter). One dish was
+              set as the light group (induced with a green flashlight for 6 hours), and the other as the non-light group
+              (wrapped with aluminum foil for light protection). Both groups were cultured in a 37°C incubator.</li>
+            <li>For shaking culture occasion, the remaining bacterial solution was distributed into two Erlenmeyer
+              flasks (or disposable shaking flasks), also, with one set as the light group and the other as the
+              non-light group. The former was illuminated by a green flashlight and shaking cultured at a 37°C shaker,
+              while the latter was placed in another dark 37°C shaker.</li>
+          </ol>
+
+          <h4>10.3.2 Blue Light Induction</h4>
+          <p class="sub">The same as above, only changing the flashlight into blue.</p>
+
+          <h2>11. Culture collection</h2>
+          <h3>11.1 Introduction</h3>
+          <p class="sub">The technique of maintaining the vitality and genetic characteristics of microbial strains.
+            </h3>
+          <h3>11.2 Materials</h3>
+          <p class="sub">Glycerin, saline water, bacterial solution.</p>
+          <h3>11.3 Procedure</h3>
+          <ol>
+            <li>Mix glycerin and saline in a 1:1 ratio to form a glycerin solution with a final concentration of 50%.
+            </li>
+            <li>When used, mix according to the ratio of 50% glycerin: bacterial liquid =1:1, so that the final glycerin
+              concentration is 20-30%.</li>
+            <li>Transfer the glycerin strains to the refrigerator at -20℃ and store for a long time.</li>
+          </ol>
+
+          <h2>12. Bacterial Harvesting and WB Sample Preparation</h2>
+          <h3>12.1 Materials</h3>
+          <p class="sub">1×PBS (pH 7.4), 5×protein loading buffer.</h3>
+          <h3>12.2 Procedure</h3>
+          <ol>
+            <li>Harvest the bacteria: Take 2 mL of the bacterial solution, centrifuge at 8000×g for 2 minutes, and
+              discard the supernatant.</li>
+            <li>Add 1 mL of PBS to the EP tube, resuspend and mix well, then centrifuge at 8000×g for 2 minutes and
+              discard the supernatant. Repeat the washing step 3 times.</li>
+            <li>Add 800 μL of PBS to the EP tube, resuspend and mix well.(4) Take 100 μL of the above bacterial
+              solution, mix it with 900 μL of PBS, and add the mixture to a cuvette for OD measurement. (The
+              spectrophotometer should be preheated in advance; calibrate with 1 mL of PBS before measurement. The OD
+              value measured at this time is for the 10× diluted sample).</li>
+            <li>Take 100 μL of the above bacterial solution, mix it with 900 μL of PBS, and add the mixture to a cuvette
+              for OD measurement. (The spectrophotometer should be preheated in advance; calibrate with 1 mL of PBS
+              before measurement. The OD value measured at this time is for the 10× diluted sample).</li>
+            <li>Determine the final diluted OD value based on the measured OD. An OD value of 1.5 was used in this
+              experiment. Take 500 μL of the bacterial solution from Step (3), and calculate the volume of PBS required
+              for dilution to adjust the OD of the diluted sample to 1.5.</li>
+            <li>Take 80 μL of the above sample solution, add it to a new EP tube, mix it with 20 μL of loading buffer
+              using a vortex mixer, and briefly centrifuge with a microcentrifuge to collect the liquid on the tube
+              wall.</li>
+            <li>Preheat a boiling water bath. Once the water boils, place the EP tube on a floating plate and boil for
+              10 minutes. Store the sample at -20°C for later use.</li>
+          </ol>
+
+          <h2>13. SDS-PAGE & Western blotting</h2>
+          <h3>13.1 Introduction</h3>
+          <p class="sub">Western immunoblotting is a method of transferring a protein to a membrane and then using
+            antibodies for detection. Western Blot uses polyacrylamide gel electrophoresis. The subject is a protein,
+            the probe is an antibody, and the color rendering uses a labeled secondary antibody. The protein sample
+            separated by PAGE is transferred to a solid-phase carrier (such as nitrocellulose film-pvdf). The
+            solid-phase carrier adsorbs the protein in the form of a non-covalent bond, and can keep the type of
+            polypeptide separated by electrophoresis and its biological activity unchanged. The protein or polypeptide
+            on the solid-phase carrier is used as the antigen, and the corresponding antibody is immunologically
+            reacted, and then the enzyme or isotope-labeled second antibody is reacted, and the substrate is
+            color-developed or radioautoextended to detect the protein component of the specific target gene expression
+            isolated by electrophoresis. This technology is also widely used to detect the expression of protein levels.
+          </p>
+          <h3>13.2 Procedure</h3>
+          <ol>
+            <li>Prepare WB samples from the induced bacterial solutions.</li>
+            <li>Take out the precast 12% SDS-PAGE gel cassette (or self-made gels, with detailed preparation method in
+              13.3), place the long plate facing outward (placing the short plate outward will cause an open circuit),
+              and fix it with a clamp. Pour an appropriate amount of MOPS electrophoresis buffer between the two plates;
+              after confirming no leakage, place the cassette into the electrophoresis tank.</li>
+            <li>Pull out the comb, and pour MOPS electrophoresis buffer into the gap between the plates until the liquid
+              level inside the plates is slightly higher than that outside (otherwise, no potential difference can be
+              formed). Load 7.5 μL of sample into each well, use a tricolor pre-stained protein molecular weight marker
+              as the marker, and run electrophoresis at 120 V for 50 minutes.</li>
+            <li>After electrophoresis, check if the marker bands are fully separated. Pry open the plastic plates to
+              take out the gel, cut off the required part, soak the gel in electrotransfer buffer, and cut a PVDF
+              membrane and filter papers of appropriate size.</li>
+            <li>Soak the PVDF membrane in absolute methanol for 30 seconds first, then transfer it to electrotransfer
+              buffer and soak for 2 minutes. Take out the sandwich electrotransfer clamp, and arrange the components in
+              the order of "black plate → sponge → filter paper → gel → PVDF membrane → filter paper → sponge → red
+              plate" before placing it into the electrophoresis tank.</li>
+            <li>Pour 1000 mL of electrotransfer buffer into the tank, place the electrophoresis tank in an ice box, and
+              perform electrotransfer at 100 V for 1.5 hours.</li>
+            <li>Preparation of 20×PBS-T: Mix one package of PBS powder (which should be dissolved in 2000 mL of
+              deionized water) with 100 mL of deionized water, then add 1 mL of Tween.</li>
+            <li>Preparation of blocking solution: 10% non-fat milk powder dissolved in PBS-T. (Add 5 g of non-fat milk
+              powder to 50 mL of 1×PBS-T, mix well in a centrifuge tube; store at -20°C if not used immediately).</li>
+            <li>Place the PVDF membrane into the blocking solution and incubate at room temperature for 2 hours.</li>
+            <li>Primary antibody incubation: Dilute the primary antibody in blocking solution at a ratio of 1:1000 (10
+              μL of mouse-derived primary antibody diluted in 10 mL of blocking solution). Transfer the PVDF membrane to
+              the primary antibody dilution and incubate overnight at 4°C.</li>
+            <li>After primary antibody incubation, wash the membrane with PBS-T 3 times, 10 minutes each time.</li>
+            <li>Secondary antibody incubation: Dilute the secondary antibody in blocking solution at a ratio of 1:1000
+              (10 μL of goat anti-mouse secondary antibody diluted in 10 mL of blocking solution). Transfer the PVDF
+              membrane to the secondary antibody dilution and incubate at 37°C and 75 rpm for 1 hour.</li>
+            <li>After secondary antibody incubation, wash the PVDF membrane with PBS-T 3 times, 10 minutes each time.
+            </li>
+            <li>Aspirate 1 mL of ECL FemtoLight Substrate and 1 mL of ECL FemtoLight Oxidant, mix them well to prepare
+              the developing solution. Blot the residual liquid on the PVDF membrane with filter paper, then perform
+              development and photography.</li>
+          </ol>
+
+          <h3>13.3 Preparation of SDS-PAGE Gel</h3>
+          <ol>
+            <li>Take out the matching glass plates, wash them with tap water, and rinse with deionized water.</li>
+            <li>Place the long plate inward and the short plate outward, align them, clamp them in a holder, and fix the
+              holder vertically on a rack. Pour deionized water to check for leakage; if the liquid level does not drop,
+              it indicates no leakage. Pour off the deionized water and blot the residual water with filter paper.</li>
+            <li>Preparation of separating gel: For a gel thickness of 1 mm, add 2.7 mL of separating gel solution, 2.7
+              mL of separating gel buffer, and finally 60 μL of modified coagulant. Mix well, use a pipette to add the
+              mixture between the glass plates until the liquid level reaches below the white crossbar. Then fill the
+              gap with isopropanol. Let it stand for about 30 minutes to solidify.</li>
+            <li>After the separating gel solidifies, pour off the isopropanol and blot the residual liquid with filter
+              paper.</li>
+            <li>Preparation of stacking gel: For a gel thickness of 1 mm, add 0.75 mL of stacking gel solution, 0.75 mL
+              of stacking gel buffer, and finally 15 μL of modified coagulant. Mix well, use a pipette to add the
+              mixture between the glass plates until the liquid level is slightly lower than the top of the glass
+              plates. Insert a comb immediately to ensure the liquid fills the gaps without forming air bubbles. Let it
+              stand for about 40 minutes to solidify.</li>
+            <li>Pull out the comb, remove the gel cassette, add an appropriate amount of deionized water to keep it
+              moist, wrap it with plastic wrap, and store it in a 4°C refrigerator for later use.</li>
+          </ol>
+
+          <!-- 14 -->
+          <h2>14. Configuration of culture medium</h2>
+          <h3>14.1 Introduction</h3>
+          <p class="sub">Medium refers to a nutrient matrix formulated from a combination of different nutrients that
+            supplies microorganisms, plants, or animals (or tissues) for growth and reproduction. Generally, it contains
+            several types of substances such as carbohydrates, nitrogen-containing substances, inorganic salts
+            (including trace elements), vitamins, and water. Media vary in its function, configuration and application,
+            where the use of a medium is generally achieved by changing its configuration.</p>
+          <h3>14.2 Materials</h3>
+          <p class="sub">Tryptone, yeast extract, NaCl, deionized water, agar.</p>
+          <h3>14.3 Procedure</h3>
+          <h4>14.3.1 LB liquid medium</h4>
+          <ol>
+            <li>Weigh 10 g tryptone, 5 g yeast extract, and 10 g sodium chloride.</li>
+            <li>Add about 800 mL of deionized water, stir thoroughly to dissolve.</li>
+            <li>Add deionized water to bulk the medium to 1 L.</li>
+            <li>Sterilize at 115°C for 25 minutes (or 121°C for 20 minutes).</li>
+          </ol>
+          <h4>14.3.2 LB solid medium</h4>
+          <p class="sub">The same as liquid medium, with 2% (w/v) agar powder added as a coagulant before sterilization.
+          </p>
+          <h4>14.3.3 LB semi-solid medium</h4>
+          <p class="sub">The same as liquid medium, with 0.25% (w/v) agar powder added as a coagulant before
+            sterilization.</p>
+
+          <!-- 15 -->
+          <h2>15. Bacteria Motility Verification</h2>
+          <h3>15.1 Introduction</h3>
+          <p class="sub">Visualize the diffusion ability of an engineered bacteria through semi-solid medium.</p>
+          <h3>15.2 Materials</h3>
+          <p class="sub">LB semi-solid medium, corresponding antibiotics.</p>
+          <h3>15.3 Procedure</h3>
+          <h4>15.3.1 Original method</h4>
+          <ol>
+            <li>Heat and melt the LB semi-solid medium, cool to approximately 55°C, add corresponding antibiotic, pour
+              into petri dishes with an inner diameter of 6 cm, and let stand in a biosafety cabinet with air flow until
+              the medium solidifies completely.</li>
+            <li>Take 2 μL of the induced bacterial solution, carefully spot it on the center of the prepared semi-solid
+              LB medium plate (avoid piercing the medium surface), and set up 3 biological replicates for each group.
+            </li>
+            <li>Incubate upright at 37°C for 15 hours, observe, and take photos.</li>
+          </ol>
+          <h4>15.3.2 Optimized approach</h4>
+          <p class="sub">Basically the same in operation details as above, with the order of induction and inoculation
+            changed. The bacterial solution (before induction) was spot on the center of the prepared semi-solid LB
+            medium plate first. Then the plate was induced using a flashlight with a specific wavelength.</p>
+
+
+          <!-- 16 -->
+          <h2>16. Multi-Mode Microplate Reader Detection</h2>
+          <h3>16.1 Introduction</h3>
+          <p class="sub">To detect the flurorescent intensity of the engineered bacteria after being induced in contrast
+            to that without induction.</p>
+          <h3>16.2 Procedure</h3>
+          <ol>
+            <li>After harvesting the bacteria, wash them with pure water 3 times, and dilute the bacterial solution to
+              an OD value of 1 for later use.</li>
+            <li>Use a BioTek multi-mode microplate reader: First, turn on the instrument for self-test. Open the Gen 5
+              software, select "Immediate Detection", choose "Fluorescence Detection" as the detection method, and set
+              the optical component type to "Monochromator".</li>
+            <li>Select 488 nm as the excitation wavelength and 509 nm as the emission wavelength, with the optical
+              component position set to "Bottom".</li>
+            <li>Use a black microplate: First detect the empty plate, then load pure water, and samples induced for 0
+              hour, 3 hours, and 6 hours at 100 μL per well. Set up 3 biological replicates for each group.</li>
+            <li>Download the data and compare the fluorescence intensity using relative fluorescence intensity.</li>
+          </ol>
+
+          <!-- 17 -->
+          <h2>17. Microscopic Observation</h2>
+          <h3>17.1 Introduction</h3>
+          <p class="sub">See and record the movement and motion situation of the engineered bacteria based on ordinary
+            optics microscopy through 100×oil immersion lens, with a total magnification ratio of 1000×.</p>
+          <h3>17.2 Materials</h3>
+          <p class="sub">Glass slides, coverslips, ordinary optics microscope.</p>
+          <h3>17.3 Procedure</h3>
+          <ol>
+            <li>Wash the fresh bacterial solution with pure water 3 times, and take out clean glass slides and
+              coverslips.</li>
+            <li>Use a pipette to aspirate 1 μL of the bacterial solution, drop it onto a glass slide, cover with a
+              coverslip, and observe under a microscope with a 40×objective lens.</li>
+            <li>Before using a 100×oil immersion objective, drop cedar oil onto the coverslip. After finding the field
+              of view, take photos and record videos using Image J software.</li>
+          </ol>
+
+        </section>
+
+        <!-- ID：parts -->
+        <section id="parts">
+          <h1>Parts</h1>
+          <h3>1. Introduction</h3>
+          <p class="sub">For us, the Parts in iGEM are the "cornerstone" of our project—from building the genetic circuit for light-controlled bacterial movement to ensuring the stable function of vaccine strains, all rely on standardized and highly active parts. We not only strictly screen and verify parts to ensure experimental efficiency, but also optimize and submit new parts to the Registry, which not only lays a solid foundation for our own project, but also contributes to the shared collaboration of global synthetic biology.</p>
+
+          <h3>2. Basic parts</h3>
+          <p class="figurecaption">Table 1 Previously Published Basic Parts Used in This Study</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table5.webp" alt="table5">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table6.webp" alt="table6">
+
+          <p class="figurecaption">Table 2 Basic Parts Uploaded in This Study</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table7.webp" alt="table7">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table8.webp" alt="table8">
+
+          <p class="sub">Composite parts</p>
+          <p class="figurecaption">Table 3 Composite Parts Uploaded in This Study</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table9.webp" alt="table9">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table14.webp" alt="table10">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table12.webp" alt="table11">
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/experiments/table13.webp" alt="table11">
+        </section>
+
+          <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

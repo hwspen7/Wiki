@@ -1,34 +1,155 @@
 {% extends "layout.html" %}
-  
-{% block title %}Contribution{% endblock %}
-{% block lead %}Make a useful contribution for future iGEM teams and document it on this page.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/project.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Make a useful contribution for future iGEM teams and document it on this page.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/medals">Medals page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>PROJECT</h3>
+    <h1>CONTRIBUTION</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>What Should this Page Contain?</h2>
-    <hr />
-    <p>Teams must document their contribution and explain why their effort is a contribution to fellow iGEMers. There is no single definition of what a contribution should be. We invite teams to be creative and generous in the knowledge, data or tools they may provide to the community.</p>
-    <p>A few examples of contributions are:</p>
-    <ul>
-      <li>Creating a new BioBrick part or significantly improving an existing one in the iGEM Registry.</li>
-      <li>Developing software, tools, or resources that can considerably assist future iGEM teams.</li>
-      <li>Sharing optimized protocols, experimental techniques, or methodologies.</li>
-      <li>Any other contributions that provide a clear benefit to future iGEM teams.</li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#contribution1">CONTRIBUTION <br>TO THE SOCIETY</a></li>
+            <li><a class="navlink" href="#contribution2">CONTRIBUTION <br>TO THE SCIENTIFIC <br>COMMUNITY</a></li>
+            <li><a class="navlink" href="#contribution3">SHARING OF <br> OUTPUT <br>RESULTS AND <br>POTENTIAL <br>
+                BENEFITS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <section id="contribution1">
+          <h1>Contribution to the Society</h1>
+          <h2>(1)Improving Aquaculture Efficiency and Sustainability</h2>
+          <p class="sub">
+            Through innovative vaccination technologies, this project significantly enhances the efficiency and
+            sustainability of aquaculture. Field research in Qinhuangdao's fisheries revealed bottlenecks in current
+            large-scale farming practices, particularly efficiency and cost challenges with traditional injection and
+            immersion methods. The automated injection system and continuous immersion inoculation technology developed
+            in this project effectively improve vaccination efficiency, reduce labor costs, and boost overall
+            aquaculture profitability.
+          </p>
+
+          <h2>(2)Ensuring the Quality and Safety of Aquatic Products</h2>
+          <p class="sub">
+            This initiative utilizes vaccination technology to reduce disease incidence in aquaculture animals and
+            decrease antibiotic usage, thereby enhancing the quality and safety of aquatic products. For instance,
+            Hainan Wanning Linlan Group has implemented vaccination techniques in Oriental Starfish farming, which has
+            significantly improved fish health and reduced disease transmission risks. This approach not only meets
+            consumers 'demand for healthy and safe aquatic products but also aligns with China's national food safety
+            strategy.
+          </p>
+
+          <h2>(3)Promoting Aquaculture Technology Innovation and Industrial Upgrading</h2>
+          <p class="sub">
+            This project fosters innovation and industrial upgrading in aquaculture through corporate partnerships. For
+            instance, collaboration with Linlan Group has not only enhanced breeding techniques for Oriental Starfish
+            (Orient Starfish) but also provided technical references for cultivating other high-value aquatic species.
+            Such partnerships enable enterprises to reduce operational risks, improve product quality, and strengthen
+            market competitiveness.
+          </p>
+
+
+          <h2>(4)Promoting Economic Growth and Employment</h2>
+          <p class="sub">
+            The implementation of this project will drive the development of related industries and create more job
+            opportunities. For instance, the research and application of vaccine technology require specialized
+            technical personnel and equipment support, which will boost industries such as smart device manufacturing
+            and biotechnology R&D. Meanwhile, efficient breeding techniques will enhance corporate profitability and
+            stimulate local economic growth.
+          </p>
+        </section>
+
+
+        <section id="contribution2">
+          <h1>Contribution to the Scientific Community</h1>
+          <h2>(1)Technical Optimization and Innovation</h2>
+          <p class="sub">
+            Through animal experiments on species such as the turbot, we have optimized vaccination techniques to
+            enhance vaccine utilization and immunization efficacy. For instance, in Qinhuangdao Fisheries' trials, our
+            continuous immersion inoculation method was found to significantly improve vaccine uniformity and
+            administration efficiency while reducing fish stress responses. The study also validated the effectiveness
+            of intelligent management systems in water quality monitoring and disease prevention, providing aquaculture
+            enterprises with a comprehensive smart solution.
+          </p>
+
+          <h2>(2)Data and Experience Accumulation</h2>
+          <p class="sub">
+            Animal experiments have accumulated extensive experimental data and practical experience, providing
+            scientific foundations for further development of vaccination technologies. For instance, in the experiment
+            conducted by Hainan Wanning Linlan Group, we collected immunological response data following vaccination
+            with the Oriental Star Spotted Fish vaccine, which served as crucial references for vaccine R&D
+            optimization. These data and insights not only enhance vaccine performance but also offer valuable lessons
+            for developing vaccines for other fish species.
+          </p>
+
+          <h2>(3)Market and Consumer Demand Satisfaction</h2>
+          <p class="sub">
+            Through strategic partnerships with enterprises, this initiative effectively addresses market demands and
+            consumer expectations for premium aquatic products. By implementing vaccination technologies to enhance
+            product quality and safety standards, it meets growing consumer needs for wholesome and secure seafood.
+            Furthermore, through technical collaborations, the project empowers businesses to elevate product
+            excellence, strengthen market competitiveness, and successfully meet the rising demand for high-value
+            aquatic products.
+          </p>
+
+        </section>
+
+
+        <section id="contribution3">
+          <h1>Sharing of Output Results and Potential Benefits</h1>
+          <h2>(1)Sharing with the Enterprise</h2>
+          <p class="sub">
+            The project's outcomes have been shared with multiple enterprises, including Qinhuangdao Fisheries and
+            Hainan Wanning Linlan Group. Through technical training, seminars, and field research, we have engaged in
+            in-depth exchanges and collaborations with companies regarding vaccination technologies and intelligent
+            management systems. For instance, during the training session at Hainan Wanning Linlan Group, we shared the
+            latest vaccination techniques to help optimize their vaccination processes and enhance breeding efficiency.
+            Additionally, through technical partnerships, we assisted the company in developing new vaccine products to
+            boost their market competitiveness.
+          </p>
+
+          <h2>(2)Sharing with the Scientific Community</h2>
+          <p class="sub">
+            The experimental data and research findings from this project will be shared with the scientific community
+            through academic papers, technical reports, and other publications. These achievements not only provide new
+            data and methodologies for fish immunology research but also offer valuable references for studies in
+            related fields. For instance, the optimized vaccination techniques and application effects of intelligent
+            management systems identified in our experiments will be published in academic papers, providing fresh
+            research perspectives and technical references for the scientific community.
+          </p>
+
+          <h2>(3)Sharing with the Social Sector</h2>
+          <p class="sub">
+            The outcomes of this project will also be shared with the social sector through technology promotion and
+            policy recommendations. For instance, we will conduct technology outreach activities to introduce the
+            advantages and application methods of vaccination techniques to more aquaculture enterprises and farmers,
+            thereby promoting the widespread adoption of these technologies.
+          </p>
+        </section>
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

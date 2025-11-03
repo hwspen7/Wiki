@@ -1,67 +1,197 @@
 {% extends "layout.html" %}
-
-{% block title %}Home{% endblock %}
-{% block lead %}<b>Your iGEM Journey Begins Here!</b> We wish you a successful and rewarding season!{% endblock %}
-
 {% block page_content %}
 
-<div class="row">
-  <div class="col">
-    <h2>Essential First Steps</h2>
-    <hr />
-    <p>Familiarize yourself with the official iGEM competition rules, policies, and judging criteria:</p>
-    <ul>
-      <li>Carefully review the <a href="https://competition.igem.org/deliverables/team-wiki" target="_blank">Wiki Requirements page</a> to ensure your wiki meets all necessary standards for judging and awards.</li>
-      <li>Understand the criteria and required wiki pages for Gold, Silver, and Bronze Medals on the <a href="https://competition.igem.org/judging/medals" target="_blank">Medals page</a>.</li>
-      <li>Explore the various Project Prizes and their corresponding wiki requirements on the <a href="https://competition.igem.org/judging/project-prizes" target="_blank">Project Prizes Page</a>.</li>
-      <li>Discover the eligibility criteria and wiki requirements for Special Prizes on the <a href="https://competition.igem.org/judging/special-prizes" target="_blank">Special Prizes Page</a>.</li>
-    </ul>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+
+<div class="container">
+  <!-- First Section -->
+  <div class="first-section">
+    <img class="fg-img" src="https://static.igem.wiki/teams/5972/uploads/home/wukonghome.webp" alt="wukonghome">
+    <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+      alt="delimeterlong">
+
+    <div class="wukong-text">
+      <p>A Phototactic Micro-Biohybrid Robotic System for <br> Precision Immersion Delivery of Engineered <br> Bacterial
+        Vaccines
+        in Aquaculture</p>
+    </div>
+  </div>
+
+
+  <!-- Second Section -->
+  <div class="second-section">
+    <div class="ocean-bg"></div>
+    <img src="https://static.igem.wiki/teams/5972/uploads/home/peoandfish.webp" alt="peoandfish" class="peoandfish">
+    <img src="https://static.igem.wiki/teams/5972/uploads/home/medicine.webp" alt="medicine" class="medicine">
+    <img src="https://static.igem.wiki/teams/5972/uploads/home/peoeatfish.webp" alt="peoeatfish" class="peoeatfish">
+    <div class="insert-circle part-1">
+      However, diseases have long represented one of the major risks in the aquaculture industry, causing direct global
+      economic losses exceeding USD 6 billion. Conventional prevention strategies, such as the use of antibiotics, pose
+      a serious threat to food safety
+    </div>
+    <div class="insert-circle part-2">
+      Marine aquaculture, as a strategic “blue granary” for securing the supply of high-quality protein, plays a vital
+      role in sustaining the livelihoods of hundreds of millions of people and in promoting the sustainable utilization
+      of marine resources
+    </div>
+    <div class="video-box-1">
+      <iframe src="https://video.igem.org/videos/embed/qDNHVcvL24P46gsXf2ww8J?autoplay=1&muted=1&controls=0&logo=0"
+        allow="autoplay; fullscreen" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        title="ECUST-China: video1 (2025) [English]" frameborder="0" scrolling="no">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Third Section -->
+  <div class="third-section">
+    <div class="title-1">
+      <p>OUR PROJECT AIMS <br>TO ACHIEVE</p>
+    </div>
+    <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+      alt="delimeterlong">
+    <div class="title-2">
+      <p>Vaccine robots and continuous immersion <br> vaccination</p>
+    </div>
+    <div class="two-columns">
+      <div class="left-card">
+        <img src="https://static.igem.wiki/teams/5972/uploads/home/vaccinations.webp" alt="vaccinations">
+      </div>
+      <div class="right-card">
+        <img src="https://static.igem.wiki/teams/5972/uploads/home/rightcard.webp" alt="rightcard">
+      </div>
+    </div>
+  </div>
+
+  <!-- Fourth Section -->
+  <div class="fourth-section">
+    <div class="title-1">
+      <p>THE ENLIGHTENMENT <br>OR SUN WUKONG</p>
+    </div>
+    <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+      alt="delimeterlong">
+    <div class="title-2">
+      <p>While struggling to find answers, we chanced upon Journey <br> to the West, where Sun Wukong seemed to <br>
+        leap right off the page</p>
+    </div>
+    <div class="video-box-2">
+      <iframe src="https://video.igem.org/videos/embed/fGxpPZosBed5ByTUdwr8eZ?autoplay=1&muted=1&controls=0&logo=0"
+        allow="autoplay; fullscreen" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        title="ECUST-China: video1 (2025) [English]" frameborder="0" scrolling="no">
+      </iframe>
+    </div>
+
+    <!-- Fifth Section -->
+    <div class="fifth-section">
+      <div class="title-1">
+        <p>THE GOLDEN <br>CUDCEL EXPANDS</p>
+      </div>
+      <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+        alt="delimeterlong">
+      <div class="video-box-3">
+        <iframe src="https://video.igem.org/videos/embed/98uFRaTgZtsPTZ43yaD8yf?autoplay=1&muted=1&controls=0&logo=0"
+          allow="autoplay; fullscreen" allowfullscreen
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+          title="ECUST-China: video1 (2025) [English]" frameborder="0" scrolling="no">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Sixth Section -->
+    <div class="sixth-section">
+      <div class="title-1">
+        <p>SUN WUKONG <br>SHRINKS</p>
+      </div>
+      <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimetershort.webp"
+        alt="delimeterlong">
+      <div class="title-2">
+        <p>This episode originates from Journey to the West, <br> in which Sun Wukong enters Princess Iron <br>Fan's
+          body to
+          obtain the Palm Leaf Fan</p>
+      </div>
+
+      <div class="video-box-3">
+        <iframe src="https://video.igem.org/videos/embed/dj2hZx8UKBWaMC2RUvr4RZ?autoplay=1&muted=1&controls=0&logo=0"
+          allow="autoplay; fullscreen" allowfullscreen
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+          title="ECUST-China: video1 (2025) [English]" frameborder="0" scrolling="no">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Eigth Section -->
+    <div class="eigth-section">
+      <div class="title-1">
+        <p>ENTER THE <br>LABORATORY</p>
+      </div>
+      <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+        alt="delimeterlong">
+
+      <div class="lab-button">
+        <a href="{{ url_for('design') }}"><img src="https://static.igem.wiki/teams/5972/uploads/home/enterlab.svg"
+            alt="Enter Lab Button"></a>
+
+      </div>
+
+      <div class="video-box-3">
+        <iframe src="https://video.igem.org/videos/embed/wE7GwGqkKWmkpUcRp87Ejd?autoplay=1&muted=1&controls=0&logo=0"
+          allow="autoplay; fullscreen" allowfullscreen
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+          title="ECUST-China: video1 (2025) [English]" frameborder="0" scrolling="no">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nitth Section -->
+  <div class="ninth-section">
+    <div class="title-1">
+      <p>THE EMERGENCE OF <br> Hardware</p>
+    </div>
+    <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+      alt="delimeterlong">
+
+    <div class="hardware-button">
+      <a href="{{ url_for('hardware') }}"><img src="https://static.igem.wiki/teams/5972/uploads/home/enterhardware.svg"
+          alt="Enter Lab Button"></a>
+    </div>
+
+    <div class="title-2">
+      <p>This episode originates from Journey to the West, <br> in which Sun Wukong enters Princess Iron <br>Fan's
+        body to
+        obtain the Palm Leaf Fan</p>
+    </div>
+    <img class="factory-farming" src="https://static.igem.wiki/teams/5972/uploads/home/factoryfarming.webp"
+      alt="factoryfarming">
+    <div class="part-3">
+      Meanwhile, through the integration of Internet of Things (IoT) and<br>automation technologies, an intelligent
+      continuous immersion vaccination system has been developed to significantly improve vaccination efficiency
+    </div>
+  </div>
+
+  <!-- Tenth Section -->
+  <div class="tenth-section">
+    <div class="title-1">
+      <p>WE DID IT</p>
+    </div>
+    <img class="delimeter-com" src="https://static.igem.wiki/teams/5972/uploads/home/delimeterlong.webp"
+      alt="delimeterlong">
+
+    <div class="result-button">
+      <a href="{{ url_for('results') }}"> <img src="https://static.igem.wiki/teams/5972/uploads/home/enterresult.svg"
+          alt="result"></a>
+    </div>
+
+  </div>
+
+  <div class="bottompage">
+    <img src="https://static.igem.wiki/teams/5972/uploads/home/home.webp" alt="bottompage">
   </div>
 </div>
-<div class="row mt-4">
-  <div class="col">
-    <h2>Building Your Wiki</h2>
-    <hr />
-    <ul>
-      <li><b>Content First, Design Second</b>: Focus on clearly documenting your project, research, and activities. Design can be refined later.</li>
-      <li><b>Navigation is Key</b>: Structure your wiki with clear and intuitive navigation. Visitors should easily find information.</li>
-      <li><b>Accessibility Matters</b>: Use readable fonts, appropriate color contrast, and ensure your wiki is mobile-friendly.</li>
-      <li><b>Media Optimization</b>: Compress images and videos to reduce file sizes and improve loading times.</li>
-      <li><b>Document Early & Often</b>: Start documenting your project from day one. Don't wait until the Wiki Freeze.</li>
-      <li><b>Prepare for Deadlines</b>: Stay up-to-date with important deadlines and events by checking the <a href="https://competition.igem.org/calendar" target="_blank">iGEM Competition Calendar</a>.</li>
-    </ul>
-  </div>
+
+
 </div>
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Tips for Success</h2>
-    <hr />
-    <ul>
-      <li><b>Clearly Define Your Project</b>: Explain your project's goals, methodology, and expected outcomes in a clear and concise manner.</li>
-      <li><b>Show Your Progress</b>: Regularly update your wiki with your team's progress, experiments, and results.</li>
-      <li><b>Engage Your Audience</b>: Consider your global audience and use language that is accessible to everyone.</li>
-      <li><b>Human Practices & Safety</b>: Thoroughly document your team's human practices activities and safety considerations.</li>
-      <li><b>Collaborate & Share</b>: Highlight collaborations with other teams and institutions.</li>
-      <li><b>Have Fun and Learn!</b> iGEM is a unique opportunity to learn, grow, and contribute to synthetic biology.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspiration</h2>
-    <hr />
-    <p>You can also view other team wikis for inspiration! Here are some examples:</p>
-    <ul>
-      <li><a href="https://2024.igem.wiki/ju-krakow">2024 JU-Krakow</a></li>
-      <li><a href="https://2024.igem.wiki/gems-taiwan">2024 GEMS-Taiwan</a></li>
-      <li><a href="https://2024.igem.wiki/heidelberg">2024 Heidelberg</a></li>
-      <li><a href="https://2024.igem.wiki/marburg">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/sydney-australia">2024 Sydney-Australia</a></li>
-      <li><a href="https://2024.igem.wiki/toulouse-insa-ups">2024 Toulouse-INSA-UPS</a></li>
-      <li><a href="https://2024.igem.wiki/bnds-china">2024 BNDS-China</a></li>
-      <li><a href="https://2024.igem.wiki/vilnius-lithuania">2024 Vilnius-Lithuania</a></li>
-      <li><a href="https://2024.igem.wiki/bnuzh-china">2024 BNUZH-China</a></li>
-      <li><a href="https://2024.igem.wiki/xmu-china">2024 XMU-China</a></li>
-    </ul>
-  </div>
-</div>
+
+<script src="https://static.igem.wiki/teams/5972/js/home.js"></script>
 
 {% endblock %}

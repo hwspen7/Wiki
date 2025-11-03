@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/project.css') }}">
+
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>PROJECT</h3>
+    <h1>SAFETY</h1>
+  </div>
+</div>
+
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#safety1">ANIMAL ORIGIN</a></li>
+            <li><a class="navlink" href="#safety2">PROFESSIONAL <br>SUPPORT TEAM</a></li>
+            <li><a class="navlink" href="#safety3">USE AND <br>MANAGEMENT OF <br>LABORATORY ANIMALS</a></li>
+            <li><a class="navlink" href="#safety4">COMPLIANCE WITH <br>INTERNATIONAL <br>REGULATIONS</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <section id="safety1">
+          <h1>Animal Origin</h1>
+          <h2>1.1Supplier selection</h2>
+          <p class="sub">
+            The Atlantic halibut (Scophthalmus maximus) used in this project will be sourced from certified aquaculture
+            suppliers with proven breeding records and robust animal health protocols, ensuring the availability of
+            healthy, disease-free laboratory specimens. Prior to procurement, we conduct thorough evaluations of
+            suppliers' farming environments, water quality management systems, and disease prevention measures to
+            guarantee that all purchased fish meet strict experimental requirements.
+          </p>
+
+          <h2>1.2Transport and adaptation</h2>
+          <p class="sub">
+            During fish transportation, we strictly adhere to animal welfare standards by using specialized equipment
+            and optimal conditions to ensure their health and safety throughout the journey. Upon arrival at the
+            laboratory, fish are given an acclimatization period to adapt to the environment. Throughout this phase, we
+            closely monitor their well-being to guarantee they are in peak condition before experimental procedures
+            commence.
+          </p>
+        </section>
+
+
+        <section id="safety2">
+          <h1>Professional Support Team</h1>
+          <h2>2.1Veterinary support</h2>
+          <p class="sub">
+            The project team is supported by professional veterinary experts. These veterinarians will be involved
+            throughout the entire process, including experimental design, animal health monitoring, and procedure
+            execution to ensure the welfare of laboratory animals. Regular health checkups will be conducted to promptly
+            identify and address potential health issues, guaranteeing smooth progress of all research activities.
+          </p>
+          <h2>2.2Animal Caregivers</h2>
+          <p class="sub">
+            The project team consists of experienced animal caretakers who have undergone professional training and are
+            well-versed in fish husbandry management and disease prevention. These professionals will oversee daily
+            operations including water quality monitoring, feed distribution, and environmental sanitation to ensure
+            experimental animals maintain proper living conditions.
+          </p>
+          <h2>2.3Ethical oversight</h2>
+          <p class="sub">
+            This project strictly adheres to animal experiment ethics principles by establishing an Ethics Supervision
+            Group responsible for monitoring animal welfare during experiments. The group will conduct regular reviews
+            of experimental protocols and procedures to ensure ethical use of laboratory animals, thereby minimizing
+            unnecessary animal usage and suffering.
+          </p>
+        </section>
+
+
+        <section id="safety3">
+          <h1>Use and Management of Laboratory Animals</h1>
+          <h2>3.1Minimize animal use</h2>
+          <p class="sub">
+            In our experimental design, we optimized the protocol and employed advanced statistical methods to minimize
+            animal usage. By fully utilizing data from each subject, we enhanced research efficiency. Through
+            preliminary experiments and literature reviews, we precisely calculated required animal quantities, ensuring
+            maximum reduction of animal use while meeting all experimental requirements.
+          </p>
+          <h2>3.1Minimize animal use</h2>
+          <p class="sub">
+            Throughout the experiment, we will strictly adhere to the "3R" principles (Replacement, Reduction,
+            Refinement) to ensure the welfare of laboratory animals. Their living environments will undergo regular
+            cleaning and disinfection to maintain hygiene and comfort. Additionally, we will provide suitable water
+            quality, temperature control, and lighting conditions to minimize stress responses in fish.
+          </p>
+        </section>
+
+
+        <section id="safety4">
+          <h1>Compliance with International Regulations</h1>
+          <p class="sub">
+            This project strictly complies with the relevant provisions of the Terrestrial Animal Health Code formulated
+            by the World Organization for Animal Health (OIE), especially Article 7.8.3, which clearly embodies the "3R"
+            principle.
+          </p>
+          <p class="sub">
+            In addition,Our project complies with the relevant provisions of the new EU Directive 2010/60/EC on the
+            protection of laboratory animals. The Directive specifies the 3Rs principles in Article 1 and emphasizes the
+            importance of laboratory animal welfare and ethical review in several clauses
+          </p>
+        </section>
+
+
+
+        <p class="sub"></p>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

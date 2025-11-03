@@ -22,9 +22,116 @@ def freeze():
 def serve():
     freezer.run()
 
+
+# Home
 @app.route('/')
 def home():
     return render_template('pages/home.html')
+
+# Team
+# Teammember
+@app.route("/teammember")
+def teammember():
+    return render_template("pages/teammember.html")
+
+# Attributions
+@app.route("/attributions")
+def attributions():
+    return render_template("pages/attributions.html")
+
+# Collaborations
+# Team
+@app.route("/collaborations")
+def collaborations():
+    return render_template("pages/collaborations.html")
+
+
+
+# Project
+# Project Description
+@app.route("/projectdescription")
+def projectdescription_view():
+    return render_template("pages/projectdescription.html")
+
+# Engineering
+@app.route("/engineering")
+def engineering():
+    return render_template("pages/engineering.html")
+
+# Contribution
+@app.route("/contribution")
+def contribution():
+    return render_template("pages/contribution.html")
+
+# Safety-Project
+@app.route("/safetyproject")
+def safetyproject():
+    return render_template("pages/safetyproject.html")
+
+
+
+# Lab
+# Design
+@app.route("/design")
+def design():
+    return render_template("pages/design.html")
+
+# Experiments
+@app.route("/experiments")
+def experiments():
+    return render_template("pages/experiments.html")
+
+# Notebook
+@app.route("/notebook")
+def notebook():
+    return render_template("pages/notebook.html")
+
+# Results
+@app.route("/results")
+def results():
+    return render_template("pages/results.html")
+
+# Model
+@app.route("/model")
+def model():
+    return render_template("pages/model.html")
+
+# Hardware
+@app.route("/hardware")
+def hardware():
+    return render_template("pages/hardware.html")
+
+# Software
+@app.route("/software")
+def software():
+    return render_template("pages/software.html")
+
+# Human Practice
+# Practical Content
+@app.route("/human-practices")
+def humanpractices():
+    return render_template("pages/human-practices.html")
+
+# Education
+@app.route("/education")
+def education():
+    return render_template("pages/education.html")
+
+# Safety
+@app.route("/safetyhuman")
+def safetyhuman():
+    return render_template("pages/safetyhuman.html")
+
+# Inclusivity
+@app.route("/inclusivity")
+def inclusivity():
+    return render_template("pages/inclusivity.html")
+
+# Sustainability
+@app.route("/sustainability")
+def sustainability():
+    return render_template("pages/sustainability.html")
+
 
 @app.route('/<page>')
 def pages(page):
@@ -32,4 +139,5 @@ def pages(page):
 
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    # Add port 8080
+    app.run(debug=True, use_reloader=True, port=8080) 

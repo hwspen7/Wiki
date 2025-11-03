@@ -1,18 +1,445 @@
-body { padding-top: 56px; }
-.left-aligned { margin-left: auto; }
-.bg-dark { background-color: #343a40 !important; }
-.bg-hero { background-color: #45b06cff; }
+/* Common */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+html,
+body,
+header {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header.bg-hero {
+    display: none !important;
+}
+
+
+/* Header Fonts */
+@font-face {
+    font-family: "Inknut Antiqua";
+    src: url("/static/fonts/InknutAntiqua-Regular.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Footer Fonts */
+@font-face {
+    font-family: "Agency FB";
+    src: url("/static/fonts/AGENCYR.TTF") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Agency FB";
+    src: url("/static/fonts/AGENCYB.TTF") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('/static/fonts/ABeeZee-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABeeZee';
+    src: url('/static/fonts/ABeeZee-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Header */
+.navbar .nav-link {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #EAF2FB;
+
+    display: flex;
+    align-items: center;
+    height: 94px;
+    line-height: 1;
+}
+
+.logo-wrapper {
+    position: relative;
+    width: 220px;
+    height: 120px;
+}
+
+.logo-left {
+    position: absolute;
+    top: 6px;
+    left: 6%;
+    width: 94px;
+    height: 94px;
+}
+
+.logo-right {
+    position: absolute;
+    top: 25px;
+    left: 35%;
+    width: 150px;
+    height: 75px;
+    z-index: 1;
+}
+
+
+.custom-navbar {
+    background: linear-gradient(90deg, #000000 35.1%, #142127 62.02%);
+    height: 94px;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    max-width: 1920px;
+    z-index: 3000;
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+
+/* Dropdown Menu */
+.mega-menu {
+    position: fixed;
+    top: 94px;
+    left: 50%;
+    width: 1440px;
+    height: 1024px;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 2000;
+    background:
+        url("https://static.igem.wiki/teams/5972/uploads/header-subpage/headersubback.webp");
+    background-size: 100% 1000px, 100% 1000px;
+    background-position: center top, center top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+/* Underline */
+.mega-trigger {
+    position: relative;
+    display: inline-block;
+}
+
+.mega-trigger::after {
+    content: "";
+    position: absolute;
+    bottom: 24px;
+    left: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #e6d3af;
+    transition: width 0.4s ease;
+}
+
+.mega-trigger:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu Style */
+.project-section {
+    position: relative;
+    padding: 40px;
+    color: #e6d3af;
+    font-family: 'Times New Roman', serif;
+    z-index: 1;
+}
+
+
+/* Navigator Section */
+.home-link {
+    display: flex;
+    align-items: center;
+}
+
+.home-link::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    margin-right: 2px;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/homewhite.webp") no-repeat center/contain;
+    position: relative;
+    top: -1px;
+    background-size: contain;
+}
+
+.home-link:hover::before {
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/homeyellow.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+
+
+.team-link::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/teamwhite.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.team-link:hover::before {
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/teamyellow.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+
+.project-link::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    margin-right: 1px;
+    position: relative;
+    top: -1px;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/projectwhite.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.project-link:hover::before {
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/projectyellow.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.lab-link::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    margin-right: 1px;
+    position: relative;
+    top: -1px;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/labwhite.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.lab-link:hover::before {
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/labyellow.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.human-practice-link::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/humanwhite.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.human-practice-link:hover::before {
+    background: url("https://static.igem.wiki/teams/5972/uploads/header/humanyellow.webp") no-repeat center/contain;
+    background-size: contain;
+}
+
+.nav-link:hover {
+    color: #FFF4D9;
+}
+
+
+/* Body Section */
+body {
+    padding-top: 56px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.left-aligned {
+    margin-left: auto;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.bg-hero {
+    background-color: #343a40;
+}
 
 /* CALLOUT */
-.bd-callout { padding:1.25rem; margin-top:1.25rem; margin-bottom:1.25rem; border:1px solid #e9ecef; border-left-width:.25rem; border-radius:.25rem }
-.bd-callout h4 { margin-bottom: 1.25rem }
-.bd-callout p:last-child { margin-bottom:0 }
-.bd-callout code { border-radius:.25rem }
-.bd-callout+.bd-callout { margin-top:-.25rem }
-.bd-callout-info { border-left-color:#5bc0de }
-.bd-callout-warning { border-left-color:#f0ad4e }
-.bd-callout-danger { border-left-color:#d9534f }
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid black;
+    border-left-width: .25rem;
+    border-radius: .25rem
+}
 
-/* footer */
-footer a { color: white; font-weight: bold; text-decoration: none; }
-footer a:hover { color: white; text-decoration: underline; }
+.bd-callout h4 {
+    margin-bottom: 1.25rem
+}
+
+.bd-callout p:last-child {
+    margin-bottom: 0
+}
+
+.bd-callout code {
+    border-radius: .25rem
+}
+
+.bd-callout+.bd-callout {
+    margin-top: -.25rem
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de
+}
+
+.bd-callout-warning {
+    border-left-color: #f0ad4e
+}
+
+.bd-callout-danger {
+    border-left-color: #d9534f
+}
+
+/* Footer */
+/* Background */
+footer {
+    width: 1440px;
+    max-width: 1920px;
+    height: 236px;
+    left: 1px;
+    background-image: url(https://static.igem.wiki/teams/5972/uploads/footer/footerlogo.webp), url(https://static.igem.wiki/teams/5972/uploads/footer/footerbackground.webp);
+    background-size: 213px 194px, cover;
+    background-position: 11px -11px, bottom center;
+    background-color: #E6AA27;
+    background-repeat: no-repeat, repeat;
+    margin: 0 auto;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.footer .license {
+    margin-top: -8px !important;
+    padding-top: 0px !important;
+}
+
+/* Left Part */
+.wukong-fish {
+    width: 315px;
+    height: 161px;
+    margin-left: 81px;
+    margin-top: 34px;
+    padding-right: 0 !important;
+}
+
+/* Middle Part */
+.schoolInfo {
+    margin-top: 33px;
+    margin-left: 53px;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: nowrap;
+    padding-bottom: 0;
+    max-width: 50px;
+    white-space: 1px;
+}
+
+.schoolInfo .middle-university {
+    margin-top: -25px;
+}
+
+.schoolInfo .middle-school {
+    margin-top: 10px;
+}
+
+.schoolInfo .schoolInfo-text {
+    font-family: "Agency FB", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.footer-logo {
+    height: 35px;
+    width: 67px;
+}
+
+/* Right Part */
+.contactInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 140px;
+    gap: 2px;
+    z-index: 999;
+}
+
+.contactInfo .contactInfo-text {
+    font-family: "Agency FB", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.contactInfo .wechat-icon,
+.contactInfo .bilibili-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+.contactInfo::after {
+    content: "";
+    position: absolute;
+    top: -82px;
+    right: -115px;
+    width: 240px;
+    height: 185px;
+    background: url(https://static.igem.wiki/teams/5972/uploads/footer/fish.webp) no-repeat center/contain;
+    z-index: 0;
+    transform: rotate(60deg) scaleX(-1);
+    pointer-events: none;
+}
+
+/* 留白 */
+.license {
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.license .col {
+    padding-top: 8px;
+}

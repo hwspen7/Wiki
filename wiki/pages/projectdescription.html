@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/project.css') }}">
+
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>PROJECT</h3>
+    <h1>DESCRIPTION</h1>
+  </div>
+</div>
+
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#description">DESCRIPTION</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：design -->
+        <section id="description">
+          <h1>Description</h1>
+          <!-- <h2>1.1 Research Background</h2> -->
+          <p class="sub">The "Sun Wukong" project,
+            led by the School of Bioengineering at East China
+            University of Science and Technology and jointly
+            conducted by student teams from multiple departments within the university,
+            aims to significantly reduce antibiotic dependence in aquaculture through innovative vaccine
+            technologies and intelligent vaccination systems, driving the industry's transition toward
+            sustainable development. Inspired by the character of Sun Wukong from China's classical novel
+            “Journey to the West”, the project transforms his "72 transformations" of adaptability
+            and breakthrough spirit into technical design concepts, demonstrating the deep integration
+            of traditional wisdom and modern technology. Technically, our team successfully developed a
+            novel vaccine delivery system responsive to specific light signals using gene editing technology.
+            This system utilizes a biomimetic vaccine robot to achieve targeted penetration of fish immune barriers
+            and precise activation of immune responses, thereby significantly enhancing disease resistance in fish.
+            Meanwhile, the automated immersion inoculation equipment adopts high-efficiency, non-destructive designs
+            to ensure high precision and scalability during inoculation, making it suitable for large-scale farming
+            scenarios. Currently, the project has completed application verification at multiple national aquaculture
+            demonstration bases. Practice has shown that this technological system effectively reduces
+            antibiotic usage and decreases disease outbreak frequency, while simultaneously raising public
+            awareness of aquatic disease prevention through cultural practices and science outreach activities.
+            The project's achievements provide innovative solutions for marine ecological protection and global
+            food security, showcasing the potential of interdisciplinary collaboration in addressing agricultural
+            challenges.</p>
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

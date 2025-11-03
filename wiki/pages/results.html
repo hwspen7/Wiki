@@ -1,44 +1,283 @@
 {% extends "layout.html" %}
-  
-{% block title %}Results{% endblock %}
-{% block lead %}Present the results of your project, along with a detailed analysis and discussion of their significance. Also outline future plans and reflections on the impact of your project.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/wetlab.css') }}">
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What Should this Page Contain?</h2>
-    <hr />
-    <ul>
-      <li>Clearly and objectively describe the results of your experiments and research.</li>
-      <li>Use tables, graphs, and images to visualize your data.</li>
-      <li>Discuss the implications of your findings in the context of your project goals.</li>
-      <li>Highlight any trends, patterns, or significant observations.</li>
-      <li>Include an analysis summary section to synthesize your findings and discuss their overall significance.</li>
-      <li>Outline your future plans for the project, including potential applications, further research, and development.</li>
-      <li>Explain what went wrong and what you learned from these experiences.</li>
-      <li>Discuss potential improvements or alternative approaches.</li>
-      <li>Emphasize the importance of scientific honesty and transparency.</li>
-    </ul>
-  </div>
-
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/heidelberg/results">2024 Heidelberg</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/results">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/epfl/results">2024 EPFL</a></li>
-      <li><a href="https://2024.igem.wiki/utoronto/results">2024 UToronto</a></li>
-      <li><a href="https://2024.igem.wiki/marburg/results">2024 Marburg</a></li>
-      <li><a href="https://2024.igem.wiki/sydney-australia/results">2024 Sydney-Australia</a></li>
-      <li><a href="https://2024.igem.wiki/toulouse-insa-ups/results">2024 Toulouse-INSA-UPS</a></li>
-      <li><a href="https://2024.igem.wiki/bnds-china/results">2024 BNDS-China</a></li>
-      <li><a href="https://2024.igem.wiki/vilnius-lithuania/results">2024 Vilnius-Lithuania</a></li>
-      <li><a href="https://2024.igem.wiki/xmu-china/results">2024 XMU-China</a></li>
-      <li><a href="https://2023.igem.wiki/estonia-tuit/results">2023 Estonia-TUIT</a></li>
-    </ul>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>LAB</h3>
+    <h1>RESULTS</h1>
   </div>
 </div>
 
-{% endblock %}
+
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#introduction">INTRODUCTION</a></li>
+            <li><a class="navlink" href="#section1">SECTION 1</a></li>
+            <li><a class="navlink" href="#section2">SECTION 2</a></li>
+            <li><a class="navlink" href="#section3">SECTION 3</a></li>
+            <li><a class="navlink" href="#section4">SECTION 4</a></li>
+            <li><a class="navlink" href="#section5">SECTION 5</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：introduction -->
+        <section id="introduction">
+          <h1>Introduction</h1>
+          <h2>1.1 Research Background</h2>
+          <p class="sub">In this project, we plan to use Escherichia coli as a substitute for Edwardsiella piscicida to
+            construct an engineered strain that exhibits linear movement under blue light and tumbling movement under
+            green light. We will further combine this engineered strain with a light irradiation device to achieve
+            precise control over the movement state of Escherichia coli, thereby enhancing the invasive ability of the
+            vaccine strain and improving the efficacy of immersion immunization. </p>
+
+          <p class="sub">At present, we have completed the construction of four groups of plasmids, which have been
+            introduced into Escherichia coli BL21 to construct engineered strains. We have verified that the target
+            proteins can be successfully expressed and initially tested their effects on the movement state of bacteria.
+          </p>
+        </section>
+
+        <!-- ID：section1 -->
+        <section id="section1">
+          <h1>Section 1: Plasmid Amplification and Reconstruction</h1>
+          <p class="sub">In this project, pBBR1MCS-5, pDawn, and pSR58.6 were used as vectors. The main target genes
+            included CheA, CheY, CheZ, and sfGFP. The electrophoresis results of the main fragments and vector backbones
+            used in this study are shown in the figure below.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results1.webp" alt="results1">
+          <p class="figurecaption">Figure 1 Electrophoresis Image of the CheA, CheY and CheZ Fragments</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results2.webp" alt="results2">
+          <p class="figurecaption">Figure 2 Electrophoresis Image of the sfGFP Fragment</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results3.webp" alt="results3">
+          <p class="figurecaption">Figure 3 Electrophoresis Image of the pBBR1MCS-5 Vector Backbone</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results4.webp" alt="results4">
+          <p class="figurecaption">Figure 4 Electrophoresis Image of the pDawn Vector Backbone</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results5.webp" alt="results5">
+          <p class="figurecaption">Figure 5 Electrophoresis Image of the pSR58.6 Vector Backbone</p>
+
+          <p class="sub">The aforementioned fragments and vector backbones were successfully assembled into the
+            recombinant plasmids listed in the table below using a seamless cloning method.</p>
+
+          <!-- Table 1 -->
+          <p class="figurecaption">Table 1 Main Plasmids Used in This Experiment</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/table1.webp" alt="table1">
+        </section>
+
+        <!-- ID：section2 -->
+        <section id="section2">
+          <h1>Section 2: Verification of Light-responsive Pathways</h1>
+          <p class="sub">Centered on constructing light-controlled E. coli BL21 engineered strains that move straight
+            under blue light and tumble under green light, this project relies on CheA, CheY, and CheZ proteins to
+            control bacterial movement. Western Blot and fluorescence detection are key experiments to verify protein
+            expression and regulation efficiency, laying the foundation for subsequent movement capability studies.</p>
+          <p class="sub">Western blot directly confirms whether target proteins are expressed: Using Flag-tagged
+            plasmids (e.g., BL21-pDawn-CheZ-Flag), it detects protein expression differences under light induction.
+            Results show blue light significantly increases CheZ expression, confirming the "light signal → target
+            protein expression" pathway works; weak bands in dark groups indicate minor basal expression, guiding
+            subsequent optimizations.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results6.webp" alt="results6">
+          <p class="figurecaption">Figure 6 WB Development Result Image of BL21-pDawn-CheZ-Flag</p>
+          <p class="sub">Under green light induction conditions, similar results were also observed. Taking
+            BL21-pSR43.6r&pSR58.6-CheA-Flag as an example:</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results7.webp" alt="results7">
+          <p class="figurecaption">Figure 7 WB Development Result Image of BL21-pDawn-CheZ-Flag</p>
+          <p class="sub">Fluorescence detection (with sfGFP as reporter gene) quantifies expression efficiency:
+            Experiments on BL21-pDawn-sfGFP and BL21-pSR43.6r&pSR58.6 show light boosts sfGFP expression in a
+            time-dependent manner, confirming inducible and quantifiable light-responsive pathways.</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results8.webp" alt="results8">
+          <p class="figurecaption">Figure 8 Relative Fluorescence Intensity of Bacterial Culture under Blue Light
+            Induction</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results9.webp" alt="results9">
+          <p class="figurecaption">Figure 9 Together, they verify the light-controlled expression system is functional,
+            ensuring
+            reliable attribution of subsequent movement experiment results to protein function rather than expression
+            errors.</p>
+        </section>
+
+        <!-- ID：section3 -->
+        <section id="section3">
+          <h1>Section 3:</h1>
+          <h2>Verification 1: Macroscopic Verification via Semi-Solid Medium Culture Assay</h2>
+          <p class="sub">To preliminarily verify the motility of the engineered strains, we designed a semi-solid medium
+            culture assay. Owing to its semi-solid nature, this medium exhibits both a certain degree of fluidity and
+            stability. Utilizing semi-solid medium to assess bacterial diffusive motility (i.e., motility test) enables
+            more intuitive observation of phenomena, making it a fundamental and crucial identification technique in
+            microbiology laboratories.</p>
+          <p class="sub">In our hypothesis, overexpression of the CheZ protein would dephosphorylate CheY-A, thereby
+            inhibiting the clockwise rotation of Escherichia coli (E. coli) flagella, weakening their tumbling motility,
+            and simultaneously promoting counterclockwise rotation to enhance their straight-line motility. The weakened
+            tumbling ability and strengthened straight-line motility of E. coli would manifest as enhanced diffusive
+            motility on semi-solid medium, possibly with an accelerated diffusion rate—specifically, forming larger
+            colony areas within the same time period.</p>
+
+          <p class="sub">To validate whether the effect of CheZ overexpression aligns with our hypothesized outcomes
+            under IPTG induction, we constructed the pBBR1-MCS-5-CheZ system.</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results10.webp" alt="results10">
+          <p class="figurecaption">Figure 10 Results of semi-solid medium culture for the pBBR1-MCS-5-CheZ system(From
+            left to right: Plates 1 and 3 are IPTG-induced groups; Plate 2 is the uninduced control group)</p>
+
+          <p class="sub">From the semi-solid culture results, the colonies in the two experimental groups (IPTG-induced)
+            were indeed larger than those in the middle control group (uninduced). This confirms that overexpression of
+            the CheZ protein can effectively promote the straight-line motility of E. coli.</p>
+          <p class="sub">Conversely, overexpression of the CheY protein or CheA protein (a phosphokinase) would increase
+            the production of CheY-A, thereby promoting the counterclockwise rotation of E. coli flagella, enhancing
+            their tumbling motility, and inhibiting clockwise rotation to weaken their straight-line motility. The
+            strengthened tumbling ability and weakened straight-line motility of E. coli would manifest as reduced
+            diffusive motility on semi-solid medium, possibly with a slower diffusion rate—specifically, forming smaller
+            bacterial lawn areas within the same time period. To verify whether the effects of CheY and CheA
+            overexpression match our hypothesized outcomes under IPTG induction, we further constructed the
+            pBBR1-MCS-5-CheY and pBBR1-MCS-5-CheA systems.</p>
+
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results11.webp" alt="results11">
+          <p class="figurecaption">Figure 11 Results of semi-solid medium culture for the pBBR1-MCS-5-CheY system(From
+            left to right: Plates 1 and 2 are IPTG-induced groups; Plate 3 is the uninduced control group)</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results12.webp" alt="results12">
+          <p class="figurecaption">Figure 12 Results of semi-solid medium culture for the pBBR1-MCS-5-CheZ system(From
+            left to right: Plates 1 and 2 are IPTG-induced groups; Plate 3 is the uninduced control group)</p>
+
+          <p class="sub">From the semi-solid culture results, the colonies in the IPTG-induced groups were either the
+            same size as or smaller than those in the uninduced control group. This partially aligns with our expected
+            outcomes. We hypothesize that this discrepancy may stem from human operational errors during sample
+            spotting, which caused slight variations in the volume of bacterial culture added—leading to differences in
+            colony size. To a certain extent, this result supports the validity of our initial hypothesis, but further
+            verification is required to confirm the exact scenario.</p>
+          <p class="sub">In our design, under green light induction, the pSR43.6-pSR58.6-CheA and pSR43.6-pSR58.6-CheY
+            systems would overexpress the CheA and CheY proteins, respectively. This would increase CheY-A production,
+            enhance tumbling motility, and weaken straight-line motility of the bacteria. On semi-solid medium, this
+            would manifest as reduced diffusive motility and a slower diffusion rate—specifically, forming smaller
+            bacterial lawn areas within the same time period.</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results13.webp" alt="results13">
+          <p class="figurecaption">Figure 13 Results of semi-solid medium culture for the pSR43.6-pSR58.6-CheY system
+          </p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results14.webp" alt="results14">
+          <p class="figurecaption">Figure 14 Results of semi-solid medium culture for the pSR43.6-pSR58.6-CheA system
+          </p>
+
+          <p class="sub">From the results in Figures 13 and 14, there was no significant difference in colony size
+            between the green light-induced groups and the non-induced groups. This confirms that the variations in
+            colony size observed in the pBBR1-MCS-5 system were likely caused by experimental errors. However, this does
+            not sufficiently prove that overexpression of CheA or CheY has no effect on flagellar tumbling motility.
+            Similarly, while the colony results from CheZ overexpression in semi-solid medium do not fully confirm
+            enhanced straight-line motility, they provide preliminary macroscopic evidence of a potential effect.
+            Further experiments are needed to clarify the exact impact of these protein overexpressions.</p>
+          <p class="sub">Therefore, we conducted the following microscopic observation assay to investigate bacterial
+            motility at the microscopic level.</p>
+
+
+          <h2>Verification 2: Microscopic Investigation via Microscopic Field Observation</h2>
+          <p class="sub">To directly identify changes in the motility of engineered strains from a microscopic
+            perspective, we designed a microscopic observation assay to visualize the movement trajectories of E. coli
+            in a liquid environment, as shown in the figures below.</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results15.webp" alt="results15">
+          <p class="figurecaption">Figure 15 Microscopic movement trajectories of strains from the pDawn-CheZ system</p>
+
+          <p class="sub">Figure 15 presents the movement trajectories of four representative E. coli cells selected for
+            observation. Microscopic observations revealed that the strains overexpressing CheZ exhibited a noticeable
+            enhancement in straight-line motility. Compared to the macroscopic observations from the semi-solid medium
+            assay, this microscopic evidence further confirms our expected outcomes.</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results16.webp" alt="results16">
+          <p class="figurecaption">Figure 16 Microscopic movement trajectories of strains from the pSR43.6-pSR58.6-CheY
+            system</p>
+
+          <p class="sub">The E. coli cells observed in Figure 16 were strains overexpressing CheY. Observations of their
+            motility revealed a significant decrease in movement ability. This is consistent with our previous
+            hypothesis that overexpression of CheY enhances tumbling motility. We propose that if E. coli exhibits
+            strengthened tumbling motility and weakened straight-line motility, it would appear as slow in-place
+            wriggling rather than rapid movement under microscopic observation. This further confirms the success of our
+            strain engineering. The unexpected diffusion results from the earlier semi-solid medium assay may be
+            attributed to the difficulty of detecting changes in E. coli flagellar motility using macroscopic
+            observation methods.</p>
+        </section>
+
+
+        <section id="section4">
+          <h1>Section 4: Verification Assay for the Infectivity of Edwardsiella Piscicida</h1>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results17.webp" alt="results17">
+          <p class="figurecaption">Figure 17 Infection assay of Edwardsiella piscicida labeled with red fluorescent
+            protein</p>
+
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/results/results18.webp" alt="results18">
+          <p class="figurecaption">Figure 18 Infection assay of Edwardsiella piscicida labeled with green fluorescent
+            protein</p>
+
+          <p class="sub">In this set of experiments, we constructed E. piscicida strains labeled with red fluorescent
+            protein and green fluorescent protein, respectively, and subjected them to attenuation treatment before
+            conducting infection assays. Through immersion infection assays on zebrafish larvae, we finally detected the
+            infection efficiency using fluorescence microscopy, as shown in Figures 17 and 18. Observations revealed
+            that the vaccine strains primarily accumulated in the gills, digestive tract, and skin surface of the
+            zebrafish larvae. This is consistent with findings from previously reviewed literature, which indicate that
+            vaccine strains typically enter the fish body through these three pathways and then reach immune organs such
+            as the liver via bodily fluids to activate the immune response—thereby exerting their function as a vaccine.
+          </p>
+        </section>
+
+
+        <section id="section5">
+          <h1>Section 5: Conclusion and Outlook</h1>
+          <h2>Conclusion</h2>
+
+
+          <p class="sub">Our goal was to design a light-inducible system for precise control of Edwardsiella piscicida
+            motility. This would allow accurate immersion vaccination in fish. As a first step, we performed
+            proof-of-concept studies in E. coli.
+          </p>
+
+          <p class="sub">Using pBBR1-MCS-5, we showed that CheZ, CheA, and CheY can alter flagellar behavior. We then
+            used pDawn and pSR43.6r&pSR58.6 systems to achieve light-inducible control. Under blue light, cells were
+            expected to swim linearly. Under green light, cells were expected to tumble.</p>
+          <p class="sub">We successfully constructed 13 engineered strains. PCR and gel electrophoresis confirmed
+            correct assembly. Western blotting verified protein expression. Semi-solid assays and microscopy
+            demonstrated changes in motility consistent with our design. sfGFP served as a reporter to measure
+            light-inducible expression levels. These data supported our prediction of motility regulation.</p>
+          <p class="sub">To test translational application, we performed zebrafish immersion infection with
+            fluorescently labeled Edwardsiella piscicida. Bacteria localized to major entry points and immune organs.
+            This confirmed the feasibility of our proposed vaccination concept.</p>
+
+          <h2>Outlook</h2>
+          <p class="sub">Time limits restricted our current work to concept validation. In the future, we will:</p>
+          <ol>
+            <li>Repeat experiments to ensure reproducibility.</li>
+            <li>Combine blue- and green-light-inducible systems in a single strain. This will allow ratio-dependent
+              control of linear versus tumbling motility.</li>
+            <li>Transfer the system to Edwardsiella piscicida. This should enable precise, light-controlled infection
+              during immersion vaccination. The strategy may improve efficiency, dosage control, and delivery accuracy
+              in aquaculture vaccines.</li>
+          </ol>
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

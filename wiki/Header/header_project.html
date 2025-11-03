@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header/project.css') }}">
+
+<div class="project-section d-flex align-items-start">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Title -->
+            <div class="col-md-6 project-title d-flex flex-column justify-content-center">
+                <h1>PROJECT</h1>
+            </div>
+
+            <!-- Right Two Columns -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- Right Upper -->
+                    <div class="col-md-6 project-links">
+                        <ul>
+                            <li><a href="{{ url_for('projectdescription_view') }}">PROJECT <br> DESCRIPTION</a></li>
+                            <li><a href="{{ url_for('engineering') }}">ENGINEERING</a></li>
+                        </ul>
+                    </div>
+                    <!-- Right Bottom -->
+                    <div class="col-md-6 project-links">
+                        <ul>
+                            <li><a href="{{ url_for('contribution') }}">CONTRIBUTION</a></li>
+                            <li><a href="{{ url_for('safetyproject') }}">SAFETY</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

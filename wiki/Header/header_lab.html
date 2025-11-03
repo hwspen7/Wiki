@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header/lab.css') }}">
+
+<div class="project-section d-flex align-items-start">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Title -->
+            <div class="col-md-6 project-title d-flex flex-column justify-content-center">
+                <h1>WET&DRY LAB</h1>
+            </div>
+
+            <!-- Right Two Columns -->
+            <div class="col-md-6">
+                <div class="row">
+                    <!-- Right Upper -->
+                    <div class="col-md-6 project-links">
+                        <dl>
+                            <dt>WET LAB</dt>
+                            <dd><a href="{{ url_for('design') }}">DESIGN</a></dd>
+                            <dd><a href="{{ url_for('experiments') }}">EXPERIMENTS</a></dd>
+                            <dd><a href="{{ url_for('notebook') }}">NOTEBOOK</a></dd>
+                            <dd><a href="{{ url_for('results') }}">RESULTS</a></dd>
+                        </dl>
+                    </div>
+                    <!-- Right Bottom -->
+                    <div class="col-md-6 project-links">
+                        <dl>
+                            <dt>DRYLAB</dt>
+                            <dd><a href="{{ url_for('model') }}">MODEL</a></dd>
+                            <dd><a href="{{ url_for('hardware') }}">HARDWARE</a></dd>
+                            <dd><a href="{{ url_for('software') }}">SOFTWARE</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

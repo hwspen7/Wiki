@@ -1,0 +1,976 @@
+{% extends "layout.html" %} {% block page_content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/pages/common.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/pages/team.css') }}"
+/>
+
+<style>
+  .member-card::before {
+    content: attr(data-bgtext);
+    position: absolute;
+    font-size: 5.5rem !important; /* 调整这个值来控制大小 */
+    font-weight: 800;
+    color: rgba(18, 18, 1, 0.05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    white-space: nowrap;
+  }
+
+  .member-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .member-photo,
+  .member-info {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>TEAM</h3>
+    <h1>TEAM MEMBER</h1>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="layout">
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#team">OUR TEAM</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+        <!-- Our Team Introduction -->
+        <section id="team-introduction">
+          <h1>Our Team</h1>
+          <h2>Meet the Team</h2>
+          <p
+            style="
+              font-size: 1.1rem;
+              line-height: 1.8;
+              color: #333;
+              margin: 20px 0 40px 0;
+            "
+          >
+            We are a team composed of enthusiastic students from East China
+            University of Science and Technology. We all have a strong interest
+            in life sciences and a passion for exploring the unknown. Through
+            our efforts, we hope to apply our skills and knowledge to create a
+            project with a positive social impact.
+          </p>
+        </section>
+
+        </section>
+
+        <!-- Team Group Photo -->
+        <section id="team-photo" style="text-align: center; margin: 0 0 60px 0;">
+          <div style="max-width: 900px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <img 
+              src="https://static.igem.wiki/teams/5972/uploads/page/team/groupimage.webp" 
+              alt="Team Group Photo" 
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+          <p style="margin-top: 20px; color: #666; font-style: italic;">Our amazing team together</p>
+        </section>
+
+        <!-- Team Leader Section -->
+        <!-- Team Leader Section -->
+        <h1>Team Leader</h1>
+        <section id="team-leader">
+          <div class="member-card" data-bgtext="Team Leader">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/yangyongkang-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yongkang Yang</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Sun WuKong
+                <br />
+                Study Snack Bliss: Barbecue
+              </p>
+              <p class="more">
+                Self-description: Yongkang Yang is a dynamic and meticulous
+                student who combines an upbeat, collaborative spirit with a
+                rigorous, detail-oriented approach to his work. His outgoing
+                personality is evident in his exceptional communication skills
+                and his innate ability to build positive relationships with
+                people around him. He thrives in team environments, often
+                serving as a motivational force that fosters a collaborative and
+                inclusive atmosphere.
+              </p>
+            </div>
+          </div>
+          <div class="member-card" data-bgtext="Team Leader">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/xiejiayi-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Jiayi Xie</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: Jiayi Xie is a well-rounded and reliable
+                individual, passionately pursuing diverse hobbies while
+                maintaining a rigorous and proactive approach to scientific
+                research.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Team Leader">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhangyangxin-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yangxin Zhang</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Sloth
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: Yangxin Zhang is a dedicated and methodical
+                researcher who balances scientific rigor with a passionate
+                creativity, exemplified by his love for playing the drums.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wet Lab Section -->
+        <h1>Wet Lab</h1>
+        <section id="wet-lab">
+          <div class="member-card" data-bgtext="WetLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/xieyixun-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yixuan Xie</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Snail
+                <br />
+                Study Snack Bliss: Canned Yellow Peaches
+              </p>
+              <p class="more">
+                Self-description: Yixuan Xie ,a Joyful,optimistic and determined
+                soul who brings a delightful mix of warmth and strength to every
+                situation., you might have guessed that her MBTI is ENFJ. She
+                love books, movies, music, and enjoy trying all kinds of
+                interesting activities, which is why she chose to join the
+                experimental group.In her spare time, Yixuan Xie have dabbled in
+                K-pop, dancing, anime, and musicals, and her favorite sport is
+                figure skating.Energetic,curious and cheerful, Yixuan Xie is a
+                perfect blend of intellect and fun.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="WetLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/wucaijin-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Caijing Wu</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Dog
+                <br />
+                Study Snack Bliss: Spicy Strip
+              </p>
+              <p class="more">
+                Self-description: Caijing Wu is a cheerful and outgoing
+                individual with great curiosity toward the unknown. She thrives
+                on exploring new experiences, whether it's immersing herself in
+                the natural world through outdoor hiking or unraveling
+                intriguing mechanisms in scientific research. Her optimistic
+                outlook allows her to see challenges as valuable opportunities
+                for personal growth. Caijing Wu combines rigorous methodology
+                with genuine enthusiasm, finding deep satisfaction in the
+                process of experimental discovery.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="WetLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhaoruhao.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Ruhao Zhao</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Lesser Panda
+                <br />
+                Study Snack Bliss: Want Want crunchy rice balls
+              </p>
+              <p class="more">
+                Self-description: Ruhao Zhao is deeply passionate about
+                information processing and the exploration of knowledge,and
+                always finds genuine satisfaction in helping others. In his
+                daily life, he values efficiency and organization, believing
+                that logic and structure can also bring warmth and clarity to
+                people's experiences. In scientific research, he upholds the
+                principles of precision and continuous learning, viewing complex
+                problems as puzzles waiting to be solved.He truly enjoys the
+                process of seeking answers through logical reasoning.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="WetLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhangyeye-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yanye Zhang</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: MilkteaCake
+              </p>
+              <p class="more">
+                Self-description: Yanye Zhang is an introverted and reflective
+                individual, who approaches everything he does with dedication
+                and focus. His love for reading not only enriches his inner
+                world but also sharpens his intellectual curiosity. In his
+                academic pursuits, he strives to conduct meaningful research
+                within his capabilities. Each day, he makes a conscious effort
+                to lead a purposeful and fulfilling life, valuing growth and
+                consistency in all he undertakes.
+              </p>
+            </div>
+          </div>
+
+          
+        </section>
+
+        <!-- Dry Lab Section -->
+        <h1>Dry Lab</h1>
+        <section id="dry-lab">
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/luochenwei-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Chenwei Luo</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Information Engineering
+                <br />
+                Spirit Animal: Pigeon
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: Chenwei Luo, full of passion for life,has a
+                clear perception of his future goals and direction.He strives to
+                be proactive and energetic in life, constantly reflecting and
+                improving himself. He maintain a serious and rigorous attitude
+                toward scientific research and is willing to devote himself to
+                fundamental research work . In daily life, Chenwei Luo always
+                eagerly follow the latest academic advancements to broaden his
+                horizons.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/chenmingyu-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Mingyu Chen</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Mechanical Engineering
+                <br />
+                Spirit Animal: Crow
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: When he is not immersed in science, Mingyu
+                Chen enjoy watching animation or playing videos .He tends to go
+                with the flow in daily life,and everyone finds him to be a both
+                casual and resilient person.Regarding science, he is
+                considerably conscientious.To be more specific,you will find him
+                quite reliable and trustworthy in his scientific work. Mingyu
+                Chen's well balance of work and life empowers him to conquer
+                tasks with ease.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/liwenbo.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Wenbo Li</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Mechanical Engineering
+                <br />
+                Spirit Animal: Eagle
+                <br />
+                Study Snack Bliss: Chewy Candy
+              </p>
+              <p class="more">
+                Self-description: When not diving into science, Wenbo Li enjoy
+                going to beach very much. The sight of the beautiful sea always
+                fills him with peace and pleasure. Often described as diligent
+                and having great passion for life,Wenbo Li approaches study and
+                work with integrity and a strong sense of responsibility. Guided
+                by a pragmatic personality that favors tangible results and
+                logical processes, Wenbo Li navigates complex situations
+                efficiently.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhaohaonan-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Haonan Zhao</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Applied Mathematics
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: CafeChicken Claws
+              </p>
+              <p class="more">
+                Self-description: Haonan zhao's interests are notably diverse,
+                encompassing piano, calligraphy, and video games. He
+                consistently approaches life with fervent enthusiasm. A defining
+                characteristic is his ability to undertake pursuits with a
+                surprising relaxed demeanor , yet this approach belies an
+                underlying commitment to exceptionally high standards and
+                personal goals. Meanwhile, Haonan zhao firmly believes that
+                through dedicated personal exploration, the world's mysteries
+                can be unraveled.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhujunjie-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Junjie Zhu</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Panda
+                <br />
+                Study Snack Bliss: Hot ChocolateFrappuccino
+              </p>
+              <p class="more">
+                Self-description: Junjie Zhu ,a dedicated student with great
+                passion for scientific inquiry. He approaches his work with
+                intensity and curiosity, striving for meaningful contributions
+                in his field. Beyond the lab, he consciously prioritizes a
+                balanced lifestyle, understanding that true productivity stems
+                from a well-rested and inspired mind. He actively engages in
+                leisure activities, which not only recharge his energy but also
+                provide fresh perspectives for his work.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/zhengmaolin-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Maolin Zheng</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Information Engineering
+                <br />
+                Spirit Animal: Dog
+                <br />
+                Study Snack Bliss: Want Want Milk
+              </p>
+              <p class="more">
+                Self-description: Maolin Zheng is not only a perpetual optimist
+                but also a firm believer that challenges are opportunities in
+                disguise Driven by curiosity and a desire for continuous growth,
+                he is always eager to learn new things and take on new projects.
+                This growth mindset, combined with a natural ability to see the
+                best in people and situations, makes Maolin Zheng a valued
+                member of any team.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/liheng-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Heng Li</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Dog
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: Heng Li is a highly motivated and meticulous
+                researcher with a clear vision, driven by curiosity and
+                integrity in his scientific exploration.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="DryLab">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/liuchenxi-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Chenxi Liu</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Mechanical Engineering
+                <br />
+                Spirit Animal: Eagle
+                <br />
+                Study Snack Bliss: Chewy Candy
+              </p>
+              <p class="more">
+                Self-description: Chenxi Liu is a diligent and pragmatic
+                individual, passionately dedicated to his scientific work while
+                finding peace and inspiration by the sea.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wiki Section -->
+        <h1>Wiki</h1>
+        <section id="wiki">
+          <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/wuwenqi-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Wenqi Wu</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Art Design
+                <br />
+                Spirit Animal: Fox
+                <br />
+                Study Snack Bliss: Plum Cake
+              </p>
+              <p class="more">
+                Self-description: Edward is an enthusiastic and easygoing
+                explorer who loves photography, embraces life's journey, and
+                values experiences over results.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/songwancheng-min.webp" alt="成员照片" />
+            </div>
+            <div class="member-info">
+              <h2>Wanchen Song</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Art Design
+                <br />
+                Spirit Animal: Rabbit
+                <br />
+                Study Snack Bliss: Mochi
+              </p>
+              <p class="more">
+                Self-description: ‌ Wanchen Song is an introverted individual
+                who embraces a "live in the moment" philosophy, finding joy in
+                simple pleasures like sketching, reading, and anime.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/duanxiaoting-min.webp" alt="成员照片" />
+            </div>
+            <div class="member-info">
+              <h2>Xiaoting Duan</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Information Engineering
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: CandiesDried Fish
+              </p>
+              <p class="more">
+                Self-description: Xiaoting Duan is a warm and outgoing
+                individual whose infectious optimism and love for life inspire
+                everyone around her.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/chenyang-min.webp" alt="成员照片" />
+            </div>
+            <div class="member-info">
+              <h2>Yang Chen</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Information Engineering
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: CandiesDried Fish
+              </p>
+              <p class="more">
+                Self-description: Yang Chen is a warm and outgoing individual
+                whose infectious optimism and love for life inspire everyone
+                around her.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Wiki">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/yehuiming-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Huimin Ye</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Sloth
+                <br />
+                Study Snack Bliss: Chocolate
+              </p>
+              <p class="more">
+                Self-description: Huimin Ye is a dedicated and methodical
+                researcher who balances scientific rigor with a passionate
+                creativity, exemplified by his love for playing the drums.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Human Practices Section -->
+        <h1>Human Practices</h1>
+        <section id="human-practices">
+          <div class="member-card" data-bgtext="Human Practices">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/xiangyifei-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yifei Xiang</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Cat
+                <br />
+                Study Snack Bliss: Fruits
+              </p>
+              <p class="more">
+                Self-description: Yifei Xiang is an introspective and passionate
+                individual, dedicated to both scientific exploration and
+                creative arts like painting and anime.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Human Practices">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/fuyusun-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Yusun Fu</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Puppy
+                <br />
+                Study Snack Bliss: Matcha Chocolate
+              </p>
+              <p class="more">
+                Self-description: Yusun Fu is a friendly and passionate
+                individual, rigorous in her scientific work while finding
+                inspiration and relaxation through films and novels.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Human Practices">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/sunlaiman-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Laiman Su</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Sloth
+                <br />
+                Study Snack Bliss: Caramel PuddingSweet Soup
+              </p>
+              <p class="more">
+                Self-description: Laiman Su is a vibrant and optimistic
+                individual whose infectious enthusiasm and warm positivity
+                brighten every moment, big and small.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Instructor Section -->
+        <h1>Instructor</h1>
+        <section id="instructor">
+          <div class="member-card" data-bgtext="Instructor">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/chenrunsheng-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Runsheng Chen</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Bioengineering
+                <br />
+                Spirit Animal: Pigeon
+                <br />
+                Study Snack Bliss: Mocha
+              </p>
+              <p class="more">
+                Self-description: Runsheng Chen is an optimistic and inquisitive
+                leader who finds value in every challenge, inspires
+                collaboration, and pursues scientific innovation with remarkable
+                vitality.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Instructor">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/jiangboyin-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Jiang Boyin</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Biochemical Engineering
+                <br />
+                Spirit Animal: Fox
+                <br />
+                Study Snack Bliss: Matcha Latte
+              </p>
+              <p class="more">
+                Self-description: Jiang Boyin is a meticulous and insightful
+                researcher who excels at connecting interdisciplinary concepts,
+                thrives on solving complex problems, and approaches scientific
+                challenges with strategic creativity.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Instructor">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/peherden-ahat-min.webp"
+                alt="成员照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Peherden·Ahat</h2>
+              <hr />
+              <p class="default">
+                Field of Study: Computational Biology
+                <br />
+                Spirit Animal: Wolf
+                <br />
+                Study Snack Bliss: Dried Meat Strips
+              </p>
+              <p class="more">
+                Self-description: Peherden·Ahat is a resilient and strategic
+                thinker who excels at uncovering patterns in complexity, thrives
+                in collaborative problem-solving, and tackles scientific
+                challenges with fierce determination and loyalty to the team.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PIs Section -->
+        <h1>PIs</h1>
+        <section id="pis">
+          <h2>Primary PIs</h2>
+          <div class="member-card" data-bgtext="Primary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/mayue.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Yue Ma</h2>
+              <hr />
+              <p class="default">
+                Ph.D., Associate Professor in Biochemical Engineering
+              </p>
+              <p class="more">
+                Research directions: focusing on pathogenic mechanisms,
+                multi-pathogen co-infection in aquatic animals, and intelligent
+                vaccine manufacturing technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Primary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/wangqiyao.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Qiyao Wang</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                Research areas: researches on pathogenic mechanism of pathogenic
+                bacteria in marine animals.
+              </p>
+            </div>
+          </div>
+
+          <h2>Secondary PIs</h2>
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/liuyueling.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Yueling Liu</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                Research focuses on the fundamental studies and applications of
+                biosensing and chemical sensing technologies in medical
+                diagnosis, food safety, and environmental monitoring.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/lipengfei.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Pengfei Li</h2>
+              <hr />
+              <p class="default">Lecturer</p>
+              <p class="more">
+                The research interest includes biosensors, especially
+                electrochemical biosensor, colorimetric biosensor, nano-based
+                biosensor; biological analysis, mainly towards disease marker
+                proteins, DNA and cells with clinical implications.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img
+                src="https://static.igem.wiki/teams/5972/uploads/page/team/liuxiaohong.webp"
+                alt="PI照片"
+              />
+            </div>
+            <div class="member-info">
+              <h2>Xiaohong Liu</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                The research primarily focuses on vaccine development and immune
+                response mechanisms in marine fish, with specialized expertise
+                in the design of fish vaccines and adjuvants, as well as
+                clinical application studies and production-oriented
+                development.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/liyouyuan.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Youyuan Li</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                Many papers were published on journals of bioinformatics.
+                Research areas: Fermentation process optimization and microbial
+                metabolic regulation research, proteomics research.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/tanshuai.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Shuai Tan</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                Authored multiple publications in renowned bioengineering
+                journals. Research areas: Vaccine delivery systems,
+                pathogen-host interaction mechanisms, and intelligent
+                biomanufacturing technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="member-card" data-bgtext="Secondary PI">
+            <div class="member-photo">
+              <img src="https://static.igem.wiki/teams/5972/uploads/page/team/caimenghao.webp" alt="PI照片" />
+            </div>
+            <div class="member-info">
+              <h2>Menghao Cai</h2>
+              <hr />
+              <p class="default">Ph.D.</p>
+              <p class="more">
+                Published extensively in leading computational biology journals.
+                Research areas: Multi-omics data integration, machine learning
+                in biomedical research, and intelligent drug discovery
+                platforms.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="logo-ring"></div>
+      </div>
+    </main>
+    {% endblock %}
+  </div>
+</div>

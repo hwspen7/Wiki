@@ -1,0 +1,577 @@
+header.bg-hero {
+    display: none !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Abhaya Libre";
+    src: url("/static/fonts/AbhayaLibre-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: black;
+    font-family: "Inknut Antiqua", serif;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    z-index: 0;
+}
+
+
+/* Container */
+.container {
+    width: 1440px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+/* Section ONE */
+.first-section {
+    width: 100%;
+    background: url("https://static.igem.wiki/teams/5972/uploads/home/longbackground.webp") no-repeat center top;
+    background-size: contain;
+    position: relative;
+    padding: 50px 0;
+    z-index: 10;
+}
+
+.fg-img {
+    display: block;
+    width: 783px;
+    height: 485px;
+    margin: 1540px auto -32px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.delimeter-com {
+    display: block;
+    width: 1250px;
+    height: 85px;
+    margin: 30px auto 50px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.wukong-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -70px;
+
+    width: 1200px;
+    text-align: center;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    z-index: 10;
+}
+
+
+
+/* Section TWO */
+.second-section {
+    margin-top: -100px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.second-section .ocean-bg {
+    position: absolute;
+    top: -110px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://static.igem.wiki/teams/5972/uploads/home/ocean.webp") no-repeat center top;
+    background-size: contain;
+    z-index: 0;
+}
+
+.second-section img {
+    display: block;
+    margin: 60px 0 100px 0;
+    width: 800px;
+    max-width: 90%;
+    position: relative;
+    z-index: 1;
+}
+
+.second-section .peoandfish {
+    top: 988px;
+    left: 0px;
+}
+
+.second-section .medicine {
+    width: 1037px;
+    height: 836px;
+    top: 590px;
+    right: -730px;
+    z-index: 7;
+}
+
+.second-section .peoeatfish {
+    transform: scaleX(-1);
+    width: 1200px;
+    top: -235px;
+    left: -48px;
+}
+
+.insert-circle {
+    position: absolute;
+    display: grid;
+    width: 860px;
+    height: 405px;
+    place-items: center;
+    text-align: center;
+    line-height: 55px;
+
+    /* Fonts */
+    color: #FFF4D9;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Left */
+.part-1 {
+    top: 1534px;
+    left: 45px;
+    z-index: 7;
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat,
+
+        /* Background Color change */
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+/* Right */
+.part-2 {
+    width: 770px;
+    height: 430px;
+    top: 1135px;
+    left: 620px;
+    z-index: 6;
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+}
+
+.peoandfish,
+.peoeatfish,
+.part-1 {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 1s ease-out;
+}
+
+.medicine,
+.part-2 {
+    opacity: 0;
+    transform: translateX(80px);
+    /* 从右边划入 */
+    transition: all 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Video 1 */
+.video-box-1 {
+    width: 1440px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -480px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.video-box-1 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+
+/* Third Section */
+.title-1 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 96px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.title-2 p {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+
+.two-columns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 60px auto 100px auto;
+    max-width: 1200px;
+}
+
+
+.left-card {
+    width: 588px;
+    height: 707px;
+    top: 1150px;
+    right: 193px;
+    z-index: 6;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.left-card,
+.right-card {
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.left-card {
+    transform: translateX(-150px);
+}
+
+.right-card {
+    transform: translateX(150px);
+}
+
+.show .left-card,
+.show .right-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+/* Fourth Section */
+.video-box-2 {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.video-box-2 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+
+
+
+.eigth-section {
+    position: relative;
+}
+
+.video-fifth {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video-fifth iframe {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+
+.factory-farming {
+    width: 1226px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+
+.part-3 {
+    width: 1188px;
+    height: 215px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    background:
+        /* Side */
+        linear-gradient(to right, gold 0%, gold 100%) top center / calc(100% - 60px) 1.7px no-repeat,
+        linear-gradient(to right, gold 0%, gold 100%) bottom center / calc(100% - 60px) 1.8px no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) left center / 1.7px calc(100% - 60px) no-repeat,
+        linear-gradient(to bottom, gold 0%, gold 100%) right center / 1.7px calc(100% - 60px) no-repeat,
+        /* Corner */
+        radial-gradient(circle at 0 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 0 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 0, transparent 28px, gold 30px, gold 31px, transparent 32px) 100% 0 / 60px 60px no-repeat,
+        radial-gradient(circle at 100% 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 100% 100% / 60px 60px no-repeat,
+        radial-gradient(circle at 0 100%, transparent 28px, gold 29px, gold 31px, transparent 32px) 0 100% / 60px 60px no-repeat;
+
+    /* Fonts */
+    color: #FFF4D9;
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+.video-box-3 {
+    width: 1440px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    margin-bottom: 100px;
+    z-index: 2;
+    display: block;
+}
+
+.video-box-3 iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+
+/* Lab Button */
+.lab-button {
+    width: 420px;
+    height: auto;
+    margin: 0 auto 50px auto;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+}
+
+.lab-button:hover {
+    transform: scale(1.35) translateY(0);
+}
+
+.lab-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.lab-button:hover::after {
+    animation: sweep-once 0.8s ease forwards;
+}
+
+/* Hardware Button */
+.hardware-button {
+    width: 420px;
+    height: auto;
+    margin: 0 auto 50px auto;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+}
+
+.hardware-button:hover {
+    transform: scale(1.35) translateY(0);
+}
+
+.hardware-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.hardware-button:hover::after {
+    animation: sweep-once 0.8s ease forwards;
+}
+
+/* Result Button */
+.result-button {
+    width: 420px;
+    height: auto;
+    margin: 0 auto 80px auto;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+}
+
+.result-button:hover {
+    transform: scale(1.35) translateY(0);
+}
+
+.result-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.result-button:hover::after {
+    animation: sweep-once 0.8s ease forwards;
+}
+
+.tenth-section {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.bottompage {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+
+.bottompage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+@keyframes sweep-once {
+    0% {
+        left: 10%;
+        opacity: .65;
+    }
+
+    70% {
+        opacity: .65;
+    }
+
+    100% {
+        left: 70%;
+        opacity: 0;
+    }
+}

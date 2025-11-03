@@ -1,0 +1,399 @@
+{% extends "layout.html" %} {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/team.css') }}" />
+
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>TEAM</h3>
+    <h1>COLLABORATION</h1>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="layout">
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#introduction">INTRODUCTION</a></li>
+            <li>
+              <a class="navlink" href="#industry">INDUSTRY <br />PARTNERSHIPS</a>
+            </li>
+            <li>
+              <a class="navlink" href="#community">COMMUNITY <br />ENGAGEMENT</a>
+            </li>
+            <li>
+              <a class="navlink" href="#academic">ACADEMIC <br />EXCHANGES</a>
+            </li>
+            <li>
+              <a class="navlink" href="#international">INTERNATIONAL <br />OUTREACH</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+        <!-- 新增：致谢文字 -->
+        <section id="acknowledgement">
+          <h1>Our Sponsors And Partners</h1>
+          <h3>Acknowledgement for cooperation</h3>
+          <p class="sub">
+            In the process of promoting the "Monkey King Fish Vaccine" project
+            in East China University of Science and Technology, we have received
+            a lot of support and help from many enterprises and schools. Their
+            assistance has played a vital role in the smooth development of the
+            project. Here, we would like to express our sincere thanks to them.
+          </p>
+
+          <h2>1. Corporate partnerships</h2>
+
+          <p class="sub">
+            <strong>(1) Qinhuangdao Zhenli Aquatic Products</strong><br />
+            Qinhuangdao Zhenli Aquatic provided us with a valuable opportunity
+            to gain deep insights into the modern aquaculture industry. Through
+            field research, we gained firsthand knowledge of the farm's overall
+            layout, breeding scale, main species, and daily management
+            processes. Particularly noteworthy were their advanced intelligent
+            management system, which demonstrated IoT technology applications in
+            real-time water quality monitoring and fish health status tracking.
+            This experience has become crucial reference for optimizing our
+            vaccination protocols and improving hardware design, while also
+            clarifying innovation directions in key technical fields like
+            automated injection systems.
+          </p>
+
+          <p class="sub">
+            <strong>(2) Hainan Wanning Linlan Group</strong><br />
+            As a leading aquaculture enterprise in Wanning, Hainan, Linlan Group
+            has provided invaluable firsthand data and practical experience
+            through its groundbreaking achievements in Oriental sea urchin
+            breeding. By participating in their technical training programs, we
+            systematically acquired cutting-edge vaccination techniques and
+            engaged in in-depth discussions with experts regarding critical
+            aspects like vaccine selection, optimal timing, and dosage control.
+            This hands-on learning has deepened our understanding of achieving
+            safety, efficacy, cost-effectiveness, and ease of administration in
+            developing the Miniatus Grouper vaccine, offering crucial insights
+            for our project development.
+          </p>
+
+          <p class="sub">
+            <strong>(3) Shandong Guoxin Oriental Aquaculture Base</strong><br />
+            Through field research at Guoxin Oriental Aquaculture Base, we
+            gained comprehensive insights into the full-cycle operation system
+            of industrialized aquaculture. This included fish fry stocking,
+            water quality management, disease prevention, and adult fish
+            harvesting. The smart monitoring systems implemented provided
+            tangible demonstrations of IoT technology applications in water
+            quality control, fish behavior tracking, and automated feeding.
+            Regarding vaccine immunization techniques, technical staff at the
+            base engaged in in-depth discussions with our team about existing
+            challenges in injection protocols. Their insights not only guided
+            the development of our submerged immunization device but also
+            enabled us to gather specific corporate requirements for cost
+            control, vaccine storage conditions, and immunization effectiveness
+            evaluation – all of which served as crucial practical references for
+            our R&D efforts.
+          </p>
+
+          <p class="sub">
+            <strong>(4) Laizhou Mingbo Aquatic Products Co., LTD</strong><br />
+            Mingbo Aquaculture is renowned in the industry for its advanced
+            breeding techniques, intelligent management systems, and sustainable
+            development model. During our visit to their smart recirculating
+            aquaculture nursery workshop, we gained in-depth insights into
+            efficient seedling cultivation processes, feed feeding strategies,
+            and pest control measures. Their advantages in water conservation
+            and environmental protection provided crucial practical references
+            for exploring vaccine immunization technology applications. Through
+            specialized discussions with technical teams, we clarified the
+            actual effectiveness, operational challenges, and scalability of
+            existing vaccination methods. This experience has laid the
+            groundwork for developing high-efficiency, cost-effective
+            immunization technologies suitable for large-scale implementation.
+          </p>
+
+          <p class="sub">
+            <strong>(5) Yantai Tianyuan Aquatic Products Co., LTD</strong><br />
+            As a national-level premium flounder breeding farm and
+            provincial-level original seed farm, Tianyuan Aquatic Resources
+            holds industry-leading positions in marine fish breeding and
+            aquaculture. The industrialized recirculating aquaculture system
+            demonstrates significant advantages including water and energy
+            conservation, as well as accelerated fish growth rates, providing
+            crucial references for technological optimization. Regarding
+            vaccination technology, the company's technical team addressed
+            existing challenges in injection methods and highlighted the urgent
+            need for innovative immunization approaches. This insight has
+            clarified our innovation roadmap, directing R&D efforts toward
+            automated injection systems, submerged immunization techniques, and
+            oral vaccine delivery systems to resolve current bottlenecks in
+            vaccination practices.
+          </p>
+
+          <p class="sub">
+            <strong>(6) Shanghai Xuhui Youth Center</strong><br />
+            The Shanghai Xuhui Youth Center has created a unique community
+            platform for the East China University of Science and Technology
+            (ECUST) iGEM team. Here, we engaged in in-depth discussions with
+            science and technology enthusiasts about their competition project
+            "Sun Wukong". Their insightful questions and cross-disciplinary
+            perspectives—from technical details to interdisciplinary
+            perspectives—provided fresh inspiration for optimizing the project.
+            This experience highlighted the importance of aligning research
+            initiatives with societal needs, infused new vitality into the team,
+            and demonstrated the unique value of youth centers as platforms for
+            innovative practice among young innovators.
+          </p>
+
+          <h2>2. School partnerships</h2>
+
+          <p class="sub">
+            <strong>(1) University of Liverpool West</strong><br />
+            During an exchange event, the Xi'an Jiaotong-Liverpool University
+            iGEM team shared their cross-college selection mechanism and
+            international talent development model. They emphasized enhancing
+            team collaboration efficiency through modular division of labor.
+            Their case study in biomedical industrialization demonstrated
+            pathways bridging academic research with industry needs, providing
+            valuable insights for optimizing team composition and succession
+            mechanisms while advancing project implementation. This initiative
+            has facilitated knowledge sharing and collaborative innovation among
+            university iGEM teams in synthetic biology.
+          </p>
+
+          <p class="sub">
+            <strong>(2) Nanjing University of Technology</strong><br />
+            The iGEM team from Nanjing Tech University shared their experience
+            in building disciplinary expertise-based talent pipelines, offering
+            fresh perspectives for optimizing team composition and succession
+            mechanisms at our university. Their engineering platform development
+            insights provided valuable references for technology implementation
+            in our projects. Furthermore, Nanjing Tech University's practice of
+            aligning projects with local industrial demands inspired our
+            university to refine the "research-society" two-way empowerment
+            model. This collaboration strengthened inter-university cooperation
+            consensus and expanded the team's multidimensional understanding of
+            iGEM competition objectives.
+          </p>
+
+          <p class="sub">
+            Once again, we extend our heartfelt gratitude to the enterprises and
+            institutions that have supported and assisted us. Their
+            participation and contributions have been instrumental in achieving
+            today's accomplishments. Moving forward, we look forward to
+            collaborating with like-minded partners to advance sustainable
+            aquaculture development and contribute more effectively to
+            addressing global challenges in aquaculture diseases.
+          </p>
+        </section>
+
+        <!-- ID：introduction -->
+        <section id="introduction">
+          <h1>Introduction</h1>
+          <p class="sub">
+            Collaboration is at the heart of synthetic biology innovation.
+            Throughout our iGEM journey, the ECUST team has actively engaged
+            with diverse stakeholders - from industry leaders and small-scale
+            farmers to academic institutions and youth organizations. These
+            partnerships have not only enriched our "Smart Vac" project but also
+            contributed to the broader goal of advancing sustainable aquaculture
+            practices.
+          </p>
+
+          <p class="sub">
+            Our collaborative approach spans multiple dimensions: technical
+            knowledge exchange with industry partners, grassroots engagement
+            with local farming communities, academic discourse with peer
+            institutions, and international outreach at global exhibitions. Each
+            interaction has provided unique insights that shaped our project's
+            development and enhanced its real-world applicability.
+          </p>
+        </section>
+
+        <!-- ID：industry -->
+        <section id="industry">
+          <h1>Industry Partnerships</h1>
+
+          <h4>Hainan Wanning Linlan Group Collaboration</h4>
+          <p class="sub">
+            Our team conducted extensive field research and participated in
+            breeding training at Hainan Wanning Linlan Group, a leading
+            aquaculture enterprise specializing in high-value species like
+            Oriental sea urchins and red seabream. This partnership provided
+            invaluable insights into industrial-scale breeding operations and
+            vaccination protocols.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo01.webp" alt="01" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo02.webp" alt="02" />
+          </div>
+
+          <h4>Tianyuan Aquatic Products Research Partnership</h4>
+          <p class="sub">
+            We established a research collaboration with Tianyuan Aquatic
+            Products, a pioneering company in recirculating aquaculture systems.
+            This partnership focused on understanding advanced vaccination
+            practices and automated injection systems, directly informing our
+            Smart Vac system design.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo03.webp" alt="03" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo04.webp" alt="04" />
+          </div>
+        </section>
+
+        <!-- ID：community -->
+        <section id="community">
+          <h1>Community Engagement</h1>
+
+          <h4>Liaoning Huludao Individual Farmers Exchange</h4>
+          <p class="sub">
+            Understanding the challenges faced by small-scale operators was
+            crucial for our project's accessibility goals. We conducted in-depth
+            interviews with over 20 individual aquaculture businesses in
+            Huludao, ranging from small family operations to medium-sized
+            enterprises.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo05.webp" alt="05" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo06.webp" alt="06" />
+          </div>
+
+          <p class="sub">
+            These exchanges revealed critical insights: most small operators
+            rely on basic pond systems without modern environmental controls due
+            to financial constraints. This finding reinforced our commitment to
+            developing cost-effective, scalable solutions that could benefit
+            farmers across all operational scales.
+          </p>
+        </section>
+
+        <!-- ID：academic -->
+        <section id="academic">
+          <h1>Academic Exchanges</h1>
+
+          <h4>Xi'an Jiaotong-Liverpool University Exchange</h4>
+          <p class="sub">
+            Our offline exchange with Xi'an Jiaotong-Liverpool University
+            focused on interdisciplinary collaboration strategies and talent
+            cultivation models. This interaction helped optimize our team
+            structure and project management approaches.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo07.webp" alt="07" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo08.webp" alt="08" />
+          </div>
+
+          <h4>Nanjing Tech University Collaboration</h4>
+          <p class="sub">
+            The exchange with Nanjing Tech University provided valuable insights
+            into engineering platform construction and echelon team building.
+            Their experience in translating academic research into practical
+            applications significantly influenced our implementation strategy.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo09.webp" alt="09" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo10.webp" alt="10" />
+          </div>
+
+          <h4>Shanghai Guanghua United Team Online Exchange</h4>
+          <p class="sub">
+            Our online academic exchange with Shanghai Guanghua United Team
+            fostered deep technical discussions on synthetic biology
+            applications in aquaculture, particularly focusing on vaccine
+            delivery systems and AI-driven disease prediction models.
+          </p>
+
+          <div class="collaboration-images single-image">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo11.webp" alt="11" />
+          </div>
+        </section>
+
+        <!-- ID：international -->
+        <section id="international">
+          <h1>International Outreach</h1>
+
+          <h4>2025 China International Industry Fair</h4>
+          <p class="sub">
+            Our team's debut at the China International Industry Fair marked a
+            significant milestone in transitioning our research from laboratory
+            to market. The Smart Vac system attracted considerable attention
+            from global industry leaders, validating our approach to intelligent
+            aquaculture automation.
+          </p>
+
+          <div class="collaboration-images">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo12.webp" alt="12" />
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo13.webp" alt="13" />
+          </div>
+
+          <h4>Shanghai Xuhui Youth Center Exchange</h4>
+          <p class="sub">
+            Our collaboration with Shanghai Xuhui Youth Center extended our
+            outreach to young innovators and future scientists. This engagement
+            strengthened university-community ties and inspired the next
+            generation to pursue careers in biotechnology and sustainable
+            development.
+          </p>
+
+          <div class="collaboration-images single-image">
+            <img src="https://static.igem.wiki/teams/5972/uploads/page/collaboration/photo14.webp" alt="14" />
+          </div>
+        </section>
+
+        <div class="logo-ring"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<style>
+  .collaboration-images {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .collaboration-images img {
+    width: calc(50% - 10px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+
+  /* 针对单个图片的情况 */
+  .collaboration-images.single-image img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* 响应式设计 - 移动端单列显示 */
+  @media (max-width: 768px) {
+    .collaboration-images img {
+      width: 100%;
+    }
+
+    .collaboration-images.single-image img {
+      width: 100%;
+    }
+  }
+</style>
+
+{% endblock %}

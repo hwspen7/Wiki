@@ -1,39 +1,107 @@
 {% extends "layout.html" %}
-  
-{% block title %}Inclusivity{% endblock %}
-{% block lead %}Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/inclusivity.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Inclusivity Award</h4>
-      <p>The Inclusivity Award recognizes exceptional efforts to include people with diverse identities in scientific research. Who is allowed to have a voice in iGEM, synthetic biology and science more broadly? How have you developed new opportunities to eliminate barriers and allow more people to contribute to, participate in and/or be represented by these communities? To compete for this prize, activities do not have to be directly related to your team’s project. Document your approach, how you improved inclusivity and what was learned.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/special-prizes">Special Prizes page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>iHP</h3>
+    <h1>INCLUSIVITY</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr />
-    <p>We should all recognize the importance of building an open and welcoming scientific community. A more diverse community involved in creating knowledge and technology is more likely to produce a more equitable and representative system. Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development. Everyone should be able to share their opinions on the societal implications of research.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/patras-med/inclusivity">2024 Patras-Med</a></li>
-      <li><a href="https://2024.igem.wiki/fudan/inclusivity">2024 Fudan</a></li>
-      <li><a href="https://2023.igem.wiki/unimuenster/inclusivity">2023 UniMuenster</a></li>
-      <li><a href="https://2023.igem.wiki/ugm-indonesia/inclusivity">2023 UGM-Indonesia</a></li>
-      <li><a href="https://2023.igem.wiki/vilnius-lithuania/inclusivity">2023 Vilnius-Lithuania</a></li>
-      <li><a href="https://2023.igem.wiki/nis-kazakhstan/inclusivity">2023 NIS-Kazakhstan</a></li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#team">TEAM <br> RECRUITMENT AND <br>COMPOSITION</a></li>
+            <li><a class="navlink" href="#shaping">SHAPING OUR <br> TEAM <br>TOGETHER</a></li>
+            <li><a class="navlink" href="#making">MAKING SCIENCE <br>INCLUSIVE OF ALL</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：team -->
+        <section id="team">
+          <h1>Team Recruitment and Composition</h1>
+          <p class="sub">From the outset, we have been fully aware of the significance of diversity within our team. We
+            believed that a <strong style="color:#9c7b3f;">variety</strong> of <strong style="color:#9c7b3f;">view pionts</strong> and <strong style="color:#9c7b3f;">professional backgrounds</strong> would not only enhance our <strong style="color:#9c7b3f;">creativity</strong>
+            but also improve our problem-solving skills. </p>
+
+          <p class="sub">With this in mind, we set out to recruit team members from <strong style="color:#9c7b3f;">a diversity of backgrounds</strong>.For
+            example, we have students coming from the School of Information and Electronic Engineering, the School of
+            Art and Design, the School of Biotechnology, and also the School of Mechanical Engineering. To make sure
+            that all students at East China University of Science and Technology had an <strong style="color:#9c7b3f;">equal opportunity</strong> to join us, we
+            created and distributed recruitment posters across different school websites. This approach made sure that
+            students from <strong style="color:#9c7b3f;">various majors</strong> could apply.</p>
+
+          <p class="sub">The selection process involved interviews conducted by our team leaders, who assessed
+            candidates based on their <strong style="color:#9c7b3f;">knowledge</strong>, <strong style="color:#9c7b3f;">passion</strong>, and <strong style="color:#9c7b3f;">potential contributions</strong> to the team. Each applicant was
+            interviewed until all available positions were filled,and during the interview, all candidates responded to
+            a set of questions to select excellent students.Through this selection method,we guaranteed a <strong style="color:#9c7b3f;">fair</strong> and also
+            <strong style="color:#9c7b3f;">reliable</strong> selection about the team members. </p>
+
+          <p class="sub">We're proud to have brought together a diverse group of <strong style="color:#9c7b3f;">20 students from 4 different
+            faculties</strong>.Therefore, our team comprises students with a vibrant blend of knowledge and experience.
+          </p>
+        </section>
+
+        <!-- ID: shaping -->
+        <section id="shaping">
+          <h1>Shaping Our Team Together </h1>
+          <p class="sub">When we began our project, all of our team members, as well as our supervisors, had little
+            prior experience in the sensing vaccine field, as this is a frontier research field. This shared starting
+            point created a unique opportunity for <strong style="color:#9c7b3f;">studying</strong> and <strong style="color:#9c7b3f;">making progress together</strong>. Everyone in our team had to
+            find out their own position in our team and also should <strong style="color:#9c7b3f;">understand the meaning of being one part of IGEM</strong>.
+          </p>
+          <p class="sub">Since we were all new to this as we all just started joining in this research field, it created
+            <strong style="color:#9c7b3f;">a strong sense of pride and belonging</strong>. Everyone were <strong style="color:#9c7b3f;">excited</strong> to share their ideas and took an <strong style="color:#9c7b3f;">active</strong> part in
+            their own part of work.We held offline meetings where each member had the chance to talk about their
+            progress once a week, discussing any challenges they were facing and sharing new ideas with each other.</p>
+        </section>
+
+
+        <!-- ID：making -->
+        <section id="making">
+          <h1>Making Science Inclusive of All</h1>
+          <p class="sub">One of our major educational goal was to connect with not only students from <strong style="color:#9c7b3f;">different
+            academies</strong>,but also <strong style="color:#9c7b3f;">the public people</strong> who probably knew little about our reaserch before.To achieve this
+            aim,we engaged with the public through <strong style="color:#9c7b3f;">media</strong> and <strong style="color:#9c7b3f;">online speeches</strong>. During the activities, we made sure to
+            <strong style="color:#9c7b3f;">adapt our content</strong> to <strong style="color:#9c7b3f;">make the science principals about our project straightaway</strong> to various people,
+            considering different backgrounds and age ranges.</p>
+
+          <p class="sub">We are deeply awared that <strong style="color:#9c7b3f;">everyone should take their own part in science</strong>, and the participation
+            in iGEM is also included. We believe that iGEM and synthetic biology can greatly benefit our society and our
+            world.We hope people can be aware of their presence through our efforts,like all those conferences, and
+            meetings we held with students, community members, and industry representatives.We want to show people <strong style="color:#9c7b3f;">the
+            prospects within synthetic biology</strong> and how they can <strong style="color:#9c7b3f;">contribute to the greater future</strong>.</p>
+
+          <p class="sub">In China, where this field is still emerging, we hope we can <strong style="color:#9c7b3f;">bridge the awareness gap in
+            synthetic biology</strong>. We aimed not just to engage people in our initiative, but to prove that <strong style="color:#9c7b3f;">science progress
+            influences every individual</strong>,and of us need to participate in science discussion and influence the future of
+            science.</p>
+
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}

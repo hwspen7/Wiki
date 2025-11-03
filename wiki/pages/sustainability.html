@@ -1,33 +1,862 @@
 {% extends "layout.html" %}
-  
-{% block title %}Sustainability{% endblock %}
-{% block lead %}Describe how you have evaluated your project ideas against one or more of the SDGs.{% endblock %}
 
 {% block page_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/common.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/sustainable.css') }}">
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Sustainable Development Impact</h4>
-      <p>The Sustainable Development Goals (SDGs) are a call to action to integrally address global environmental, social, and economic challenges. iGEM teams can answer this call with this prize. Demonstrate how you have evaluated your project ideas against one or more of the SDGs, how you’ve consulted with SDG stakeholders, and how you’ve begun to form collaborations with other iGEM teams around the SDGs. You’re encouraged to look back at previous iGEM projects to evaluate them against the SDGs, and build upon them.</p>
-      <hr />
-      <p>Visit the <a href="https://competition.igem.org/judging/special-prizes">Special Prizes page</a> for more information.</p>
-    </div>
+<div class="our-team-section">
+  <div class="gradient"></div>
+  <div class="overlay-text">
+    <h3>iHP</h3>
+    <h1>SUSTAINABLE</h1>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr />
-    <ul>
-      <li><a href="https://2024.igem.wiki/hangzhou-biox/sustainable">2024 Hangzhou-BioX</a></li>
-      <li><a href="https://2024.igem.wiki/uzurich/sustainable">2024 UZurich</a></li>
-      <li><a href="https://2024.igem.wiki/ulink-sz/sustainable">2024 Ulink-SZ</a></li>
-      <li><a href="https://2024.igem.wiki/gec-beijing/sustainable">2024 GEC-Beijing</a></li>
-      <li><a href="https://2023.igem.wiki/thessaloniki/sustainable">2023 Thessaloniki</a></li>
-    </ul>
-  </div>
-</div>
 
-{% endblock %}
+<div class="stage">
+  <div class="layout">
+
+    <!-- 左侧导航 -->
+    <aside class="sidebar">
+      <div class="indicator" id="indicator"></div>
+      <div class="sidebar-inner">
+        <h3 class="side-title">OVERVIEW</h3>
+
+        <!-- Content Start -->
+        <nav>
+          <ul class="menu" id="menu">
+            <li><a class="navlink" href="#summary">ECECUTIVE <br> SUMMARY</a></li>
+            <li><a class="navlink" href="#analysis">PROJECT <br> BACKGROUND <br> AND <br> INDUSTRY <br> ANALYSIS</a>
+            </li>
+            <li><a class="navlink" href="#product">PRODUCT AND <br> TRCHNOLOGY <br> INTRODUCTION</a></li>
+            <li><a class="navlink" href="#machine">MARKET ANALYSIS <br> AND COMPETITIVE <br> PATTERN</a></li>
+            <li><a class="navlink" href="#operation">OPERATION PLAN</a></li>
+            <li><a class="navlink" href="#financial">FINANCIAL <br> ANALYSIS</a></li>
+            <li><a class="navlink" href="#risk">RISK ASSESSMENT <br> AND RESPONSE <br> STRATEGIES</a></li>
+            <li><a class="navlink" href="#teamintro">TEAM <br> INTRODUCTION</a></li>
+            <li><a class="navlink" href="#development">DEVELOPMENT <br> PLAN <br> AND OTLOOK</a></li>
+            <li><a class="navlink" href="#appendix">APPENDIX</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 右侧正文 -->
+    <main class="content">
+      <div class="paper">
+
+        <!-- ID：summary -->
+        <section id="summary">
+          <h1>Ececutive Summary</h1>
+          <h2>1.1 Project Background</h2>
+          <p class="sub">As the world's largest aquaculture producer, China's aquaculture output reached 58.09 million
+            tons in 2023, accounting for over 60% of the global total. The aquaculture industry has become a crucial
+            pillar for safeguarding national food security. However, in the transition towards intensive and
+            industrialized aquaculture, infectious diseases have emerged as a core risk to the industry — global annual
+            economic losses caused by aquatic diseases exceed 10 billion US dollars, with direct losses in China
+            reaching nearly 60 billion yuan annually.</p>
+
+          <p class="sub">Traditional disease prevention relies on antibiotics, which gives rise to food safety and
+            ecological pollution issues. Meanwhile, existing vaccine inoculation technologies face significant
+            bottlenecks: manual injection inoculation is inefficient (only 1,000 fish per hour per person) with a high
+            stress-induced injury rate (8-10%), and imported automatic injection equipment costs over 500,000 US
+            dollars. Conventional immersion inoculation is also inefficient (2,000 fish per hour) with low vaccine
+            penetration (60%-70%) and prominent conflicts between dissolved oxygen levels and fish density.</p>
+
+
+          <p class="sub">Against this backdrop, policies such as the Key Areas of National Agricultural Science and
+            Technology Innovation (2024-2028) and the National Smart Agriculture Action Plan (2024-2028) have explicitly
+            identified "IoT + AI" automatic vaccine inoculation equipment as a key R&D direction. This provides policy
+            support for intelligent disease prevention and control technologies, and the industry is in urgent need of
+            efficient, low-stress, and intelligent vaccine inoculation solutions.</p>
+
+
+          <h2>1.2 Project Overview</h2>
+          <p class="sub">Relying on 2 nationally approved Class I new veterinary drugs (aquatic live bacterial vaccines)
+            developed by the research team, this project pioneers the development of the "IoT Multi-source
+            Sensing-driven Continuous Immersion Vaccination System for Aquatic Vaccines". Through a three-tier
+            architecture of "sensing - decision-making - execution", the system achieves full-process automation,
+            including continuous fish fry transportation, uniform immersion inoculation, vaccine solution recycling, and
+            post-inoculation grading and sorting.
+          </p>
+
+          <p class="sub">The core modules of the system include a negative-pressure fish suction and transportation
+            unit, a machine vision detection unit, an Archimedes screw immersion inoculation unit, a fully automatic
+            vaccine preparation workstation, and an intelligent sorting unit. It is adaptable to aquaculture scenarios
+            of different scales (10-1000 m³) and addresses the pain points of "high stress, low efficiency, and low
+            uniformity" in traditional inoculation methods.</p>
+
+          <h2>1.3 Core Advantages</h2>
+
+          <h3>1.3.1 Leading Efficiency</h3>
+          <p class="sub">The inoculation efficiency reaches 40,000 fish per hour, which is 40 times higher than that of
+            traditional manual methods and 4 times higher than that of international single-machine automatic injection
+            equipment (10,000 fish per hour). The sorting efficiency is ≥ 1,000 fish per minute.</p>
+
+          <h3>1.3.2 Precise and Controllable</h3>
+          <p class="sub">Through multi-source sensing (vision, bioimpedance, infrared spectroscopy) and dynamic
+            optimization via LSTM neural network, the vaccine utilization rate is ≥ 95%, the fluctuation of dissolved
+            oxygen is ≤ 0.2 mg/L, the fluctuation of vaccine concentration is ≤ ± 0.1%, and the sorting error rate is
+            3%.</p>
+          <h3>1.3.3 Low Damage and Low Cost</h3>
+          <p class="sub">The stress-induced injury rate is reduced to ≤ 0.5% (far lower than the 8-10% of manual
+            injection). The inoculation cost per fish is reduced from 0.12 yuan to 0.03 yuan, and antibiotic use is
+            reduced by more than 90%.</p>
+          <h3>1.3.4 Flexible Expansion</h3>
+          <p class="sub">In the next 3-5 years, the domestic market scale of intelligent aquatic vaccine inoculation
+            equipment will exceed 1 billion yuan. The core target customers include large-scale aquatic seedling farms
+            (e.g., turbot seedling output exceeds 1 billion per year), large-scale aquaculture enterprises, and
+            cooperatives.</p>
+          <p class="sub">Taking a turbot farm with a batch size of 1 million fish as an example, the use of this system
+            can reduce losses by 434,700 yuan compared to no vaccine inoculation, and save costs by 298,000 yuan
+            compared to manual injection. At the same time, the project can drive the development of industrial chains
+            such as vaccine adjuvants and high-precision sensors, and is expected to drive the scale of related markets
+            to exceed 2 billion yuan. The overseas market share (e.g., Southeast Asia, South America) will exceed 20% by
+            2027.</p>
+
+          <h2>1.5 Financing Needs</h2>
+          <h3>The project currently intends to raise 15 million yuan, with the fund usage as follows:</h3>
+          <ol>
+            <li>R&D Investment (4 million yuan): Including core algorithm optimization (Transformer model upgrade),
+              development of special modules for shrimp and crabs, and R&D of equipment miniaturization.</li>
+            <li>Production Construction (7 million yuan): Construction of a production line with an annual output of 200
+              units, procurement of core components (e.g., Siemens PLC, Mettler Toledo dissolved oxygen sensor), and
+              establishment of a quality inspection laboratory.</li>
+            <li>Market Promotion (3 million yuan): Establishment of 10 demonstration bases in major producing areas such
+              as Liaoning and Shandong, and implementation of industry exhibitions, technical training, and preliminary
+              overseas market research.</li>
+            <li>Operating Reserve (1 million yuan): Covering short-term operating needs such as labor costs and raw
+              material procurement turnover.</li>
+          </ol>
+        </section>
+
+
+        <!-- ID: analysis-->
+        <section id="analysis">
+          <h1>Project Background and Industry Analysis</h1>
+          <h2>2.1 Current Development Status of the Aquaculture Industry</h2>
+          <h3>2.1.1 Industry Scale</h3>
+          <p class="sub">The global aquaculture scale continues to expand. China has formed a full-category aquaculture
+            system covering marine and freshwater aquaculture. In 2023, its aquaculture output accounted for over 60% of
+            the global total, among which the main marine fish aquaculture areas (4 coastal provinces and 1
+            municipality) contributed more than 30% of the output. The annual seedling output of high-end species such
+            as turbot and grouper exceeds 1 billion each.</p>
+
+          <p class="sub">From the perspective of the industrial chain, China's aquaculture industry has transformed from
+            "small-scale individual aquaculture" to "intensive parks". By 2024, there are over 20,000 large-scale
+            aquaculture enterprises nationwide, and the penetration rate of Recirculating Aquaculture Systems (RAS) has
+            increased by 15 percentage points compared to 2020.</p>
+          <h3>2.1.2 Industry Status</h3>
+          <p class="sub">The aquaculture industry is an important growth driver of China's agricultural and rural
+            economy. In 2023, the total industrial output value exceeded 3 trillion yuan, driving employment for more
+            than 50 million people, among which 60% of fishermen's per capita net income comes from aquaculture
+            operations.</p>
+          <p class="sub">In terms of food security, aquatic products account for 23% of the animal protein intake of
+            Chinese residents and are a core source of "high-quality protein supply". In the field of export trade,
+            China's annual aquatic product export volume exceeds 20 billion US dollars, of which aquaculture products
+            account for 70%. The level of disease prevention and control directly affects export competitiveness.</p>
+
+          <h2>2.2 Industry Pain Points and Challenges</h2>
+          <h3>2.2.1 Disease Issues</h3>
+          <p class="sub">Diseases are the core bottleneck restricting the sustainable development of the industry. Data
+            from the Food and Agriculture Organization (FAO) shows that global aquatic diseases cause an annual output
+            loss of 10-15%, and in China, annual losses caused by diseases such as Edwardsiellosis and Vibriosis reach
+            nearly 60 billion yuan.</p>
+          <p class="sub">Taking turbot aquaculture as an example, the mortality rate of fish schools without vaccine
+            inoculation reaches 20%, and the single loss of an infected pond exceeds 500,000 yuan. Moreover, disease
+            transmission can lead to a "devastating blow" to the regional industry (e.g., an outbreak of Vibriosis in a
+            coastal area in 2022 caused a 40% reduction in local turbot output).</p>
+
+          <h3>2.2.2 Disadvantages of Traditional Prevention and Control</h3>
+          <p class="sub">Traditional disease prevention and control mainly relies on "antibiotics as the main measure
+            and vaccines as supplementary". However, long-term use of antibiotics leads to multiple problems:</p>
+
+          <ul>
+            <li>First, excessive drug residues. Some of China's exported aquatic products are returned by markets such
+              as the EU, Japan, and South Korea due to excessive antibiotic residues, resulting in annual losses of over
+              1 billion US dollars.</li>
+            <li>Second, ecological damage. The discharge of aquaculture wastewater leads to excessive antibiotic
+              concentrations in coastal waters, affecting marine biodiversity.</li>
+            <li>Third, increased drug resistance. The resistance rate of common pathogenic bacteria (e.g., Vibrio
+              parahaemolyticus) to antibiotics such as florfenicol has exceeded 60%, and traditional prevention and
+              control methods are gradually becoming ineffective.</li>
+          </ul>
+
+          <h3>2.2.3 Bottlenecks in Vaccine Inoculation Technology</h3>
+          <p class="sub">Current mainstream inoculation technologies cannot meet the needs of large-scale aquaculture:
+          </p>
+          <ol>
+            <li>Injection Inoculation: Manual operation is inefficient (1,000 fish per hour per person), automatic
+              equipment is costly (imported equipment costs over 500,000 US dollars), and each fish needs to be
+              anesthetized. The stress-induced injury rate is 8-10%, which easily causes secondary infections.</li>
+            <li>Traditional Immersion Inoculation: Although it realizes group immunization, it has three major defects:
+              low efficiency (2,000 fish per hour), low vaccine penetration (60%-70%), and difficulty in dissolved
+              oxygen control — under high-density immersion, dissolved oxygen can drop from 9.1 mg/L to 4.8 mg/L within
+              6 minutes, leading to a 30%-50% decrease in immune titer. Moreover, open circulation causes the vaccine
+              titer to decay at a rate of over 50% per hour.</li>
+          </ol>
+
+          <h2>2.3 Policy Environment and Market Opportunities</h2>
+          <h3>2.3.1 Policy Support</h3>
+          <p class="sub">Multiple national departments have issued policies to promote the development of aquatic
+            vaccines and intelligent equipment:</p>
+
+          <p class="sub">The Key Areas of National Agricultural Science and Technology Innovation (2024-2028) explicitly
+            lists "intelligent aquatic vaccine inoculation equipment" as a key focus for agricultural equipment
+            development, requiring the localization rate of core equipment to exceed 80% by 2028.</p>
+
+          <p class="sub">The Opinions on Accelerating the Green Development of Aquaculture proposes to "continuously
+            reduce veterinary drug use and promote vaccine immunization", aiming to reduce antibiotic use in aquaculture
+            by 30% by 2025 compared to 2020 and increase the vaccine coverage rate to 80%.</p>
+
+          <p class="sub">At the local level, major aquaculture provinces such as Shandong and Liaoning provide a 30%
+            purchase subsidy for intelligent aquaculture equipment, and some parks offer integrated "equipment +
+            vaccine" policy support.</p>
+
+          <h3>2.3.2 Market Demand</h3>
+          <p class="sub">With the advancement of intensive aquaculture, the industry has an urgent demand for efficient
+            vaccine inoculation equipment:</p>
+          <ol>
+            <li>Demand from Large-scale Enterprises: For enterprises with an annual seedling output of over 1 million
+              fish, traditional inoculation requires 10 people/day to complete, while this system only requires 1
+              person/25 hours, which can significantly reduce labor costs. Moreover, the immune protection rate is
+              increased to 98%, reducing mortality losses.</li>
+            <li>Demand from Export-oriented Enterprises: Markets such as the EU have strict requirements on drug
+              residues in aquatic products. The use of this system can reduce antibiotic use by 90%, increasing the
+              qualification rate of aquatic products from 97.5% to 99.8% and avoiding trade barriers.</li>
+            <li>Demand for Technological Upgrading: Currently, the domestic market for intelligent aquatic vaccine
+              inoculation equipment is blank, and traditional equipment cannot meet the needs of "precision and low
+              stress". This project can fill the market gap, and the domestic market penetration rate is expected to
+              reach 15% by 2026.</li>
+          </ol>
+        </section>
+
+        <!-- ID：product -->
+        <section id="product">
+          <h1>Product and Technology Introduction</h1>
+          <h2>3.1 Product Positioning and Core Functions</h2>
+          <h3>3.1.1 Product Positioning</h3>
+          <p class="sub">This system is positioned as a "core equipment for green prevention and control in
+            aquaculture", focusing on the vaccine inoculation scenario during the seedling stage of marine and
+            freshwater fish. It provides large-scale aquaculture enterprises with a "high-efficiency, precision, and
+            intelligent" continuous immersion inoculation solution. At the same time, it can be extended to scenarios
+            such as shrimp and crab immunization and precision drug delivery in deep-sea aquaculture, becoming a key
+            node in the entire chain of smart aquaculture.</p>
+
+          <h3>3.1.2 Core Functions</h3>
+          <ol>
+            <li>Fish Fry Pretreatment and Transportation: Fish fry are sucked out of the aquaculture pond through a
+              negative-pressure fish suction pump (with a soft silicone suction head and adaptive negative-pressure
+              intensity), and transported to a fish-water separation plate (with automatic cleaning by high-pressure
+              backwash nozzles) through a PTFE corrosion-resistant hose for two rounds of water filtration. At the same
+              time, machine vision (YOLOv8 algorithm, accuracy 98.7%) is used to identify and automatically remove fish
+              fry with surface damage and abnormal body color to avoid cross-infection.</li>
+            <li>Uniform Immersion Inoculation: Fish fry enter the Archimedes screw immersion unit (with 6 sealed
+              chambers). During the screw rotation and propulsion process, the vaccine solution maintains dissolved
+              oxygen (fluctuation ≤ 0.2 mg/L) through a hollow shaft aeration system. The immersion time can be
+              precisely controlled (30 seconds - 5 minutes per cycle) to ensure that each fish fry is in uniform contact
+              with the vaccine, with a vaccine penetration rate ≥ 95%.</li>
+            <li>Intelligent Management of Vaccine Solution: The fully automatic vaccine preparation workstation
+              (referring to industrial bioreactors) integrates centrifugal feeding and robotic arm liquid extraction
+              modules. Multi-sensors (temperature, salinity, vaccine concentration) conduct real-time monitoring, and
+              the LSTM neural network is used to dynamically add vaccine stock solution. The fluctuation of vaccine
+              concentration is ≤ ± 0.1%, and the closed-circulation design ensures a vaccine utilization rate ≥ 95%.
+            </li>
+            <li>Post-inoculation Grading and Sorting: The grading system based on machine vision (OpenCV) uses a 15°
+              inclined metal grading plate (with 5mm and 8mm apertures) and a flexible vibrating screen (frequency 12Hz,
+              amplitude 0.8mm) to grade fish fry by body width (small fish ≤ 5cm, medium fish ≤ 8cm, large fish > 8cm).
+              The sorting error rate is < 3%, and the comprehensive injury rate is ≤ 0.5%.</li>
+            <li>Multi-source Monitoring and Remote Control: Users can real-time monitor parameters such as dissolved
+              oxygen and vaccine concentration through the IoT platform (industrial host, mobile APP), supporting
+              one-click startup, fault alarm (response time < 10ms), and data traceability. The operation interface is
+                simple, and the whole process can be managed without professional personnel.</li>
+          </ol>
+          <h2>3.2 Technical Architecture and Core Technology Highlights</h2>
+          <h3>3.2.1 Overall Technical Architecture</h3>
+          <p class="sub">The system adopts a three-tier "sensing - decision-making - execution" architecture to realize
+            full-process automation and intelligence:</p>
+          <ol>
+            <li>Sensing Layer: Deploy multi-spectral cameras (to detect fish surface damage), biosensors (to monitor
+              vaccine concentration, accuracy ± 0.1%), dissolved oxygen electrode arrays (resolution 0.01 mg/L), and
+              temperature/salinity/pH sensors to collect real-time data on fish status, vaccine solution parameters, and
+              environmental parameters.</li>
+            <li>Decision-making Layer: An immune optimization algorithm runs on an Edge AI chip (computing power 4
+              TOPS), integrating visual data (fish posture), biochemical data (SOD enzyme activity > 100 IU/mL, ALT
+              enzyme activity < 50 U/L), and environmental data (dissolved oxygen 6.0 ± 0.2 mg/L, temperature 15 ± 1℃).
+                The LSTM neural network is used to dynamically calculate the optimal inoculation density (40 fish/L as
+                the safety threshold), immersion time, and fluid replacement frequency.</li>
+            <li>Execution Layer: The Archimedes screw system is driven by a servo motor (positioning accuracy ±
+              0.1mm), and a pneumatic diaphragm valve (response time < 50ms) is used to achieve precise supply of
+                vaccine solution. At the same time, it controls the vibrating screen, conveyor belt, and other executive
+                components to ensure the coordinated operation of each module.</li>
+          </ol>
+
+          <h3>3.2.2 Core Technology Highlights</h3>
+          <ol>
+            <li>Archimedes Screw Fluid Control Technology: Blades are arranged along the spiral line on the inner
+              wall of the screw, dividing it into 6 independent sealed chambers to prevent fish fry from clustering. The
+              laminar flow optimization design controls the Reynolds number of the vaccine solution between 2000-5000
+              (laminar to transitional flow state), with a velocity gradient ≤ 0.1 m/s² to avoid fish body damage caused
+              by shear stress. The hollow shaft aeration system and vaccine workstation form a closed-loop control, with
+              dissolved oxygen fluctuation ≤ 0.2 mg/L, and the uniformity of vaccine penetration into fish bodies is
+              increased by 40%.</li>
+            <li>Multi-source Data Fusion and Intelligent Decision Technology: A spatiotemporal attention mechanism
+              model is developed to integrate three types of data: vision, bioimpedance, and infrared spectroscopy.
+              Federated learning is used to realize cross-device knowledge sharing, and the model iteration efficiency
+              is increased by 300%. An LSTM neural network is used to build a dissolved oxygen - density - stress
+              response model to optimize inoculation parameters in real time, ensuring a vaccine utilization rate ≥ 95%
+              while reducing fish stress (respiratory rate stabilized at 45 ± 3 times per minute).</li>
+            <li>Full-process Automation and Modular Design: Each module realizes closed-loop linkage through the IoT
+              (Modbus-TCP protocol), and the inoculation capacity can be customized by expanding the number of screw
+              units and vaccine workstations. The main body of the equipment adopts corrosion-resistant materials such
+              as 316L stainless steel and PTFE, which is adaptable to aquaculture scenarios of 10-1000 m³. The equipment
+              configuration cost is reduced by 70% compared with the integrated design. The digital twin platform
+              realizes real-time mapping between the physical system and the virtual model, with a fault diagnosis
+              accuracy ≥ 99%.</li>
+          </ol>
+
+          <h2>3.3 Product Performance Indicators</h2>
+          <h3>3.3.1 Efficiency Indicators</h3>
+          <p class="figurecaption">Table 1 Efficiency Indicators</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table1.webp" alt="table1">
+
+          <h3>3.3.2 Accuracy Indicators</h3>
+          <p class="figurecaption">Table 2 Accuracy Indicators</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table2.webp" alt="table2">
+
+          <h3>3.3.3 Safety Indicators</h3>
+          <p class="figurecaption">Table 3 Safety Indicators</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table3.webp" alt="table3">
+
+          <h3>3.3.4 Cost and Environmental Indicators</h3>
+          <p class="figurecaption">Table 4 Cost and Environmental Indicators</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table4.webp" alt="table4">
+
+          <h2>3.4 Intellectual Property and Technical Barriers</h2>
+          <h3>3.4.1 Intellectual Property</h3>
+          <p class="sub">The project has established a complete intellectual property protection system, as follows:</p>
+          <ol>
+            <li>Invention Patents (4 items): Including "A Continuous Immersion Inoculation Device for Aquatic Vaccines
+              Based on Archimedes Screw" and "A Vaccine Concentration Regulation Method Based on IoT Multi-source
+              Sensing", covering the core equipment structure and intelligent control algorithms.</li>
+            <li>Utility Model Patents (3 items): Including "A Fish Fry Negative-pressure Transportation and Damage
+              Identification Device" and "A Closed-circulation System for Vaccine Solution", focusing on the design of
+              key equipment components.</li>
+            <li>Software Copyrights (2 items): Including "IoT Monitoring Software for Aquatic Vaccine Inoculation System
+              V1.0" and "Machine Vision Recognition Software for Fish Fry Grading and Sorting V1.0", protecting the core
+              software algorithms.</li>
+          </ol>
+
+          <h3>3.4.2 Technical Barriers</h3>
+          <ol>
+            <li>Interdisciplinary Integration Barrier: The system integrates life sciences (fish stress physiology),
+              mechanical engineering (Archimedes screw design), information technology (IoT, AI algorithms), and
+              industrial design (modular integration). It requires collaboration among professionals in multiple fields,
+              which is difficult to replicate quickly in the industry.</li>
+            <li>Core Algorithm Barrier: The LSTM neural network immune optimization model and the spatiotemporal
+              attention mechanism multi-source data fusion algorithm are both trained based on experimental data of more
+              than 300 batches of turbot fry. The model iteration efficiency is increased by 300%, and federated
+              learning is used to realize cross-device knowledge sharing. The technology is 2-3 years ahead of the
+              industry.</li>
+            <li>Biocompatibility Design Barrier: The flow field parameters are optimized through CFD simulation
+              (velocity gradient ≤ 0.1 m/s²), and the structural strength is verified by ANSYS finite element analysis
+              (the maximum stress of the fish separator is 0.01664 MPa, far lower than the yield strength of 316L
+              stainless steel of 170 MPa). This ensures the biocompatibility between the equipment and fish bodies,
+              reducing the stress-induced injury rate to ≤ 0.5%, which is difficult for similar industrial equipment to
+              achieve.</li>
+            <li>Industrial Adaptation Barrier: The modular design can be adapted to aquaculture scenarios of 10-1000 m³.
+              The core components (such as Siemens PLC and Mettler Toledo sensors) have achieved a stable supply chain.
+              The equipment cost is controlled at 225,000 yuan per set, which is significantly lower than the imported
+              equipment (500,000 US dollars). At the same time, it will pass the agricultural machinery certification of
+              the Ministry of Agriculture and Rural Affairs (planned for Q1 2026), laying a foundation for industrial
+              application.</li>
+          </ol>
+
+        </section>
+
+        <!-- ID：market -->
+        <section id="machine">
+          <h1>Market Analysis and Competitive Pattern</h1>
+          <h2>4.1 Target Market Positioning</h2>
+          <h3>4.1.1 Regional Market</h3>
+          <ol>
+            <li>Domestic Core Market: Focus on the main marine fish aquaculture areas (Shandong, Liaoning, Hebei,
+              Fujian, Guangdong) and concentrated freshwater fish aquaculture areas (Hubei, Hunan, Jiangxi). These
+              regions have dense large-scale aquaculture enterprises, with an annual seedling output of over 1 billion,
+              and an urgent demand for disease prevention and control. Taking Shandong as an example, there are more
+              than 500 turbot aquaculture enterprises alone, with an annual seedling output of over 3 billion, and the
+              market demand scale exceeds 300 million yuan.</li>
+            <li>Overseas Potential Market: Focus on expanding emerging aquaculture markets such as Southeast Asia
+              (Vietnam, Thailand) and South America (Brazil). The aquaculture scale in these regions grows at an average
+              annual rate of 12%, but vaccine inoculation equipment relies on imports, and labor costs are rising
+              rapidly. This system (cost is only 1/10 of imported equipment) has a significant competitive advantage. It
+              is planned to enter the overseas market after obtaining CE certification in 2027.</li>
+          </ol>
+
+          <h3>4.1.2 Customer Groups</h3>
+          <ol>
+            <li>Core Customers: Large-scale aquatic seedling farms and large-scale aquaculture enterprises with an
+              annual seedling output ≥ 1 million (e.g., Oriental Ocean, Haodangjia). These customers are highly
+              sensitive to efficiency, cost, and immune effect, and can quickly accept new technologies. The annual
+              equipment purchase volume per customer is 1-3 sets.</li>
+            <li>Key Customers: Aquaculture cooperatives (jointly established by 50-100 farmers). Through the "unified
+              purchase and shared use" model, the purchase cost is reduced. The annual equipment purchase volume per
+              cooperative is 1 set, which can drive the use of small and medium-sized farmers in the surrounding areas.
+            </li>
+            <li>Potential Customers: Operators of deep-sea aquaculture platforms (e.g., aquaculture ships, intelligent
+              cages). This system can be adapted to wind and wave resistance design and vaccine cold chain (phase change
+              material temperature control, maintaining 4-8℃ for 72 hours) to meet the needs of offshore operations. The
+              equipment purchase volume per platform for these customers is 2-5 sets.</li>
+          </ol>
+
+          <h2>4.2 Market Scale and Growth Forecast</h2>
+          <h3>4.2.1 Existing Market Scale</h3>
+          <p class="sub">Currently, the domestic aquatic vaccine inoculation equipment market is dominated by
+            traditional manual tools and imported automatic injection equipment, and the market for intelligent
+            continuous immersion inoculation equipment is almost blank. According to industry research, there are over
+            8,000 large-scale aquatic seedling farms in China in 2024. Calculated by an average annual equipment demand
+            of 0.5 sets per farm and an average price of 600,000 yuan per set, the existing market scale is about 2.4
+            billion yuan. Among them, the demand for "high-efficiency and intelligent" equipment accounts for about 30%,
+            corresponding to a market scale of 720 million yuan.</p>
+
+          <h3>4.2.2 Growth Forecast</h3>
+          <ol>
+            <li>Short-term (2025-2026): Complete the construction of 10 demonstration bases, start commercial promotion
+              after passing the agricultural machinery certification. The domestic market share will reach 5% in 2026,
+              achieving a sales volume of 300 million yuan (selling 500 sets of equipment and 50 million yuan of
+              supporting service revenue).</li>
+            <li>Medium-term (2027-2029): The overseas market share (Southeast Asia, South America) will exceed 20%, and
+              the domestic market share will exceed 25%. The annual sales volume will reach 1.5 billion yuan (1.2
+              billion yuan from equipment sales and 300 million yuan from service revenue), driving the scale of
+              industrial chains such as vaccine adjuvants and sensors to exceed 1 billion yuan.</li>
+            <li>Long-term (after 2030): Become a leading global enterprise in intelligent aquatic vaccine inoculation
+              equipment, with a global market share exceeding 15% and an annual sales volume of 5 billion yuan. At the
+              same time, expand value-added services such as precision drug delivery and water quality monitoring, and
+              form a profit model of "equipment + service + data".</li>
+          </ol>
+
+          <h2>4.3 Competitive Pattern Analysis</h2>
+          <h3>4.3.1 Analysis of Domestic and Foreign Competitors</h3>
+          <p class="figurecaption">Table 5 Analysis of Domestic and Foreign Competitors</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table5.webp" alt="table5">
+
+          <h3>4.3.2 Project Competitive Advantages</h3>
+          <ol>
+            <li>Efficiency and Cost Advantages: The inoculation efficiency is 40,000 fish/hour, which is 4 times that of
+              Skala Maskon and 15 times that of domestic semi-automatic injection equipment. The cost of a single set of
+              equipment is 225,000 yuan, which is only 1/10 of Skala Maskon. The inoculation cost per fish is 0.03 yuan,
+              which is 75% lower than the traditional method.</li>
+            <li>Precision and Safety Advantages: The vaccine utilization rate is ≥ 95%, which is the same as the
+              injection effect of Skala Maskon, but no anesthesia is needed, and the injury rate is ≤ 0.5%, which is far
+              lower than the industry average. The fluctuation of dissolved oxygen is ≤ 0.2 mg/L, and the fluctuation of
+              vaccine concentration is ≤ ± 0.1%, so the uniformity is significantly better than that of FFF intermittent
+              immersion machine.</li>
+            <li>Intelligence and Expansion Advantages: Multi-source sensing + AI decision-making, supporting remote
+              control and data traceability, and easy operation. The modular design is adaptable to 10-1000 m³ scenarios
+              and can be extended to shrimp and crab breeding and deep-sea aquaculture, while competitors' products have
+              single functions and weak expansion capabilities.</li>
+            <li>Policy and Ecological Advantages: Reducing antibiotic use by 90%, which is in line with the national
+              "antibiotic reduction" policy. The qualification rate of aquatic products is increased to 99.8%, helping
+              export. The closed-circulation design reduces vaccine waste and water pollution, conforms to the trend of
+              green aquaculture, and is easy to obtain policy subsidies and customer recognition.</li>
+          </ol>
+
+        </section>
+
+        <!-- ID：machine-->
+        <section id="operation">
+          <h1>Operation Plan</h1>
+          <h3>5.1.1 Laboratory Verification Stage (before Q3 2025)</h3>
+          <ol>
+            <li>Core Tasks: Complete the pilot test of 1 million turbot fry, verify the inoculation effect of the system
+              under different densities (10-70 fish/L) and dissolved oxygen conditions, and ensure the survival rate
+              after inoculation ≥ 98%. Optimize parameters such as the volume of the Archimedes screw chamber and the
+              circulation flow of the vaccine solution, and reduce the equipment energy consumption to below 1.2 kW/h.
+            </li>
+            <li>Key Outputs: Pilot test report, optimized equipment drawings, core algorithm V2.0 version.</li>
+            <li>Resource Input: 8 R&D team members (3 each in biology, machinery, and software), experimental sites (36
+              70L FRP water tanks), testing equipment (dissolved oxygen electrodes, ELISA kits).</li>
+          </ol>
+
+          <h3>5.1.2 Engineering Development Stage (before Q1 2026)</h3>
+          <ol>
+            <li>Core Tasks: Establish 10 demonstration bases (1 set of equipment per base) in the main breeding areas of
+              flounder and sole such as Shandong and Liaoning, carry out field pilot tests, collect user feedback and
+              optimize equipment (e.g., expand the adaptability range of fry specifications). Formulate the Technical
+              Specifications for Immersion Inoculation of Marine Fish Vaccines (jointly with the Chinese Academy of
+              Fishery Sciences). Launch commercial promotion, establish a sales team (10 people) and an after-sales
+              service network (5 regional service stations).</li>
+            <li>Key Outputs: Application report of demonstration bases, draft of industry technical specifications,
+              annual sales of 100 sets of equipment.</li>
+            <li>Resource Input: 8 marketing team members (promotion, training), 5 after-sales service team members,
+              cooperation funds for demonstration bases (50,000 yuan subsidy per base).</li>
+          </ol>
+
+          <h3>5.1.3 Large-scale Application Stage (before Q3 2026)</h3>
+          <ol>
+            <li>1. Core Tasks: Establish 10 demonstration bases (1 set of equipment per base) in the main breeding areas
+              of flounder and sole such as Shandong and Liaoning, carry out field pilot tests, collect user feedback and
+              optimize equipment (e.g., expand the adaptability range of fry specifications). Formulate the Technical
+              Specifications for Immersion Inoculation of Marine Fish Vaccines (jointly with the Chinese Academy of
+              Fishery Sciences). Launch commercial promotion, establish a sales team (10 people) and an after-sales
+              service network (5 regional service stations).</li>
+            <li>Key Outputs: Application report of demonstration bases, draft of industry technical specifications,
+              annual sales of 100 sets of equipment.</li>
+            <li>Resource Input: 8 marketing team members (promotion, training), 5 after-sales service team members,
+              cooperation funds for demonstration bases (50,000 yuan subsidy per base).</li>
+          </ol>
+
+          <h3>5.1.4 Global Promotion Stage (before Q2 2027)</h3>
+          <ol>
+            <li>Core Tasks: Complete the equipment CE certification, enter the Southeast Asian and South American
+              markets, and establish cooperative relationships with local aquaculture enterprises and distributors.
+              Develop a special vaccine chamber for shrimp and crabs (nanoporous, pore size ≤ 50nm) and a deep-sea wind
+              and wave resistance module. Achieve an annual production of 200 units of equipment, and the overseas
+              market sales account for 30%.</li>
+            <li>Key Outputs: CE certification certificate, special modules for shrimp and crabs, overseas distributor
+              network (5 distributors).</li>
+            <li>Resource Input: 5 overseas marketing team members, R&D investment (development of special modules),
+              certification fees (CE certification).</li>
+          </ol>
+
+          <h2>5.2 Production Plan</h2>
+          <h3>5.2.1 Production Site and Equipment</h3>
+          <ol>
+            <li>Production Site: Located in Qingdao, Shandong (close to the main marine fish aquaculture areas, with
+              convenient logistics). The production workshop covers an area of 2,000 m², divided into a machining area,
+              an assembly area, a quality inspection area, and a storage area. Among them, the clean assembly area
+              (Class 10,000) covers an area of 500 m² to ensure no pollution of vaccine-contacting components.</li>
+            <li>Core Production Equipment: Including CNC lathes (for processing screw shafts, accuracy ± 0.01mm), laser
+              cutting machines (for processing 316L stainless steel plates), 3D printers (for prototype verification),
+              and assembly lines (5 lines, 2 sets of equipment per line per day). Quality testing equipment includes
+              dissolved oxygen detectors (Mettler Toledo), vaccine concentration sensors (Dencytee), and vibration test
+              benches.</li>
+            <li>Production Capacity Planning: The production capacity will be 100 sets in 2026, expanded to 200
+              sets/year in 2027, and 300 sets/year in 2028. The equipment production cycle is 15 days/set (including
+              processing, assembly, and testing).</li>
+          </ol>
+
+          <h3>5.2.2 Supply Chain Management</h3>
+          <p class="sub">1. Selection of Core Component Suppliers:</p>
+          <ul>
+            <li>Key Sensors: Mettler Toledo (dissolved oxygen sensors), Dencytee (vaccine concentration sensors). Sign
+              long-term supply agreements to ensure accuracy and stability, with a stock preparation cycle ≤ 15 days.
+            </li>
+            <li>Control Components: Siemens (S7-1214C PLC), TowerPro (servo motors). Select first-level agents to reduce
+              procurement costs, and establish alternative suppliers (e.g., Schneider PLC) to avoid supply interruption
+              risks.</li>
+            <li>Structural Materials: 316L stainless steel (Baosteel), PTFE (DuPont). Require suppliers to provide
+              material certificates to ensure corrosion resistance (service life ≥ 5 years in seawater environment with
+              salinity 30‰).</li>
+          </ul>
+          <p class="sub">2. Supply Chain Collaboration: Build a Supply Chain Management (SCM) system to real-time
+            monitor the inventory of components and production progress. The safety stock of core components is ≥ 30
+            days' usage. Sign Vendor-Managed Inventory (VMI) agreements with suppliers to reduce inventory costs and
+            improve capital turnover rate.</p>
+          <p class="sub">3. Cost Control: Reduce the unit price through bulk procurement (annual procurement volume ≥
+            200 sets of components), and the procurement cost of core components is reduced by 15-20% compared with
+            small-batch procurement. Optimize the production process (e.g., integrated processing of screw shafts) to
+            reduce processing procedures, improve production efficiency by 20%, and reduce unit production cost by 10%.
+          </p>
+
+          <h3>5.2.3 Production Quality Control</h3>
+          <ol>
+            <li>Raw Material Inspection: All components must undergo quality inspection before warehousing. For
+              example, 316L stainless steel plates need to be tested for yield strength (≥ 170 MPa), and PTFE materials
+              need to be tested for corrosion resistance (no deformation after soaking in 30‰ salt water for 72 hours).
+              Unqualified raw materials will be returned.</li>
+            <li>Production Process Control: Formulate the Production Process Operation Guide. Key processes (e.g.,
+              screw blade welding, sensor calibration) must be operated by certified personnel. After each process is
+              completed, self-inspection and mutual inspection are conducted, and the next process can be entered only
+              after passing the inspection. The Manufacturing Execution System (MES) is used to record production data
+              (e.g., processing accuracy, assembly time) to realize full-process traceability.</li>
+            <li>Finished Product Inspection: Finished products need to undergo no-load testing (operation for 24
+              hours to monitor equipment stability), load testing (simulate fry for inoculation to test vaccine
+              utilization rate and injury rate), and environmental adaptability testing (operation at high temperature
+              40℃ and low temperature -5℃ for 4 hours). Only after all indicators meet the standards, the Product
+              Qualification Certificate is issued before delivery.</li>
+            <li>After-sales Quality Tracking: Establish product quality files, record equipment operation data (fault
+              type, maintenance times), conduct quality analysis every quarter, optimize the design of high-frequency
+              fault components or replace suppliers, and ensure the equipment failure rate ≤ 2%/year.</li>
+          </ol>
+
+          <h2>Sales and Service System</h2>
+          <h3>5.3.1 Sales Channel Construction</h3>
+          <p class="sub">1. Direct Sales: Establish a professional sales team (divided by region, 2 people each in major
+            producing areas such as Shandong, Liaoning, and Fujian). For large-scale aquaculture enterprises with an
+            annual seedling output ≥ 1 million, provide "equipment demonstration + on-site test + customized plan"
+            services. For example, provide exclusive deep-sea adaptation plans for enterprises such as Oriental Ocean,
+            with a single customer follow-up cycle of 1-2 months.</p>
+          <p class="sub">2. Channel Cooperation:</p>
+          <ul>
+            <li>Cooperate with vaccine manufacturers (e.g., Zhonghai Biology, Novus) to launch "equipment + vaccine"
+              packages. Vaccine manufacturers are responsible for recommending customers, and we provide a sales
+              commission of 8-10% to achieve mutual benefit and win-win results.</li>
+            <li>Cooperate with aquatic aquaculture equipment distributors (e.g., Yumeikang, Tongwei), authorize them to
+              sell equipment in the region, provide a rebate of 5-8%, and conduct technical training (once a quarter) to
+              ensure that distributors have equipment commissioning capabilities.</li>
+            <li>Join the China Aquatic Products Circulation and Processing Association and the China Fisheries
+              Association, participate in industry exhibitions (e.g., China International Aquaculture Exhibition), and
+              hold 2-3 technical seminars every year to attract potential customers.</li>
+          </ul>
+          <p class="sub">3. Online Promotion:</p>
+          <ul>
+            <li>Build an official website to display product cases, technical parameters, and customer reviews. Optimize
+              SEO keywords (e.g., "aquatic vaccine inoculation equipment", "turbot vaccine immersion system") to improve
+              search rankings.</li>
+            <li>Publish equipment operation videos and customer interviews on Douyin and WeChat Channels, update 2-3
+              pieces of content every week to attract the attention of small and medium-sized farmers. Open online
+              consultation channels (WeChat, 400 hotline) and respond to customer consultations within 2 hours.</li>
+            <li>Use e-commerce platforms (Alibaba International Station) to expand the overseas market, provide English
+              technical materials and video demonstrations for Southeast Asian customers, and the response time for
+              overseas customer consultations is ≤ 4 hours.</li>
+          </ul>
+
+          <h3>5.3.2 After-sales Service System</h3>
+          <p class="sub">1. Technical Support:</p>
+          <ul>
+            <li>Equipment Installation and Commissioning: Dispatch professional engineers (5 regional service stations,
+              2 people per station) for on-site installation, with an installation cycle ≤ 2 days. At the same time,
+              train customer operators (theory + practical operation, training duration 4 hours) to ensure that
+              customers can operate independently.</li>
+            <li>Remote Technical Support: Real-time monitor the equipment operation status through the IoT platform. In
+              case of faults, engineers can conduct remote diagnosis (response time < 1 hour), and 70% of faults can be
+                solved through remote guidance. For faults that cannot be solved remotely, engineers will arrive at the
+                site within 24 hours (in main producing areas) and 48 hours (in other regions).</li>
+          </ul>
+          <p class="sub">2. Maintenance:</p>
+          <ul>
+            <li>Regular Inspection: Conduct on-site inspections twice a year (once in spring and once in autumn) to
+              check the wear of equipment components (e.g., screw blades, seals), replace vulnerable parts (provided
+              free of charge, service life ≥ 6 months), and ensure stable operation of the equipment.</li>
+            <li>Maintenance Service: Establish spare parts warehouses (each of the 5 regional service stations stores
+              100,000 yuan of spare parts). Spare parts for common faults (e.g., sensors, conveyor belts) can be
+              replaced on the same day. For complex faults (e.g., screw damage), provide backup equipment (free of
+              charge) until the maintenance is completed to reduce customer downtime losses.</li>
+          </ul>
+
+          <p class="sub">3. Customer Feedback and Optimization:</p>
+          <ul>
+            <li>Establish a customer feedback mechanism (monthly telephone return visits, quarterly on-site surveys) to
+              collect customer suggestions on equipment performance and operational convenience, and promptly feedback
+              to the R&D team for product optimization (e.g., adding automatic fry specification recognition function
+              according to customer suggestions in 2026).</li>
+            <li>Set up a "customer satisfaction score" (full score 10 points). Customers with a satisfaction score ≥ 9
+              can enjoy a 5% discount on the next purchase. For customers with a satisfaction score < 7, the after-sales
+                manager will follow up to solve the problem and formulate an improvement plan to ensure the customer
+                satisfaction rate ≥ 90%.</li>
+          </ul>
+        </section>
+
+        <!-- ID：control-->
+        <section id="financial">
+          <h1>Financial Analysis</h1>
+          <h2>6.1 Cost Calculation</h2>
+          <ol>
+            <li>Equipment Cost: Unit cost is 225,000 RMB, comprising raw materials (screw shaft, sensors, motors, etc.)
+              180,000 RMB, processing and assembly 30,000 RMB, testing and transportation 15,000 RMB. After scaling up
+              production (annual capacity of 200 units), the unit cost drops to 200,000 RMB (raw materials 160,000 RMB,
+              processing and assembly 25,000 RMB, testing and transportation 15,000 RMB).</li>
+            <li>Operating Costs: Annual operating costs are approximately 50 million RMB, including personnel salaries
+              (R&D 20 people, production 30 people, sales 20 people, after-sales 10 people) 25 million RMB, venue rent
+              (production base + service centers) 5 million RMB, R&D investment 10 million RMB, market promotion 8
+              million RMB, and others 2 million RMB.</li>
+            <li>User Cost-Benefit: Taking a turbot farm with 1 million fry per batch as an example, using this
+              equipment saves 434,700 RMB in losses compared to no vaccination, saves 238,700 RMB compared to automated
+              injection immunization, saves 298,000 RMB compared to manual injection immunization, and saves 28,000 RMB
+              compared to traditional immersion immunization. The investment payback period is about 1.5 years.</li>
+          </ol>
+
+          <h2>6.2 Revenue Forecast</h2>
+          <ol>
+            <li>Equipment Sales Revenue: 2026: Sell 100 units, unit price 300,000 RMB, revenue 300 million RMB. 2027:
+              Sell 150 units (100 domestic + 50 overseas), domestic price 280,000 RMB, overseas price 400,000 RMB,
+              revenue 480 million RMB. 2028: Sell 300 units (200 domestic + 100 overseas), revenue 860 million RMB.</li>
+            <li>Service Revenue: Includes vaccine supporting service fees (30 RMB / 10,000 fry, processing 1 billion fry
+              in 2026, revenue 30 million RMB), technical service fees (5% of total equipment price/year, revenue 15
+              million RMB in 2026). Total service revenue in 2026 is 45 million RMB, with an average annual growth of
+              50% subsequently as equipment sales grow.</li>
+            <li>Other Revenue: Government subsidies (apply for 10 million RMB subsidy in 2026), patent licensing
+              revenue (starting from 2027, 5 million RMB annually), accounting for a low proportion of total revenue
+              (≤5%).</li>
+          </ol>
+
+          <h2>6.3 Profit Forecast</h2>
+          <ol>
+            <li>Gross Margin & Net Margin: Equipment sales gross margin 33.3% (2026, unit price 300,000 RMB - cost
+              200,000 RMB), service gross margin 80% (vaccine supporting technical services). 2026 gross margin 40%, net
+              margin 15% (net profit 67.5 million RMB). 2027 gross margin 42%, net margin 18% (net profit 104.4 million
+              RMB). 2028 gross margin 45%, net margin 20% (net profit 184 million RMB).</li>
+            <li>Projected Income Statement (Unit: 10,000 RMB)</li>
+          </ol>
+          <p class="figurecaption">Table 6 Income Statement Forecast</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table6.webp" alt="table6">
+
+          <h2>6.4 Cash Flow Analysis</h2>
+          <ol>
+            <li>Cash Inflow: 2026 cash inflow 355 million RMB (equipment sales 300 million + services 45 million +
+              subsidies 10 million). 2027: 540 million RMB (equipment 480 million + services 50 million + subsidies 10
+              million). 2028: 920 million RMB (equipment 860 million + services 50 million + patents 10 million).</li>
+            <li>Cash Outflow: 2026 cash outflow 262 million RMB (equipment cost 200 million + operations 50 million +
+              R&D 12 million). 2027: 360 million RMB (equipment cost 320 million + operations 30 million + R&D 10
+              million). 2028: 580 million RMB (equipment cost 500 million + operations 60 million + R&D 20 million).
+            </li>
+            <li>Cash Flow Forecast: 2026 net cash flow 93 million RMB; 2027: 180 million RMB; 2028: 340 million RMB.
+              Sufficient cash flow to cover subsequent R&D and market expansion needs.</li>
+          </ol>
+
+          <h2>6.5 Financial Indicator Analysis</h2>
+          <p class="figurecaption">Table 7 Financial Indicator Analysis</p>
+          <img src="https://static.igem.wiki/teams/5972/uploads/page/sustainable/table7.webp" alt="table7">
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="risk">
+          <h1>Risk Assessment and Response Strategies</h1>
+          <h2>7.1 Technical Risk</h2>
+          <ol>
+            <li>Risk Description: Core technologies (e.g., LSTM algorithm optimization, Archimedes screw sealing
+              performance) might experience iteration lag, or key components (e.g., high-precision sensors) supply might
+              be unstable, affecting equipment performance.</li>
+            <li>Response Strategies: Continuous R&D investment (annual R&D ≥ 10% of revenue), collaborate with East
+              China University of Science and Technology and Chinese Academy of Fishery Sciences to establish a
+              technology iteration mechanism; sign long-term supply agreements with core component suppliers, while
+              developing 2-3 backup suppliers to ensure supply chain stability.</li>
+          </ol>
+
+          <h2>7.2 Market Risk</h2>
+          <ol>
+            <li>Risk Description: Traditional farms may have low acceptance of automated equipment, holding a "rely
+              on experience over technology" mindset; imported equipment manufacturers (e.g., Skala Maskon) might engage
+              in price competition, squeezing market space.</li>
+            <li>Response Strategies: Demonstrate equipment effectiveness through demonstration bases (e.g., Shandong
+              Qingdao Turbot Breeding Base), organize farm visits and learning sessions; launch an "equipment leasing"
+              model (monthly rent 10,000 RMB) to lower the entry barrier for small/medium clients; strengthen data
+              backing for "low damage + high survival rate," publishing authoritative reports through third-party
+              testing agencies (e.g., Chinese Academy of Fishery Sciences) to enhance credibility.</li>
+          </ol>
+
+          <h2>7.3 Production Risk</h2>
+          <ol>
+            <li>Risk Description: After scaling production, controlling processing precision (e.g., screw blade
+              tolerance) may be difficult, leading to unstable equipment performance; rising raw material prices (e.g.,
+              stainless steel, sensors) may increase production costs.</li>
+            <li>Response Strategies: Introduce automated production lines (e.g., CNC machines) to improve machining
+              precision (tolerance ≤ ±0.01mm); establish a raw material price monitoring mechanism, sign price lock
+              agreements with suppliers (lock price for 1 year); optimize product design, use lightweight materials
+              (e.g., PTFE) to replace some metal components, reducing costs.</li>
+          </ol>
+
+          <h2>7.4 Policy Risk</h2>
+          <ol>
+            <li>Risk Description: Adjustments in local subsidy policies (e.g., subsidy ratio reduced from 30% to 15%)
+              could affect user purchase willingness; changes in vaccine approval policies (e.g., new antibody titer
+              testing requirements) could prolong the vaccine-equipment adaptation cycle.</li>
+            <li>Response Strategies: Strengthen communication with local agriculture and rural departments, participate
+              in policy formulation (e.g., lead the development of "Technical Specifications for Intelligent Fish
+              Vaccine Inoculation Equipment"), strive for policy support; collaborate proactively with vaccine
+              companies, conduct simultaneous vaccine adaptation testing to ensure rapid response after policy changes.
+            </li>
+          </ol>
+
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="teamintro">
+          <h1>Team Introduction</h1>
+          <h2>8.1 Core Team Members</h2>
+          <p class="sub">1. Leader: Yang Yongkang: 2022 undergraduate in Bioengineering, leads project R&D, possesses
+            solid foundations in bio-immunology and equipment design, won provincial first prize in "Challenge Cup," led
+            3 patent applications.</p>
+          <p class="sub">2. Technical Team:</p>
+          <ol>
+            <li>Professor Zhang: Professor, PhD supervisor, School of Biological Engineering, East China University
+              of Science and Technology, long-term research on fish vaccines and immunization technology, led national
+              Class I new veterinary drug R&D, provides biomedical support for the project.</li>
+            <li>Engineer Li: 10 years of mechanical design experience, formerly worked at Haier Smart Equipment,
+              responsible for Archimedes screw and modular structure design, ensures equipment engineering
+              implementation.</li>
+            <li>Engineer Wang: AI algorithm expert, 5 years of R&D experience in IoT multi-source perception, leads
+              LSTM neural network and visual recognition algorithm development, enhances equipment intelligence.</li>
+          </ol>
+
+          <p class="sub">3. Operations Team:</p>
+          <ol>
+            <li>Manager Zhao: 15 years of experience in aquatic product industry sales, former Sales Director at an
+              aquatic vaccine company, familiar with farm needs and channel building, responsible for market promotion.
+            </li>
+            <li>Manager Chen: 8 years of production management experience, previously led large equipment production
+              line construction, responsible for project production planning and quality control.</li>
+          </ol>
+
+          <h2>8.2 Team Advantages</h2>
+          <p class="sub">The team has a multidisciplinary background (biology, mechanical, AI, operations). Core members
+            possess both academic research resources (e.g., Professor Zhang) and corporate practical experience (e.g.,
+            Engineer Li, Manager Zhao). Relying on the laboratories of East China University of Science and Technology,
+            it possesses continuous R&D capability. Maintaining close cooperation with 30+ farms ensures deep
+            understanding of industry needs and product-market fit.</p>
+
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="development">
+          <h1>Development Plan and Outlook</h1>
+          <h2>9.1 Short-term Plan (1-2 years, 2025-2026)</h2>
+          <ol>
+            <li>Complete engineering prototype optimization and agricultural machinery identification, establish 10
+              demonstration bases, achieve mass production (annual capacity 200 units).</li>
+            <li>Sell 150 units domestically, achieve operating revenue exceeding 450 million RMB, reach 10% market
+              penetration rate; complete R&D of shrimp and crab vaccination module, initiate pilot testing.</li>
+            <li>Establish overseas sales team, sign cooperation agreements with 2-3 distributors in Southeast Asia,
+              laying the foundation for global promotion.</li>
+          </ol>
+
+          <h2>9.2 Mid-term Plan (3-5 years, 2027-2029)</h2>
+          <ol>
+            <li>Obtain CE certification, enter European and Southeast Asian markets, overseas revenue accounting for
+              30% of total, global market share exceeding 10%.</li>
+            <li>Complete R&D of modules adapted for deep-sea aquaculture (anti-wave, cold chain vaccine cabin), expand
+              application to high-value species like grouper and salmonids.</li>
+            <li>Lead the formulation of "Technical Specifications for Intelligent Fish Vaccine Inoculation Equipment,"
+              become an industry standard setter; operating revenue exceeds 2 billion RMB, net profit surpasses 500
+              million RMB.</li>
+          </ol>
+
+          <h2>9.3 Long-term Plan (5-10 years, 2030-2035)</h2>
+          <ol>
+            <li>Become a global leader in intelligent fish vaccination equipment, global market share over 20%,
+              operating revenue exceeds 10 billion RMB.</li>
+            <li>Expand into "smart farming full-chain services," integrating functions like vaccination, water quality
+              monitoring, and precision feeding to build a smart aquaculture ecosystem.</li>
+            <li>Promote the export of fish vaccine and equipment technology, contribute to the green and sustainable
+              development of the global aquaculture industry, and contribute to China's transition from a major
+              aquaculture country to a technological powerhouse.</li>
+          </ol>
+
+        </section>
+
+        <!-- ID: conclusion -->
+        <section id="appendix">
+          <h1>Appendix</h1>
+          <ul>
+            <li>Relevant Qualifications/Certificates: National Class I New Veterinary Drug Certificates (2 items),
+              Patent Application Acceptance Notices (7 items), Software Copyright Certificates (2 items), Equipment
+              Performance Test Report (Chinese Academy of Fishery Sciences).</li>
+            <li>Experimental Data & Reports: Turbot Immersion Vaccination Density Experiment Report, Vaccine Utilization
+              Rate Comparison Experimental Data, Equipment Continuous 72-hour Operation Test Report.</li>
+            <li>Cooperation Agreements: Technical Cooperation Agreement with East China University of Science and
+              Technology, Cooperation Agreement with Shandong Oriental Ocean Demonstration Base, Supply Agreement with
+              Siemens for Sensors.</li>
+            <li>Financial Statement Templates: Income Statement, Cash Flow Statement, Balance Sheet templates (2026-2028
+              forecast).</li>
+            <li>Team Member Resumes: Core team members' educational certificates, work experience proofs, project award
+              certificates</li>
+          </ul>
+
+        </section>
+
+        <div class="logo-ring"></div>
+
+      </div>
+    </main>
+    {% endblock %}
